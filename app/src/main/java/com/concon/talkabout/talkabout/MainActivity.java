@@ -12,6 +12,10 @@ import android.widget.TextView;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Random;
+
 
 public class MainActivity extends ActionBarActivity {
 
@@ -27,10 +31,26 @@ public class MainActivity extends ActionBarActivity {
 
     }
 
-    public void changeTopic(View v){
+    public void changeTopic(View v) {
+        TextView phraseField = (TextView) findViewById(R.id.phrase);
 
-        TextView tv1 = (TextView)findViewById(R.id.phrase);
-        tv1.setText("Button Pressed ");
+        /**
+         * To Be replaced by XML Parser
+         */
+        List<String> list = new ArrayList<String>();
+        list.add("Dragon Ball Z");
+        list.add("Pokemon");
+        list.add("Digimon");
+        list.add("El Chavo del 8");
+        list.add("La vanguardia Peronista");
+
+        Random rand = new Random();
+        String random = list.get(rand.nextInt(list.size()));
+        while (random.equalsIgnoreCase(phraseField.getText().toString())) {
+            random = list.get(rand.nextInt(list.size()));
+        }
+
+        phraseField.setText(random);
 
     }
 }
