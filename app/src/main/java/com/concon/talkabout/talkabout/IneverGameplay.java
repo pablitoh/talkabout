@@ -1,16 +1,11 @@
 package com.concon.talkabout.talkabout;
 
-import android.content.Context;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -20,7 +15,7 @@ import java.util.List;
 import java.util.Random;
 
 
-public class MainActivity extends ActionBarActivity {
+public class IneverGameplay extends ActionBarActivity {
 
     private Integer difficulty;
     float x1,x2;
@@ -35,7 +30,7 @@ public class MainActivity extends ActionBarActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.inever_gameplay);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
         AdView mAdView = (AdView) findViewById(R.id.adView);

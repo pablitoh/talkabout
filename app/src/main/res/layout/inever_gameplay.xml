@@ -11,7 +11,7 @@
     android:orientation="vertical"
     android:rowCount="8"
     android:columnCount="8"
-    android:background="@drawable/wood">
+    android:background="@drawable/background">
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
@@ -23,7 +23,14 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true">
     </com.google.android.gms.ads.AdView>
-
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:text="I never.."
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        android:layout_alignBottom="@+id/adView"
+        android:gravity="center"/>
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="500dp"
@@ -35,8 +42,6 @@
         android:textColor="@android:color/white"
         android:textSize="40sp"
         android:layout_alignParentTop="false"
-        android:layout_alignParentLeft="false"
-
         android:textAppearance="@android:color/white" />
 
     <Button
@@ -55,7 +60,5 @@
         android:layout_below="@+id/phrase"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"/>
-
-
 
 </RelativeLayout>

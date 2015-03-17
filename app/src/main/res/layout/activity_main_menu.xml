@@ -1,59 +1,93 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/wood"
-    tools:context="com.concon.talkabout.talkabout.MainMenu">
+    android:orientation="vertical"
+    android:background="@drawable/background">
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:orientation="horizontal">
+        <com.google.android.gms.ads.AdView
+            android:id="@+id/adView"
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            ads:adSize="BANNER"
+            ads:adUnitId="@string/banner_ad_unit_id"
+            >
+        </com.google.android.gms.ads.AdView>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="App Title"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            android:textSize="80sp"
+            android:textIsSelectable="false"
+            android:textAlignment="center" />
 
-    <com.google.android.gms.ads.AdView
-        android:id="@+id/adView"
-        android:layout_width="fill_parent"
-        android:layout_height="60dp"
-        ads:adSize="BANNER"
-        ads:adUnitId="@string/banner_ad_unit_id"
-        android:layout_alignParentBottom="false"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true">
-    </com.google.android.gms.ads.AdView>
+        </LinearLayout>
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="300dp"
-        android:id="@+id/mainTitle"
-        android:text="@string/title"
-        android:gravity="center"
-        android:textSize="60sp"
-        android:textColor="@color/bright_foreground_material_dark"
-        android:layout_below="@+id/adView"
-        />
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="I never"
+            android:onClick="startGame"
+            android:background="@drawable/buttonshape"
+            android:textColor="#000000"
+            android:id="@+id/iNeverButton"
+            android:textSize="30dp" />
 
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="60dp"
-        android:id="@+id/basicDifficulty"
-        android:text="Please Go Easy..."
-        android:layout_above="@+id/mediumDifficulty"
-        android:background="@drawable/main_menu_button"
-        android:onClick="startActivity"/>
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="60dp"
-        android:id="@+id/mediumDifficulty"
-        android:text="I'm kinda ready"
-        android:layout_above="@+id/hardDifficulty"
-        android:layout_alignLeft="@+id/hardDifficulty"
-        android:layout_alignStart="@+id/hardDifficulty"
-        android:background="@drawable/main_menu_button"
-        android:onClick="startActivity"/>
-    <Button
-        android:layout_width="fill_parent"
-        android:layout_height="60dp"
-        android:id="@+id/hardDifficulty"
-        android:text="Bring it, Baby !"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/basicDifficulty"
-        android:layout_alignStart="@+id/basicDifficulty"
-        android:background="@drawable/main_menu_button"
-        android:onClick="startActivity"/>
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Truth / Dare"
+            android:onClick="startGame"
+            android:textColor="#000000"
+            android:background="@drawable/buttonshape"
+            android:id="@+id/truthDareButton"
+            android:textSize="30dp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_height="0dp"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:orientation="horizontal">
 
-</RelativeLayout>
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Mimic"
+            android:onClick="startGame"
+            android:background="@drawable/buttonshape"
+            android:textColor="#000000"
+            android:id="@+id/mimicButton"
+            android:textSize="30dp" />
+
+        <Button
+            android:layout_height="match_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:text="Marry-Kill-F**k"
+            android:onClick="startGame"
+            android:textColor="#000000"
+            android:background="@drawable/buttonshape"
+            android:id="@+id/marryButton"
+            android:textSize="30dp" />
+    </LinearLayout>
+</LinearLayout>

@@ -12,12 +12,12 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 
-public class MainMenu extends ActionBarActivity {
+public class IneverMainMenu extends ActionBarActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_menu);
+        setContentView(R.layout.inever_main_menu);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
         AdView mAdView = (AdView) findViewById(R.id.adView);
@@ -37,8 +37,6 @@ public class MainMenu extends ActionBarActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
 
         int id = item.getItemId();
-
-
         if (id == R.id.action_settings) {
             return true;
         }
@@ -46,14 +44,26 @@ public class MainMenu extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void startGame(View v) {
+    public void startActivity(View v) {
+        Intent intent = new Intent(IneverMainMenu.this, IneverGameplay.class);
+        Bundle b = new Bundle();
+
         switch (v.getId()) {
-            case R.id.iNeverButton:
-                startActivity(new Intent(MainMenu.this, IneverMainMenu.class));
+            case R.id.basicDifficulty:
+                b.putInt("key", 1); //Your id
                 break;
-            default:;
+            case R.id.mediumDifficulty:
+                b.putInt("key", 2); //Your id
+                break;
+            case R.id.hardDifficulty:
+                b.putInt("key", 3); //Your id
+                break;
+            default:
+                throw new RuntimeException("Unknow button ID");
         }
 
+        intent.putExtras(b); //Put your id to your next Intent
+        startActivity(intent);
 
     }
 }
