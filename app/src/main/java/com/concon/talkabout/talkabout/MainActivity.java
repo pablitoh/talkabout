@@ -4,6 +4,7 @@ import android.content.Context;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Xml;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
@@ -12,8 +13,11 @@ import android.view.Window;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.concon.talkabout.talkabout.service.ParserService;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+
+import org.xmlpull.v1.XmlPullParser;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,6 +35,7 @@ public class MainActivity extends ActionBarActivity {
      */
     List<String> list = new ArrayList<String>();
 
+    private ParserService parserService;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,13 +53,17 @@ public class MainActivity extends ActionBarActivity {
 
         /**
          * To be replaced
-         */
+
+
         list.add("Dragon Ball Z");
         list.add("Pokemon");
         list.add("Digimon");
         list.add("El Chavo del 8");
         list.add("La vanguardia Peronista");
+         */
 
+        parserService = new ParserService();
+        list =  parserService.parseXml(difficulty, this.getResources().openRawResource(R.raw.talks.xml));
     }
 
     private String getRandomFromList( List<String> list)
