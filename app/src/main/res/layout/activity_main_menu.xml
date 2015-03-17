@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:background="@drawable/wood"
+    tools:context="com.concon.talkabout.talkabout.MainMenu">
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+    </com.google.android.gms.ads.AdView>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="300dp"
+        android:id="@+id/mainTitle"
+        android:text="@string/title"
+        android:gravity="center"
+        android:textSize="60sp"
+        android:textColor="@color/bright_foreground_material_dark"
+        android:layout_below="@+id/adView"
+        />
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:id="@+id/basicDifficulty"
+        android:text="Please Go Easy..."
+        android:layout_above="@+id/mediumDifficulty"
+        android:background="@drawable/main_menu_button"
+        android:onClick="startActivity"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:id="@+id/mediumDifficulty"
+        android:text="I'm kinda ready"
+        android:layout_above="@+id/hardDifficulty"
+        android:layout_alignLeft="@+id/hardDifficulty"
+        android:layout_alignStart="@+id/hardDifficulty"
+        android:background="@drawable/main_menu_button"
+        android:onClick="startActivity"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:id="@+id/hardDifficulty"
+        android:text="Bring it, Baby !"
+        android:layout_alignParentBottom="true"
+        android:layout_alignLeft="@+id/basicDifficulty"
+        android:layout_alignStart="@+id/basicDifficulty"
+        android:background="@drawable/main_menu_button"
+        android:onClick="startActivity"/>
+
+</RelativeLayout>
