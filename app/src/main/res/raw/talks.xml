@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed>
+    <talks3>
+        <talk>Bleach</talk>
+        <talk>One Piece</talk>
+        <talk>Death note</talk>
+        <talk>Elfen lied</talk>
+    </talks3>
+    <talks2>
+        <talk>Los Halcones Galacticos</talk>
+        <talk>Tom y Jerry</talk>
+        <talk>Los Simpsons</talk>
+        <talk>Naruto</talk>
+    </talks2>
+    <talks1>
+        <talk>Dragon Ball Z</talk>
+        <talk>Pokemon</talk>
+        <talk>Digimon</talk>
+        <talk>Thundercats</talk>
+    </talks1>
+</feed>
