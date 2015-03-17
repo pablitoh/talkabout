@@ -40,7 +40,13 @@
         </activity>
         <activity
             android:name=".TruthDareGameplay"
-            android:label="@string/title_activity_truth_dare_gameplay" >
+            android:label="@string/title_activity_truth_dare_gameplay"
+            android:screenOrientation="portrait" >
+>
+        </activity>
+        <activity
+            android:name=".MimicGameplay"
+            android:label="@string/title_activity_mimic_gameplay" >
         </activity>
     </application>
 
