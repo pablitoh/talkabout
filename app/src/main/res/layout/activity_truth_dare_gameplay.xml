@@ -25,8 +25,8 @@
     <TextView
         android:layout_width="fill_parent"
         android:layout_height="200dp"
-        android:text="I never.."
-        android:textColor="@android:color/white"
+        android:text="You will..."
+        android:textColor="@android:color/holo_red_dark"
         android:textSize="40sp"
         android:gravity="center"
         android:layout_below="@+id/adView"/>
@@ -34,7 +34,7 @@
         android:layout_width="fill_parent"
         android:layout_height="500dp"
         android:gravity="center"
-        android:text="Gonna let you Down..."
+        android:text="Roll your fate"
         android:id="@+id/phrase"
         android:background="@drawable/rounded_text_view"
         android:textColor="@android:color/white"
@@ -43,8 +43,8 @@
         android:textAppearance="@android:color/white" />
 
     <Button
-        android:id="@+id/nextTopic"
-        android:text="@string/nextString"
+        android:id="@+id/chooseTruthorDare"
+        android:text="Choose My Destiny !"
         android:textColor="#FFFFFF"
         android:textSize="30sp"
         android:layout_width="fill_parent"
@@ -54,9 +54,8 @@
         android:shadowDx="0"
         android:shadowDy="0"
         android:shadowRadius="5"
-        android:onClick="changeTopic"
+        android:onClick="getFate"
         android:layout_below="@+id/phrase"
         android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"/>
-
 </RelativeLayout>

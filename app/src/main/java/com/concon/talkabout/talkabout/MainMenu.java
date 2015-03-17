@@ -51,6 +51,8 @@ public class MainMenu extends ActionBarActivity {
             case R.id.iNeverButton:
                 startActivity(new Intent(MainMenu.this, IneverMainMenu.class));
                 break;
+            case R.id.truthDareButton:
+                startActivity(new Intent(MainMenu.this, TruthDareGameplay.class));
             default:;
         }
 
