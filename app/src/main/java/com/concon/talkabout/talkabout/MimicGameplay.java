@@ -1,23 +1,30 @@
 package com.concon.talkabout.talkabout;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.TextView;
 
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
 
-public class MainMenu extends ActionBarActivity {
+
+public class MimicGameplay extends ActionBarActivity {
+
+    private List<String> list = Arrays.asList("MI pobre Angelito","Cazafantasmas","Relatos Salvajes","Peron vive","Nestor One Love");
+    private Random rand = new Random();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main_menu);
+        setContentView(R.layout.activity_mimic_gameplay);
         ActionBar actionBar = getSupportActionBar();
         actionBar.hide();
         AdView mAdView = (AdView) findViewById(R.id.adView);
@@ -29,16 +36,18 @@ public class MainMenu extends ActionBarActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main_menu, menu);
+        getMenuInflater().inflate(R.menu.menu_mimic_gameplay, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-
+        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -46,18 +55,10 @@ public class MainMenu extends ActionBarActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void startGame(View v) {
-        switch (v.getId()) {
-            case R.id.iNeverButton:
-                startActivity(new Intent(MainMenu.this, IneverMainMenu.class));
-                break;
-            case R.id.truthDareButton:
-                startActivity(new Intent(MainMenu.this, TruthDareGameplay.class));break;
-            case R.id.mimicButton:
-                startActivity(new Intent(MainMenu.this, MimicGameplay.class));break;
-            default:;
-        }
-
-
+    public void getMimic(View v)
+    {
+        TextView phraseField = (TextView) findViewById(R.id.phrase);
+        String random = list.get(rand.nextInt(list.size()));
+        phraseField.setText(random);
     }
 }
