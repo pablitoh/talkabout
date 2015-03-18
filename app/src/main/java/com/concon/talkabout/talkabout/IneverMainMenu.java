@@ -59,7 +59,7 @@ public class IneverMainMenu extends ActionBarActivity {
                 b.putInt("key", 3); //Your id
                 break;
             default:
-                throw new RuntimeException("Unknow button ID");
+                throw new RuntimeException("Unknown button ID");
         }
 
         intent.putExtras(b); //Put your id to your next Intent
