@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed>
+    <mimic1>
+        <entry>Bleach</entry>
+        <entry>One Piece</entry>
+        <entry>Death note</entry>
+        <entry>Elfen lied</entry>
+    </mimic1>
+    <mimic2>
+        <entry>Los Halcones Galacticos</entry>
+        <entry>Tom y Jerry</entry>
+        <entry>Los Simpsons</entry>
+        <entry>Naruto</entry>
+    </mimic2>
+    <mimic3>
+        <entry>Dragon Ball Z</entry>
+        <entry>Pokemon</entry>
+        <entry>Digimon</entry>
+        <entry>Thundercats</entry>
+    </mimic3>
+</feed>

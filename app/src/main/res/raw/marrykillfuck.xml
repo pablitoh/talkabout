@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed>
+    <men>
+        <entry>Joe</entry>
+        <entry>Juan</entry>
+        <entry>John</entry>
+        <entry>Jose</entry>
+    </men>
+    <women>
+        <entry>Mary</entry>
+        <entry>Maria</entry>
+        <entry>Merry</entry>
+        <entry>Marta</entry>
+    </women>
+</feed>

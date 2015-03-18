@@ -7,8 +7,14 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
+import com.concon.talkabout.talkabout.service.ParserService;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+
+
+import org.xmlpull.v1.XmlPullParserException;
+
+import java.io.IOException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +32,8 @@ public class IneverGameplay extends ActionBarActivity {
      */
     List<String> list = new ArrayList<String>();
 
+    private ParserService parserService;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,16 +47,26 @@ public class IneverGameplay extends ActionBarActivity {
 
         Bundle b = getIntent().getExtras();
 
-        difficulty = b.getInt("key");
+        int difficulty = b.getInt("key");
 
         /**
          * To be replaced
-         */
+
         list.add("Dragon Ball Z");
         list.add("Pokemon");
         list.add("Digimon");
         list.add("El Chavo del 8");
         list.add("La vanguardia Peronista");
+         */
+
+        parserService = new ParserService();
+        try {
+            list =  parserService.parseXml(difficulty, this.getResources().openRawResource(R.raw.inever), "inever");
+        } catch (XmlPullParserException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
 
     }
 
