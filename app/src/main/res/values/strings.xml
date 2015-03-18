@@ -8,9 +8,12 @@
 
    //I Never Strings
 
-    <string name="title">I never....</string>
+    <string name="INevertitle">I Never....</string>
     <string name="IneverDescription">A sentence will appear in screen, anyone which is not identified with it must DRINK !!! Be Honest and have fun !!! </string>
     <string name="IneverDifficultySelect">Choose the innocence of the sentences</string>
+    <string name='easy'> We are Angels</string>
+    <string name='medium'>We are only Humans</string>
+    <string name='hard'> Bring it, b**tch!</string>
 
     //Truth / Dare
     <string name="title_activity_truth_dare_gameplay">truthDareGameplay</string>
