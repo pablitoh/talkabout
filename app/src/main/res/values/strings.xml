@@ -1,15 +1,26 @@
 <resources>
-    <string name="app_name">TalkAbout</string>
+    <string name="app_name">FiestApp</string>
+    <string name="title_activity_main_menu">FiestApp</string>
 
     <string name="action_settings">Settings</string>
     <string name="nextString">Next</string>
     <string name="banner_ad_unit_id">ca-app-pub-3166954381042414/6936833717</string>
-    <string name="title_activity_main_menu">Talk About</string>
 
-    <string name="hello_world">Hello world!</string>
+   //I Never Strings
+
     <string name="title">I never....</string>
+    <string name="IneverDescription">A sentence will appear in screen, anyone which is not identified with it must DRINK !!! Be Honest and have fun !!! </string>
+    <string name="IneverDifficultySelect">Choose the innocence of the sentences</string>
+
+    //Truth / Dare
     <string name="title_activity_truth_dare_gameplay">truthDareGameplay</string>
-    <string name="title_activity_mimic_gameplay">MimicGameplay</string>
-    <string name="nextMovie">Next Movie</string>
+    <string name="TruthDareDescription">You will be faced with 4 different options:\n1-Truth\n2-Dare\n3-Dodge\n4-Choose a victim</string>
+
+    //Marry / Kill
     <string name="title_activity_marry_kill">MarryKill</string>
+
+    //Charades Strings
+    <string name="title_activity_mimic_gameplay">MimicGameplay</string>
+    <string name="mimicDescription">You have to "act out" a movie title without speaking, while the other members of your team try to guess which movie it is</string>
+
 </resources>
