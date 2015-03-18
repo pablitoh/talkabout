@@ -47,7 +47,11 @@
         <activity
             android:name=".MimicGameplay"
             android:label="@string/title_activity_mimic_gameplay"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".MarryKill"
+            android:label="@string/title_activity_marry_kill" >
         </activity>
     </application>
 
