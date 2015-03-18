@@ -23,15 +23,19 @@
         android:layout_width="match_parent"
         android:layout_weight="1"
         android:orientation="horizontal">
+
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
-            android:text="App Title"
+            android:background="@null"
+            android:text="FIESTAPP"
+            android:id="@+id/AppTitle"
             android:textColor="#ffffff"
             android:gravity="center"
-            android:textSize="80sp"
+            android:textSize="90sp"
             android:textIsSelectable="false"
-            android:textAlignment="center" />
+
+            android:textStyle="bold" />
 
         </LinearLayout>
     <LinearLayout
@@ -47,9 +51,11 @@
             android:text="I never"
             android:onClick="startGame"
             android:background="@drawable/buttonshape"
-            android:textColor="#000000"
+            android:textColor="@color/blue"
             android:id="@+id/iNeverButton"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:layout_margin="5dp"
+            android:textStyle="bold" />
 
         <Button
             android:layout_height="match_parent"
@@ -57,10 +63,12 @@
             android:layout_weight="1"
             android:text="Truth / Dare"
             android:onClick="startGame"
-            android:textColor="#000000"
+            android:textColor="@color/blue"
             android:background="@drawable/buttonshape"
             android:id="@+id/truthDareButton"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:layout_margin="5dp"
+            android:textStyle="bold" />
     </LinearLayout>
     <LinearLayout
         android:layout_height="0dp"
@@ -75,9 +83,11 @@
             android:text="Mimic"
             android:onClick="startGame"
             android:background="@drawable/buttonshape"
-            android:textColor="#000000"
+            android:textColor="@color/blue"
             android:id="@+id/mimicButton"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:layout_margin="5dp"
+            android:textStyle="bold" />
 
         <Button
             android:layout_height="match_parent"
@@ -85,9 +95,11 @@
             android:layout_weight="1"
             android:text="Marry-Kill-F**k"
             android:onClick="startGame"
-            android:textColor="#000000"
+            android:textColor="@color/blue"
             android:background="@drawable/buttonshape"
             android:id="@+id/marryButton"
-            android:textSize="30dp" />
+            android:textSize="30dp"
+            android:layout_margin="5dp"
+            android:textStyle="bold" />
     </LinearLayout>
 </LinearLayout>

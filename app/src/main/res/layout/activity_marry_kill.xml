@@ -1,0 +1,107 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.concon.talkabout.talkabout.IneverGameplay">
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+    </com.google.android.gms.ads.AdView>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Marry..Kill.. F**K"
+        android:id="@+id/MarryKillTitle"
+        android:textColor="@android:color/white"
+        android:textSize="40sp"
+        android:gravity="center"
+        android:layout_below="@+id/adView"
+        android:typeface="normal"
+        android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical"
+            android:layout_below="@+id/MarryKillTitle"
+            android:gravity="center"
+            android:layout_above="@+id/linearLayout">
+
+            <TextView
+                android:layout_width="fill_parent"
+
+                android:layout_height="wrap_content"
+                android:id="@+id/option1"
+                android:textSize="30sp"
+                android:textColor="@color/blue"
+                android:text="Jeniffer Lawrance"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="fill_parent"
+                android:id="@+id/option2"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="@color/blue"
+                android:text="Cameron Diaz"
+                android:gravity="center"
+                />
+            <TextView
+                android:layout_width="fill_parent"
+                android:id="@+id/option3"
+                android:layout_height="wrap_content"
+                android:textSize="30sp"
+                android:textColor="@color/blue"
+                android:text="Lita de Lazzari"
+                android:gravity="center"
+                />
+            </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/linearLayout">
+
+        <Button
+
+            android:layout_height="fill_parent"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:id="@+id/manButton"
+            android:text="I'm a man"
+            android:background="@drawable/buttonshape"
+            android:onClick="getPeople"
+            android:gravity="center"
+            android:textColor="@color/blue"
+            android:layout_margin="2dp"
+            android:textStyle="bold" />
+        <Button
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="fill_parent"
+            android:id="@+id/womanButton"
+            android:text="I'm a Girl"
+            android:background="@drawable/buttonshape"
+            android:onClick="getPeople"
+            android:textColor="@color/blue"
+            android:layout_margin="2dp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+</RelativeLayout>

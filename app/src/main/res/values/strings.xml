@@ -11,4 +11,5 @@
     <string name="title_activity_truth_dare_gameplay">truthDareGameplay</string>
     <string name="title_activity_mimic_gameplay">MimicGameplay</string>
     <string name="nextMovie">Next Movie</string>
+    <string name="title_activity_marry_kill">MarryKill</string>
 </resources>
