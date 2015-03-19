@@ -80,7 +80,7 @@
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:text="Mimic"
+            android:text="Charades"
             android:onClick="startGame"
             android:background="@drawable/buttonshape"
             android:textColor="@color/blue"
