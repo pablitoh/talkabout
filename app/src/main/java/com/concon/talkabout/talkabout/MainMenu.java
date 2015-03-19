@@ -1,5 +1,6 @@
 package com.concon.talkabout.talkabout;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.support.v7.app.ActionBar;
@@ -14,19 +15,12 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 
-public class MainMenu extends ActionBarActivity {
+public class MainMenu extends Activity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_menu);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
-
-        TextView tv = (TextView) findViewById(R.id.AppTitle);
-        Typeface face = Typeface.createFromAsset(getAssets(),
-                "PWStripes.ttf");
-        tv.setTypeface(face);
 
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();

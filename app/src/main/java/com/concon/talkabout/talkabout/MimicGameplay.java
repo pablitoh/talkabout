@@ -1,5 +1,6 @@
 package com.concon.talkabout.talkabout;
 
+import android.app.Activity;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -16,7 +17,7 @@ import java.util.List;
 import java.util.Random;
 
 
-public class MimicGameplay extends ActionBarActivity {
+public class MimicGameplay extends Activity {
 
     private List<String> list = Arrays.asList("MI pobre Angelito","Cazafantasmas","Relatos Salvajes","Peron vive","Nestor One Love");
     private Random rand = new Random();
@@ -25,8 +26,6 @@ public class MimicGameplay extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_mimic_gameplay);
-        ActionBar actionBar = getSupportActionBar();
-        actionBar.hide();
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);

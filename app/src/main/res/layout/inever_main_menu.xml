@@ -16,7 +16,7 @@
         ads:adSize="BANNER"
         ads:adUnitId="@string/banner_ad_unit_id"/>
 
-    <TextView
+    <com.concon.talkabout.talkabout.elements.TitleFun
         android:id="@+id/textView"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
@@ -25,7 +25,7 @@
         android:layout_below="@+id/adView"
         android:gravity="center"
         android:text="@string/INevertitle"
-        android:textColor="@color/blue"
+        android:textColor="@color/orange"
         android:textSize="40sp" />
 
 
@@ -42,11 +42,13 @@
             android:id="@+id/phrase"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-
             android:gravity="center"
+            android:padding="10dp"
             android:text="@string/IneverDescription"
-            android:textColor="@drawable/text"
-            android:textSize="40sp" />
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:typeface="normal" />
 
     </ScrollView>
 
@@ -57,7 +59,7 @@
         android:layout_above="@+id/linearLayout2"
         android:gravity="center"
         android:text="@string/IneverDifficultySelect"
-        android:textColor="@color/blue"
+        android:textColor="@color/orange"
         android:textSize="20sp" />
 
     <LinearLayout
@@ -66,7 +68,7 @@
         android:layout_height="100dp"
         android:layout_alignParentBottom="true">
 
-        <Button
+        <com.concon.talkabout.talkabout.elements.ButtonFun
 
             android:id="@+id/basicDifficulty"
             android:layout_width="0dp"
@@ -77,9 +79,11 @@
             android:gravity="center"
             android:onClick="startActivity"
             android:text="@string/easy"
-            android:textColor="@color/blue" />
+            android:textSize="30sp"
+            android:padding="5dp"
+            android:textColor="@color/orange" />
 
-        <Button
+        <com.concon.talkabout.talkabout.elements.ButtonFun
             android:id="@+id/mediumDifficulty"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
@@ -88,9 +92,11 @@
             android:background="@drawable/buttonshape"
             android:onClick="startActivity"
             android:text="@string/medium"
-            android:textColor="@color/blue" />
+            android:textSize="30sp"
+            android:padding="5dp"
+            android:textColor="@color/orange" />
 
-        <Button
+        <com.concon.talkabout.talkabout.elements.ButtonFun
             android:id="@+id/hardDifficulty"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
@@ -99,6 +105,8 @@
             android:background="@drawable/buttonshape"
             android:onClick="startActivity"
             android:text="@string/hard"
-            android:textColor="@color/blue" />
+            android:textColor="@color/orange"
+            android:textSize="30sp"
+            android:padding="5dp"/>
     </LinearLayout>
 </RelativeLayout>

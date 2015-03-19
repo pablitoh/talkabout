@@ -23,13 +23,13 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true">
     </com.google.android.gms.ads.AdView>
-    <TextView
+    <com.concon.talkabout.talkabout.elements.TitleFun
         android:layout_width="fill_parent"
-        android:layout_height="100dp"
+        android:layout_height="50dp"
         android:text="Truth / Dare "
         android:id="@+id/textView"
         android:textSize="40sp"
-        android:textColor="@color/blue"
+        android:textColor="@color/orange"
         android:layout_below="@+id/adView"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -42,10 +42,11 @@
         android:gravity="center"
         android:text="@string/TruthDareDescription"
         android:id="@+id/phrase"
+        android:padding="10dp"
         android:clickable="true"
         android:onClick="getFate"
         android:textColor="@drawable/text"
-        android:textSize="40sp"
+        android:textSize="20sp"
         android:layout_above="@+id/textView3"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
@@ -57,8 +58,10 @@
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"
         android:text="Tap to continue..."
-        android:textColor="@color/blue"
+        android:textColor="@color/orange"
         android:gravity="center"
         android:textSize="20sp"
-        android:id="@+id/textView3" />
+        android:id="@+id/textView3"
+        android:onClick="getFate"
+        android:clickable="true"/>
 </RelativeLayout>
