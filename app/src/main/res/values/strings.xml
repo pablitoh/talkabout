@@ -24,6 +24,7 @@
     <string name="marryKillTitle">Marry-Kill-F**k</string>
 
     //Charades Strings
+    <string name="mimicTitle">Charades</string>
     <string name="title_activity_mimic_gameplay">MimicGameplay</string>
     <string name="mimicDescription">You have to "act out" a movie title without speaking, while the other members of your team try to guess which movie it is</string>
 

@@ -56,16 +56,17 @@
             android:layout_margin="5dp"
             android:textStyle="bold"
             android:padding="3dp"
-            style="?android:borderlessButtonStyle"/>
+
+            />
 
         <com.concon.talkabout.talkabout.elements.ButtonFun
+            android:background="@drawable/buttonshape"
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:text="Truth / Dare"
             android:onClick="startGame"
             android:textColor="@color/orange"
-            android:background="@drawable/buttonshape"
             android:id="@+id/truthDareButton"
             android:textSize="50sp"
             android:layout_margin="5dp"

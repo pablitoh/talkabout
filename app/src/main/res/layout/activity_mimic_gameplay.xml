@@ -20,7 +20,7 @@
         <com.concon.talkabout.talkabout.elements.TitleFun
             android:layout_width="fill_parent"
             android:layout_height="50dp"
-            android:text="Charades"
+            android:text="@string/mimicTitle"
             android:id="@+id/textView"
             android:textSize="40sp"
             android:textColor="@color/orange"
