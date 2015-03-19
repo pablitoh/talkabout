@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Juegos de Fiesta</string>
+    <string name="title_activity_main_menu">Juegos de Fiesta</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="nextString">Next</string>
+    <string name="banner_ad_unit_id">ca-app-pub-3166954381042414/6936833717</string>
+
+    //I Never Strings
+
+    <string name="INevertitle">Yo Nunca </string>
+    <string name="IneverDescription">A sentence will appear in screen, anyone which is not identified with it must DRINK !!!\n Be Honest and have fun !!! </string>
+    <string name="IneverDifficultySelect">Choose the innocence of the sentences</string>
+    <string name='easy'> Somos Angelitos</string>
+    <string name='medium'>Somos Humanos</string>
+    <string name='hard'>Lo que venga !</string>
+
+    //Truth / Dare
+    <string name="title_activity_truth_dare_gameplay">truthDareGameplay</string>
+    <string name="TruthDareDescription">You will be faced with 4 different options:\n1-Truth\n2-Dare\n3-Dodge\n4-Choose a victim</string>
+
+    //Marry / Kill
+    <string name="title_activity_marry_kill">MarryKill</string>
+    <string name="marryKillTitle">Marry-Kill-F**k</string>
+
+    //Charades Strings
+    <string name="mimicTitle">Digalo con Mimica</string>
+    <string name="title_activity_mimic_gameplay">Digalo con Mimica</string>
+    <string name="mimicDescription">You have to "act out" a movie title without speaking, while the other members of your team try to guess which movie it is</string>
+
+</resources>
