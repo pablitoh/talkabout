@@ -1,6 +1,7 @@
 package com.concon.talkabout.talkabout.elements;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.util.AttributeSet;
 import android.widget.Button;
@@ -23,6 +24,7 @@ import android.widget.Button;
 
             Typeface font = Typeface.createFromAsset(context.getAssets(), "PWStripes.ttf");
             this.setTypeface(font);
+
         }
 
         public ButtonFun(Context context, AttributeSet attrs, int defStyle) {
