@@ -23,11 +23,12 @@ import java.util.List;
 public class MarryKill extends Activity {
 
     List<String> list;
-    ParserService parser = new MarryKillParserService();
+    ParserService parser;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_marry_kill);
+        parser = new MarryKillParserService();
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
@@ -58,6 +59,7 @@ public class MarryKill extends Activity {
 
     public void getPeople(View v) throws IOException, XmlPullParserException {
         int talkLevel;
+
         switch (v.getId()){
             case R.id.manButton:
                 talkLevel =1 ;

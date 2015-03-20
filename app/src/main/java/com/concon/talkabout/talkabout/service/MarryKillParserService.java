@@ -20,11 +20,11 @@ public class MarryKillParserService extends ParserService{
         List<String> data = super.parseXml(talkLevel, xml, tag);
         Random rand = new Random();
         List<String> dataToDeliver = new ArrayList<String>(3);
-        dataToDeliver.add(data.get(rand.nextInt()));
+        dataToDeliver.add(data.get(rand.nextInt(data.size())));
         Collections.shuffle(data, rand);
-        dataToDeliver.add(data.get(rand.nextInt()));
+        dataToDeliver.add(data.get(rand.nextInt(data.size())));
         Collections.shuffle(data, rand);
-        dataToDeliver.add(data.get(rand.nextInt()));
+        dataToDeliver.add(data.get(rand.nextInt(data.size())));
 
         return dataToDeliver;
     }
