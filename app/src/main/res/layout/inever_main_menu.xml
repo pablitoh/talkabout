@@ -79,7 +79,7 @@
             android:gravity="center"
             android:onClick="startActivity"
             android:text="@string/easy"
-            android:textSize="30sp"
+            android:textSize="@dimen/gameplay_button_text"
             android:padding="5dp"
             android:textColor="@color/orange" />
 
@@ -92,9 +92,10 @@
             android:background="@drawable/buttonshape"
             android:onClick="startActivity"
             android:text="@string/medium"
-            android:textSize="30sp"
+            android:textSize="@dimen/gameplay_button_text"
             android:padding="5dp"
-            android:textColor="@color/orange" />
+            android:textColor="@color/orange"
+            android:gravity="center"/>
 
         <com.concon.talkabout.talkabout.elements.ButtonFun
             android:id="@+id/hardDifficulty"
@@ -106,7 +107,8 @@
             android:onClick="startActivity"
             android:text="@string/hard"
             android:textColor="@color/orange"
-            android:textSize="30sp"
-            android:padding="5dp"/>
+            android:textSize="@dimen/gameplay_button_text"
+            android:padding="5dp"
+            android:gravity="center"/>
     </LinearLayout>
 </RelativeLayout>
