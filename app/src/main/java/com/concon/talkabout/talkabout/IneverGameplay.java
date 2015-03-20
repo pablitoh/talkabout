@@ -49,16 +49,6 @@ public class IneverGameplay extends Activity {
 
         int difficulty = b.getInt("key");
 
-        /**
-         * To be replaced
-
-        list.add("Dragon Ball Z");
-        list.add("Pokemon");
-        list.add("Digimon");
-        list.add("El Chavo del 8");
-        list.add("La vanguardia Peronista");
-         */
-
         parserService = new INeverParserService();
         try {
             list =  parserService.parseXml(difficulty, this.getResources().openRawResource(R.raw.inever), "inever");
