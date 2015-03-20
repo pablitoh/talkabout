@@ -29,6 +29,15 @@
             android:layout_alignParentStart="true"
             android:gravity="center"/>
 
+    <ScrollView
+        android:id="@+id/SCROLLER_ID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/indicatorContainer"
+        android:layout_below="@+id/textView"
+        android:fillViewport="true"
+        android:scrollbars="vertical"
+        >
 
     <com.concon.talkabout.talkabout.elements.TextViewFun
         android:layout_width="fill_parent"
@@ -41,12 +50,8 @@
         android:onClick="getMimic"
         android:textColor="@drawable/text"
         android:textSize="40sp"
-        android:layout_above="@+id/indicatorContainer"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/textView"
         />
-
+</ScrollView>
     <com.concon.talkabout.talkabout.elements.TextViewFun
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

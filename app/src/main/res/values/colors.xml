@@ -4,4 +4,5 @@
     <item name="orange" type="color">#fff48310</item>
     <item name="orangeLight" type="color">#fff4b109</item>
     <item name="yellow" type="color">#fff9f80a</item>
+    <item name="black" type="color">#000000</item>
 </resources>
