@@ -9,15 +9,19 @@
     //I Never Strings
 
     <string name="INevertitle">Yo Nunca </string>
-    <string name="IneverDescription">A sentence will appear in screen, anyone which is not identified with it must DRINK !!!\n Be Honest and have fun !!! </string>
-    <string name="IneverDifficultySelect">Choose the innocence of the sentences</string>
+    <string name="IneverDescription"> Una frase aparecerá en pantalla, todos los que NO se sientan identificados, DEBERAN TOMAR ! Sean Honestos y a DIVERTIRSE ! </string>
+    <string name="IneverDifficultySelect">Elegi el nivel de picantez</string>
     <string name='easy'> Somos Angelitos</string>
     <string name='medium'>Somos Humanos</string>
     <string name='hard'>Lo que venga !</string>
 
     //Truth / Dare
     <string name="title_activity_truth_dare_gameplay">truthDareGameplay</string>
-    <string name="TruthDareDescription">You will be faced with 4 different options:\n1-Truth\n2-Dare\n3-Dodge\n4-Choose a victim</string>
+    <string name="TruthDareDescription">Seras presentado con 4 posibilidades:\n1-Elegis a alguien para que diga la VERDAD\n2- Elegis a alguien para que sufra las CONSECUENCIAS\n3-Pasas!\n4- TOMAS !</string>
+    <string name="truth">Elegí a alguien para que diga la VERDAD !!</string>
+    <string name="dare">Elegí a alguien para que sufra las CONSECUENCIAS !!</string>
+    <string name="drink"> TOMÁS !!</string>
+    <string name="dodge"> SAFASTE !!!</string>
 
     //Marry / Kill
     <string name="title_activity_marry_kill">MarryKill</string>
