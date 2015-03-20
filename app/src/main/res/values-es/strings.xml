@@ -11,9 +11,9 @@
     <string name="INevertitle">Yo Nunca </string>
     <string name="IneverDescription"> Una frase aparecerá en pantalla, todos los que NO se sientan identificados, DEBERAN TOMAR ! Sean Honestos y a DIVERTIRSE ! </string>
     <string name="IneverDifficultySelect">Elegi el nivel de picantez</string>
-    <string name='easy'> Somos Angelitos</string>
-    <string name='medium'>Somos Humanos</string>
-    <string name='hard'>Lo que venga !</string>
+    <string name='easy'> Angelitos</string>
+    <string name='medium'>Picante !</string>
+    <string name='hard'>Ambas!</string>
 
     //Truth / Dare
     <string name="title_activity_truth_dare_gameplay">truthDareGameplay</string>
