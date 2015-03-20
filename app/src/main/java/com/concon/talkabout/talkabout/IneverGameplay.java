@@ -1,8 +1,7 @@
 package com.concon.talkabout.talkabout;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
