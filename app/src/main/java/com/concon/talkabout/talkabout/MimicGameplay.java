@@ -9,9 +9,14 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.concon.talkabout.talkabout.service.MimicParserService;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
+import org.xmlpull.v1.XmlPullParserException;
+
+import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
@@ -19,7 +24,9 @@ import java.util.Random;
 
 public class MimicGameplay extends Activity {
 
-    private List<String> list = Arrays.asList("MI pobre Angelito","Cazafantasmas","Relatos Salvajes","Peron vive","Nestor One Love");
+    private MimicParserService mimicParserService = new MimicParserService();
+
+    private List<String> list = new ArrayList<>();
     private Random rand = new Random();
 
     @Override
@@ -29,6 +36,14 @@ public class MimicGameplay extends Activity {
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+        try {
+            list = mimicParserService.parseXml(1, this.getResources().openRawResource(R.raw.mimic), "mimic");
+        } catch (XmlPullParserException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 
 
@@ -54,8 +69,7 @@ public class MimicGameplay extends Activity {
         return super.onOptionsItemSelected(item);
     }
 
-    public void getMimic(View v)
-    {
+    public void getMimic(View v) throws IOException, XmlPullParserException {
         TextView phraseField = (TextView) findViewById(R.id.phrase);
         String random = list.get(rand.nextInt(list.size()));
         phraseField.setText(random);

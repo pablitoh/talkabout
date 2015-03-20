@@ -8,6 +8,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.TextView;
 
+import com.concon.talkabout.talkabout.service.INeverParserService;
 import com.concon.talkabout.talkabout.service.ParserService;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -58,7 +59,7 @@ public class IneverGameplay extends Activity {
         list.add("La vanguardia Peronista");
          */
 
-        parserService = new ParserService();
+        parserService = new INeverParserService();
         try {
             list =  parserService.parseXml(difficulty, this.getResources().openRawResource(R.raw.inever), "inever");
         } catch (XmlPullParserException e) {
