@@ -43,8 +43,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/option1"
                 android:textSize="30sp"
-                android:textColor="@color/orange"
-                android:text="Jeniffer Lawrance"
+                android:textColor="@color/black"
+                android:text="You will have to decide which one"
                 android:gravity="center"
                 />
             <com.concon.talkabout.talkabout.elements.TextViewFun
@@ -52,8 +52,8 @@
                 android:id="@+id/option2"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
-                android:textColor="@color/orange"
-                android:text="Cameron Diaz"
+                android:textColor="@color/black"
+                android:text="You Kill, Your Marry"
                 android:gravity="center"
                 />
             <com.concon.talkabout.talkabout.elements.TextViewFun
@@ -61,8 +61,8 @@
                 android:id="@+id/option3"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
-                android:textColor="@color/orange"
-                android:text="Lita de Lazzari"
+                android:textColor="@color/black"
+                android:text="or you F**K"
                 android:gravity="center"
                 />
             </LinearLayout>

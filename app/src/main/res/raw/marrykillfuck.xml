@@ -1,15 +1,123 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed>
     <girls>
-        <entry>Mary</entry>
-        <entry>Maria</entry>
-        <entry>Merry</entry>
-        <entry>Marta</entry>
+        <entry>Miley Cirus</entry>
+        <entry>Selena Gomez</entry>
+        <entry>Rihanna</entry>
+        <entry>Mila Kunis</entry>
+        <entry>Jennifer Lawrence</entry>
+        <entry>Jennifer Love Hewitt</entry>
+        <entry>Kate Upton</entry>
+        <entry>Katy Perry</entry>
+        <entry>Taylor Swift</entry>
+        <entry>Beyonce</entry>
+        <entry>Scarlett Jhonasson</entry>
+        <entry>Olivia Wilde</entry>
+        <entry>Jessica Alba</entry>
+        <entry>Emma Watson</entry>
+        <entry>Emma Stone</entry>
+        <entry>Demi Lovato</entry>
+        <entry>Charlize Theron</entry>
+        <entry>Kaley Cuoco</entry>
+        <entry>Lea Michele</entry>
+        <entry>Sofia Vergara</entry>
+        <entry>Shakira</entry>
+        <entry>Eva Mendes</entry>
+        <entry>Cameron Diaz</entry>
+        <entry>Emilia Clarke</entry>
+        <entry>Ke$ha</entry>
+        <entry>Kat Dennings</entry>
+        <entry>Zooey Deschanel</entry>
+        <entry>Madonna</entry>
+        <entry>Elizabeth Hurley</entry>
+        <entry>Cara Delevingne</entry>
+        <entry>Kate Moss</entry>
+        <entry>Gwyneth Paltrow</entry>
+        <entry>Lindsay Lohan</entry>
+        <entry>Victoria Beckham</entry>
+        <entry>Avril Lavigne</entry>
+        <entry>Britney Spears</entry>
+        <entry>Christina Aguilera</entry>
+        <entry>Amy Lee</entry>
+        <entry>Fergie</entry>
+        <entry>Gwen Stefani</entry>
+        <entry>Jennifer Aniston</entry>
+        <entry>Angelina Jolie</entry>
+        <entry>Jessica Simpson</entry>
+        <entry>Sasha Gray</entry>
+        <entry>Kylie Minogue</entry>
+        <entry>Lady Gaga</entry>
+        <entry>Nicole Kidman</entry>
+        <entry>Jennifer Lopez</entry>
+        <entry>Hayley Williams</entry>
+        <entry>Kim Kardashian</entry>
+        <entry>Natalie Portman</entry>
+        <entry>Jennifer Connelly</entry>
+        <entry>Kirsten Dunst</entry>
+        <entry>Anne Hathaway</entry>
+        <entry>Sandra Bullock</entry>
+        <entry>Courtney Cox</entry>
+        <entry>Megan Fox</entry>
     </girls>
     <boys>
-        <entry>Joe</entry>
-        <entry>Juan</entry>
-        <entry>John</entry>
-        <entry>Jose</entry>
+        <entry>Channing Tatum</entry>
+        <entry>Eric Bana</entry>
+        <entry>James Lafferty</entry>
+        <entry>Wentworth Miller</entry>
+        <entry>Bradley Cooper</entry>
+        <entry>Jude Law</entry>
+        <entry>Leonardo DiCaprio</entry>
+        <entry>Kellan Lutz</entry>
+        <entry>Jake Gyllenhaal</entry>
+        <entry>Ryan Reynolds</entry>
+        <entry>Milo Ventimiglia</entry>
+        <entry>Zac Efron</entry>
+        <entry>Robert Pattinson</entry>
+        <entry>Justin Beiber</entry>
+        <entry>Ashton Kutcher</entry>
+        <entry>Ryan Gosling</entry>
+        <entry>James Marsden</entry>
+        <entry>Johnny Depp</entry>
+        <entry>George Clooney</entry>
+        <entry>Andrew Garfield</entry>
+        <entry>Orlando Bloom</entry>
+        <entry>James Franco</entry>
+        <entry>Taylor Lautner</entry>
+        <entry>Brad Pitt</entry>
+        <entry>Gerard Butler</entry>
+        <entry>Adam Brody</entry>
+        <entry>Liam Hemsworth</entry>
+        <entry>Jason Segel</entry>
+        <entry>Joe Manganiello</entry>
+        <entry>Eminem</entry>
+        <entry>Hugh Laurie</entry>
+        <entry>Hugh Jackman</entry>
+        <entry>Joseph Gordon-Levitt</entry>
+        <entry>Jared Leto</entry>
+        <entry>Daniel Craig</entry>
+        <entry>Travis Barker</entry>
+        <entry>Eric Dane</entry>
+        <entry>David Beckham</entry>
+        <entry>James McAvoy</entry>
+        <entry>Ben McKenzie</entry>
+        <entry>Christian Bale</entry>
+        <entry>Justin Timberlake</entry>
+        <entry>Ben Affleck</entry>
+        <entry>Tom Welling</entry>
+        <entry>Jason Statham</entry>
+        <entry>Gael Garcia Bernal</entry>
+        <entry>Dwayne Johnson (The Rock)</entry>
+        <entry>Will Smith</entry>
+        <entry>Adam Sandler</entry>
+        <entry>Edward Norton</entry>
+        <entry>Chris Evans</entry>
+        <entry>Robert Downey Jr</entry>
+        <entry>Charlie Sheen</entry>
+        <entry>Shemar Moore</entry>
+        <entry>Seth Rogen</entry>
+        <entry>Cristiano Ronaldo</entry>
+        <entry>Lionel Messi</entry>
+        <entry>Enrique Iglesias</entry>
+        <entry>Vin Diesel</entry>
     </boys>
 </feed>
