@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:textColor="@color/black"
-                android:text="You Kill, Your Marry"
+                android:text="You Kill, You Marry"
                 android:gravity="center"
                 />
             <com.concon.talkabout.talkabout.elements.TextViewFun
@@ -64,6 +64,17 @@
                 android:textColor="@color/black"
                 android:text="or you F**K"
                 android:gravity="center"
+                />
+            <Button
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:text="Share"
+                android:textSize="20sp"
+                android:onClick="share"
+                android:drawableTop="@drawable/share_button"
+                android:background="@null"
+                android:textColor="@color/black"
+                android:layout_marginTop="40dp"
                 />
             </LinearLayout>
     <LinearLayout
@@ -79,10 +90,10 @@
             android:layout_weight="1"
             android:id="@+id/manButton"
             android:text="Show me the girls..."
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/hot_button_behavior"
             android:onClick="getPeople"
             android:gravity="center"
-            android:textColor="@color/orange"
+            android:textColor="@color/black"
             android:layout_margin="2dp"
             android:textStyle="bold"
             android:textSize="@dimen/gameplay_button_text"/>
@@ -92,9 +103,9 @@
             android:layout_height="fill_parent"
             android:id="@+id/womanButton"
             android:text="Show me the boys.."
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/hot_button_behavior"
             android:onClick="getPeople"
-            android:textColor="@color/orange"
+            android:textColor="@color/black"
             android:layout_margin="2dp"
             android:textStyle="bold"
             android:textSize="@dimen/gameplay_button_text"/>
@@ -104,13 +115,12 @@
             android:layout_height="fill_parent"
             android:id="@+id/allButton"
             android:text="I don't care.."
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/hot_button_behavior"
             android:onClick="getPeople"
-            android:textColor="@color/orange"
+            android:textColor="@color/black"
             android:layout_margin="2dp"
             android:textStyle="bold"
             android:textSize="@dimen/gameplay_button_text"/>
-
     </LinearLayout>
 
 </RelativeLayout>

@@ -43,7 +43,7 @@
         android:orientation="horizontal"
        >
 
-        <com.concon.talkabout.talkabout.elements.ButtonFun
+        <com.concon.talkabout.talkabout.elements.MenuButtonFun
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -59,7 +59,7 @@
 
             />
 
-        <com.concon.talkabout.talkabout.elements.ButtonFun
+        <com.concon.talkabout.talkabout.elements.MenuButtonFun
             android:background="@drawable/buttonshape"
             android:layout_height="match_parent"
             android:layout_width="0dp"
@@ -80,7 +80,7 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <com.concon.talkabout.talkabout.elements.ButtonFun
+        <com.concon.talkabout.talkabout.elements.MenuButtonFun
 
             android:layout_height="match_parent"
             android:layout_width="0dp"
@@ -95,7 +95,7 @@
             android:textStyle="bold"
             style="?android:borderlessButtonStyle"/>
 
-        <com.concon.talkabout.talkabout.elements.ButtonFun
+        <com.concon.talkabout.talkabout.elements.MenuButtonFun
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"

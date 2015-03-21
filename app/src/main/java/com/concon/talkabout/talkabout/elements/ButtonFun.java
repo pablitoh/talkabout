@@ -14,7 +14,7 @@ import android.widget.Button;
 
         public ButtonFun(Context context) {
             super(context);
-            Typeface font = Typeface.createFromAsset(context.getAssets(), "PWStripes.ttf");
+            Typeface font = Typeface.createFromAsset(context.getAssets(), "minya nouvelle it.ttf");
             this.setTypeface(font);
 
         }
@@ -22,14 +22,14 @@ import android.widget.Button;
         public ButtonFun(Context context, AttributeSet attrs) {
             super(context, attrs);
 
-            Typeface font = Typeface.createFromAsset(context.getAssets(), "PWStripes.ttf");
+            Typeface font = Typeface.createFromAsset(context.getAssets(), "minya nouvelle it.ttf");
             this.setTypeface(font);
 
         }
 
         public ButtonFun(Context context, AttributeSet attrs, int defStyle) {
             super(context, attrs, defStyle);
-            Typeface font = Typeface.createFromAsset(context.getAssets(), "PWStripes.ttf");
+            Typeface font = Typeface.createFromAsset(context.getAssets(), "minya nouvelle it.ttf");
             this.setTypeface(font);
         }
     }

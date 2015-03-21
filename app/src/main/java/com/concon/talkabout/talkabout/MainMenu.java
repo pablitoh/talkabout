@@ -2,21 +2,19 @@ package com.concon.talkabout.talkabout;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.Typeface;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
+import com.facebook.UiLifecycleHelper;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
 
 public class MainMenu extends Activity {
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,14 +54,19 @@ public class MainMenu extends Activity {
                 startActivity(new Intent(MainMenu.this, IneverMainMenu.class));
                 break;
             case R.id.truthDareButton:
-                startActivity(new Intent(MainMenu.this, TruthDareGameplay.class));break;
+                startActivity(new Intent(MainMenu.this, TruthDareGameplay.class));
+                break;
             case R.id.mimicButton:
-                startActivity(new Intent(MainMenu.this, MimicGameplay.class));break;
+                startActivity(new Intent(MainMenu.this, MimicGameplay.class));
+                break;
             case R.id.marryButton:
-                startActivity(new Intent(MainMenu.this, MarryKill.class));break;
-            default:;
+                startActivity(new Intent(MainMenu.this, MarryKill.class));
+                break;
+            default:
+                ;
         }
 
-
     }
+
+
 }
