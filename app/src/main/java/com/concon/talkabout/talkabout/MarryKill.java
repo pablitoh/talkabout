@@ -1,9 +1,10 @@
 package com.concon.talkabout.talkabout;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -11,6 +12,9 @@ import android.widget.TextView;
 
 import com.concon.talkabout.talkabout.service.MarryKillParserService;
 import com.concon.talkabout.talkabout.service.ParserService;
+import com.facebook.AppEventsLogger;
+import com.facebook.UiLifecycleHelper;
+import com.facebook.widget.FacebookDialog;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
@@ -24,6 +28,8 @@ public class MarryKill extends Activity {
 
     List<String> list;
     ParserService parser;
+    private UiLifecycleHelper uiHelper;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +38,10 @@ public class MarryKill extends Activity {
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+
+        uiHelper = new UiLifecycleHelper(this, null);
+        uiHelper.onCreate(savedInstanceState);
+
     }
 
 
@@ -80,5 +90,58 @@ public class MarryKill extends Activity {
         option.setText(list.get(1));
         option = (TextView) findViewById(R.id.option3);
         option.setText(list.get(2));
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        uiHelper.onActivityResult(requestCode, resultCode, data, new FacebookDialog.Callback() {
+            @Override
+            public void onError(FacebookDialog.PendingCall pendingCall, Exception error, Bundle data) {
+                Log.e("Activity", String.format("Error: %s", error.toString()));
+            }
+            @Override
+            public void onComplete(FacebookDialog.PendingCall pendingCall, Bundle data) {
+                Log.i("Activity", "Success!");
+            }
+        });
+    }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        AppEventsLogger.activateApp(this);
+        uiHelper.onResume();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        uiHelper.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        AppEventsLogger.deactivateApp(this);
+        uiHelper.onPause();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        uiHelper.onDestroy();
+    }
+
+    public void shareMKF(View v){
+
+        String option1 = ((TextView) findViewById(R.id.option1)).getText().toString();
+        String option2 = ((TextView) findViewById(R.id.option2)).getText().toString();
+        String option3 = ((TextView) findViewById(R.id.option3)).getText().toString();
+
+        FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(this)
+                .setLink("https://www.facebook.com/PartyGamesMobileApp").setApplicationName("Party Games").setCaption("Party Games is an Android application with 4 classical Party Games:").setDescription("Marry One, Kill One, F**K One:\n\n" + option1 + ",\n" + option2 + ",\n" + option3 + "\n").setPicture(getResources().getString(R.string.mkfPostImage))
+                .build();
+        uiHelper.trackPendingDialogCall(shareDialog.present());
     }
 }

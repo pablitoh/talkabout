@@ -65,7 +65,7 @@
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="fill_parent"
-        android:layout_height="100dp"
+        android:layout_height="120dp"
         android:layout_alignParentBottom="true">
 
         <com.concon.talkabout.talkabout.elements.ButtonFun
@@ -75,13 +75,13 @@
             android:layout_height="fill_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/button_hot_behavior"
             android:gravity="center"
             android:onClick="startActivity"
             android:text="@string/easy"
             android:textSize="@dimen/gameplay_button_text"
             android:padding="5dp"
-            android:textColor="@color/orange" />
+            android:textColor="@color/black" />
 
         <com.concon.talkabout.talkabout.elements.ButtonFun
             android:id="@+id/mediumDifficulty"
@@ -89,13 +89,14 @@
             android:layout_height="fill_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/button_hot_behavior"
             android:onClick="startActivity"
             android:text="@string/medium"
             android:textSize="@dimen/gameplay_button_text"
             android:padding="5dp"
-            android:textColor="@color/orange"
-            android:gravity="center"/>
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textStyle="bold" />
 
         <com.concon.talkabout.talkabout.elements.ButtonFun
             android:id="@+id/hardDifficulty"
@@ -103,10 +104,10 @@
             android:layout_height="fill_parent"
             android:layout_margin="2dp"
             android:layout_weight="1"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/button_hot_behavior"
             android:onClick="startActivity"
             android:text="@string/hard"
-            android:textColor="@color/orange"
+            android:textColor="@color/black"
             android:textSize="@dimen/gameplay_button_text"
             android:padding="5dp"
             android:gravity="center"/>

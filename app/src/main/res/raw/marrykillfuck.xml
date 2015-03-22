@@ -58,6 +58,25 @@
         <entry>Sandra Bullock</entry>
         <entry>Courtney Cox</entry>
         <entry>Megan Fox</entry>
+        <entry>Nicki Minaj</entry>
+        <entry>Penelope Cruz</entry>
+        <entry>Tina Fey</entry>
+        <entry>Keira Knightley</entry>
+        <entry>Halle Berry</entry>
+        <entry>Lisa Kudrow</entry>
+        <entry>Irina Shayk</entry>
+        <entry>Melissa Rauch</entry>
+        <entry>Lana del Rey</entry>
+        <entry>Iggy Azalea</entry>
+        <entry>Sarah Jessica Parker</entry>
+        <entry>Paris Hilton</entry>
+        <entry>Kate Winstlet</entry>
+        <entry>Drew Barrymore</entry>
+        <entry>Tyra Banks</entry>
+        <entry>Uma Thurman</entry>
+        <entry>Janet Jackson</entry>
+        <entry>Salma Hayek</entry>
+        <entry>Lucy Liu</entry>
     </girls>
     <boys>
         <entry>Channing Tatum</entry>
@@ -119,5 +138,20 @@
         <entry>Lionel Messi</entry>
         <entry>Enrique Iglesias</entry>
         <entry>Vin Diesel</entry>
+        <entry>Adam Levine</entry>
+        <entry>Matthew McConaughey</entry>
+        <entry>Colin Farrell</entry>
+        <entry>Alex Turner</entry>
+        <entry>Pharrell Williams</entry>
+        <entry>Rafa Nadal</entry>
+        <entry>Michael Fassbender</entry>
+        <entry>Chris Hemsworth</entry>
+        <entry>Benedict Cumberbatch</entry>
+        <entry>Will Ferrell</entry>
+        <entry>Steve Carrell</entry>
+        <entry>Matt Damon</entry>
+        <entry>Kanye West</entry>
+        <entry>Mike Patton</entry>
+        <entry>Anthony Kiedis</entry>
     </boys>
 </feed>

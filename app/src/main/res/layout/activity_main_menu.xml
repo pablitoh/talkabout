@@ -43,13 +43,13 @@
         android:orientation="horizontal"
        >
 
-        <com.concon.talkabout.talkabout.elements.ButtonFun
+        <com.concon.talkabout.talkabout.elements.MenuButtonFun
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:text="@string/INevertitle"
             android:onClick="startGame"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/button_shape"
             android:textColor="@color/orange"
             android:id="@+id/iNeverButton"
             android:textSize="@dimen/menu_text_size"
@@ -59,12 +59,12 @@
 
             />
 
-        <com.concon.talkabout.talkabout.elements.ButtonFun
-            android:background="@drawable/buttonshape"
+        <com.concon.talkabout.talkabout.elements.MenuButtonFun
+            android:background="@drawable/button_shape"
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:text="Truth / Dare"
+            android:text="@string/truthDareTitle"
             android:onClick="startGame"
             android:textColor="@color/orange"
             android:id="@+id/truthDareButton"
@@ -80,14 +80,14 @@
         android:layout_weight="1"
         android:orientation="horizontal">
 
-        <com.concon.talkabout.talkabout.elements.ButtonFun
+        <com.concon.talkabout.talkabout.elements.MenuButtonFun
 
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:text="Charades"
+            android:text="@string/charadesTitle"
             android:onClick="startGame"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/button_shape"
             android:textColor="@color/orange"
             android:id="@+id/mimicButton"
             android:textSize="@dimen/menu_text_size"
@@ -95,14 +95,14 @@
             android:textStyle="bold"
             style="?android:borderlessButtonStyle"/>
 
-        <com.concon.talkabout.talkabout.elements.ButtonFun
+        <com.concon.talkabout.talkabout.elements.MenuButtonFun
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
-            android:text="Marry-Kill-F**k"
+            android:text="@string/mkfTitle"
             android:onClick="startGame"
             android:textColor="@color/orange"
-            android:background="@drawable/buttonshape"
+            android:background="@drawable/button_shape"
             android:id="@+id/marryButton"
             android:textSize="@dimen/menu_text_size"
             android:layout_margin="5dp"

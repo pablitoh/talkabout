@@ -5,6 +5,7 @@
     <string name="action_settings">Settings</string>
     <string name="nextString">Next</string>
     <string name="banner_ad_unit_id">ca-app-pub-3166954381042414/6936833717</string>
+    <string name="share_text">Compartir</string>
 
     //I Never Strings
 
@@ -12,24 +13,32 @@
     <string name="IneverDescription"> Una frase aparecerá en pantalla, todos los que NO se sientan identificados, DEBERAN TOMAR ! Sean Honestos y a DIVERTIRSE ! </string>
     <string name="IneverDifficultySelect">Elegi el nivel de picantez</string>
     <string name='easy'> Angelitos</string>
-    <string name='medium'>Picante !</string>
+    <string name='medium'>HOT!</string>
     <string name='hard'>Ambas!</string>
 
     //Truth / Dare
+
     <string name="title_activity_truth_dare_gameplay">truthDareGameplay</string>
     <string name="TruthDareDescription">Seras presentado con 4 posibilidades:\n1-Elegis a alguien para que diga la VERDAD\n2- Elegis a alguien para que sufra las CONSECUENCIAS\n3-Pasas!\n4- TOMAS !</string>
     <string name="truth">Elegí a alguien para que diga la VERDAD !!</string>
     <string name="dare">Elegí a alguien para que sufra las CONSECUENCIAS !!</string>
     <string name="drink"> TOMÁS !!</string>
     <string name="dodge"> SAFASTE !!!</string>
+    <string name="truthDareTitle">Verdad / Consecuencia</string>
 
     //Marry / Kill
+
     <string name="title_activity_marry_kill">MarryKill</string>
     <string name="marryKillTitle">Marry-Kill-F**k</string>
+    <string name="mkfTitle">Cásate, Mata, Acuestate</string>
 
     //Charades Strings
     <string name="mimicTitle">Digalo con Mimica</string>
     <string name="title_activity_mimic_gameplay">Digalo con Mimica</string>
-    <string name="mimicDescription">You have to "act out" a movie title without speaking, while the other members of your team try to guess which movie it is</string>
+    <string name="mimicDescription">Sin decir una palabra, actuá el nombre de la pelicula que te toco.. Si tu equipo no la adivina. TOMAN. Si tu equipo la adivina, toma el otro equipo!!!\n A Divertirse!!</string>
+    <string name="charadesTitle">Digalo con Mimica</string>
+
+
+
 
 </resources>
