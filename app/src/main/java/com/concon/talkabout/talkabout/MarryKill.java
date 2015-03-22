@@ -140,7 +140,7 @@ public class MarryKill extends Activity {
         String option3 = ((TextView) findViewById(R.id.option3)).getText().toString();
 
         FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(this)
-                .setLink("https://www.facebook.com/PartyGamesMobileApp").setApplicationName("Party Games").setCaption("Party Games is an Android application with 4 classical Party Games:").setDescription("Marry One, Kill One, F**K One:\n" + option1 + ",\n" + option2 + ",\n" + option3 + ",\n").setPicture(getResources().getString(R.string.IneverPostImage))
+                .setLink("https://www.facebook.com/PartyGamesMobileApp").setApplicationName("Party Games").setCaption("Party Games is an Android application with 4 classical Party Games:").setDescription("Marry One, Kill One, F**K One:\n\n" + option1 + ",\n" + option2 + ",\n" + option3 + "\n").setPicture(getResources().getString(R.string.IneverPostImage))
                 .build();
         uiHelper.trackPendingDialogCall(shareDialog.present());
     }
