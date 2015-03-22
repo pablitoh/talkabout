@@ -101,7 +101,6 @@ public class MarryKill extends Activity {
             public void onError(FacebookDialog.PendingCall pendingCall, Exception error, Bundle data) {
                 Log.e("Activity", String.format("Error: %s", error.toString()));
             }
-
             @Override
             public void onComplete(FacebookDialog.PendingCall pendingCall, Bundle data) {
                 Log.i("Activity", "Success!");
@@ -134,14 +133,14 @@ public class MarryKill extends Activity {
         uiHelper.onDestroy();
     }
 
-    public void share(View v){
+    public void shareMKF(View v){
 
         String option1 = ((TextView) findViewById(R.id.option1)).getText().toString();
         String option2 = ((TextView) findViewById(R.id.option2)).getText().toString();
         String option3 = ((TextView) findViewById(R.id.option3)).getText().toString();
 
         FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(this)
-                .setLink("https://developers.facebook.com/android").setApplicationName("Party Games").setDescription("Marry One, Kill One, F**K One:\n" + option1 + "\n" + option2 + "\n" + option3 + "\n").setCaption("Test Caption")
+                .setLink("https://www.facebook.com/PartyGamesMobileApp").setApplicationName("Party Games").setCaption("Party Games is an Android application with 4 classical Party Games:").setDescription("Marry One, Kill One, F**K One:\n" + option1 + ",\n" + option2 + ",\n" + option3 + ",\n").setPicture(getResources().getString(R.string.IneverPostImage))
                 .build();
         uiHelper.trackPendingDialogCall(shareDialog.present());
     }

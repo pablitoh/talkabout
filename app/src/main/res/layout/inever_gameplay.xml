@@ -44,6 +44,18 @@
         android:textColor="@drawable/text"
         android:textSize="40sp" />
 
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/share_text"
+        android:textSize="15sp"
+        android:onClick="shareInever"
+        android:drawableTop="@drawable/button_share"
+        android:background="@null"
+        android:textColor="@color/black"
+        android:layout_alignBottom="@+id/phrase"
+        android:layout_centerHorizontal="true" />
+
     <com.concon.talkabout.talkabout.elements.TextViewFun
         android:id="@+id/indicatorContainer"
         android:layout_width="fill_parent"

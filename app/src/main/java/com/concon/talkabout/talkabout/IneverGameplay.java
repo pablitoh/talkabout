@@ -1,22 +1,23 @@
 package com.concon.talkabout.talkabout;
 
 import android.app.Activity;
-import android.graphics.Typeface;
+import android.content.Intent;
 import android.os.Bundle;
-import android.view.MotionEvent;
+import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
 import com.concon.talkabout.talkabout.service.INeverParserService;
 import com.concon.talkabout.talkabout.service.ParserService;
+import com.facebook.AppEventsLogger;
+import com.facebook.UiLifecycleHelper;
+import com.facebook.widget.FacebookDialog;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-
 
 import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -25,8 +26,7 @@ import java.util.Random;
 public class IneverGameplay extends Activity {
 
     private Integer difficulty;
-    float x1,x2;
-    float y1, y2;
+    private UiLifecycleHelper uiHelper;
 
     /**
      * To Be replaced by XML Parser
@@ -43,6 +43,8 @@ public class IneverGameplay extends Activity {
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+        uiHelper = new UiLifecycleHelper(this, null);
+        uiHelper.onCreate(savedInstanceState);
 
         Bundle b = getIntent().getExtras();
 
@@ -76,32 +78,56 @@ public class IneverGameplay extends Activity {
 
     }
 
-    public boolean onTouchEvent(MotionEvent touchevent)
-    {
-            switch (touchevent.getAction())
-            {
-                case MotionEvent.ACTION_DOWN:
-                {
-                    x1 = touchevent.getX();
-                    y1 = touchevent.getY();
-                    break;
-                }
-                case MotionEvent.ACTION_UP:
-                {
-                    x2 = touchevent.getX();
-                    y2 = touchevent.getY();
-                    /*
-                    Distancia de swipe
-                     */
-                    if ((x1 - x2) > 250)
-                    {
-                        TextView phraseField = (TextView) findViewById(R.id.phrase);
 
-                        phraseField.setText(getRandomFromList(list));
-                    }
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
 
-                }
+        uiHelper.onActivityResult(requestCode, resultCode, data, new FacebookDialog.Callback() {
+            @Override
+            public void onError(FacebookDialog.PendingCall pendingCall, Exception error, Bundle data) {
+                Log.e("Activity", String.format("Error: %s", error.toString()));
             }
-            return false;
-        }
+
+            @Override
+            public void onComplete(FacebookDialog.PendingCall pendingCall, Bundle data) {
+                Log.i("Activity", "Success!");
+            }
+        });
     }
+    @Override
+    protected void onResume() {
+        super.onResume();
+        AppEventsLogger.activateApp(this);
+        uiHelper.onResume();
+    }
+
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        uiHelper.onSaveInstanceState(outState);
+    }
+
+    @Override
+    public void onPause() {
+        super.onPause();
+        AppEventsLogger.deactivateApp(this);
+        uiHelper.onPause();
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        uiHelper.onDestroy();
+    }
+    public void shareInever(View v){
+
+        String option1 = ((TextView) findViewById(R.id.phrase)).getText().toString();
+
+        FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(this)
+                .setLink("https://www.facebook.com/PartyGamesMobileApp").setApplicationName("Party Games").setCaption("Party Games is an Android application with 4 classical Party Games:").setDescription(option1).setPicture(getResources().getString(R.string.IneverPostImage))
+                .build();
+        uiHelper.trackPendingDialogCall(shareDialog.present());
+    }
+}
+
