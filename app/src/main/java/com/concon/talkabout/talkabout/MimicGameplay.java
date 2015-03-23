@@ -1,8 +1,8 @@
 package com.concon.talkabout.talkabout;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
+import android.media.MediaPlayer;
+import android.os.CountDownTimer;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.concon.talkabout.talkabout.service.MimicParserService;
+import com.concon.talkabout.talkabout.utils.TimeHelper;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
@@ -17,7 +18,6 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.Random;
 
@@ -28,6 +28,9 @@ public class MimicGameplay extends Activity {
 
     private List<String> list = new ArrayList<>();
     private Random rand = new Random();
+    private CountDown timerCount ;
+    private MediaPlayer mediaPlayer = new MediaPlayer();
+    private final int CharadesTime = 300 ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -56,12 +59,7 @@ public class MimicGameplay extends Activity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
@@ -71,7 +69,91 @@ public class MimicGameplay extends Activity {
 
     public void getMimic(View v) throws IOException, XmlPullParserException {
         TextView phraseField = (TextView) findViewById(R.id.phrase);
+        phraseField.setTextColor(getResources().getColor(R.color.black));
         String random = list.get(rand.nextInt(list.size()));
         phraseField.setText(random);
+
+        if(timerCount!=null)
+        {
+            timerCount.cancel();
+        }
+        timerCount = new CountDown(CharadesTime * 1000, 1000);
+        timerCount.start();
+    }
+
+    public class CountDown extends CountDownTimer {
+        public CountDown(long millisInFuture, long countDownInterval) {
+            super(millisInFuture, countDownInterval);
+        }
+
+        @Override
+        public void onFinish() {
+            mediaPlayer.stop();
+            TextView tv = (TextView) findViewById(R.id.phrase);
+            tv.setText("TIME-OUT!!!\n Time to DRINK !!");
+            tv.setTextColor(getResources().getColor(R.color.red));
+
+            TextView timer = (TextView) findViewById(R.id.timer);
+            timer.setText("");
+
+            mediaPlayer = MediaPlayer.create(getApplicationContext(),R.raw.wrong);
+            try {
+
+                mediaPlayer.prepare();
+                mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+                    @Override
+                    public void onCompletion(MediaPlayer mp)
+                    {
+                        mp.release();
+                    }
+                });
+
+
+            } catch (IllegalArgumentException e) {
+                e.printStackTrace();
+            } catch (SecurityException e) {
+                e.printStackTrace();
+            } catch (IllegalStateException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            mediaPlayer.start();
+
+        }
+
+        @Override
+        public void onTick(long millisUntilFinished) {
+            TextView timer = (TextView) findViewById(R.id.timer);
+            timer.setText(TimeHelper.convertMilisToTimeFormat(millisUntilFinished));
+
+            if(millisUntilFinished < 10000)
+            {
+                mediaPlayer = MediaPlayer.create(getApplicationContext(),R.raw.tick);
+                try {
+
+                    mediaPlayer.prepare();
+                    mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
+
+                        @Override
+                        public void onCompletion(MediaPlayer mp)
+                        {
+                            mp.release();
+                        }
+                    });
+
+                } catch (IllegalArgumentException e) {
+                    e.printStackTrace();
+                } catch (SecurityException e) {
+                    e.printStackTrace();
+                } catch (IllegalStateException e) {
+                    e.printStackTrace();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+                mediaPlayer.start();
+            }
+        }
     }
 }

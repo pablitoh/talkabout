@@ -15,6 +15,7 @@
     <string name='easy'> Angelitos</string>
     <string name='medium'>HOT!</string>
     <string name='hard'>Ambas!</string>
+    <string name="IneverPostImage">http://scontent-gru.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/11081467_831485430234404_7159253971600731338_n.png?oh=693feffdfa3a5dd0fe3e1a6f09a8aa39&amp;oe=55AC4C31</string>
 
     //Truth / Dare
 
@@ -31,14 +32,13 @@
     <string name="title_activity_marry_kill">MarryKill</string>
     <string name="marryKillTitle">Marry-Kill-F**k</string>
     <string name="mkfTitle">Cásate, Mata, Acuestate</string>
+    <string name="mkfPostImage">http://scontent-gru.xx.fbcdn.net/hphotos-xat1/v/t1.0-9/10423785_831485426901071_6961001977131207866_n.png?oh=67f2b3e78d974664f41183c4ef209cb9&amp;oe=5570BE4C</string>
+
 
     //Charades Strings
     <string name="mimicTitle">Digalo con Mimica</string>
     <string name="title_activity_mimic_gameplay">Digalo con Mimica</string>
     <string name="mimicDescription">Sin decir una palabra, actuá el nombre de la pelicula que te toco.. Si tu equipo no la adivina. TOMAN. Si tu equipo la adivina, toma el otro equipo!!!\n A Divertirse!!</string>
     <string name="charadesTitle">Digalo con Mimica</string>
-
-
-
 
 </resources>
