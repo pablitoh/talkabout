@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.media.MediaPlayer;
 import android.os.CountDownTimer;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -30,7 +31,7 @@ public class MimicGameplay extends Activity {
     private Random rand = new Random();
     private CountDown timerCount ;
     private MediaPlayer mediaPlayer = new MediaPlayer();
-    private final int CharadesTime = 300 ;
+    private final int CharadesTime = 30 ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,23 @@ public class MimicGameplay extends Activity {
 
     }
 
+
+    @Override
+    protected void onUserLeaveHint() {
+
+        if(timerCount!=null){
+            timerCount.cancel();
+        }
+        super.onUserLeaveHint();
+    }
+
+    @Override
+    public void onBackPressed() {
+        if(timerCount!=null){
+            timerCount.cancel();
+        }
+        super.onBackPressed();
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
