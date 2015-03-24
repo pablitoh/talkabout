@@ -38,8 +38,24 @@
         android:fillViewport="true"
         android:scrollbars="vertical"
         >
-
+        <com.concon.talkabout.talkabout.elements.TextViewFun
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center"
+            android:text="@string/mimicDescription"
+            android:id="@+id/phrase"
+            android:padding="10dp"
+            android:clickable="true"
+            android:onClick="getMimic"
+            android:textColor="@drawable/text"
+            android:textSize="40sp"
+            android:layout_below="@+id/textView"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_above="@+id/timer" />
     </ScrollView>
+
+
     <com.concon.talkabout.talkabout.elements.TextViewFun
         android:layout_width="fill_parent"
         android:layout_height="60dp"
@@ -61,22 +77,6 @@
         android:id="@+id/indicatorContainer"
         android:clickable="true"
         android:onClick="getMimic"/>
-
-    <com.concon.talkabout.talkabout.elements.TextViewFun
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:gravity="center"
-        android:text="@string/mimicDescription"
-        android:id="@+id/phrase"
-        android:padding="10dp"
-        android:clickable="true"
-        android:onClick="getMimic"
-        android:textColor="@drawable/text"
-        android:textSize="40sp"
-        android:layout_below="@+id/textView"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_above="@+id/timer" />
 
 
 </RelativeLayout>

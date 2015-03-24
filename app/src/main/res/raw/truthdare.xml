@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed>
     <truthDare>
-        <entry>Pick someone to tell the\nTRUTH!!</entry>
-        <entry>Pick someone to tell suffer the\nCONSEQUENCES!!\n(or Drink x2 )</entry>
+        <entry>Pick someone to tell the\nTRUTH!! (or Drink x2)</entry>
+        <entry>Pick someone to tell suffer the\nCONSEQUENCES!!\n(or Drink x2)</entry>
         <entry>Pick someone to:\n DRINK!</entry>
-        <entry>The person to your left:\n DRINKS</entry>
-        <entry>The person to your right:\n DRINKS</entry>
         <entry>The person who give you the device:\n DRINKS!</entry>
         <entry>You dodge this one.\n Handle the device to someone else!!</entry>
+        <entry>The person to your LEFT:\n DRINKS</entry>
+        <entry>The person to your RIGHT:\n DRINKS</entry>
+        <entry>The person to your LEFT:\n Tells the TRUTH (or Drink x2)</entry>
+        <entry>The person to your RIGHT:\n Tells the TRUTH (or Drink x2)</entry>
+        <entry>The person to your LEFT:\n suffer the\nCONSEQUENCES!!\n(or Drink x2)</entry>
+        <entry>The person to your RIGHT:\n suffer the\nCONSEQUENCES!!\n(or Drink x2)</entry>
     </truthDare>
 </feed>

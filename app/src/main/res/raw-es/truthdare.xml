@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed>
     <truthDare>
-        <entry>Elegí a alguien para que diga la VERDAD !!</entry>
-        <entry>Elegí a alguien para que sufra las CONSECUENCIAS !! (o Toma x2 )</entry>
+        <entry>Elegí a alguien para que diga la\n VERDAD !!</entry>
+        <entry>Elegí a alguien para que sufra las\n CONSECUENCIAS !!\n (o Toma x2 )</entry>
         <entry>Elegís quien toma!!</entry>
-        <entry>Toma el de la izquierda!!</entry>
-        <entry>Toma el de la Derecha!!</entry>
+        <entry>Toma la persona de la IZQUIERDA!!</entry>
+        <entry>Toma la persona de la DERECHA!!</entry>
         <entry>Toma la persona que te pasó el control!!!</entry>
         <entry>Pasas y elegis a quien le pasas el control!!!</entry>
+        <entry>El de la DERECHA dice la\n verdad\n(o Toma x2 )</entry>
+        <entry>El de la IZQUIERDA dice la\n verdad\n (o Toma x2 )</entry>
+        <entry>El de la DERECHA sufre las\n CONSECUENCIAS !!\n (o Toma x2 )</entry>
+        <entry>El de la IZQUIERDA sufre las\n CONSECUENCIAS !!\n (o Toma x2 )</entry>
     </truthDare>
 </feed>
