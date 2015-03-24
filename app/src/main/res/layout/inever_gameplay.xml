@@ -39,7 +39,7 @@
         android:clickable="true"
         android:onClick="changeTopic"
         android:padding="10dp"
-        android:text="Get Ready...sssssssssssssssssssssssss"
+        android:text="Get Ready..."
         android:textColor="@drawable/text"
         android:textSize="40sp"
         android:layout_above="@+id/button" />
