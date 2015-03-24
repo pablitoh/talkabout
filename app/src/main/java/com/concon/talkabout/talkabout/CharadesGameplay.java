@@ -10,6 +10,7 @@ import android.view.View;
 import android.widget.TextView;
 
 import com.concon.talkabout.talkabout.service.SingleFeedParserService;
+import com.concon.talkabout.talkabout.utils.RandomHelper;
 import com.concon.talkabout.talkabout.utils.TimeHelper;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -25,9 +26,7 @@ import java.util.Random;
 public class CharadesGameplay extends Activity {
 
     private SingleFeedParserService singleFeedParserService = new SingleFeedParserService();
-
     private List<String> list = new ArrayList<>();
-    private Random rand = new Random();
     private CountDown timerCount ;
     private MediaPlayer mediaPlayer = new MediaPlayer();
     private final int CharadesTime = 300 ;
@@ -87,8 +86,8 @@ public class CharadesGameplay extends Activity {
     public void getMimic(View v) throws IOException, XmlPullParserException {
         TextView phraseField = (TextView) findViewById(R.id.phrase);
         phraseField.setTextColor(getResources().getColor(R.color.black));
-        String random = list.get(rand.nextInt(list.size()));
-        phraseField.setText(random);
+
+        phraseField.setText(RandomHelper.getNextRandomString(list));
 
         if(timerCount!=null)
         {
