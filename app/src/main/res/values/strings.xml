@@ -6,6 +6,8 @@
     <string name="nextString">Next</string>
     <string name="banner_ad_unit_id">ca-app-pub-3166954381042414/6936833717</string>
     <string name="app_id">739790739451983</string>
+    <string name="share_text">Share</string>
+    <string name="noMoreOptions">No more options available at the moment, please restart the game to start over!!</string>
    //I Never Strings
 
     <string name="INevertitle">Never have I ever.. </string>
@@ -34,7 +36,6 @@
     <string name="mimicTitle">Charades</string>
     <string name="title_activity_mimic_gameplay">MimicGameplay</string>
     <string name="mimicDescription">You have to "act out" a movie title without speaking, while the other members of your team try to guess which movie it is</string>
-    <string name="share_text">Share</string>
     <string name="mkfTitle">Marry,Kill,F**k</string>
     <string name="charadesTitle">Charades</string>
     <string name="truthDareTitle">Truth / Dare</string>

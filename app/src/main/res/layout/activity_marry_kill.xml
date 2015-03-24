@@ -68,7 +68,7 @@
             <Button
                 android:layout_width="100dp"
                 android:layout_height="wrap_content"
-                android:text="Share"
+                android:text="@string/share_text"
                 android:textSize="20sp"
                 android:onClick="shareMKF"
                 android:drawableTop="@drawable/button_share"

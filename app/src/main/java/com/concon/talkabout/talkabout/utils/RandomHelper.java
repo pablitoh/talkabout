@@ -1,5 +1,9 @@
 package com.concon.talkabout.talkabout.utils;
 
+import android.content.Context;
+
+import com.concon.talkabout.talkabout.R;
+
 import java.util.List;
 import java.util.Random;
 
@@ -8,7 +12,7 @@ import java.util.Random;
  */
 public class RandomHelper {
 
-    public static String getNextRandomString(List<String> list)
+    public static String getNextRandomString(List<String> list,Context context)
     {
         Random rand = new Random();
         int listSize = list.size();
@@ -21,7 +25,7 @@ public class RandomHelper {
         }
         else
         {
-            return "No more options available at the moment, please restart the game to start over!!";
+            return context.getResources().getString(R.string.noMoreOptions);
         }
 
     }
