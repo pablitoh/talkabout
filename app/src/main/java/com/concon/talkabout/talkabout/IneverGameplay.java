@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.concon.talkabout.talkabout.service.INeverParserService;
 import com.concon.talkabout.talkabout.service.ParserService;
+import com.concon.talkabout.talkabout.utils.RandomHelper;
 import com.facebook.AppEventsLogger;
 import com.facebook.UiLifecycleHelper;
 import com.facebook.widget.FacebookDialog;
@@ -61,19 +62,14 @@ public class IneverGameplay extends Activity {
 
     }
 
-    private String getRandomFromList( List<String> list)
+    private String getRandomFromList(List<String> list)
     {
         TextView phraseField = (TextView) findViewById(R.id.phrase);
-        Random rand = new Random();
-        String random = list.get(rand.nextInt(list.size()));
-        while (random.equalsIgnoreCase(phraseField.getText().toString())) {
-            random = list.get(rand.nextInt(list.size()));
-        }
-        return random;
+        return RandomHelper.getNextRandomString(list);
     }
     public void changeTopic(View v) {
         TextView phraseField = (TextView) findViewById(R.id.phrase);
-
+        System.out.println("SIZE: " + list.size());
         phraseField.setText(getRandomFromList(list));
 
     }
