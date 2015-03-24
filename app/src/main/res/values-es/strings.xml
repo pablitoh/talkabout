@@ -15,17 +15,13 @@
     <string name='easy'> Angelitos</string>
     <string name='medium'>HOT!</string>
     <string name='hard'>Ambas!</string>
-    <string name="IneverPostImage">http://scontent-gru.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/11081467_831485430234404_7159253971600731338_n.png?oh=693feffdfa3a5dd0fe3e1a6f09a8aa39&amp;oe=55AC4C31</string>
+    <string name="IneverPostImage">http://scontent-gru.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/11081125_831938256855788_5590356093113912653_n.png?oh=e0668f6af106c9749836903e1367dc1b&amp;oe=55B756F3</string>
 
     //Truth / Dare
 
     <string name="title_activity_truth_dare_gameplay">truthDareGameplay</string>
-    <string name="TruthDareDescription">Seras presentado con 4 posibilidades:\n1-Elegis a alguien para que diga la VERDAD\n2- Elegis a alguien para que sufra las CONSECUENCIAS\n3-Pasas!\n4- TOMAS !</string>
-    <string name="truth">Elegí a alguien para que diga la VERDAD !!</string>
-    <string name="dare">Elegí a alguien para que sufra las CONSECUENCIAS !!</string>
-    <string name="drink"> TOMÁS !!</string>
-    <string name="dodge"> SAFASTE !!!</string>
-    <string name="truthDareTitle">Verdad / Consecuencia</string>
+    <string name="TruthDareDescription">Instrucciones:\n Seras presentado con varias opciones, la victima será el proximo que tenga el control!</string>
+
 
     //Marry / Kill
 

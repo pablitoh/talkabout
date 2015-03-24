@@ -15,6 +15,9 @@ import java.util.List;
 public class INeverParserService extends ParserService {
 
     public void parseInnerCustom(XmlPullParser parser, int talkLevel, String tag, List<String> data) throws XmlPullParserException, IOException {
+
+
+
         for (int i = 0; i < talkLevel; i++) {
             if(i > 0) {
                 parser.nextTag();

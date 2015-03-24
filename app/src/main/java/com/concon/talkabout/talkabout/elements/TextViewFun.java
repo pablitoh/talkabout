@@ -28,7 +28,7 @@ public class TextViewFun extends TextView {
 
     private void setFont(Context context,TextView text)
     {
-        Typeface font = Typeface.createFromAsset(context.getAssets(), "minya nouvelle it.ttf");
+        Typeface font = Typeface.createFromAsset(context.getAssets(), "Action_Man.ttf");
         text.setTypeface(font);
     }
 }
