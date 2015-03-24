@@ -7,7 +7,6 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 
-import com.facebook.UiLifecycleHelper;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
@@ -57,10 +56,10 @@ public class MainMenu extends Activity {
                 startActivity(new Intent(MainMenu.this, TruthDareGameplay.class));
                 break;
             case R.id.mimicButton:
-                startActivity(new Intent(MainMenu.this, MimicGameplay.class));
+                startActivity(new Intent(MainMenu.this, CharadesGameplay.class));
                 break;
             case R.id.marryButton:
-                startActivity(new Intent(MainMenu.this, MarryKill.class));
+                startActivity(new Intent(MainMenu.this, MarryKillGameplay.class));
                 break;
             default:
                 ;

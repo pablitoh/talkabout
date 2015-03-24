@@ -18,7 +18,7 @@
 
     //Truth / Dare
     <string name="title_activity_truth_dare_gameplay">truthDareGameplay</string>
-    <string name="TruthDareDescription">You will be faced with 4 different options:\n1-Choose someone to tell the TRUTH !\n2-Choose someone to face the DARE!\n3- DRINK !!!\n4-DODGE !!</string>
+    <string name="TruthDareDescription">Instructions:\n You will be faced with different options, once you choose someone you'll have to handle the device to that person!!\n HAVE FUN!</string>
     <string name="truth"> Choose someone to tell the TRUTH !</string>
     <string name="dare">Choose someone to face the DARE!</string>
     <string name="drink"> DRINK !!!</string>

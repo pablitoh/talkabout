@@ -1,23 +1,23 @@
 package com.concon.talkabout.talkabout;
 
 import android.app.Activity;
-import android.support.v7.app.ActionBar;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.concon.talkabout.talkabout.service.SingleFeedParserService;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
-import java.util.Arrays;
+import org.xmlpull.v1.XmlPullParserException;
+
+import java.io.IOException;
 import java.util.List;
 import java.util.Random;
 
 
 public class TruthDareGameplay extends Activity {
+    private SingleFeedParserService singleFeedParserService = new SingleFeedParserService();
 
     private List<String> list;
     private Random rand = new Random();
@@ -25,8 +25,15 @@ public class TruthDareGameplay extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        list = Arrays.asList(getString(R.string.truth), getString(R.string.dare), getString(R.string.dodge), getString(R.string.drink));
         setContentView(R.layout.activity_truth_dare_gameplay);
+        try {
+
+            list = singleFeedParserService.parseXml(1, this.getResources().openRawResource(R.raw.truthdare), "truthDare");
+        } catch (XmlPullParserException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);

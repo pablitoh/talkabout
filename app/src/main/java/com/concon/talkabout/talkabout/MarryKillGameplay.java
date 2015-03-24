@@ -24,7 +24,7 @@ import java.io.IOException;
 import java.util.List;
 
 
-public class MarryKill extends Activity {
+public class MarryKillGameplay extends Activity {
 
     List<String> list;
     ParserService parser;

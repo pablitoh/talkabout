@@ -34,15 +34,15 @@
         android:id="@+id/phrase"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:layout_above="@+id/indicatorContainer"
         android:layout_below="@+id/textView"
         android:gravity="center"
         android:clickable="true"
         android:onClick="changeTopic"
         android:padding="10dp"
-        android:text="Get Ready..."
+        android:text="Get Ready...sssssssssssssssssssssssss"
         android:textColor="@drawable/text"
-        android:textSize="40sp" />
+        android:textSize="40sp"
+        android:layout_above="@+id/button" />
 
     <Button
         android:layout_width="100dp"
@@ -53,8 +53,9 @@
         android:drawableTop="@drawable/button_share"
         android:background="@null"
         android:textColor="@color/black"
-        android:layout_alignBottom="@+id/phrase"
-        android:layout_centerHorizontal="true" />
+        android:layout_above="@+id/indicatorContainer"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/button" />
 
     <com.concon.talkabout.talkabout.elements.TextViewFun
         android:id="@+id/indicatorContainer"

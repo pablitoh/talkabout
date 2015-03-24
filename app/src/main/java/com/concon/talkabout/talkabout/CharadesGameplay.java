@@ -4,13 +4,12 @@ import android.app.Activity;
 import android.media.MediaPlayer;
 import android.os.CountDownTimer;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.concon.talkabout.talkabout.service.MimicParserService;
+import com.concon.talkabout.talkabout.service.SingleFeedParserService;
 import com.concon.talkabout.talkabout.utils.TimeHelper;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -23,15 +22,15 @@ import java.util.List;
 import java.util.Random;
 
 
-public class MimicGameplay extends Activity {
+public class CharadesGameplay extends Activity {
 
-    private MimicParserService mimicParserService = new MimicParserService();
+    private SingleFeedParserService singleFeedParserService = new SingleFeedParserService();
 
     private List<String> list = new ArrayList<>();
     private Random rand = new Random();
     private CountDown timerCount ;
     private MediaPlayer mediaPlayer = new MediaPlayer();
-    private final int CharadesTime = 30 ;
+    private final int CharadesTime = 300 ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,7 +40,7 @@ public class MimicGameplay extends Activity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
         try {
-            list = mimicParserService.parseXml(1, this.getResources().openRawResource(R.raw.mimic), "mimic");
+            list = singleFeedParserService.parseXml(1, this.getResources().openRawResource(R.raw.mimic), "mimic");
         } catch (XmlPullParserException e) {
             e.printStackTrace();
         } catch (IOException e) {

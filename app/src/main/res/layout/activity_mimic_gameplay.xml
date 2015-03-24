@@ -3,7 +3,7 @@
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.concon.talkabout.talkabout.MimicGameplay"
+    tools:context="com.concon.talkabout.talkabout.CharadesGameplay"
     android:background="@drawable/background">
 
     <com.google.android.gms.ads.AdView

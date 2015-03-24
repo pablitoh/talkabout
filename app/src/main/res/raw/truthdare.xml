@@ -1,39 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed>
-    <truth1>
-        <entry>Bleach</entry>
-        <entry>One Piece</entry>
-        <entry>Death note</entry>
-        <entry>Elfen lied</entry>
-    </truth1>
-    <truth2>
-        <entry>Los Halcones Galacticos</entry>
-        <entry>Tom y Jerry</entry>
-        <entry>Los Simpsons</entry>
-        <entry>Naruto</entry>
-    </truth2>
-    <truth3>
-        <entry>Dragon Ball Z</entry>
-        <entry>Pokemon</entry>
-        <entry>Digimon</entry>
-        <entry>Thundercats</entry>
-    </truth3>
-    <dare1>
-        <entry>Bleach</entry>
-        <entry>One Piece</entry>
-        <entry>Death note</entry>
-        <entry>Elfen lied</entry>
-    </dare1>
-    <dare2>
-        <entry>Los Halcones Galacticos</entry>
-        <entry>Tom y Jerry</entry>
-        <entry>Los Simpsons</entry>
-        <entry>Naruto</entry>
-    </dare2>
-    <dare3>
-        <entry>Dragon Ball Z</entry>
-        <entry>Pokemon</entry>
-        <entry>Digimon</entry>
-        <entry>Thundercats</entry>
-    </dare3>
+    <truthDare>
+        <entry>Pick someone to tell the\nTRUTH!!</entry>
+        <entry>Pick someone to tell suffer the\nCONSEQUENCES!!\n(or Drink x2 )</entry>
+        <entry>Pick someone to:\n DRINK!</entry>
+        <entry>The person to your left:\n DRINKS</entry>
+        <entry>The person to your right:\n DRINKS</entry>
+        <entry>The person who give you the device:\n DRINKS!</entry>
+        <entry>You dodge this one.\n Handle the device to someone else!!</entry>
+    </truthDare>
 </feed>

@@ -52,12 +52,12 @@
 >
         </activity>
         <activity
-            android:name=".MimicGameplay"
+            android:name=".CharadesGameplay"
             android:label="@string/title_activity_mimic_gameplay"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".MarryKill"
+            android:name=".MarryKillGameplay"
             android:label="@string/title_activity_marry_kill" >
         </activity>
     </application>
