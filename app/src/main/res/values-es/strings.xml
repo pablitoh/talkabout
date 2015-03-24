@@ -3,9 +3,10 @@
     <string name="title_activity_main_menu">Juegos de Fiesta</string>
 
     <string name="action_settings">Settings</string>
-    <string name="nextString">Next</string>
+    <string name="nextString">Siguiente</string>
     <string name="banner_ad_unit_id">ca-app-pub-3166954381042414/6936833717</string>
     <string name="share_text">Compartir</string>
+    <string name="noMoreOptions">No hay mas opciones disponibles, vuelva al menu y empieze de nuevo!!!</string>
 
     //I Never Strings
 

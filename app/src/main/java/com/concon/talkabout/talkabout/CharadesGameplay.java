@@ -87,7 +87,7 @@ public class CharadesGameplay extends Activity {
         TextView phraseField = (TextView) findViewById(R.id.phrase);
         phraseField.setTextColor(getResources().getColor(R.color.black));
 
-        phraseField.setText(RandomHelper.getNextRandomString(list));
+        phraseField.setText(RandomHelper.getNextRandomString(list,getApplicationContext()));
 
         if(timerCount!=null)
         {

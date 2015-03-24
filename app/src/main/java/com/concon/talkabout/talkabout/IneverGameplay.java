@@ -65,7 +65,7 @@ public class IneverGameplay extends Activity {
     private String getRandomFromList(List<String> list)
     {
         TextView phraseField = (TextView) findViewById(R.id.phrase);
-        return RandomHelper.getNextRandomString(list);
+        return RandomHelper.getNextRandomString(list,getApplicationContext());
     }
     public void changeTopic(View v) {
         TextView phraseField = (TextView) findViewById(R.id.phrase);
