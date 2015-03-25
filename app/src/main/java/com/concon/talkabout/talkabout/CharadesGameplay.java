@@ -9,6 +9,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.concon.talkabout.talkabout.ads.CustomInterstitial;
 import com.concon.talkabout.talkabout.service.SingleFeedParserService;
 import com.concon.talkabout.talkabout.utils.RandomHelper;
 import com.concon.talkabout.talkabout.utils.TimeHelper;
@@ -29,6 +30,7 @@ public class CharadesGameplay extends Activity {
     private List<String> list = new ArrayList<>();
     private CountDown timerCount ;
     private MediaPlayer mediaPlayer = new MediaPlayer();
+    private CustomInterstitial ad;
     private final int CharadesTime = 300 ;
 
     @Override
@@ -37,6 +39,7 @@ public class CharadesGameplay extends Activity {
         setContentView(R.layout.activity_mimic_gameplay);
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
+        ad = new CustomInterstitial(this);
         mAdView.loadAd(adRequest);
         try {
             list = singleFeedParserService.parseXml(1, this.getResources().openRawResource(R.raw.mimic), "mimic");
@@ -60,34 +63,18 @@ public class CharadesGameplay extends Activity {
 
     @Override
     public void onBackPressed() {
+        ad.showIfAvailable();
         if(timerCount!=null){
             timerCount.cancel();
         }
         super.onBackPressed();
     }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_mimic_gameplay, menu);
-        return true;
-    }
-
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
     public void getMimic(View v) throws IOException, XmlPullParserException {
         TextView phraseField = (TextView) findViewById(R.id.phrase);
         phraseField.setTextColor(getResources().getColor(R.color.black));
 
-        phraseField.setText(RandomHelper.getNextRandomString(list,getApplicationContext()));
+        phraseField.setText(RandomHelper.getNextRandomString(list, getApplicationContext()));
 
         if(timerCount!=null)
         {

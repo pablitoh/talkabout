@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.concon.talkabout.talkabout.ads.CustomInterstitial;
 import com.concon.talkabout.talkabout.service.SingleFeedParserService;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -21,6 +22,7 @@ public class TruthDareGameplay extends Activity {
 
     private List<String> list;
     private Random rand = new Random();
+    private CustomInterstitial ad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +38,7 @@ public class TruthDareGameplay extends Activity {
         }
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
+        ad = new CustomInterstitial(this);
         mAdView.loadAd(adRequest);
 
     }
@@ -44,5 +47,11 @@ public class TruthDareGameplay extends Activity {
         TextView phraseField = (TextView) findViewById(R.id.phrase);
         String random = list.get(rand.nextInt(list.size()));
         phraseField.setText(random);
+    }
+
+    @Override
+    public void onBackPressed() {
+        ad.showIfAvailable();
+        super.onBackPressed();
     }
 }

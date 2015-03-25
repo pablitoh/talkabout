@@ -10,13 +10,16 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.concon.talkabout.talkabout.ads.CustomInterstitial;
 import com.concon.talkabout.talkabout.service.MarryKillParserService;
 import com.concon.talkabout.talkabout.service.ParserService;
 import com.facebook.AppEventsLogger;
 import com.facebook.UiLifecycleHelper;
 import com.facebook.widget.FacebookDialog;
+import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.ads.InterstitialAd;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -29,6 +32,7 @@ public class MarryKillGameplay extends Activity {
     List<String> list;
     ParserService parser;
     private UiLifecycleHelper uiHelper;
+    private CustomInterstitial ad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,34 +42,18 @@ public class MarryKillGameplay extends Activity {
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
-
+        ad = new CustomInterstitial(getApplicationContext());
         uiHelper = new UiLifecycleHelper(this, null);
         uiHelper.onCreate(savedInstanceState);
-
-    }
-
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_marry_kill, menu);
-        return true;
     }
 
     @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
+    public void onBackPressed() {
+        ad.showIfAvailable();
+        super.onBackPressed();
     }
+
+
 
     public void getPeople(View v) throws IOException, XmlPullParserException {
         int talkLevel;
