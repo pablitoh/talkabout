@@ -12,7 +12,7 @@
    //I Never Strings
 
     <string name="INevertitle">Never have I ever.. </string>
-    <string name="IneverDescription">A sentence will appear in screen, anyone which is not identified with it must DRINK !!!\n Be Honest and have fun !!! </string>
+    <string name="IneverDescription">A sentence will appear in screen, anyone which is not identified with it must DRINK!!!\n Be Honest and have fun!!! </string>
     <string name="IneverDifficultySelect">Choose the innocence of the sentences</string>
     <string name='easy'> We are Angels</string>
     <string name='medium'>Hot !!!</string>
@@ -42,6 +42,7 @@
     <string name="firstTitle">You will have to decide which one</string>
     <string name="secondTitle">You Kill, You Marry</string>
     <string name="thirdTitle">or you F**K</string>
+    <string name="timeout">TIME-OUT!!!\n Time to DRINK!!</string>
 
 
 </resources>

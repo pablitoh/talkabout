@@ -1,4 +1,4 @@
-package com.concon.talkabout.talkabout;
+package com.decote.partygames;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -6,10 +6,12 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.concon.talkabout.talkabout.service.INeverParserService;
-import com.concon.talkabout.talkabout.service.ParserService;
-import com.concon.talkabout.talkabout.utils.RandomHelper;
+import com.decote.partygames.service.INeverParserService;
+import com.decote.partygames.service.ParserService;
+import com.decote.partygames.R;
+import com.decote.partygames.utils.RandomHelper;
 import com.facebook.AppEventsLogger;
 import com.facebook.UiLifecycleHelper;
 import com.facebook.widget.FacebookDialog;
@@ -21,7 +23,6 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 
 public class IneverGameplay extends Activity {
@@ -119,11 +120,17 @@ public class IneverGameplay extends Activity {
     public void shareInever(View v){
 
         String option1 = ((TextView) findViewById(R.id.phrase)).getText().toString();
-
-        FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(this)
-                .setLink("https://www.facebook.com/PartyGamesMobileApp").setApplicationName("Party Games").setCaption("Party Games is an Android application with 4 classical Party Games:").setDescription(option1).setPicture(getResources().getString(R.string.IneverPostImage))
-                .build();
-        uiHelper.trackPendingDialogCall(shareDialog.present());
+        if (FacebookDialog.canPresentShareDialog(getApplicationContext()))
+        {
+            FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(this)
+                    .setLink("https://www.facebook.com/PartyGamesMobileApp").setApplicationName("Party Games").setCaption("Party Games is an Android application with 4 classical Party Games:").setDescription(option1).setPicture(getResources().getString(R.string.IneverPostImage))
+                    .build();
+            uiHelper.trackPendingDialogCall(shareDialog.present());
+        }
+        else
+        {
+            Toast.makeText(getApplicationContext(), "You need to have Facebook App installed for this", Toast.LENGTH_LONG).show();
+        }
     }
 }
 

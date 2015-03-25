@@ -1,8 +1,8 @@
-package com.concon.talkabout.talkabout.utils;
+package com.decote.partygames.utils;
 
 import android.content.Context;
 
-import com.concon.talkabout.talkabout.R;
+import com.decote.partygames.R;
 
 import java.util.List;
 import java.util.Random;

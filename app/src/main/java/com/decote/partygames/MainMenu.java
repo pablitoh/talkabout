@@ -1,10 +1,13 @@
-package com.concon.talkabout.talkabout;
+package com.decote.partygames;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Toast;
 
+import com.decote.partygames.R;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
@@ -20,6 +23,17 @@ public class MainMenu extends Activity {
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
 
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        // TODO Auto-generated method stub
+
+        if(event.getPointerCount() > 1) {
+            return true;
+        }
+        else
+            return super.onTouchEvent(event);
     }
 
     public void startGame(View v) {

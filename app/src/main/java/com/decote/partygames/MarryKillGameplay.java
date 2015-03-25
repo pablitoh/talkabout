@@ -1,25 +1,27 @@
-package com.concon.talkabout.talkabout;
+package com.decote.partygames;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
-import com.concon.talkabout.talkabout.ads.CustomInterstitial;
-import com.concon.talkabout.talkabout.service.MarryKillParserService;
-import com.concon.talkabout.talkabout.service.ParserService;
+import com.decote.partygames.ads.CustomInterstitial;
+import com.decote.partygames.service.MarryKillParserService;
+import com.decote.partygames.service.ParserService;
+import com.decote.partygames.R;
+import com.decote.partygames.utils.FacebookHelper;
 import com.facebook.AppEventsLogger;
+import com.facebook.FacebookException;
+import com.facebook.FacebookOperationCanceledException;
+import com.facebook.Session;
 import com.facebook.UiLifecycleHelper;
 import com.facebook.widget.FacebookDialog;
-import com.google.android.gms.ads.AdListener;
+import com.facebook.widget.WebDialog;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
-import com.google.android.gms.ads.InterstitialAd;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -123,13 +125,34 @@ public class MarryKillGameplay extends Activity {
 
     public void shareMKF(View v){
 
+
         String option1 = ((TextView) findViewById(R.id.option1)).getText().toString();
         String option2 = ((TextView) findViewById(R.id.option2)).getText().toString();
         String option3 = ((TextView) findViewById(R.id.option3)).getText().toString();
 
-        FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(this)
-                .setLink("https://www.facebook.com/PartyGamesMobileApp").setName("Party Games").setCaption("Party Games is an Android application with 4 classical Party Games:").setDescription("Marry One, Kill One, F**K One:\n\n" + option1 + ",\n" + option2 + ",\n" + option3 + "\n").setPicture(getResources().getString(R.string.mkfPostImage))
-                .build();
-        uiHelper.trackPendingDialogCall(shareDialog.present());
+        String link="https://www.facebook.com/PartyGamesMobileApp";
+        String name="Party Games";
+        String caption="Party Games is an Android application with 4 classical Party Games:";
+        String picture=getResources().getString(R.string.mkfPostImage);
+        String description="Marry One, Kill One, F**K One:\n\n" + option1 + ",\n" + option2 + ",\n" + option3 + "\n";
+
+
+
+        if (FacebookDialog.canPresentShareDialog(getApplicationContext(),
+                FacebookDialog.ShareDialogFeature.SHARE_DIALOG))
+        {
+            FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(this)
+                    .setLink(link).setName(name).setCaption(caption).setDescription(description).setPicture(picture)
+                    .build();
+            uiHelper.trackPendingDialogCall(shareDialog.present());
+        }
+        else
+        {
+            Toast.makeText(getApplicationContext(),"You need to have Facebook App installed for this", Toast.LENGTH_LONG).show();
+        }
+
+
     }
+
+
 }

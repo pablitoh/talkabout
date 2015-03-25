@@ -4,7 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    >
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
@@ -22,7 +23,9 @@
         android:layout_height="0dp"
         android:layout_width="match_parent"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:splitMotionEvents="false"
+        android:windowEnableSplitTouch="false">
 
         <TextView
             android:layout_width="fill_parent"
@@ -41,9 +44,11 @@
         android:layout_width="match_parent"
         android:layout_weight="1"
         android:orientation="horizontal"
+        android:splitMotionEvents="false"
+        android:windowEnableSplitTouch="false"
        >
 
-        <com.concon.talkabout.talkabout.elements.MenuButtonFun
+        <com.decote.partygames.elements.MenuButtonFun
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -59,7 +64,7 @@
 
             />
 
-        <com.concon.talkabout.talkabout.elements.MenuButtonFun
+        <com.decote.partygames.elements.MenuButtonFun
             android:background="@drawable/button_shape"
             android:layout_height="match_parent"
             android:layout_width="0dp"
@@ -78,9 +83,11 @@
         android:layout_height="0dp"
         android:layout_width="match_parent"
         android:layout_weight="1"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:splitMotionEvents="false"
+        android:windowEnableSplitTouch="false">
 
-        <com.concon.talkabout.talkabout.elements.MenuButtonFun
+        <com.decote.partygames.elements.MenuButtonFun
 
             android:layout_height="match_parent"
             android:layout_width="0dp"
@@ -95,7 +102,7 @@
             android:textStyle="bold"
             style="?android:borderlessButtonStyle"/>
 
-        <com.concon.talkabout.talkabout.elements.MenuButtonFun
+        <com.decote.partygames.elements.MenuButtonFun
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
