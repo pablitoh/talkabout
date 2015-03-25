@@ -43,27 +43,37 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/option1"
                 android:textSize="30sp"
-                android:textColor="@color/black"
+                android:padding="10dp"
+                android:textColor="@drawable/text"
                 android:text="@string/firstTitle"
                 android:gravity="center"
+                android:clickable="true"
+                android:onClick="getInformation"
+
                 />
             <com.concon.talkabout.talkabout.elements.TextViewFun
                 android:layout_width="fill_parent"
                 android:id="@+id/option2"
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
-                android:textColor="@color/black"
+                android:padding="10dp"
+                android:textColor="@drawable/text"
                 android:text="@string/secondTitle"
                 android:gravity="center"
+                android:clickable="true"
+                android:onClick="getInformation"
                 />
             <com.concon.talkabout.talkabout.elements.TextViewFun
                 android:layout_width="fill_parent"
                 android:id="@+id/option3"
                 android:layout_height="wrap_content"
+                android:padding="10dp"
                 android:textSize="30sp"
-                android:textColor="@color/black"
+                android:textColor="@drawable/text"
                 android:text="@string/thirdTitle"
                 android:gravity="center"
+                android:clickable="true"
+                android:onClick="getInformation"
                 />
             <Button
                 android:layout_width="100dp"

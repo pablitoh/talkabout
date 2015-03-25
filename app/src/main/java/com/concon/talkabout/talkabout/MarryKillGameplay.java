@@ -2,6 +2,7 @@ package com.concon.talkabout.talkabout;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -147,6 +148,18 @@ public class MarryKillGameplay extends Activity {
         }
 
 
+    }
+
+    public void getInformation(View v)
+    {
+        TextView tv = (TextView) v;
+        String name = tv.getText().toString();
+        if(!name.equalsIgnoreCase(getString(R.string.firstTitle)) && !name.equalsIgnoreCase(getString(R.string.secondTitle)) && !name.equalsIgnoreCase(getString(R.string.thirdTitle)))
+        {
+            Uri uriUrl = Uri.parse("http://www.google.com/search?q="+name);
+            Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
+            startActivity(launchBrowser);
+        }
     }
 
 
