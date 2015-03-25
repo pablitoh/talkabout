@@ -4,7 +4,8 @@
 
     <string name="action_settings">Settings</string>
     <string name="nextString">Siguiente</string>
-    <string name="banner_ad_unit_id">ca-app-pub-3166954381042414/6936833717</string>
+    <string name="banner_ad_unit_id">ca-app-pub-1227361330330418/6799856087</string>
+    <string name="adsInterstitialID">ca-app-pub-1227361330330418/7042031683</string>
     <string name="share_text">Compartir</string>
     <string name="noMoreOptions">No hay mas opciones disponibles, vuelva al menu y empieze de nuevo!!!</string>
 
@@ -37,5 +38,6 @@
     <string name="title_activity_mimic_gameplay">Digalo con Mimica</string>
     <string name="mimicDescription">Sin decir una palabra, actuá el nombre de la pelicula que te toco.. Si tu equipo no la adivina. TOMAN. Si tu equipo la adivina, toma el otro equipo!!!\n A Divertirse!!</string>
     <string name="charadesTitle">Digalo con Mimica</string>
+
 
 </resources>
