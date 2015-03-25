@@ -76,6 +76,7 @@ public class CharadesGameplay extends Activity {
 
         if(phraseField.getText().equals(getString(R.string.noMoreOptions)))
         {
+            phraseField.setTextColor(getResources().getColor(R.color.red));
             ((TextView) findViewById(R.id.timer)).setText("");
             ((TextView) findViewById(R.id.indicatorContainer)).setText("");
         }

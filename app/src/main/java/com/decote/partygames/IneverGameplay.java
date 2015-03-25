@@ -67,15 +67,14 @@ public class IneverGameplay extends Activity {
     {
         return RandomHelper.getNextRandomString(list,getApplicationContext());
     }
-    
+
     public void changeTopic(View v) {
         TextView phraseField = (TextView) findViewById(R.id.phrase);
         phraseField.setText(getRandomFromList(list));
 
         if(phraseField.getText().equals(getString(R.string.noMoreOptions)))
         {
-            phraseField.setTextColor(getResources().getColor(R.color.black));
-            ((TextView) findViewById(R.id.timer)).setText("");
+            phraseField.setTextColor(getResources().getColor(R.color.red));
             ((TextView) findViewById(R.id.indicatorContainer)).setText("");
         }
 
