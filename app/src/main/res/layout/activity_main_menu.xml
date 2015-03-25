@@ -48,7 +48,7 @@
         android:windowEnableSplitTouch="false"
        >
 
-        <com.decote.partygames.elements.MenuButtonFun
+        <com.concon.talkabout.talkabout.elements.MenuButtonFun
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"
@@ -64,7 +64,7 @@
 
             />
 
-        <com.decote.partygames.elements.MenuButtonFun
+        <com.concon.talkabout.talkabout.elements.MenuButtonFun
             android:background="@drawable/button_shape"
             android:layout_height="match_parent"
             android:layout_width="0dp"
@@ -87,7 +87,7 @@
         android:splitMotionEvents="false"
         android:windowEnableSplitTouch="false">
 
-        <com.decote.partygames.elements.MenuButtonFun
+        <com.concon.talkabout.talkabout.elements.MenuButtonFun
 
             android:layout_height="match_parent"
             android:layout_width="0dp"
@@ -102,7 +102,7 @@
             android:textStyle="bold"
             style="?android:borderlessButtonStyle"/>
 
-        <com.decote.partygames.elements.MenuButtonFun
+        <com.concon.talkabout.talkabout.elements.MenuButtonFun
             android:layout_height="match_parent"
             android:layout_width="0dp"
             android:layout_weight="1"

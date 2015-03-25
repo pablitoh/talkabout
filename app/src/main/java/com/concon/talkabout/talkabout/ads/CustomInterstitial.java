@@ -1,8 +1,8 @@
-package com.decote.partygames.ads;
+package com.concon.talkabout.talkabout.ads;
 
 import android.content.Context;
 
-import com.decote.partygames.R;
+import com.concon.talkabout.talkabout.R;
 import com.google.android.gms.ads.AdListener;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.InterstitialAd;

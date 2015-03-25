@@ -11,7 +11,7 @@
     android:rowCount="8"
     android:columnCount="8"
     android:background="@drawable/background"
-    tools:context="com.decote.partygames.TruthDareGameplay">
+    tools:context="com.concon.talkabout.talkabout.TruthDareGameplay">
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
@@ -23,7 +23,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true">
     </com.google.android.gms.ads.AdView>
-    <com.decote.partygames.elements.TitleFun
+    <com.concon.talkabout.talkabout.elements.TitleFun
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:text="Truth / Dare "
@@ -45,7 +45,7 @@
         android:scrollbars="vertical"
         >
 
-    <com.decote.partygames.elements.TextViewFun
+    <com.concon.talkabout.talkabout.elements.TextViewFun
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:gravity="center"
@@ -58,7 +58,7 @@
         android:textSize="40sp"
         />
             </ScrollView>
-    <com.decote.partygames.elements.TextViewFun
+    <com.concon.talkabout.talkabout.elements.TextViewFun
         android:layout_width="fill_parent"
         android:layout_height="50dp"
         android:layout_alignParentBottom="true"

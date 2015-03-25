@@ -1,4 +1,4 @@
-package com.decote.partygames.utils;
+package com.concon.talkabout.talkabout.utils;
 
 /**
  * Created by Pablito on 23/03/2015.

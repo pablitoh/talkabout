@@ -1,4 +1,4 @@
-package com.decote.partygames;
+package com.concon.talkabout.talkabout;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -8,10 +8,10 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.decote.partygames.service.INeverParserService;
-import com.decote.partygames.service.ParserService;
-import com.decote.partygames.R;
-import com.decote.partygames.utils.RandomHelper;
+import com.concon.talkabout.talkabout.service.INeverParserService;
+import com.concon.talkabout.talkabout.service.ParserService;
+import com.concon.talkabout.talkabout.R;
+import com.concon.talkabout.talkabout.utils.RandomHelper;
 import com.facebook.AppEventsLogger;
 import com.facebook.UiLifecycleHelper;
 import com.facebook.widget.FacebookDialog;

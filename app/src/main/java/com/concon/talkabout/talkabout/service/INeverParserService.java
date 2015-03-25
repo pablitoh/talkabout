@@ -1,4 +1,4 @@
-package com.decote.partygames.service;
+package com.concon.talkabout.talkabout.service;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;

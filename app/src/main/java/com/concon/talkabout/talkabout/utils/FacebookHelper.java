@@ -1,11 +1,9 @@
-package com.decote.partygames.utils;
+package com.concon.talkabout.talkabout.utils;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.widget.Toast;
 
 import com.facebook.FacebookException;
-import com.facebook.FacebookOperationCanceledException;
 import com.facebook.Session;
 import com.facebook.widget.WebDialog;
 
