@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed>
-    <inever1>
+    <soft>
         <entry>YO NUNCA me he emborrachado..</entry>
         <entry>YO NUNCA me he besado con mi mejor amiga/o…</entry>
         <entry>YO NUNCA he fumado marihuana…</entry>
@@ -58,8 +58,8 @@
         <entry>Yo NUNCA estuve en un accidente de autos</entry>
         <entry>Yo NUNCA estuve en la nieve</entry>
         <entry>Yo NUNCA he perdido mis anteojos / Lentes de contacto</entry>
-    </inever1>
-    <inever2>
+    </soft>
+    <hot>
         <entry>YO NUNCA le tuve ganas a la mamá o papá de algún amigo/a…</entry>
         <entry>YO NUNCA he escuchado a mis padres haciendolo..</entry>
         <entry>YO NUNCA he visto a un amigo/a haciendo el amor con alguna chica/o…</entry>
@@ -101,8 +101,8 @@
         <entry>YO NUNCA he participado en una orgía..</entry>
         <entry>YO NUNCA me he masturbado más de 3 veces en un día..</entry>
         <entry>YO NUNCA he tenido relaciones con nadie de los que está jugando a esto ahora..</entry>
-        <entry>YO NUNCA me acostaría con alguien por U$S20.000 ("Putos sobran, Lo que faltan son financistas")</entry>
-        <entry>YO NUNCA me acostaría con alguien del mismo sexo por U$S50.000 ("Putos sobran, Lo que faltan son financistas")</entry>
+        <entry>YO NUNCA me acostaría con alguien por U$S20.000 ("Lo que faltan son financistas")</entry>
+        <entry>YO NUNCA me acostaría con alguien del mismo sexo por U$S50.000 ("Lo que faltan son financistas")</entry>
         <entry>YO NUNCA he usado juguetes sexuales con mi pareja..</entry>
         <entry>YO NUNCA ate a mi pareja/fui atado..</entry>
         <entry>Yo NUNCA me aproveche de una chica/o borracha/o</entry>
@@ -119,8 +119,5 @@
         <entry>Yo NUNCA trate de tener sexo anal con alguien y fallé</entry>
         <entry>YO NUNCA he tenido relaciones con alguien que el resto consideraba FEO/A</entry>
         <entry>Yo NUNCA me saqué fotos desnudo/a</entry>
-    </inever2>
-    <inever3>
-
-    </inever3>
+    </hot>
 </feed>

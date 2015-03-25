@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <feed>
-    <inever1>
+    <soft>
         <entry>Never have I ever smoked weed</entry>
         <entry>Never have I ever kissed someone on the first date</entry>
         <entry>Never have I ever had a close brush with death</entry>
@@ -58,8 +58,8 @@
         <entry>Never have I ever got stuck in an elevator.</entry>
         <entry>Never have I ever skinny dipped</entry>
         <entry>Never have I ever lied to get a job</entry>
-    </inever1>
-    <inever2>
+    </soft>
+    <hot>
         <entry>Never have I ever done it outside</entry>
         <entry>Never have I ever had sex in the back of a pickup truck</entry>
         <entry>Never have I ever fooled around in a sibling's room</entry>
@@ -120,8 +120,5 @@
         <entry>Never have I ever been told what to do during sex</entry>
         <entry>>Never have I ever slept with a co-worker</entry>
         <entry>Never have I ever played strip poker</entry>
-    </inever2>
-    <inever3>
-        <entry>Testing Test</entry>
-    </inever3>
+    </hot>
 </feed>
