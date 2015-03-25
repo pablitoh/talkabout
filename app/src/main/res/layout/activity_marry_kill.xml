@@ -44,7 +44,7 @@
                 android:id="@+id/option1"
                 android:textSize="30sp"
                 android:textColor="@color/black"
-                android:text="You will have to decide which one"
+                android:text="@string/firstTitle"
                 android:gravity="center"
                 />
             <com.concon.talkabout.talkabout.elements.TextViewFun
@@ -53,7 +53,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:textColor="@color/black"
-                android:text="You Kill, You Marry"
+                android:text="@string/secondTitle"
                 android:gravity="center"
                 />
             <com.concon.talkabout.talkabout.elements.TextViewFun
@@ -62,7 +62,7 @@
                 android:layout_height="wrap_content"
                 android:textSize="30sp"
                 android:textColor="@color/black"
-                android:text="or you F**K"
+                android:text="@string/thirdTitle"
                 android:gravity="center"
                 />
             <Button
@@ -89,7 +89,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:id="@+id/manButton"
-            android:text="Show me the girls..."
+            android:text="@string/showWoman"
             android:background="@drawable/button_hot_behavior"
             android:onClick="getPeople"
             android:gravity="center"
@@ -102,7 +102,7 @@
             android:layout_weight="1"
             android:layout_height="fill_parent"
             android:id="@+id/womanButton"
-            android:text="Show me the boys.."
+            android:text="@string/showMen"
             android:background="@drawable/button_hot_behavior"
             android:onClick="getPeople"
             android:textColor="@color/black"
@@ -114,7 +114,7 @@
             android:layout_weight="1"
             android:layout_height="fill_parent"
             android:id="@+id/allButton"
-            android:text="I don't care.."
+            android:text="@string/showBoth"
             android:background="@drawable/button_hot_behavior"
             android:onClick="getPeople"
             android:textColor="@color/black"

@@ -36,6 +36,12 @@
     <string name="mkfTitle">Marry,Kill,F**k</string>
     <string name="charadesTitle">Charades</string>
     <string name="truthDareTitle">Truth / Dare</string>
+    <string name="showWoman">Show me the Girls</string>
+    <string name="showMen">Give me boys</string>
+    <string name="showBoth">I Don\'t Care</string>
+    <string name="firstTitle">You will have to decide which one</string>
+    <string name="secondTitle">You Kill, You Marry</string>
+    <string name="thirdTitle">or you F**K</string>
 
 
 </resources>
