@@ -71,7 +71,6 @@ public class CharadesGameplay extends Activity {
     public void getMimic(View v) throws IOException, XmlPullParserException {
         TextView phraseField = (TextView) findViewById(R.id.phrase);
         phraseField.setTextColor(getResources().getColor(R.color.black));
-
         phraseField.setText(RandomHelper.getNextRandomString(list, getApplicationContext()));
 
         if(phraseField.getText().equals(getString(R.string.noMoreOptions)))

@@ -33,11 +33,10 @@
         android:id="@+id/SCROLLER_ID"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/indicatorContainer"
         android:layout_below="@+id/textView"
         android:fillViewport="true"
         android:scrollbars="vertical"
-        >
+        android:layout_above="@+id/timer">
         <com.concon.talkabout.talkabout.elements.TextViewFun
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
@@ -57,15 +56,15 @@
 
 
     <com.concon.talkabout.talkabout.elements.TextViewFun
-        android:layout_width="fill_parent"
+        android:layout_width="wrap_content"
         android:layout_height="60dp"
         android:gravity="center"
-        android:textSize="50dp"
+        android:textSize="50sp"
         android:id="@+id/timer"
+        android:textColor="@color/orange"
+        android:padding="5dp"
         android:layout_above="@+id/indicatorContainer"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:textColor="@color/orange"/>
+        android:layout_centerHorizontal="true" />
     <com.concon.talkabout.talkabout.elements.TextViewFun
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
