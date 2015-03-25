@@ -74,6 +74,12 @@ public class CharadesGameplay extends Activity {
 
         phraseField.setText(RandomHelper.getNextRandomString(list, getApplicationContext()));
 
+        if(phraseField.getText().equals(getString(R.string.noMoreOptions)))
+        {
+            ((TextView) findViewById(R.id.timer)).setText("");
+            ((TextView) findViewById(R.id.indicatorContainer)).setText("");
+        }
+
         if(timerCount!=null)
         {
             timerCount.cancel();

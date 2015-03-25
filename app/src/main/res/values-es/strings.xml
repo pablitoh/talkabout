@@ -47,6 +47,7 @@
     <string name="mimicDescription">Sin decir una palabra, actuá el nombre de la pelicula que te toco.. Si tu equipo no la adivina. TOMAN. Si tu equipo la adivina, toma el otro equipo!!!\n A Divertirse!!</string>
     <string name="charadesTitle">Digalo con Mimica</string>
     <string name="timeout">Se acabó el tiempo!!!!\n Hora de TOMAR!!</string>
+    <string name="tapToContinue">Presione para continuar..</string>
 
 
 </resources>

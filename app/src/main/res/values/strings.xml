@@ -27,13 +27,13 @@
     <string name="title_activity_marry_kill">MarryKill</string>
     <string name="marryKillTitle">Marry-Kill-F**k</string>
     <string name="mkfPostImage">http://scontent-gru.xx.fbcdn.net/hphotos-xat1/v/t1.0-9/10423785_831485426901071_6961001977131207866_n.png?oh=67f2b3e78d974664f41183c4ef209cb9&amp;oe=5570BE4C</string>
+    <string name="mkfTitle">Marry, Kill, F**k</string>
 
 
     //Charades Strings
     <string name="mimicTitle">Charades</string>
     <string name="title_activity_mimic_gameplay">MimicGameplay</string>
     <string name="mimicDescription">You have to "act out" a movie title without speaking, while the other members of your team try to guess which movie it is</string>
-    <string name="mkfTitle">Marry,Kill,F**k</string>
     <string name="charadesTitle">Charades</string>
     <string name="truthDareTitle">Truth / Dare</string>
     <string name="showWoman">Show me the Girls</string>
@@ -43,6 +43,7 @@
     <string name="secondTitle">You Kill, You Marry</string>
     <string name="thirdTitle">or you F**K</string>
     <string name="timeout">TIME-OUT!!!\n Time to DRINK!!</string>
+    <string name="tapToContinue">Tap to continue...</string>
 
 
 </resources>
