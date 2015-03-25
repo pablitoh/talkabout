@@ -12,10 +12,10 @@
 
     //I Never Strings
 
-    <string name="INevertitle">Yo Nunca </string>
-    <string name="IneverDescription"> Una frase aparecerá en pantalla, todos los que NO se sientan identificados, DEBERAN TOMAR ! Sean Honestos y a DIVERTIRSE ! </string>
+    <string name="INevertitle">Yo Nunca</string>
+    <string name="IneverDescription">Una frase aparecerá en pantalla, todos los que NO se sientan identificados, DEBERAN TOMAR ! Sean Honestos y a DIVERTIRSE ! </string>
     <string name="IneverDifficultySelect">Elegi cuanto estás dispuesto a arriesgar</string>
-    <string name='easy'> Angelitos</string>
+    <string name='easy'> Angel</string>
     <string name='medium'>HOT! HOT!</string>
     <string name='hard'>Ambas!</string>
     <string name="IneverPostImage">http://scontent-gru.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/11081125_831938256855788_5590356093113912653_n.png?oh=e0668f6af106c9749836903e1367dc1b&amp;oe=55B756F3</string>
@@ -31,7 +31,7 @@
 
     <string name="title_activity_marry_kill">MarryKill</string>
     <string name="marryKillTitle">Marry-Kill-F**k</string>
-    <string name="mkfTitle">Cásate, Mata, Acuestate</string>
+    <string name="mkfTitle">Casate, Mata, Acuestate</string>
     <string name="mkfPostImage">http://scontent-gru.xx.fbcdn.net/hphotos-xat1/v/t1.0-9/10423785_831485426901071_6961001977131207866_n.png?oh=67f2b3e78d974664f41183c4ef209cb9&amp;oe=5570BE4C</string>
 
 
