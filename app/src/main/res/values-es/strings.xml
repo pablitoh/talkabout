@@ -5,17 +5,18 @@
     <string name="action_settings">Settings</string>
     <string name="nextString">Siguiente</string>
     <string name="banner_ad_unit_id">ca-app-pub-1227361330330418/6799856087</string>
-    <string name="adsInterstitialID">ca-app-pub-1227361330330418/7042031683</string>
+    <string name="adsInterstitialID">ca-app-pub-1227361330330418/4250015682</string>
+    <string name="app_id">739790739451983</string>
     <string name="share_text">Compartir</string>
     <string name="noMoreOptions">No hay mas opciones disponibles, vuelva al menu y empieze de nuevo!!!</string>
 
     //I Never Strings
 
-    <string name="INevertitle">Yo Nunca </string>
-    <string name="IneverDescription"> Una frase aparecerá en pantalla, todos los que NO se sientan identificados, DEBERAN TOMAR ! Sean Honestos y a DIVERTIRSE ! </string>
-    <string name="IneverDifficultySelect">Elegi el nivel de picantez</string>
-    <string name='easy'> Angelitos</string>
-    <string name='medium'>HOT!</string>
+    <string name="INevertitle">Yo Nunca</string>
+    <string name="IneverDescription">Una frase aparecerá en pantalla, todos los que NO se sientan identificados, DEBERAN TOMAR ! Sean Honestos y a DIVERTIRSE ! </string>
+    <string name="IneverDifficultySelect">Elegi cuanto estás dispuesto a arriesgar</string>
+    <string name='easy'> Angel</string>
+    <string name='medium'>HOT! HOT!</string>
     <string name='hard'>Ambas!</string>
     <string name="IneverPostImage">http://scontent-gru.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/11081125_831938256855788_5590356093113912653_n.png?oh=e0668f6af106c9749836903e1367dc1b&amp;oe=55B756F3</string>
 
@@ -23,13 +24,14 @@
 
     <string name="title_activity_truth_dare_gameplay">truthDareGameplay</string>
     <string name="TruthDareDescription">Instrucciones:\n Seras presentado con varias opciones, la victima será el proximo que tenga el control!</string>
+    <string name="truthDareTitle">Verdad / Consecuencia</string>
 
 
     //Marry / Kill
 
     <string name="title_activity_marry_kill">MarryKill</string>
     <string name="marryKillTitle">Marry-Kill-F**k</string>
-    <string name="mkfTitle">Cásate, Mata, Acuestate</string>
+    <string name="mkfTitle">Casate, Mata, Acuestate</string>
     <string name="mkfPostImage">http://scontent-gru.xx.fbcdn.net/hphotos-xat1/v/t1.0-9/10423785_831485426901071_6961001977131207866_n.png?oh=67f2b3e78d974664f41183c4ef209cb9&amp;oe=5570BE4C</string>
 
 
