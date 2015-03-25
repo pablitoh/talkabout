@@ -1,18 +1,17 @@
-package com.concon.talkabout.talkabout;
+package com.decote.partygames;
 
 import android.app.Activity;
 import android.media.MediaPlayer;
 import android.os.CountDownTimer;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
-import com.concon.talkabout.talkabout.ads.CustomInterstitial;
-import com.concon.talkabout.talkabout.service.SingleFeedParserService;
-import com.concon.talkabout.talkabout.utils.RandomHelper;
-import com.concon.talkabout.talkabout.utils.TimeHelper;
+import com.decote.partygames.utils.TimeHelper;
+import com.decote.partygames.R;
+import com.decote.partygames.ads.CustomInterstitial;
+import com.decote.partygames.service.SingleFeedParserService;
+import com.decote.partygames.utils.RandomHelper;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
@@ -21,7 +20,6 @@ import org.xmlpull.v1.XmlPullParserException;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Random;
 
 
 public class CharadesGameplay extends Activity {
@@ -93,7 +91,7 @@ public class CharadesGameplay extends Activity {
         public void onFinish() {
             mediaPlayer.stop();
             TextView tv = (TextView) findViewById(R.id.phrase);
-            tv.setText("TIME-OUT!!!\n Time to DRINK !!");
+            tv.setText(getString(R.string.timeout));
             tv.setTextColor(getResources().getColor(R.color.red));
 
             TextView timer = (TextView) findViewById(R.id.timer);

@@ -1,43 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.concon.talkabout.talkabout" >
-
+    package="com.decote.partygames">
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.WAKE_LOCK" />
-
     <uses-sdk
         android:minSdkVersion="15"
         android:targetSdkVersion="19" />
-
-
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:theme="@android:style/Theme.Holo.Wallpaper.NoTitleBar"
-        android:screenOrientation="portrait">
+        android:screenOrientation="portrait"
+        >
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
         <activity
-            android:name=".IneverGameplay"
+            android:name="com.decote.partygames.IneverGameplay"
             android:label="@string/app_name"
+            android:screenOrientation="portrait"
              >
         </activity>
         <activity
             android:name="com.google.android.gms.ads.AdActivity"
             android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
-            android:theme="@android:style/Theme.Translucent" />
+            android:theme="@android:style/Theme.Translucent"
+            android:screenOrientation="portrait"/>
         <activity
-            android:name=".IneverMainMenu"
+            android:name="com.decote.partygames.IneverMainMenu"
             android:label="@string/title_activity_main_menu"
+            android:screenOrientation="portrait"
              >
         </activity>
         <activity
-            android:name=".MainMenu"
+            android:name="com.decote.partygames.MainMenu"
             android:label="@string/title_activity_main_menu"
+            android:screenOrientation="portrait"
+
 
             android:theme="@android:style/Theme.Holo.Wallpaper.NoTitleBar">
             <intent-filter>
@@ -47,19 +48,21 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".TruthDareGameplay"
+            android:name="com.decote.partygames.TruthDareGameplay"
             android:label="@string/title_activity_truth_dare_gameplay"
+            android:screenOrientation="portrait">
             >
->
         </activity>
         <activity
-            android:name=".CharadesGameplay"
+            android:name="com.decote.partygames.CharadesGameplay"
             android:label="@string/title_activity_mimic_gameplay"
+            android:screenOrientation="portrait"
             >
         </activity>
         <activity
-            android:name=".MarryKillGameplay"
+            android:name="com.decote.partygames.MarryKillGameplay"
             android:label="@string/title_activity_marry_kill"
+            android:screenOrientation="portrait"
            >
         </activity>
     </application>

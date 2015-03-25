@@ -1,12 +1,13 @@
-package com.concon.talkabout.talkabout;
+package com.decote.partygames;
 
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import com.concon.talkabout.talkabout.ads.CustomInterstitial;
-import com.concon.talkabout.talkabout.service.SingleFeedParserService;
+import com.decote.partygames.ads.CustomInterstitial;
+import com.decote.partygames.R;
+import com.decote.partygames.service.SingleFeedParserService;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 

@@ -1,4 +1,4 @@
-package com.concon.talkabout.talkabout.elements;
+package com.decote.partygames.elements;
 
 import android.content.Context;
 import android.graphics.Typeface;
