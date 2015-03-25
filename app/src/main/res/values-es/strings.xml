@@ -33,6 +33,12 @@
     <string name="marryKillTitle">Marry-Kill-F**k</string>
     <string name="mkfTitle">Casate, Mata, Acuestate</string>
     <string name="mkfPostImage">http://scontent-gru.xx.fbcdn.net/hphotos-xat1/v/t1.0-9/10423785_831485426901071_6961001977131207866_n.png?oh=67f2b3e78d974664f41183c4ef209cb9&amp;oe=5570BE4C</string>
+    <string name="showWoman">Mujeres</string>
+    <string name="showMen">Hombres</string>
+    <string name="showBoth">Me da igual</string>
+    <string name="firstTitle">Tenes que elegir </string>
+    <string name="secondTitle">a quien matas. con quien te casas </string>
+    <string name="thirdTitle">o con quien te acostas</string>
 
 
     //Charades Strings
