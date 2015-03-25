@@ -70,7 +70,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:text="Tap to continue..."
+        android:text="@string/tapToContinue"
         android:textColor="@color/orange"
         android:gravity="center"
         android:textSize="20sp"
