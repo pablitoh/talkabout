@@ -7,35 +7,52 @@ import org.xmlpull.v1.XmlPullParserException;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+import java.util.Random;
 
 /**
  * Created by gconte on 3/19/15.
  */
 public class INeverParserService extends ParserService {
 
-    public void parseInnerCustom(XmlPullParser parser, int talkLevel, String tag, List<String> data) throws XmlPullParserException, IOException {
+    @Override
+        public void parseInnerCustom(XmlPullParser parser, int talkLevel, String tag, List<String> data) throws XmlPullParserException, IOException {
 
-
-
-        for (int i = 0; i < talkLevel; i++) {
-            if(i > 0) {
-                parser.nextTag();
-            }
-            String name = parser.getName();
-            // Starts by looking for the entry tag
-            Integer tagLevel = Integer.valueOf(name.replaceAll(tag, ""));
-            if (tagLevel <= talkLevel) {
-                parser.require(XmlPullParser.START_TAG, ns, name);
-                while (parser.next() != XmlPullParser.END_TAG) {
-                    if (parser.getEventType() != XmlPullParser.START_TAG) {
-                        continue;
-                    }
-                    data.add(read(parser, "entry"));
-                }
-            } else {
+            if(talkLevel == 1) {
+                getSoft(parser, data);
+            } else if (talkLevel == 2) {
                 skip(parser);
+                getHot(parser, data);
+            } else {
+                getBoth(parser, data);
+            }
+
+        }
+
+        private void getSoft(XmlPullParser parser, List<String> data) throws IOException, XmlPullParserException {
+            parseEntry(parser, data, "soft");
+        }
+
+        private void getHot(XmlPullParser parser, List<String> data) throws IOException, XmlPullParserException {
+            parser.nextTag();
+            String nextTag = parser.getName();
+            parseEntry(parser, data, nextTag);
+        }
+
+        private void getBoth(XmlPullParser parser, List<String> data) throws IOException, XmlPullParserException {
+            getSoft(parser, data);
+            getHot(parser, data);
+        }
+
+        private void parseEntry(XmlPullParser parser, List<String> data, String tag) throws IOException, XmlPullParserException {
+            parser.require(XmlPullParser.START_TAG, ns, tag);
+            while (parser.next() != XmlPullParser.END_TAG) {
+                if (parser.getEventType() != XmlPullParser.START_TAG) {
+                    continue;
+                }
+                data.add(read(parser, "entry"));
             }
         }
-    }
 }

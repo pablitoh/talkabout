@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashSet;
 import java.util.List;
 import java.util.Random;
 
@@ -19,14 +20,13 @@ public class MarryKillParserService extends ParserService{
     public List<String> parseXml(int talkLevel, InputStream xml, String tag) throws XmlPullParserException, IOException {
         List<String> data = super.parseXml(talkLevel, xml, tag);
         Random rand = new Random();
-        List<String> dataToDeliver = new ArrayList<String>(3);
-        dataToDeliver.add(data.get(rand.nextInt(data.size())));
-        Collections.shuffle(data, rand);
-        dataToDeliver.add(data.get(rand.nextInt(data.size())));
-        Collections.shuffle(data, rand);
-        dataToDeliver.add(data.get(rand.nextInt(data.size())));
 
-        return dataToDeliver;
+        HashSet<String> set = new HashSet<>();
+        while (set.size() < 3) {
+            set.add(data.get(rand.nextInt(data.size())));
+        }
+
+        return new ArrayList<String>(set);
     }
 
     @Override
