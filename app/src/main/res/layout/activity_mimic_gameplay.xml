@@ -3,7 +3,7 @@
     xmlns:ads="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.decote.partygames.CharadesGameplay"
+    tools:context="com.concon.talkabout.talkabout.CharadesGameplay"
     android:background="@drawable/background">
 
     <com.google.android.gms.ads.AdView
@@ -17,7 +17,7 @@
         android:layout_centerHorizontal="true">
     </com.google.android.gms.ads.AdView>
 
-        <com.decote.partygames.elements.TitleFun
+        <com.concon.talkabout.talkabout.elements.TitleFun
             android:layout_width="fill_parent"
             android:layout_height="50dp"
             android:text="@string/mimicTitle"
@@ -38,7 +38,7 @@
         android:fillViewport="true"
         android:scrollbars="vertical"
         >
-        <com.decote.partygames.elements.TextViewFun
+        <com.concon.talkabout.talkabout.elements.TextViewFun
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:gravity="center"
@@ -56,7 +56,7 @@
     </ScrollView>
 
 
-    <com.decote.partygames.elements.TextViewFun
+    <com.concon.talkabout.talkabout.elements.TextViewFun
         android:layout_width="fill_parent"
         android:layout_height="60dp"
         android:gravity="center"
@@ -66,7 +66,7 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:textColor="@color/orange"/>
-    <com.decote.partygames.elements.TextViewFun
+    <com.concon.talkabout.talkabout.elements.TextViewFun
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"

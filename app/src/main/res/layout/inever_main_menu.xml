@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
-    tools:context="com.decote.partygames.IneverMainMenu">
+    tools:context="com.concon.talkabout.talkabout.IneverMainMenu">
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
@@ -16,7 +16,7 @@
         ads:adSize="BANNER"
         ads:adUnitId="@string/banner_ad_unit_id"/>
 
-    <com.decote.partygames.elements.TitleFun
+    <com.concon.talkabout.talkabout.elements.TitleFun
         android:id="@+id/textView"
         android:layout_width="fill_parent"
         android:layout_height="50dp"
@@ -38,7 +38,7 @@
         android:fillViewport="true"
         android:scrollbars="vertical">
 
-        <com.decote.partygames.elements.TextViewFun
+        <com.concon.talkabout.talkabout.elements.TextViewFun
             android:id="@+id/phrase"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -52,7 +52,7 @@
 
     </ScrollView>
 
-    <com.decote.partygames.elements.TextViewFun
+    <com.concon.talkabout.talkabout.elements.TextViewFun
         android:id="@+id/indicatorContainer"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -68,7 +68,7 @@
         android:layout_height="120dp"
         android:layout_alignParentBottom="true">
 
-        <com.decote.partygames.elements.ButtonFun
+        <com.concon.talkabout.talkabout.elements.ButtonFun
 
             android:id="@+id/basicDifficulty"
             android:layout_width="0dp"
@@ -83,7 +83,7 @@
             android:padding="5dp"
             android:textColor="@color/black" />
 
-        <com.decote.partygames.elements.ButtonFun
+        <com.concon.talkabout.talkabout.elements.ButtonFun
             android:id="@+id/mediumDifficulty"
             android:layout_width="0dp"
             android:layout_height="fill_parent"
@@ -98,7 +98,7 @@
             android:gravity="center"
             android:textStyle="bold" />
 
-        <com.decote.partygames.elements.ButtonFun
+        <com.concon.talkabout.talkabout.elements.ButtonFun
             android:id="@+id/hardDifficulty"
             android:layout_width="0dp"
             android:layout_height="fill_parent"

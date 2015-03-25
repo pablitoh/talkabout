@@ -1,13 +1,12 @@
-package com.decote.partygames;
+package com.concon.talkabout.talkabout;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Toast;
 
-import com.decote.partygames.R;
+import com.concon.talkabout.talkabout.R;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 
