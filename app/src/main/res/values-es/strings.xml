@@ -48,6 +48,8 @@
     <string name="charadesTitle">Digalo con Mimica</string>
     <string name="timeout">Se acabó el tiempo!!!!\n Hora de TOMAR!!</string>
     <string name="tapToContinue">Presione para continuar..</string>
+    <string name="mkfInfo">*Toca en los nombres para mas informacion</string>
+    <string name="getReady">Listos...</string>
 
 
 </resources>

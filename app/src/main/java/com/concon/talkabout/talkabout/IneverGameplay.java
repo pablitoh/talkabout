@@ -53,6 +53,7 @@ public class IneverGameplay extends Activity {
         Bundle b = getIntent().getExtras();
         Tracker t = ((GoogleAnalyticsApp) getApplication()).getTracker(GoogleAnalyticsApp.TrackerName.APP_TRACKER);
         t.setScreenName("I Never");
+        t.enableAdvertisingIdCollection(true);
         t.send(new HitBuilders.AppViewBuilder().build());
 
         int difficulty = b.getInt("key");
@@ -142,7 +143,7 @@ public class IneverGameplay extends Activity {
         if (FacebookDialog.canPresentShareDialog(getApplicationContext()))
         {
             FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(this)
-                    .setLink("https://www.facebook.com/PartyGamesMobileApp").setApplicationName("Party Games").setCaption("Party Games is an Android application with 4 classical Party Games:").setDescription(option1).setPicture(getResources().getString(R.string.IneverPostImage))
+                    .setLink("https://www.facebook.com/PartyGamesMobileApp").setName("Party Games").setCaption("Party Games is an Android application with 4 classical Party Games:").setDescription(option1).setPicture(getResources().getString(R.string.IneverPostImage))
                     .build();
             uiHelper.trackPendingDialogCall(shareDialog.present());
         }

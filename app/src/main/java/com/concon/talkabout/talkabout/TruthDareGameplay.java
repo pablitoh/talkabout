@@ -46,6 +46,7 @@ public class TruthDareGameplay extends Activity {
         mAdView.loadAd(adRequest);
         Tracker t = ((GoogleAnalyticsApp) getApplication()).getTracker(GoogleAnalyticsApp.TrackerName.APP_TRACKER);
         t.setScreenName("Truth Dare");
+        t.enableAdvertisingIdCollection(true);
         t.send(new HitBuilders.AppViewBuilder().build());
 
     }

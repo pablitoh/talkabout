@@ -45,6 +45,7 @@ public class CharadesGameplay extends Activity {
 
         Tracker t = ((GoogleAnalyticsApp) getApplication()).getTracker(GoogleAnalyticsApp.TrackerName.APP_TRACKER);
         t.setScreenName("Charades");
+        t.enableAdvertisingIdCollection(true);
         t.send(new HitBuilders.AppViewBuilder().build());
         try {
             list = singleFeedParserService.parseXml(1, this.getResources().openRawResource(R.raw.mimic), "mimic");

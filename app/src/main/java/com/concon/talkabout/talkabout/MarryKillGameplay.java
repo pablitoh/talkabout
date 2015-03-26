@@ -49,6 +49,7 @@ public class MarryKillGameplay extends Activity {
         uiHelper.onCreate(savedInstanceState);
         Tracker t = ((GoogleAnalyticsApp) getApplication()).getTracker(GoogleAnalyticsApp.TrackerName.APP_TRACKER);
         t.setScreenName("MKF");
+        t.enableAdvertisingIdCollection(true);
         t.send(new HitBuilders.AppViewBuilder().build());
     }
 
@@ -143,12 +144,11 @@ public class MarryKillGameplay extends Activity {
         String option2 = ((TextView) findViewById(R.id.option2)).getText().toString();
         String option3 = ((TextView) findViewById(R.id.option3)).getText().toString();
 
-        String link="https://www.facebook.com/PartyGamesMobileApp";
+        String link="http://www.facebook.com/PartyGamesMobileApp";
         String name="Party Games";
         String caption="Party Games is an Android application with 4 classical Party Games:";
         String picture=getResources().getString(R.string.mkfPostImage);
         String description="Marry One, Kill One, F**K One:\n\n" + option1 + ",\n" + option2 + ",\n" + option3 + "\n";
-
 
 
         if (FacebookDialog.canPresentShareDialog(getApplicationContext(),
