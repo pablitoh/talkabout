@@ -143,7 +143,7 @@ public class IneverGameplay extends Activity {
         if (FacebookDialog.canPresentShareDialog(getApplicationContext()))
         {
             FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(this)
-                    .setLink("https://www.facebook.com/PartyGamesMobileApp").setApplicationName("Party Games").setCaption("Party Games is an Android application with 4 classical Party Games:").setDescription(option1).setPicture(getResources().getString(R.string.IneverPostImage))
+                    .setLink("https://www.facebook.com/PartyGamesMobileApp").setName("Party Games").setCaption("Party Games is an Android application with 4 classical Party Games:").setDescription(option1).setPicture(getResources().getString(R.string.IneverPostImage))
                     .build();
             uiHelper.trackPendingDialogCall(shareDialog.present());
         }

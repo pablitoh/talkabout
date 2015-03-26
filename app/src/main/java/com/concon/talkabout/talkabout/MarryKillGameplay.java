@@ -151,7 +151,6 @@ public class MarryKillGameplay extends Activity {
         String description="Marry One, Kill One, F**K One:\n\n" + option1 + ",\n" + option2 + ",\n" + option3 + "\n";
 
 
-
         if (FacebookDialog.canPresentShareDialog(getApplicationContext(),
                 FacebookDialog.ShareDialogFeature.SHARE_DIALOG))
         {
