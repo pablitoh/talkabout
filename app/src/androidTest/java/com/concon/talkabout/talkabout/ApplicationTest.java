@@ -1,4 +1,4 @@
-package com.decote.partygames;
+package com.concon.talkabout.talkabout;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;
