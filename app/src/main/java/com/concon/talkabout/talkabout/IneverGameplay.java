@@ -2,19 +2,19 @@ package com.concon.talkabout.talkabout;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
 import com.concon.talkabout.talkabout.service.INeverParserService;
 import com.concon.talkabout.talkabout.service.ParserService;
 import com.concon.talkabout.talkabout.utils.RandomHelper;
-import com.facebook.AppEventsLogger;
-import com.facebook.UiLifecycleHelper;
-import com.facebook.widget.FacebookDialog;
+import com.facebook.CallbackManager;
+import com.facebook.FacebookSdk;
+import com.facebook.share.model.ShareLinkContent;
+import com.facebook.share.widget.ShareDialog;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.analytics.GoogleAnalytics;
@@ -31,13 +31,13 @@ import java.util.List;
 public class IneverGameplay extends Activity {
 
     private Integer difficulty;
-    private UiLifecycleHelper uiHelper;
 
     /**
      * To Be replaced by XML Parser
      */
     List<String> list = new ArrayList<String>();
-
+    CallbackManager callbackManager;
+    ShareDialog shareDialog;
     private ParserService parserService;
 
 
@@ -48,14 +48,15 @@ public class IneverGameplay extends Activity {
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
-        uiHelper = new UiLifecycleHelper(this, null);
-        uiHelper.onCreate(savedInstanceState);
+
         Bundle b = getIntent().getExtras();
         Tracker t = ((GoogleAnalyticsApp) getApplication()).getTracker(GoogleAnalyticsApp.TrackerName.APP_TRACKER);
         t.setScreenName("I Never");
         t.enableAdvertisingIdCollection(true);
         t.send(new HitBuilders.AppViewBuilder().build());
-
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        callbackManager = CallbackManager.Factory.create();
+        shareDialog = new ShareDialog(this);
         int difficulty = b.getInt("key");
 
         parserService = new INeverParserService();
@@ -99,57 +100,41 @@ public class IneverGameplay extends Activity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+        callbackManager.onActivityResult(requestCode, resultCode, data);
 
-        uiHelper.onActivityResult(requestCode, resultCode, data, new FacebookDialog.Callback() {
-            @Override
-            public void onError(FacebookDialog.PendingCall pendingCall, Exception error, Bundle data) {
-                Log.e("Activity", String.format("Error: %s", error.toString()));
-            }
-
-            @Override
-            public void onComplete(FacebookDialog.PendingCall pendingCall, Bundle data) {
-                Log.i("Activity", "Success!");
-            }
-        });
     }
     @Override
     protected void onResume() {
         super.onResume();
-        AppEventsLogger.activateApp(this);
-        uiHelper.onResume();
     }
 
     @Override
     protected void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-        uiHelper.onSaveInstanceState(outState);
     }
 
     @Override
     public void onPause() {
         super.onPause();
-        AppEventsLogger.deactivateApp(this);
-        uiHelper.onPause();
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        uiHelper.onDestroy();
     }
     public void shareInever(View v){
 
         String option1 = ((TextView) findViewById(R.id.phrase)).getText().toString();
-        if (FacebookDialog.canPresentShareDialog(getApplicationContext()))
-        {
-            FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(this)
-                    .setLink("https://www.facebook.com/PartyGamesMobileApp").setName("Party Games").setCaption("Party Games is an Android application with 4 classical Party Games:").setDescription(option1).setPicture(getResources().getString(R.string.IneverPostImage))
+
+        if (ShareDialog.canShow(ShareLinkContent.class)) {
+            ShareLinkContent linkContent = new ShareLinkContent.Builder()
+                    .setContentTitle("Party Games")
+                    .setContentDescription(option1)
+                    .setContentUrl(Uri.parse("https://www.facebook.com/PartyGamesMobileApp"))
+                    .setImageUrl((Uri.parse(getResources().getString(R.string.IneverPostImage))))
                     .build();
-            uiHelper.trackPendingDialogCall(shareDialog.present());
-        }
-        else
-        {
-            Toast.makeText(getApplicationContext(), "You need to have Facebook App installed for this", Toast.LENGTH_LONG).show();
+
+            shareDialog.show(linkContent);
         }
     }
 }
