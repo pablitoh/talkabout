@@ -10,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.concon.talkabout.talkabout.ads.CustomInterstitial;
+import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
 import com.concon.talkabout.talkabout.service.MarryKillParserService;
 import com.concon.talkabout.talkabout.service.ParserService;
 import com.concon.talkabout.talkabout.R;
@@ -18,6 +19,9 @@ import com.facebook.UiLifecycleHelper;
 import com.facebook.widget.FacebookDialog;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -43,6 +47,9 @@ public class MarryKillGameplay extends Activity {
         ad = new CustomInterstitial(getApplicationContext());
         uiHelper = new UiLifecycleHelper(this, null);
         uiHelper.onCreate(savedInstanceState);
+        Tracker t = ((GoogleAnalyticsApp) getApplication()).getTracker(GoogleAnalyticsApp.TrackerName.APP_TRACKER);
+        t.setScreenName("MKF");
+        t.send(new HitBuilders.AppViewBuilder().build());
     }
 
     @Override
@@ -51,7 +58,17 @@ public class MarryKillGameplay extends Activity {
         super.onBackPressed();
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        GoogleAnalytics.getInstance(this).reportActivityStart(this);
+    }
 
+    @Override
+    protected void onStop() {
+        super.onStop();
+        GoogleAnalytics.getInstance(this).reportActivityStop(this);
+    }
 
     public void getPeople(View v) throws IOException, XmlPullParserException {
         int talkLevel;

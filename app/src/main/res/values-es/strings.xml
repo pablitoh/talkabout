@@ -13,17 +13,17 @@
     //I Never Strings
 
     <string name="INevertitle">Yo Nunca</string>
-    <string name="IneverDescription">Una frase aparecerá en pantalla, todos los que NO se sientan identificados, DEBERAN TOMAR ! Sean Honestos y a DIVERTIRSE ! </string>
+    <string name="IneverDescription">Instrucciones:\nUna frase aparecerá en pantalla, todos los que NO se sientan identificados, DEBERAN TOMAR ! Sean Honestos y a DIVERTIRSE ! </string>
     <string name="IneverDifficultySelect">Elegi cuanto estás dispuesto a arriesgar</string>
     <string name='easy'> Angel</string>
-    <string name='medium'>HOT! HOT!</string>
+    <string name='medium'>HOT!\nHOT!\nHOT!</string>
     <string name='hard'>Ambas!</string>
     <string name="IneverPostImage">http://scontent-gru.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/11081125_831938256855788_5590356093113912653_n.png?oh=e0668f6af106c9749836903e1367dc1b&amp;oe=55B756F3</string>
 
     //Truth / Dare
 
     <string name="title_activity_truth_dare_gameplay">truthDareGameplay</string>
-    <string name="TruthDareDescription">Instrucciones:\n Seras presentado con varias opciones, la victima será el proximo que tenga el control!</string>
+    <string name="TruthDareDescription">Instrucciones:\n Serás presentado con varias opciones, al terminar deberas pasarle el control a la victima!!</string>
     <string name="truthDareTitle">Verdad / Consecuencia</string>
 
 

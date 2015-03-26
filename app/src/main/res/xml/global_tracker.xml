@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <integer name="ga_sessionTimeout">300</integer>
+
+    <bool name="ga_autoActivityTracking">true</bool>
+    
+
+    <screenName name="com.concon.talkabout.talkabout.CharadesGameplay">Charades</screenName>
+    <screenName name="com.concon.talkabout.talkabout.IneverGameplay">IneverGameplay</screenName>
+    <screenName name="com.concon.talkabout.talkabout.IneverMainMenu">IneverMainMenu</screenName>
+    <screenName name="com.concon.talkabout.talkabout.MainMenu">MainMenu</screenName>
+    <screenName name="com.concon.talkabout.talkabout.MarryKillGameplay">MarryKillGameplay</screenName>
+    <screenName name="com.concon.talkabout.talkabout.TruthDareGameplay">TruthDareGameplay</screenName>
+
+    <string name="ga_trackingId">UA-61152808-2</string>
+
+</resources>
