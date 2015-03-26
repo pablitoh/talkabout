@@ -14,8 +14,8 @@
     <string name="INevertitle">Never have I ever.. </string>
     <string name="IneverDescription">Instructions:\nA sentence will appear in screen, anyone which is not identified with it must DRINK!!!\n Be Honest and have fun!!! </string>
     <string name="IneverDifficultySelect">Choose the innocence of the sentences</string>
-    <string name='easy'> We are Angels</string>
-    <string name='medium'>Hot !!!</string>
+    <string name='easy'>Angel Level</string>
+    <string name='medium'>HOT!\nHOT!\nHOT!</string>
     <string name='hard'> A little bit of both</string>
     <string name="IneverPostImage">http://scontent-gru.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/11081467_831485430234404_7159253971600731338_n.png?oh=693feffdfa3a5dd0fe3e1a6f09a8aa39&amp;oe=55AC4C31</string>
 
