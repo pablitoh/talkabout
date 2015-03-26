@@ -2,18 +2,21 @@ package com.concon.talkabout.talkabout;
 
 import android.app.Activity;
 import android.media.MediaPlayer;
-import android.os.CountDownTimer;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.TextView;
 
-import com.concon.talkabout.talkabout.utils.TimeHelper;
-import com.concon.talkabout.talkabout.R;
 import com.concon.talkabout.talkabout.ads.CustomInterstitial;
+import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
 import com.concon.talkabout.talkabout.service.SingleFeedParserService;
 import com.concon.talkabout.talkabout.utils.RandomHelper;
+import com.concon.talkabout.talkabout.utils.TimeHelper;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -39,6 +42,10 @@ public class CharadesGameplay extends Activity {
         AdRequest adRequest = new AdRequest.Builder().build();
         ad = new CustomInterstitial(this);
         mAdView.loadAd(adRequest);
+
+        Tracker t = ((GoogleAnalyticsApp) getApplication()).getTracker(GoogleAnalyticsApp.TrackerName.APP_TRACKER);
+        t.setScreenName("Charades");
+        t.send(new HitBuilders.AppViewBuilder().build());
         try {
             list = singleFeedParserService.parseXml(1, this.getResources().openRawResource(R.raw.mimic), "mimic");
         } catch (XmlPullParserException e) {
@@ -49,6 +56,17 @@ public class CharadesGameplay extends Activity {
 
     }
 
+    @Override
+    protected void onStart() {
+        super.onStart();
+        GoogleAnalytics.getInstance(this).reportActivityStart(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        GoogleAnalytics.getInstance(this).reportActivityStop(this);
+    }
 
     @Override
     protected void onUserLeaveHint() {

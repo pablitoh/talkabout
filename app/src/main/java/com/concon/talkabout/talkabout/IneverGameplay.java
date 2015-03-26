@@ -8,15 +8,18 @@ import android.view.View;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
 import com.concon.talkabout.talkabout.service.INeverParserService;
 import com.concon.talkabout.talkabout.service.ParserService;
-import com.concon.talkabout.talkabout.R;
 import com.concon.talkabout.talkabout.utils.RandomHelper;
 import com.facebook.AppEventsLogger;
 import com.facebook.UiLifecycleHelper;
 import com.facebook.widget.FacebookDialog;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -47,8 +50,10 @@ public class IneverGameplay extends Activity {
         mAdView.loadAd(adRequest);
         uiHelper = new UiLifecycleHelper(this, null);
         uiHelper.onCreate(savedInstanceState);
-
         Bundle b = getIntent().getExtras();
+        Tracker t = ((GoogleAnalyticsApp) getApplication()).getTracker(GoogleAnalyticsApp.TrackerName.APP_TRACKER);
+        t.setScreenName("I Never");
+        t.send(new HitBuilders.AppViewBuilder().build());
 
         int difficulty = b.getInt("key");
 
@@ -79,8 +84,17 @@ public class IneverGameplay extends Activity {
         }
 
     }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        GoogleAnalytics.getInstance(this).reportActivityStart(this);
+    }
 
-
+    @Override
+    protected void onStop() {
+        super.onStop();
+        GoogleAnalytics.getInstance(this).reportActivityStop(this);
+    }
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
