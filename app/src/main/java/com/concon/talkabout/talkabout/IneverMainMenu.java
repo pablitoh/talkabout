@@ -28,6 +28,7 @@ public class IneverMainMenu extends Activity {
         mAdView.loadAd(adRequest);
         Tracker t = ((GoogleAnalyticsApp) getApplication()).getTracker(GoogleAnalyticsApp.TrackerName.APP_TRACKER);
         t.setScreenName("I Never Menu");
+        t.enableAdvertisingIdCollection(true);
         t.send(new HitBuilders.AppViewBuilder().build());
         ad = new CustomInterstitial(this);
     }

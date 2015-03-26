@@ -4,7 +4,7 @@
     <integer name="ga_sessionTimeout">300</integer>
 
     <bool name="ga_autoActivityTracking">true</bool>
-    
+
 
     <screenName name="com.concon.talkabout.talkabout.CharadesGameplay">Charades</screenName>
     <screenName name="com.concon.talkabout.talkabout.IneverGameplay">IneverGameplay</screenName>

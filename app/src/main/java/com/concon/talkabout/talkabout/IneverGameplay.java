@@ -53,6 +53,7 @@ public class IneverGameplay extends Activity {
         Bundle b = getIntent().getExtras();
         Tracker t = ((GoogleAnalyticsApp) getApplication()).getTracker(GoogleAnalyticsApp.TrackerName.APP_TRACKER);
         t.setScreenName("I Never");
+        t.enableAdvertisingIdCollection(true);
         t.send(new HitBuilders.AppViewBuilder().build());
 
         int difficulty = b.getInt("key");

@@ -49,6 +49,7 @@ public class MarryKillGameplay extends Activity {
         uiHelper.onCreate(savedInstanceState);
         Tracker t = ((GoogleAnalyticsApp) getApplication()).getTracker(GoogleAnalyticsApp.TrackerName.APP_TRACKER);
         t.setScreenName("MKF");
+        t.enableAdvertisingIdCollection(true);
         t.send(new HitBuilders.AppViewBuilder().build());
     }
 
