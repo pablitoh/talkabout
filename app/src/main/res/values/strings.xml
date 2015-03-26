@@ -44,6 +44,8 @@
     <string name="thirdTitle">or you F**K</string>
     <string name="timeout">TIME-OUT!!!\n Time to DRINK!!</string>
     <string name="tapToContinue">Tap to continue...</string>
+    <string name="mkfInfo">*Tap the names for information</string>
+    <string name="getReady">Get Ready...</string>
 
 
 </resources>

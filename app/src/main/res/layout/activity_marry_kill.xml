@@ -34,9 +34,10 @@
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
             android:orientation="vertical"
-            android:layout_below="@+id/MarryKillTitle"
             android:gravity="center"
-            android:layout_above="@+id/linearLayout">
+            android:weightSum="1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true">
             <com.concon.talkabout.talkabout.elements.TextViewFun
                 android:layout_width="fill_parent"
 
@@ -75,18 +76,29 @@
                 android:clickable="true"
                 android:onClick="getInformation"
                 />
-            <Button
-                android:layout_width="100dp"
-                android:layout_height="wrap_content"
-                android:text="@string/share_text"
-                android:textSize="20sp"
-                android:onClick="shareMKF"
-                android:drawableTop="@drawable/button_share"
-                android:background="@null"
-                android:textColor="@color/black"
-                android:layout_marginTop="40dp"
-                />
-            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="92dp"
+                android:padding="0dp"
+                android:layout_marginBottom="0dp">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/share_text"
+                    android:textSize="20sp"
+                    android:onClick="shareMKF"
+                    android:drawableTop="@drawable/button_share"
+                    android:background="@null"
+                    android:textColor="@color/black"
+                    android:id="@+id/ShareButtonMkf"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+        </LinearLayout>
+
+
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="100dp"

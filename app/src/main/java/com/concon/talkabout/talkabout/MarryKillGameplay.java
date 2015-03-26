@@ -144,7 +144,7 @@ public class MarryKillGameplay extends Activity {
         String option2 = ((TextView) findViewById(R.id.option2)).getText().toString();
         String option3 = ((TextView) findViewById(R.id.option3)).getText().toString();
 
-        String link="https://www.facebook.com/PartyGamesMobileApp";
+        String link="http://www.facebook.com/PartyGamesMobileApp";
         String name="Party Games";
         String caption="Party Games is an Android application with 4 classical Party Games:";
         String picture=getResources().getString(R.string.mkfPostImage);
