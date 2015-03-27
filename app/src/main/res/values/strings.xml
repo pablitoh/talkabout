@@ -6,7 +6,7 @@
     <string name="nextString">Next</string>
     <string name="banner_ad_unit_id">ca-app-pub-1227361330330418/6799856087</string>
     <string name="adsInterstitialID">ca-app-pub-1227361330330418/4250015682</string>
-    <string name="app_id">739790739451983</string>
+    <string name="app_id">1624377927833115</string>
     <string name="share_text">Share</string>
     <string name="noMoreOptions">No more options available at the moment, please restart the game to start over!!</string>
    //I Never Strings
@@ -46,6 +46,7 @@
     <string name="tapToContinue">Tap to continue...</string>
     <string name="mkfInfo">*Tap the names for information</string>
     <string name="getReady">Get Ready...</string>
+    <string name="mkfPostText" >Marry one, kill one and F**K one</string>
 
 
 </resources>
