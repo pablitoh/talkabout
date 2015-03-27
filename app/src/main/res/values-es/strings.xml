@@ -6,7 +6,7 @@
     <string name="nextString">Siguiente</string>
     <string name="banner_ad_unit_id">ca-app-pub-1227361330330418/6799856087</string>
     <string name="adsInterstitialID">ca-app-pub-1227361330330418/4250015682</string>
-    <string name="app_id">739790739451983</string>
+    <string name="app_id">1624377927833115</string>
     <string name="share_text">Compartir</string>
     <string name="noMoreOptions">No hay mas opciones disponibles, vuelva al menu y empieze de nuevo!!!</string>
 
@@ -50,6 +50,7 @@
     <string name="tapToContinue">Presione para continuar..</string>
     <string name="mkfInfo">*Toca en los nombres para mas informacion</string>
     <string name="getReady">Listos...</string>
+    <string name="mkfPostText" >Casate con una, acuestate con otra, y mata a la restante</string>
 
 
 </resources>
