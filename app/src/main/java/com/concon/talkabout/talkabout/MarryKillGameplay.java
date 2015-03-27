@@ -128,12 +128,12 @@ public class MarryKillGameplay extends Activity {
         String option2 = ((TextView) findViewById(R.id.option2)).getText().toString();
         String option3 = ((TextView) findViewById(R.id.option3)).getText().toString();
 
-        String name="Party Games";
+        String name="Marry, Kill , F**K";
 
         if (ShareDialog.canShow(ShareLinkContent.class)) {
             ShareLinkContent linkContent = new ShareLinkContent.Builder()
                     .setContentTitle(name)
-                    .setContentDescription(getResources().getString(R.string.mkfPostText)+":"+option1+", "+option2+", "+option3)
+                    .setContentDescription(option1+", "+option2+", "+option3)
                     .setContentUrl(Uri.parse("https://www.facebook.com/PartyGamesMobileApp"))
                     .setImageUrl((Uri.parse(getResources().getString(R.string.mkfPostImage))))
                     .build();
