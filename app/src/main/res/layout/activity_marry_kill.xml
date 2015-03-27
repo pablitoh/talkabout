@@ -63,6 +63,7 @@
                 android:gravity="center"
                 android:clickable="true"
                 android:onClick="getInformation"
+                android:drawableLeft="@drawable/information_small"
                 />
             <com.concon.talkabout.talkabout.elements.TextViewFun
                 android:layout_width="fill_parent"
