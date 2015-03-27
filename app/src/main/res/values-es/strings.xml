@@ -50,7 +50,7 @@
     <string name="tapToContinue">Presione para continuar..</string>
     <string name="mkfInfo">*Toca en los nombres para mas informacion</string>
     <string name="getReady">Listos...</string>
-    <string name="mkfPostText" >Casate con una, acuestate con otra, y mata a la restante</string>
+    <string name="mkfPostText" >Casate, acuestate y mata:</string>
 
 
 </resources>
