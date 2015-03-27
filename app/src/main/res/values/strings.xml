@@ -44,6 +44,9 @@
     <string name="thirdTitle">or you F**K</string>
     <string name="timeout">TIME-OUT!!!\n Time to DRINK!!</string>
     <string name="tapToContinue">Tap to continue...</string>
+    <string name="title_activity_spin_whee">spinWheel</string>
+
+    <string name="hello_world">Hello world!</string>
 
 
 </resources>

@@ -62,7 +62,7 @@ public class MainMenu extends Activity {
                 startActivity(new Intent(MainMenu.this, IneverMainMenu.class));
                 break;
             case R.id.truthDareButton:
-                startActivity(new Intent(MainMenu.this, TruthDareGameplay.class));
+                startActivity(new Intent(MainMenu.this, spinWhee.class));
                 break;
             case R.id.mimicButton:
                 startActivity(new Intent(MainMenu.this, CharadesGameplay.class));
