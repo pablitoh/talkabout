@@ -142,8 +142,6 @@ public class MarryKillGameplay extends Activity {
             shareDialog.show(linkContent);
         }
 
-
-
     }
 
     public void getInformation(View v)

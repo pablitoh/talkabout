@@ -4,9 +4,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
-    <provider android:authorities="com.facebook.app.FacebookContentProvider1624377927833115"
-        android:name="com.facebook.FacebookContentProvider"
-        android:exported="true" />
+
 
     <application
         android:name="com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp"
@@ -16,6 +14,10 @@
         android:theme="@android:style/Theme.Holo.Wallpaper.NoTitleBar"
         android:screenOrientation="portrait"
         >
+        <provider android:authorities="com.facebook.app.FacebookContentProvider1624377927833115"
+            android:name="com.facebook.FacebookContentProvider"
+            android:exported="true" />
+
         <meta-data android:name="com.google.android.gms.analytics.globalConfigResource"
             android:resource="@xml/global_tracker" />
 
