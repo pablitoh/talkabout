@@ -13,7 +13,7 @@
     //I Never Strings
 
     <string name="INevertitle">Yo Nunca</string>
-    <string name="IneverDescription">Instrucciones:\nUna frase aparecerá en pantalla, todos los que NO se sientan identificados, DEBERAN TOMAR ! Sean Honestos y a DIVERTIRSE ! </string>
+    <string name="IneverDescription">Una frase aparecerá en pantalla, todos los que NO se sientan identificados, DEBERAN TOMAR ! Sean Honestos y a DIVERTIRSE ! </string>
     <string name="IneverDifficultySelect">Elegi cuanto estás dispuesto a arriesgar</string>
     <string name='easy'> Angel</string>
     <string name='medium'>HOT!\nHOT!\nHOT!</string>
@@ -23,7 +23,7 @@
     //Truth / Dare
 
     <string name="title_activity_truth_dare_gameplay">truthDareGameplay</string>
-    <string name="TruthDareDescription">Instrucciones:\n Serás presentado con varias opciones, al terminar deberas pasarle el control a la victima!!</string>
+    <string name="TruthDareDescription">Serás presentado con varias opciones, al terminar deberas pasarle el control a la victima!!</string>
     <string name="truthDareTitle">Verdad / Consecuencia</string>
 
 
