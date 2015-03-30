@@ -93,6 +93,11 @@ public class CharadesGameplay extends Activity {
         phraseField.setTextColor(getResources().getColor(R.color.black));
         phraseField.setText(RandomHelper.getNextRandomString(list, getApplicationContext()));
 
+        if(((TextView) findViewById(R.id.nextStartCharades)).getText().equals(getResources().getString(R.string.Start)))
+        {
+            ((TextView) findViewById(R.id.nextStartCharades)).setText(getResources().getString(R.string.Next));
+        }
+
         if(timerCount!=null)
         {
             timerCount.cancel();
@@ -102,7 +107,7 @@ public class CharadesGameplay extends Activity {
         {
             phraseField.setTextColor(getResources().getColor(R.color.red));
             ((TextView) findViewById(R.id.timer)).setText("");
-            ((TextView) findViewById(R.id.indicatorContainer)).setText("");
+            ((TextView) findViewById(R.id.nextStartCharades)).setText("");
         }
         else
         {

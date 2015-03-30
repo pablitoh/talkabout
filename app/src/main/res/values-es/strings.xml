@@ -9,6 +9,8 @@
     <string name="app_id">1624377927833115</string>
     <string name="share_text">Compartir</string>
     <string name="noMoreOptions">No hay mas opciones disponibles, vuelva al menu y empieze de nuevo!!!</string>
+    <string name="Start">Empezar</string>
+    <string name="Next">Siguiente</string>
 
     //I Never Strings
 
@@ -55,6 +57,7 @@
     <string name="lightTime">3 min</string>
     <string name="hardTime">7 min</string>
     <string name="timeLimitText">Selecciona el tiempo limite</string>
+
 
 
 </resources>
