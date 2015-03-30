@@ -26,9 +26,9 @@
     <com.concon.talkabout.talkabout.elements.TitleFun
         android:layout_width="fill_parent"
         android:layout_height="50dp"
-        android:text="Truth / Dare "
+        android:text="@string/truthDareTitle"
         android:id="@+id/textView"
-        android:textSize="40sp"
+        android:textSize="@dimen/section_title_text"
         android:textColor="@color/orange"
         android:layout_below="@+id/adView"
         android:layout_alignParentLeft="true"
@@ -55,7 +55,7 @@
         android:clickable="true"
         android:onClick="getFate"
         android:textColor="@drawable/text"
-        android:textSize="40sp"
+        android:textSize="@dimen/gameplay_text"
         />
             </ScrollView>
     <com.concon.talkabout.talkabout.elements.TextViewFun
@@ -65,7 +65,7 @@
         android:text="@string/tapToContinue"
         android:textColor="@color/orange"
         android:gravity="center"
-        android:textSize="20sp"
+        android:textSize="@dimen/indication_text"
         android:id="@+id/indicatorContainer"
         android:onClick="getFate"
         android:clickable="true"/>

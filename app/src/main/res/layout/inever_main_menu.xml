@@ -19,16 +19,14 @@
     <com.concon.talkabout.talkabout.elements.TitleFun
         android:id="@+id/textView"
         android:layout_width="fill_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/adView"
         android:gravity="center"
         android:text="@string/INevertitle"
         android:textColor="@color/orange"
-        android:textSize="40sp" />
-
-
+        android:textSize="@dimen/section_title_text"/>
     <ScrollView
         android:id="@+id/SCROLLER_ID"
         android:layout_width="fill_parent"
@@ -60,16 +58,15 @@
         android:gravity="center"
         android:text="@string/IneverDifficultySelect"
         android:textColor="@color/orange"
-        android:textSize="20sp" />
+        android:textSize="@dimen/indication_text"/>
 
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="fill_parent"
-        android:layout_height="120dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
 
         <com.concon.talkabout.talkabout.elements.ButtonFun
-
             android:id="@+id/basicDifficulty"
             android:layout_width="0dp"
             android:layout_height="fill_parent"

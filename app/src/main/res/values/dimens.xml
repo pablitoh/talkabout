@@ -2,6 +2,9 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-    <dimen name="menu_text_size">30sp</dimen>
-    <dimen name="gameplay_button_text">20sp</dimen>
+    <dimen name="menu_text_size">35sp</dimen>
+    <dimen name="section_title_text">35sp</dimen>
+    <dimen name="gameplay_text">25sp</dimen>
+    <dimen name="gameplay_button_text">25sp</dimen>
+    <dimen name="indication_text">15sp</dimen>
 </resources>
