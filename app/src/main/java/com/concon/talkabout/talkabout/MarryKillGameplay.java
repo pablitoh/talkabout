@@ -2,6 +2,7 @@ package com.concon.talkabout.talkabout;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -123,18 +124,16 @@ public class MarryKillGameplay extends Activity {
     }
 
     public void shareMKF(View v){
-
-
         String option1 = ((TextView) findViewById(R.id.option1)).getText().toString();
         String option2 = ((TextView) findViewById(R.id.option2)).getText().toString();
         String option3 = ((TextView) findViewById(R.id.option3)).getText().toString();
 
-        String name="Party Games";
+        String name="Marry, Kill , F**K";
 
         if (ShareDialog.canShow(ShareLinkContent.class)) {
             ShareLinkContent linkContent = new ShareLinkContent.Builder()
                     .setContentTitle(name)
-                    .setContentDescription(getResources().getString(R.string.mkfPostText)+":"+option1+","+option2+","+option3)
+                    .setContentDescription(option1+", "+option2+", "+option3)
                     .setContentUrl(Uri.parse("https://www.facebook.com/PartyGamesMobileApp"))
                     .setImageUrl((Uri.parse(getResources().getString(R.string.mkfPostImage))))
                     .build();

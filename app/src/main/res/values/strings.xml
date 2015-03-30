@@ -12,7 +12,7 @@
    //I Never Strings
 
     <string name="INevertitle">Never have I ever.. </string>
-    <string name="IneverDescription">Instructions:\nA sentence will appear in screen, anyone which is not identified with it must DRINK!!!\n Be Honest and have fun!!! </string>
+    <string name="IneverDescription">A sentence will appear in screen, anyone which is not identified with it must DRINK!!!\n Be Honest and have fun!!! </string>
     <string name="IneverDifficultySelect">Choose the innocence of the sentences</string>
     <string name='easy'>Angel Level</string>
     <string name='medium'>HOT!\nHOT!\nHOT!</string>
@@ -21,7 +21,7 @@
 
     //Truth / Dare
     <string name="title_activity_truth_dare_gameplay">truthDareGameplay</string>
-    <string name="TruthDareDescription">Instructions:\n You will be faced with different options, once you choose someone you will have to hand the device to that person!!\n HAVE FUN!</string>
+    <string name="TruthDareDescription">You will be faced with different options, once you choose someone you will have to hand the device to that person!!\n HAVE FUN!</string>
 
     //Marry / Kill
     <string name="title_activity_marry_kill">MarryKill</string>
@@ -33,7 +33,7 @@
     //Charades Strings
     <string name="mimicTitle">Charades</string>
     <string name="title_activity_mimic_gameplay">MimicGameplay</string>
-    <string name="mimicDescription">Instructions:\n You have to "act out" a movie title without speaking, while the other members of your team try to guess which movie it is</string>
+    <string name="mimicDescription">You have to "act out" a movie title without speaking, while the other members of your team try to guess which movie it is</string>
     <string name="charadesTitle">Charades</string>
     <string name="truthDareTitle">Truth / Dare</string>
     <string name="showWoman">Show me the Girls</string>

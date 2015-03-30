@@ -32,7 +32,7 @@ public class CharadesGameplay extends Activity {
     private CountDown timerCount ;
     private MediaPlayer mediaPlayer = new MediaPlayer();
     private CustomInterstitial ad;
-    private final int CharadesTime = 300 ;
+    private final int CharadesTime = 180 ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -92,19 +92,24 @@ public class CharadesGameplay extends Activity {
         phraseField.setTextColor(getResources().getColor(R.color.black));
         phraseField.setText(RandomHelper.getNextRandomString(list, getApplicationContext()));
 
+        if(timerCount!=null)
+        {
+            timerCount.cancel();
+        }
+
         if(phraseField.getText().equals(getString(R.string.noMoreOptions)))
         {
             phraseField.setTextColor(getResources().getColor(R.color.red));
             ((TextView) findViewById(R.id.timer)).setText("");
             ((TextView) findViewById(R.id.indicatorContainer)).setText("");
         }
-
-        if(timerCount!=null)
+        else
         {
-            timerCount.cancel();
+            timerCount = new CountDown(CharadesTime * 1000, 1000);
+            timerCount.start();
         }
-        timerCount = new CountDown(CharadesTime * 1000, 1000);
-        timerCount.start();
+
+
     }
 
     public class CountDown extends CountDownTimer {
