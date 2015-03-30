@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.concon.talkabout.talkabout.CharadesMainMenu">
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="fill_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"/>
+
+    <com.concon.talkabout.talkabout.elements.TitleFun
+        android:id="@+id/textView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/adView"
+        android:gravity="center"
+        android:text="@string/charadesTitle"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/section_title_text"/>
+    <ScrollView
+        android:id="@+id/SCROLLER_ID"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/indicatorContainer"
+        android:layout_below="@+id/textView"
+        android:fillViewport="true"
+        android:scrollbars="vertical">
+
+        <com.concon.talkabout.talkabout.elements.TextViewFun
+            android:id="@+id/phrase"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="@string/mimicDescription"
+            android:textColor="#000000"
+            android:textSize="30sp"
+            android:textStyle="italic"
+            android:typeface="normal" />
+
+    </ScrollView>
+
+    <com.concon.talkabout.talkabout.elements.TextViewFun
+        android:id="@+id/indicatorContainer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout2"
+        android:gravity="center"
+        android:text="@string/timeLimitText"
+        android:textColor="@color/orange"
+        android:textSize="@dimen/indication_text"/>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <com.concon.talkabout.talkabout.elements.ButtonFun
+            android:id="@+id/charadesFirstTimeOption"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_hot_behavior"
+            android:gravity="center"
+            android:onClick="startActivity"
+            android:text="@string/lightTime"
+            android:textSize="@dimen/gameplay_button_text"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <com.concon.talkabout.talkabout.elements.ButtonFun
+            android:id="@+id/charadesSecondTimeOption"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_hot_behavior"
+            android:onClick="startActivity"
+            android:text="@string/mediumTime"
+            android:textSize="@dimen/gameplay_button_text"
+            android:padding="5dp"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textStyle="bold" />
+
+        <com.concon.talkabout.talkabout.elements.ButtonFun
+            android:id="@+id/charadesThirdTimeOption"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_hot_behavior"
+            android:onClick="startActivity"
+            android:text="@string/hardTime"
+            android:textColor="@color/black"
+            android:textSize="@dimen/gameplay_button_text"
+            android:padding="5dp"
+            android:gravity="center"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</RelativeLayout>

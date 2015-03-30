@@ -9,6 +9,8 @@
     <string name="app_id">1624377927833115</string>
     <string name="share_text">Compartir</string>
     <string name="noMoreOptions">No hay mas opciones disponibles, vuelva al menu y empieze de nuevo!!!</string>
+    <string name="Start">Empezar</string>
+    <string name="Next">Siguiente</string>
 
     //I Never Strings
 
@@ -51,6 +53,11 @@
     <string name="mkfInfo">*Toca en los nombres para mas informacion</string>
     <string name="getReady">Listos...</string>
     <string name="mkfPostText" >Casate, acuestate y mata:</string>
+    <string name="mediumTime">5 min</string>
+    <string name="lightTime">3 min</string>
+    <string name="hardTime">7 min</string>
+    <string name="timeLimitText">Selecciona el tiempo limite</string>
+
 
 
 </resources>
