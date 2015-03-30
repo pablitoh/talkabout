@@ -66,7 +66,7 @@ public class MainMenu extends Activity {
                 startActivity(new Intent(MainMenu.this, TruthDareGameplay.class));
                 break;
             case R.id.mimicButton:
-                startActivity(new Intent(MainMenu.this, CharadesGameplay.class));
+                startActivity(new Intent(MainMenu.this, CharadesMainMenu.class));
                 break;
             case R.id.marryButton:
                 startActivity(new Intent(MainMenu.this, MarryKillGameplay.class));

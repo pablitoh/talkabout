@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.concon.talkabout.talkabout.ads.CustomInterstitial;
-import com.concon.talkabout.talkabout.R;
 import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -15,19 +14,19 @@ import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 
 
-public class IneverMainMenu extends Activity {
+public class CharadesMainMenu extends Activity {
 
     CustomInterstitial ad;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.inever_main_menu);
+        setContentView(R.layout.charades_main_menu);
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
         Tracker t = ((GoogleAnalyticsApp) getApplication()).getTracker(GoogleAnalyticsApp.TrackerName.APP_TRACKER);
-        t.setScreenName("I Never Menu");
+        t.setScreenName("Charades Main Menu");
         t.enableAdvertisingIdCollection(true);
         t.send(new HitBuilders.AppViewBuilder().build());
         ad = new CustomInterstitial(this);
@@ -54,24 +53,24 @@ public class IneverMainMenu extends Activity {
     }
 
     public void startActivity(View v) {
-        Intent intent = new Intent(IneverMainMenu.this, IneverGameplay.class);
+        Intent intent = new Intent(CharadesMainMenu.this, CharadesGameplay.class);
         Bundle b = new Bundle();
 
         switch (v.getId()) {
-            case R.id.basicDifficulty:
-                b.putInt("time", 1); //Your id
+            case R.id.charadesFirstTimeOption:
+                b.putInt("time", 3);
                 break;
-            case R.id.mediumDifficulty:
-                b.putInt("time", 2); //Your id
+            case R.id.charadesSecondTimeOption:
+                b.putInt("time", 5);
                 break;
-            case R.id.hardDifficulty:
-                b.putInt("time", 3); //Your id
+            case R.id.charadesThirdTimeOption:
+                b.putInt("time", 7);
                 break;
             default:
                 throw new RuntimeException("Unknown button ID");
         }
 
-        intent.putExtras(b); //Put your id to your next Intent
+        intent.putExtras(b);
         startActivity(intent);
 
     }

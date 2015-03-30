@@ -51,6 +51,10 @@
     <string name="mkfInfo">*Toca en los nombres para mas informacion</string>
     <string name="getReady">Listos...</string>
     <string name="mkfPostText" >Casate, acuestate y mata:</string>
+    <string name="mediumTime">5 min</string>
+    <string name="lightTime">3 min</string>
+    <string name="hardTime">7 min</string>
+    <string name="timeLimitText">Selecciona el tiempo limite</string>
 
 
 </resources>

@@ -31,8 +31,7 @@ public class CharadesGameplay extends Activity {
     private List<String> list = new ArrayList<>();
     private CountDown timerCount ;
     private MediaPlayer mediaPlayer = new MediaPlayer();
-    private CustomInterstitial ad;
-    private final int CharadesTime = 180 ;
+    private int charadesTime = 3 ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,13 +39,16 @@ public class CharadesGameplay extends Activity {
         setContentView(R.layout.activity_mimic_gameplay);
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
-        ad = new CustomInterstitial(this);
         mAdView.loadAd(adRequest);
 
         Tracker t = ((GoogleAnalyticsApp) getApplication()).getTracker(GoogleAnalyticsApp.TrackerName.APP_TRACKER);
         t.setScreenName("Charades");
         t.enableAdvertisingIdCollection(true);
         t.send(new HitBuilders.AppViewBuilder().build());
+
+        Bundle b = getIntent().getExtras();
+        charadesTime = b.getInt("time")*60;
+
         try {
             list = singleFeedParserService.parseXml(1, this.getResources().openRawResource(R.raw.mimic), "mimic");
         } catch (XmlPullParserException e) {
@@ -80,7 +82,6 @@ public class CharadesGameplay extends Activity {
 
     @Override
     public void onBackPressed() {
-        ad.showIfAvailable();
         if(timerCount!=null){
             timerCount.cancel();
         }
@@ -105,7 +106,7 @@ public class CharadesGameplay extends Activity {
         }
         else
         {
-            timerCount = new CountDown(CharadesTime * 1000, 1000);
+            timerCount = new CountDown(charadesTime * 1000, 1000);
             timerCount.start();
         }
 

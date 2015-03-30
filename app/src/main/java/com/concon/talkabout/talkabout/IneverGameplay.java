@@ -30,8 +30,6 @@ import java.util.List;
 
 public class IneverGameplay extends Activity {
 
-    private Integer difficulty;
-
     /**
      * To Be replaced by XML Parser
      */

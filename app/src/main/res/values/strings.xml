@@ -9,6 +9,7 @@
     <string name="app_id">1624377927833115</string>
     <string name="share_text">Share</string>
     <string name="noMoreOptions">No more options available at the moment, please restart the game to start over!!</string>
+    <string name="getReady">Get Ready...</string>
    //I Never Strings
 
     <string name="INevertitle">Never have I ever.. </string>
@@ -46,7 +47,11 @@
     <string name="thirdTitle">or you F**K</string>
     <string name="timeout">TIME-OUT!!!\n Time to DRINK!!</string>
     <string name="tapToContinue">Tap anywhere to continue...</string>
-    <string name="getReady">Get Ready...</string>
+
+    <string name="mediumTime">5 min</string>
+    <string name="lightTime">3 min</string>
+    <string name="hardTime">7 min</string>
+    <string name="timeLimitText">Select time limit</string>
 
 
 </resources>
