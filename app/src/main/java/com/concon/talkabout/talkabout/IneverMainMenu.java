@@ -59,13 +59,13 @@ public class IneverMainMenu extends Activity {
 
         switch (v.getId()) {
             case R.id.basicDifficulty:
-                b.putInt("time", 1); //Your id
+                b.putInt("key", 1); //Your id
                 break;
             case R.id.mediumDifficulty:
-                b.putInt("time", 2); //Your id
+                b.putInt("key", 2); //Your id
                 break;
             case R.id.hardDifficulty:
-                b.putInt("time", 3); //Your id
+                b.putInt("key", 3); //Your id
                 break;
             default:
                 throw new RuntimeException("Unknown button ID");
