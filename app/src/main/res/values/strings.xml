@@ -18,7 +18,7 @@
     <string name='medium'>HOT!\nHOT!\nHOT!</string>
     <string name='hard'> A little bit of both</string>
     <string name="IneverPostImage">http://scontent-gru.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/11081467_831485430234404_7159253971600731338_n.png?oh=693feffdfa3a5dd0fe3e1a6f09a8aa39&amp;oe=55AC4C31</string>
-
+    <string name="iNeverPostTitle">Never have i ever</string>
     //Truth / Dare
     <string name="title_activity_truth_dare_gameplay">truthDareGameplay</string>
     <string name="TruthDareDescription">You will be faced with different options, once you choose someone you will have to hand the device to that person!!\n HAVE FUN!</string>
@@ -28,6 +28,8 @@
     <string name="marryKillTitle">Marry-Kill-F**k</string>
     <string name="mkfPostImage">http://scontent-gru.xx.fbcdn.net/hphotos-xat1/v/t1.0-9/10423785_831485426901071_6961001977131207866_n.png?oh=67f2b3e78d974664f41183c4ef209cb9&amp;oe=5570BE4C</string>
     <string name="mkfTitle">Marry, Kill, F**k</string>
+    <string name="mkfInfo">*Tap the names for information</string>
+    <string name="mkfPostText" >Marry one, kill one and F**K one</string>
 
 
     //Charades Strings
@@ -43,10 +45,8 @@
     <string name="secondTitle">You Kill, You Marry</string>
     <string name="thirdTitle">or you F**K</string>
     <string name="timeout">TIME-OUT!!!\n Time to DRINK!!</string>
-    <string name="tapToContinue">Tap to continue...</string>
-    <string name="mkfInfo">*Tap the names for information</string>
+    <string name="tapToContinue">Tap anywhere to continue...</string>
     <string name="getReady">Get Ready...</string>
-    <string name="mkfPostText" >Marry one, kill one and F**K one</string>
 
 
 </resources>

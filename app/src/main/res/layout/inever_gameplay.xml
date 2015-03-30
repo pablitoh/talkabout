@@ -21,14 +21,14 @@
     <com.concon.talkabout.talkabout.elements.TitleFun
         android:id="@+id/textView"
         android:layout_width="fill_parent"
-        android:layout_height="100dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_below="@+id/adView"
         android:gravity="center"
         android:text="@string/INevertitle"
         android:textColor="@color/orange"
-        android:textSize="40sp" />
+        android:textSize="@dimen/section_title_text" />
 
     <com.concon.talkabout.talkabout.elements.TextViewFun
         android:id="@+id/phrase"
@@ -41,14 +41,14 @@
         android:padding="10dp"
         android:text="@string/getReady"
         android:textColor="@drawable/text"
-        android:textSize="40sp"
+        android:textSize="@dimen/gameplay_text"
         android:layout_above="@+id/button" />
 
     <Button
         android:layout_width="100dp"
         android:layout_height="wrap_content"
         android:text="@string/share_text"
-        android:textSize="15sp"
+        android:textSize="@dimen/indication_text"
         android:onClick="shareInever"
         android:drawableTop="@drawable/button_share"
         android:background="@null"
@@ -65,7 +65,7 @@
         android:gravity="center"
         android:text="@string/tapToContinue"
         android:textColor="@color/orange"
-        android:textSize="20sp"
+        android:textSize="@dimen/indication_text"
         android:clickable="true"
         android:onClick="changeTopic"/>
 

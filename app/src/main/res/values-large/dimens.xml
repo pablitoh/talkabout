@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="menu_text_size">50sp</dimen>
+    <dimen name="section_title_text">55sp</dimen>
     <dimen name="gameplay_button_text">30sp</dimen>
-
+    <dimen name="gameplay_text">50sp</dimen>
+    <dimen name="indication_text">30sp</dimen>
 </resources>

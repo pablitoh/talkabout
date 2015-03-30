@@ -125,15 +125,14 @@ public class IneverGameplay extends Activity {
     public void shareInever(View v){
 
         String option1 = ((TextView) findViewById(R.id.phrase)).getText().toString();
-
+        String title = getResources().getString(R.string.iNeverPostTitle);
         if (ShareDialog.canShow(ShareLinkContent.class)) {
             ShareLinkContent linkContent = new ShareLinkContent.Builder()
-                    .setContentTitle("Party Games")
+                    .setContentTitle(title)
                     .setContentDescription(option1)
                     .setContentUrl(Uri.parse("https://www.facebook.com/PartyGamesMobileApp"))
                     .setImageUrl((Uri.parse(getResources().getString(R.string.IneverPostImage))))
                     .build();
-
             shareDialog.show(linkContent);
         }
     }

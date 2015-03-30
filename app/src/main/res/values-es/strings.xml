@@ -13,13 +13,13 @@
     //I Never Strings
 
     <string name="INevertitle">Yo Nunca</string>
-    <string name="IneverDescription">Una frase aparecerá en pantalla, todos los que NO se sientan identificados, DEBERAN TOMAR ! Sean Honestos y a DIVERTIRSE ! </string>
+    <string name="IneverDescription">Una frase aparecerá en pantalla, todos los que NO se sientan identificados, DEBERAN TOMAR!\n Sean Honestos y a DIVERTIRSE ! </string>
     <string name="IneverDifficultySelect">Elegi cuanto estás dispuesto a arriesgar</string>
     <string name='easy'> Angel</string>
     <string name='medium'>HOT!\nHOT!\nHOT!</string>
     <string name='hard'>Ambas!</string>
     <string name="IneverPostImage">http://scontent-gru.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/11081125_831938256855788_5590356093113912653_n.png?oh=e0668f6af106c9749836903e1367dc1b&amp;oe=55B756F3</string>
-
+    <string name="iNeverPostTitle">YO NUNCA</string>
     //Truth / Dare
 
     <string name="title_activity_truth_dare_gameplay">truthDareGameplay</string>
@@ -30,24 +30,24 @@
     //Marry / Kill
 
     <string name="title_activity_marry_kill">MarryKill</string>
-    <string name="marryKillTitle">Marry-Kill-F**k</string>
+    <string name="marryKillTitle">Casate,mata,acuestate</string>
     <string name="mkfTitle">Casate, Mata, Acuestate</string>
     <string name="mkfPostImage">http://scontent-gru.xx.fbcdn.net/hphotos-xat1/v/t1.0-9/10423785_831485426901071_6961001977131207866_n.png?oh=67f2b3e78d974664f41183c4ef209cb9&amp;oe=5570BE4C</string>
     <string name="showWoman">Mujeres</string>
     <string name="showMen">Hombres</string>
     <string name="showBoth">Me da igual</string>
     <string name="firstTitle">Tenes que elegir </string>
-    <string name="secondTitle">a quien matas. con quien te casas </string>
-    <string name="thirdTitle">o con quien te acostas</string>
+    <string name="secondTitle">a quien matás. con quién te casas </string>
+    <string name="thirdTitle">o con quién te acostas</string>
 
 
     //Charades Strings
     <string name="mimicTitle">Digalo con Mimica</string>
     <string name="title_activity_mimic_gameplay">Digalo con Mimica</string>
-    <string name="mimicDescription">Sin decir una palabra, actuá el nombre de la pelicula que te toco.. Si tu equipo no la adivina. TOMAN. Si tu equipo la adivina, toma el otro equipo!!!\n A Divertirse!!</string>
+    <string name="mimicDescription">Sin decir una palabra, actuá el nombre de la película que te tocó.. Si tu equipo no la adivina. TOMAN. Si tu equipo la adivina, toma el otro equipo!!!\n A Divertirse!!</string>
     <string name="charadesTitle">Digalo con Mimica</string>
     <string name="timeout">Se acabó el tiempo!!!!\n Hora de TOMAR!!</string>
-    <string name="tapToContinue">Presione para continuar..</string>
+    <string name="tapToContinue">Presione la pantalla para continuar..</string>
     <string name="mkfInfo">*Toca en los nombres para mas informacion</string>
     <string name="getReady">Listos...</string>
     <string name="mkfPostText" >Casate, acuestate y mata:</string>
