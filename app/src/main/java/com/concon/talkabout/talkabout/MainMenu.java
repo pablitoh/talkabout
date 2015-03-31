@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 
-import com.concon.talkabout.talkabout.R;
 import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -50,10 +49,9 @@ public class MainMenu extends Activity {
     public boolean onTouchEvent(MotionEvent event) {
         // TODO Auto-generated method stub
 
-        if(event.getPointerCount() > 1) {
+        if (event.getPointerCount() > 1) {
             return true;
-        }
-        else
+        } else
             return super.onTouchEvent(event);
     }
 

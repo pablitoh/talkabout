@@ -6,7 +6,6 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.concon.talkabout.talkabout.ads.CustomInterstitial;
-import com.concon.talkabout.talkabout.R;
 import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -33,14 +32,12 @@ public class IneverMainMenu extends Activity {
         ad = new CustomInterstitial(this);
     }
 
-
-
-
     @Override
     public void onBackPressed() {
         ad.showIfAvailable();
         super.onBackPressed();
     }
+
     @Override
     protected void onStart() {
         super.onStart();

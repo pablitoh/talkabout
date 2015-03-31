@@ -2,7 +2,6 @@ package com.concon.talkabout.talkabout;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
@@ -75,19 +74,20 @@ public class MarryKillGameplay extends Activity {
     public void getPeople(View v) throws IOException, XmlPullParserException {
         int talkLevel;
 
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.manButton:
-                talkLevel =1 ;
+                talkLevel = 1;
                 break;
             case R.id.womanButton:
-                talkLevel =2 ;
+                talkLevel = 2;
                 break;
             case R.id.allButton:
-                talkLevel =3 ;
+                talkLevel = 3;
                 break;
-            default:talkLevel=3;
+            default:
+                talkLevel = 3;
         }
-        list = parser.parseXml(talkLevel,getResources().openRawResource(R.raw.marrykillfuck),"");
+        list = parser.parseXml(talkLevel, getResources().openRawResource(R.raw.marrykillfuck), "");
 
         TextView option = (TextView) findViewById(R.id.option1);
         option.setText(list.get(0));
@@ -103,6 +103,7 @@ public class MarryKillGameplay extends Activity {
         callbackManager.onActivityResult(requestCode, resultCode, data);
 
     }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -123,17 +124,17 @@ public class MarryKillGameplay extends Activity {
         super.onDestroy();
     }
 
-    public void shareMKF(View v){
+    public void shareMKF(View v) {
         String option1 = ((TextView) findViewById(R.id.option1)).getText().toString();
         String option2 = ((TextView) findViewById(R.id.option2)).getText().toString();
         String option3 = ((TextView) findViewById(R.id.option3)).getText().toString();
 
-        String name="Marry, Kill , F**K";
+        String name = "Marry, Kill , F**K";
 
         if (ShareDialog.canShow(ShareLinkContent.class)) {
             ShareLinkContent linkContent = new ShareLinkContent.Builder()
                     .setContentTitle(name)
-                    .setContentDescription(option1+", "+option2+", "+option3)
+                    .setContentDescription(option1 + ", " + option2 + ", " + option3)
                     .setContentUrl(Uri.parse("https://www.facebook.com/PartyGamesMobileApp"))
                     .setImageUrl((Uri.parse(getResources().getString(R.string.mkfPostImage))))
                     .build();
@@ -143,13 +144,11 @@ public class MarryKillGameplay extends Activity {
 
     }
 
-    public void getInformation(View v)
-    {
+    public void getInformation(View v) {
         TextView tv = (TextView) v;
         String name = tv.getText().toString();
-        if(!name.equalsIgnoreCase(getString(R.string.firstTitle)) && !name.equalsIgnoreCase(getString(R.string.secondTitle)) && !name.equalsIgnoreCase(getString(R.string.thirdTitle)))
-        {
-            Uri uriUrl = Uri.parse("http://www.google.com/search?q="+name);
+        if (!name.equalsIgnoreCase(getString(R.string.firstTitle)) && !name.equalsIgnoreCase(getString(R.string.secondTitle)) && !name.equalsIgnoreCase(getString(R.string.thirdTitle))) {
+            Uri uriUrl = Uri.parse("http://www.google.com/search?q=" + name);
             Intent launchBrowser = new Intent(Intent.ACTION_VIEW, uriUrl);
             startActivity(launchBrowser);
         }

@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * Created by gconte on 3/19/15.
  */
-public class SingleFeedParserService extends ParserService{
+public class SingleFeedParserService extends ParserService {
 
     @Override
     public void parseInnerCustom(XmlPullParser parser, int talkLevel, String tag, List<String> data) throws XmlPullParserException, IOException {

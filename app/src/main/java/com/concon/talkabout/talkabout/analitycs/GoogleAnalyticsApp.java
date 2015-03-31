@@ -36,4 +36,4 @@ public class GoogleAnalyticsApp extends Application {
         }
         return (Tracker) mTrackers.get(appTracker);
     }
-    }
+}

@@ -33,13 +33,12 @@ public class CharadesMainMenu extends Activity {
     }
 
 
-
-
     @Override
     public void onBackPressed() {
         ad.showIfAvailable();
         super.onBackPressed();
     }
+
     @Override
     protected void onStart() {
         super.onStart();

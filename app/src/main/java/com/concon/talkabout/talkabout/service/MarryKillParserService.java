@@ -13,7 +13,7 @@ import java.util.Random;
 /**
  * Created by gconte on 3/19/15.
  */
-public class MarryKillParserService extends ParserService{
+public class MarryKillParserService extends ParserService {
 
     @Override
     public List<String> parseXml(int talkLevel, InputStream xml, String tag) throws XmlPullParserException, IOException {
@@ -31,7 +31,7 @@ public class MarryKillParserService extends ParserService{
     @Override
     public void parseInnerCustom(XmlPullParser parser, int talkLevel, String tag, List<String> data) throws XmlPullParserException, IOException {
 
-        if(talkLevel == 1) {
+        if (talkLevel == 1) {
             lookingForGirls(parser, data);
         } else if (talkLevel == 2) {
             skip(parser);
@@ -43,7 +43,7 @@ public class MarryKillParserService extends ParserService{
     }
 
     private void lookingForGirls(XmlPullParser parser, List<String> data) throws IOException, XmlPullParserException {
-       parsePerson(parser, data, "girls");
+        parsePerson(parser, data, "girls");
     }
 
     private void lookingForBoys(XmlPullParser parser, List<String> data) throws IOException, XmlPullParserException {
@@ -53,7 +53,7 @@ public class MarryKillParserService extends ParserService{
     }
 
     private void lookingForGirlsWhoAreBoysWhoLikeBoysToBeGirlsWhoDoBoysLikeTheyreGirlsWhoDoGirlsLikeTheyreBoysAlwaysShouldBeSomeoneYouReallyLove(XmlPullParser parser, List<String> data) throws IOException, XmlPullParserException {
-        lookingForGirls(parser,data);
+        lookingForGirls(parser, data);
         lookingForBoys(parser, data);
     }
 
