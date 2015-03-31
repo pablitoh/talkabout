@@ -105,7 +105,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:id="@+id/linearLayout">
+        android:id="@+id/linearLayout"
+        android:background="@drawable/carrousel"
+        android:padding="5dp">
 
         <com.concon.talkabout.talkabout.elements.ButtonFun
 
@@ -114,7 +116,7 @@
             android:layout_weight="1"
             android:id="@+id/manButton"
             android:text="@string/showWoman"
-            android:background="@drawable/button_hot_behavior"
+            android:background="@drawable/button_shape"
             android:onClick="getPeople"
             android:gravity="center"
             android:textColor="@color/black"
@@ -127,7 +129,7 @@
             android:layout_height="fill_parent"
             android:id="@+id/womanButton"
             android:text="@string/showMen"
-            android:background="@drawable/button_hot_behavior"
+            android:background="@drawable/button_shape"
             android:onClick="getPeople"
             android:textColor="@color/black"
             android:layout_margin="2dp"
@@ -139,7 +141,7 @@
             android:layout_height="fill_parent"
             android:id="@+id/allButton"
             android:text="@string/showBoth"
-            android:background="@drawable/button_hot_behavior"
+            android:background="@drawable/button_shape"
             android:onClick="getPeople"
             android:textColor="@color/black"
             android:layout_margin="2dp"

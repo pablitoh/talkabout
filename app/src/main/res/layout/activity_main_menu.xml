@@ -39,81 +39,115 @@
             android:textStyle="bold" />
 
         </LinearLayout>
+
     <LinearLayout
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:layout_weight="1"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:splitMotionEvents="false"
         android:windowEnableSplitTouch="false"
-       >
-
-        <com.concon.talkabout.talkabout.elements.MenuButtonFun
-            android:layout_height="match_parent"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:text="@string/INevertitle"
-            android:onClick="startGame"
-            android:background="@drawable/button_shape"
+        android:layout_margin="0dp"
+        >
+        <com.concon.talkabout.talkabout.elements.TextViewFun
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/selectGame"
+            android:gravity="center"
             android:textColor="@color/orange"
-            android:id="@+id/iNeverButton"
-            android:textSize="@dimen/menu_text_size"
-            android:layout_margin="5dp"
-            android:textStyle="bold"
-            android:padding="3dp"
+            android:textSize="@dimen/indication_text"/>
+        <HorizontalScrollView
+            android:id="@+id/horizontalScrollView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:padding="10dp"
+            android:background="@drawable/carrousel"
+            android:fillViewport="true"
+            android:layout_marginBottom="10dp">
 
-            />
+            <LinearLayout
+                android:id="@+id/linearLayout1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:orientation="horizontal"
+                android:layout_margin="0dp">
+                <com.concon.talkabout.talkabout.elements.MenuButtonFun
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/INevertitle"
+                    android:onClick="startGame"
+                    android:background="@drawable/button_shape"
+                    android:textColor="@color/black"
+                    android:id="@+id/iNeverButton"
+                    android:textSize="@dimen/menu_text_size"
+                    android:layout_margin="5dp"
+                    android:textStyle="bold"
+                    android:padding="3dp"
 
-        <com.concon.talkabout.talkabout.elements.MenuButtonFun
-            android:background="@drawable/button_shape"
-            android:layout_height="match_parent"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:text="@string/truthDareTitle"
-            android:onClick="startGame"
-            android:textColor="@color/orange"
-            android:id="@+id/truthDareButton"
-            android:textSize="@dimen/menu_text_size"
-            android:layout_margin="5dp"
-            android:textStyle="bold"
-            style="?android:borderlessButtonStyle"
-            />
+                    />
+                <com.concon.talkabout.talkabout.elements.MenuButtonFun
+                    android:background="@drawable/button_shape"
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/truthDareTitle"
+                    android:onClick="startGame"
+                    android:textColor="@color/black"
+                    android:id="@+id/truthDareButton"
+                    android:textSize="@dimen/menu_text_size"
+                    android:layout_margin="5dp"
+                    android:textStyle="bold"
+                    style="?android:borderlessButtonStyle"
+                    />
+                <com.concon.talkabout.talkabout.elements.MenuButtonFun
+
+                    android:layout_height="fill_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/charadesTitle"
+                    android:onClick="startGame"
+                    android:background="@drawable/button_shape"
+                    android:textColor="@color/black"
+                    android:id="@+id/mimicButton"
+                    android:textSize="@dimen/menu_text_size"
+                    android:layout_margin="5dp"
+                    android:textStyle="bold"
+                    style="?android:borderlessButtonStyle"/>
+
+                <com.concon.talkabout.talkabout.elements.MenuButtonFun
+                    android:layout_height="match_parent"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/mkfTitle"
+                    android:onClick="startGame"
+                    android:textColor="@color/black"
+                    android:background="@drawable/button_shape"
+                    android:id="@+id/marryButton"
+                    android:textSize="@dimen/menu_text_size"
+                    android:layout_margin="5dp"
+                    android:textStyle="bold"
+                    style="?android:borderlessButtonStyle" />
+
+
+
+            </LinearLayout>
+        </HorizontalScrollView>
     </LinearLayout>
     <LinearLayout
-        android:layout_height="0dp"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:layout_weight="1"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:splitMotionEvents="false"
-        android:windowEnableSplitTouch="false">
-
-        <com.concon.talkabout.talkabout.elements.MenuButtonFun
-
-            android:layout_height="match_parent"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:text="@string/charadesTitle"
-            android:onClick="startGame"
-            android:background="@drawable/button_shape"
+        android:windowEnableSplitTouch="false"
+        android:layout_margin="0dp">
+        <com.concon.talkabout.talkabout.elements.TextViewFun
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/selectGame"
             android:textColor="@color/orange"
-            android:id="@+id/mimicButton"
-            android:textSize="@dimen/menu_text_size"
-            android:layout_margin="5dp"
-            android:textStyle="bold"
-            style="?android:borderlessButtonStyle"/>
-
-        <com.concon.talkabout.talkabout.elements.MenuButtonFun
-            android:layout_height="match_parent"
-            android:layout_width="0dp"
-            android:layout_weight="1"
-            android:text="@string/mkfTitle"
-            android:onClick="startGame"
-            android:textColor="@color/orange"
-            android:background="@drawable/button_shape"
-            android:id="@+id/marryButton"
-            android:textSize="@dimen/menu_text_size"
-            android:layout_margin="5dp"
-            android:textStyle="bold"
-            style="?android:borderlessButtonStyle" />
-    </LinearLayout>
+            android:textSize="@dimen/indication_text"
+            android:layout_gravity="center_horizontal"
+            android:paddingBottom="10dp"/>
 </LinearLayout>
+    </LinearLayout>
