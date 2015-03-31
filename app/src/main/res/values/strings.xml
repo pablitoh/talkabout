@@ -52,7 +52,8 @@
     <string name="lightTime">3 min</string>
     <string name="hardTime">7 min</string>
     <string name="timeLimitText">Select time limit</string>
-    <string name="Start">Next</string>
+    <string name="Start">Start</string>
+    <string name="Next">Skip</string>s
 
 
 </resources>
