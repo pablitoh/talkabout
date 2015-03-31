@@ -36,7 +36,7 @@ public abstract class ParserService {
                 continue;
             }
 
-            if(processed) {
+            if (processed) {
                 break;
             }
 

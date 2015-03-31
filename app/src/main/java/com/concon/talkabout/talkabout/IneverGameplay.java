@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
 import com.concon.talkabout.talkabout.service.INeverParserService;
 import com.concon.talkabout.talkabout.service.ParserService;
+import com.concon.talkabout.talkabout.utils.DisplayHelper;
+import com.concon.talkabout.talkabout.utils.FacebookHelper;
 import com.concon.talkabout.talkabout.utils.RandomHelper;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookSdk;
@@ -59,7 +61,7 @@ public class IneverGameplay extends Activity {
 
         parserService = new INeverParserService();
         try {
-            list =  parserService.parseXml(difficulty, this.getResources().openRawResource(R.raw.inever), "inever");
+            list = parserService.parseXml(difficulty, this.getResources().openRawResource(R.raw.inever), "inever");
         } catch (XmlPullParserException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -68,22 +70,21 @@ public class IneverGameplay extends Activity {
 
     }
 
-    private String getRandomFromList(List<String> list)
-    {
-        return RandomHelper.getNextRandomString(list,getApplicationContext());
+    private String getRandomFromList(List<String> list) {
+        return RandomHelper.getNextRandomString(list, getApplicationContext());
     }
 
     public void changeTopic(View v) {
         TextView phraseField = (TextView) findViewById(R.id.phrase);
         phraseField.setText(getRandomFromList(list));
 
-        if(phraseField.getText().equals(getString(R.string.noMoreOptions)))
-        {
+        if (phraseField.getText().equals(getString(R.string.noMoreOptions))) {
             phraseField.setTextColor(getResources().getColor(R.color.red));
             ((TextView) findViewById(R.id.indicatorContainer)).setText("");
         }
 
     }
+
     @Override
     protected void onStart() {
         super.onStart();
@@ -95,12 +96,14 @@ public class IneverGameplay extends Activity {
         super.onStop();
         GoogleAnalytics.getInstance(this).reportActivityStop(this);
     }
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         callbackManager.onActivityResult(requestCode, resultCode, data);
 
     }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -120,18 +123,10 @@ public class IneverGameplay extends Activity {
     public void onDestroy() {
         super.onDestroy();
     }
-    public void shareInever(View v){
 
-        String option1 = ((TextView) findViewById(R.id.phrase)).getText().toString();
-        String title = getResources().getString(R.string.iNeverPostTitle);
+    public void shareInever(View v) {
         if (ShareDialog.canShow(ShareLinkContent.class)) {
-            ShareLinkContent linkContent = new ShareLinkContent.Builder()
-                    .setContentTitle(title)
-                    .setContentDescription(option1)
-                    .setContentUrl(Uri.parse("https://www.facebook.com/PartyGamesMobileApp"))
-                    .setImageUrl((Uri.parse(getResources().getString(R.string.IneverPostImage))))
-                    .build();
-            shareDialog.show(linkContent);
+            FacebookHelper.shareCurrentScreen(shareDialog, DisplayHelper.takeScreenShot(getWindow().getDecorView().getRootView()));
         }
     }
 }

@@ -7,7 +7,6 @@ import android.os.CountDownTimer;
 import android.view.View;
 import android.widget.TextView;
 
-import com.concon.talkabout.talkabout.ads.CustomInterstitial;
 import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
 import com.concon.talkabout.talkabout.service.SingleFeedParserService;
 import com.concon.talkabout.talkabout.utils.RandomHelper;
@@ -29,9 +28,9 @@ public class CharadesGameplay extends Activity {
 
     private SingleFeedParserService singleFeedParserService = new SingleFeedParserService();
     private List<String> list = new ArrayList<>();
-    private CountDown timerCount ;
+    private CountDown timerCount;
     private MediaPlayer mediaPlayer = new MediaPlayer();
-    private int charadesTime = 3 ;
+    private int charadesTime = 3;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,7 +46,7 @@ public class CharadesGameplay extends Activity {
         t.send(new HitBuilders.AppViewBuilder().build());
 
         Bundle b = getIntent().getExtras();
-        charadesTime = b.getInt("time")*60;
+        charadesTime = b.getInt("time") * 60;
 
         try {
             list = singleFeedParserService.parseXml(1, this.getResources().openRawResource(R.raw.mimic), "mimic");
@@ -74,7 +73,7 @@ public class CharadesGameplay extends Activity {
     @Override
     protected void onUserLeaveHint() {
 
-        if(timerCount!=null){
+        if (timerCount != null) {
             timerCount.cancel();
         }
         super.onUserLeaveHint();
@@ -82,7 +81,7 @@ public class CharadesGameplay extends Activity {
 
     @Override
     public void onBackPressed() {
-        if(timerCount!=null){
+        if (timerCount != null) {
             timerCount.cancel();
         }
         super.onBackPressed();
@@ -93,24 +92,19 @@ public class CharadesGameplay extends Activity {
         phraseField.setTextColor(getResources().getColor(R.color.black));
         phraseField.setText(RandomHelper.getNextRandomString(list, getApplicationContext()));
 
-        if(((TextView) findViewById(R.id.nextStartCharades)).getText().equals(getResources().getString(R.string.Start)))
-        {
+        if (((TextView) findViewById(R.id.nextStartCharades)).getText().equals(getResources().getString(R.string.Start))) {
             ((TextView) findViewById(R.id.nextStartCharades)).setText(getResources().getString(R.string.Next));
         }
 
-        if(timerCount!=null)
-        {
+        if (timerCount != null) {
             timerCount.cancel();
         }
 
-        if(phraseField.getText().equals(getString(R.string.noMoreOptions)))
-        {
+        if (phraseField.getText().equals(getString(R.string.noMoreOptions))) {
             phraseField.setTextColor(getResources().getColor(R.color.red));
             ((TextView) findViewById(R.id.timer)).setText("");
             ((TextView) findViewById(R.id.nextStartCharades)).setText("");
-        }
-        else
-        {
+        } else {
             timerCount = new CountDown(charadesTime * 1000, 1000);
             timerCount.start();
         }
@@ -133,15 +127,14 @@ public class CharadesGameplay extends Activity {
             TextView timer = (TextView) findViewById(R.id.timer);
             timer.setText("");
 
-            mediaPlayer = MediaPlayer.create(getApplicationContext(),R.raw.wrong);
+            mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.wrong);
             try {
 
                 mediaPlayer.prepare();
                 mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 
                     @Override
-                    public void onCompletion(MediaPlayer mp)
-                    {
+                    public void onCompletion(MediaPlayer mp) {
                         mp.release();
                     }
                 });
@@ -165,17 +158,15 @@ public class CharadesGameplay extends Activity {
             TextView timer = (TextView) findViewById(R.id.timer);
             timer.setText(TimeHelper.convertMilisToTimeFormat(millisUntilFinished));
 
-            if(millisUntilFinished < 10000)
-            {
-                mediaPlayer = MediaPlayer.create(getApplicationContext(),R.raw.tick);
+            if (millisUntilFinished < 10000) {
+                mediaPlayer = MediaPlayer.create(getApplicationContext(), R.raw.tick);
                 try {
 
                     mediaPlayer.prepare();
                     mediaPlayer.setOnCompletionListener(new MediaPlayer.OnCompletionListener() {
 
                         @Override
-                        public void onCompletion(MediaPlayer mp)
-                        {
+                        public void onCompletion(MediaPlayer mp) {
                             mp.release();
                         }
                     });

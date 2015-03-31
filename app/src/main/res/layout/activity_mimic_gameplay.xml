@@ -33,35 +33,46 @@
         android:id="@+id/SCROLLER_ID"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
         android:fillViewport="true"
         android:scrollbars="vertical"
-        android:layout_above="@+id/timer">
-        <com.concon.talkabout.talkabout.elements.TextViewFun
+        android:layout_above="@+id/timer"
+        android:layout_below="@+id/textView">
+        <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="@string/getReady"
-            android:id="@+id/phrase"
-            android:padding="10dp"
-            android:textColor="@drawable/text"
-            android:textSize="@dimen/gameplay_text"
-             />
+            android:orientation="vertical"
+            android:weightSum="1">
+            <com.concon.talkabout.talkabout.elements.TextViewFun
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/getReady"
+                android:id="@+id/phrase"
+                android:padding="10dp"
+                android:layout_marginTop="15dp"
+                android:textColor="@drawable/text"
+                android:textSize="@dimen/gameplay_text"
+                android:layout_weight="0.65" />
+            <com.concon.talkabout.talkabout.elements.TextViewFun
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textSize="@dimen/gameplay_text"
+                android:id="@+id/nextStartCharades"
+                android:textColor="@color/orange"
+                android:background="@drawable/button_shape"
+                android:padding="5dp"
+                android:text="@string/Start"
+                android:clickable="true"
+                android:onClick="getMimic"
+
+
+                 />
+            </LinearLayout>
+
     </ScrollView>
 
-    <com.concon.talkabout.talkabout.elements.TextViewFun
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:textSize="@dimen/gameplay_text"
-        android:id="@+id/nextStartCharades"
-        android:textColor="@drawable/text"
-        android:padding="5dp"
-        android:text="@string/Start"
-        android:clickable="true"
-        android:onClick="getMimic"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true" />
+
 
     <com.concon.talkabout.talkabout.elements.TextViewFun
         android:layout_width="wrap_content"
@@ -71,7 +82,7 @@
         android:id="@+id/timer"
         android:textColor="@color/orange"
         android:padding="5dp"
-        android:layout_above="@+id/nextStartCharades"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
 
 </RelativeLayout>

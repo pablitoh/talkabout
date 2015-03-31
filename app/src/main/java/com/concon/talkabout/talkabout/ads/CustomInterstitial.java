@@ -26,13 +26,11 @@ public class CustomInterstitial {
         interstitialAd.loadAd(adRequest);
     }
 
-    public InterstitialAd getInterstitialAd()
-    {
+    public InterstitialAd getInterstitialAd() {
         return this.interstitialAd;
     }
 
-    public void showIfAvailable()
-    {
+    public void showIfAvailable() {
         if (interstitialAd.isLoaded()) {
             interstitialAd.show();
         }

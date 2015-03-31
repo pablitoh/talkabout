@@ -11,21 +11,20 @@ import android.widget.TextView;
 public class TextViewFun extends TextView {
     public TextViewFun(Context context) {
         super(context);
-        setFont(context,this);
+        setFont(context, this);
     }
 
     public TextViewFun(Context context, AttributeSet attrs) {
         super(context, attrs);
-        setFont(context,this);
+        setFont(context, this);
     }
 
     public TextViewFun(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        setFont(context,this);
+        setFont(context, this);
     }
 
-    private void setFont(Context context,TextView text)
-    {
+    private void setFont(Context context, TextView text) {
         Typeface font = Typeface.createFromAsset(context.getAssets(), "Action_Man.ttf");
         text.setTypeface(font);
     }

@@ -12,19 +12,15 @@ import java.util.Random;
  */
 public class RandomHelper {
 
-    public static String getNextRandomString(List<String> list,Context context)
-    {
+    public static String getNextRandomString(List<String> list, Context context) {
         Random rand = new Random();
         int listSize = list.size();
-        if(listSize > 0)
-        {
+        if (listSize > 0) {
             int randomNumber = rand.nextInt(listSize);
             String random = list.get(randomNumber);
             list.remove(randomNumber);
             return random;
-        }
-        else
-        {
+        } else {
             return context.getResources().getString(R.string.noMoreOptions);
         }
 
