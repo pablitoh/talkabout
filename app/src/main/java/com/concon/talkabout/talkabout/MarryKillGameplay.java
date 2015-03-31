@@ -11,6 +11,8 @@ import com.concon.talkabout.talkabout.ads.CustomInterstitial;
 import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
 import com.concon.talkabout.talkabout.service.MarryKillParserService;
 import com.concon.talkabout.talkabout.service.ParserService;
+import com.concon.talkabout.talkabout.utils.DisplayHelper;
+import com.concon.talkabout.talkabout.utils.FacebookHelper;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookSdk;
 import com.facebook.share.model.ShareLinkContent;
@@ -125,21 +127,9 @@ public class MarryKillGameplay extends Activity {
     }
 
     public void shareMKF(View v) {
-        String option1 = ((TextView) findViewById(R.id.option1)).getText().toString();
-        String option2 = ((TextView) findViewById(R.id.option2)).getText().toString();
-        String option3 = ((TextView) findViewById(R.id.option3)).getText().toString();
-
-        String name = "Marry, Kill , F**K";
 
         if (ShareDialog.canShow(ShareLinkContent.class)) {
-            ShareLinkContent linkContent = new ShareLinkContent.Builder()
-                    .setContentTitle(name)
-                    .setContentDescription(option1 + ", " + option2 + ", " + option3)
-                    .setContentUrl(Uri.parse("https://www.facebook.com/PartyGamesMobileApp"))
-                    .setImageUrl((Uri.parse(getResources().getString(R.string.mkfPostImage))))
-                    .build();
-
-            shareDialog.show(linkContent);
+            FacebookHelper.shareCurrentScreen(shareDialog,DisplayHelper.takeScreenShot(getWindow().getDecorView().getRootView()));
         }
 
     }

@@ -10,6 +10,8 @@ import android.widget.TextView;
 import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
 import com.concon.talkabout.talkabout.service.INeverParserService;
 import com.concon.talkabout.talkabout.service.ParserService;
+import com.concon.talkabout.talkabout.utils.DisplayHelper;
+import com.concon.talkabout.talkabout.utils.FacebookHelper;
 import com.concon.talkabout.talkabout.utils.RandomHelper;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookSdk;
@@ -123,17 +125,8 @@ public class IneverGameplay extends Activity {
     }
 
     public void shareInever(View v) {
-
-        String option1 = ((TextView) findViewById(R.id.phrase)).getText().toString();
-        String title = getResources().getString(R.string.iNeverPostTitle);
         if (ShareDialog.canShow(ShareLinkContent.class)) {
-            ShareLinkContent linkContent = new ShareLinkContent.Builder()
-                    .setContentTitle(title)
-                    .setContentDescription(option1)
-                    .setContentUrl(Uri.parse("https://www.facebook.com/PartyGamesMobileApp"))
-                    .setImageUrl((Uri.parse(getResources().getString(R.string.IneverPostImage))))
-                    .build();
-            shareDialog.show(linkContent);
+            FacebookHelper.shareCurrentScreen(shareDialog, DisplayHelper.takeScreenShot(getWindow().getDecorView().getRootView()));
         }
     }
 }
