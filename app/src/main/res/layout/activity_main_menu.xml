@@ -25,115 +25,141 @@
         android:layout_weight="1"
         android:orientation="horizontal"
         android:splitMotionEvents="false"
-        android:windowEnableSplitTouch="false">
+        android:windowEnableSplitTouch="false"
+        >
 
-        <TextView
+        <ImageView
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
+            android:layout_height="match_parent"
             android:id="@+id/AppTitle"
             android:textColor="#ffffff"
             android:gravity="center"
             android:textSize="90sp"
             android:textIsSelectable="false"
-            android:background="@drawable/logo"
-            android:textStyle="bold" />
+            android:src="@drawable/logo"
+            android:textStyle="bold"
+            android:adjustViewBounds="true"/>
 
         </LinearLayout>
 
-    <LinearLayout
-        android:layout_height="wrap_content"
+    <RelativeLayout
+        android:layout_height="210dp"
         android:layout_width="match_parent"
-        android:layout_weight="1"
         android:orientation="vertical"
         android:splitMotionEvents="false"
         android:windowEnableSplitTouch="false"
         android:layout_margin="0dp"
-        >
+
+        android:layout_weight="0.09">
         <com.concon.talkabout.talkabout.elements.TextViewFun
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:text="@string/selectGame"
             android:gravity="center"
             android:textColor="@color/orange"
-            android:textSize="@dimen/indication_text"/>
-        <HorizontalScrollView
-            android:id="@+id/horizontalScrollView1"
+            android:textSize="@dimen/indication_text"
+            android:layout_above="@+id/linearLayout3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        <LinearLayout
             android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:padding="10dp"
-            android:background="@drawable/carrousel"
-            android:fillViewport="true"
-            android:layout_marginBottom="10dp">
-
-            <LinearLayout
-                android:id="@+id/linearLayout1"
+            android:layout_height="200dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/linearLayout3"
+            android:background="@drawable/carrousel">
+            <com.concon.talkabout.talkabout.elements.TextViewFun
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
-                android:orientation="horizontal"
-                android:layout_margin="0dp">
-                <com.concon.talkabout.talkabout.elements.MenuButtonFun
-                    android:layout_height="match_parent"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="@string/INevertitle"
-                    android:onClick="startGame"
-                    android:background="@drawable/button_shape"
-                    android:textColor="@color/black"
-                    android:id="@+id/iNeverButton"
-                    android:textSize="@dimen/menu_text_size"
-                    android:layout_margin="5dp"
-                    android:textStyle="bold"
-                    android:padding="3dp"
-
-                    />
-                <com.concon.talkabout.talkabout.elements.MenuButtonFun
-                    android:background="@drawable/button_shape"
-                    android:layout_height="match_parent"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="@string/truthDareTitle"
-                    android:onClick="startGame"
-                    android:textColor="@color/black"
-                    android:id="@+id/truthDareButton"
-                    android:textSize="@dimen/menu_text_size"
-                    android:layout_margin="5dp"
-                    android:textStyle="bold"
-                    style="?android:borderlessButtonStyle"
-                    />
-                <com.concon.talkabout.talkabout.elements.MenuButtonFun
-
+                android:drawableStart="@drawable/arrow_left_small"
+                android:drawableLeft="@drawable/arrow_left_small"
+                android:textSize="20sp"
+                android:gravity="center"
+                android:layout_weight="0"/>
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView1"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:padding="10dp"
+                android:fillViewport="true"
+                android:layout_marginBottom="10dp"
+                android:layout_weight="1">
+                <LinearLayout
+                    android:id="@+id/linearLayout1"
+                    android:layout_width="wrap_content"
                     android:layout_height="fill_parent"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="@string/charadesTitle"
-                    android:onClick="startGame"
-                    android:background="@drawable/button_shape"
-                    android:textColor="@color/black"
-                    android:id="@+id/mimicButton"
-                    android:textSize="@dimen/menu_text_size"
-                    android:layout_margin="5dp"
-                    android:textStyle="bold"
-                    style="?android:borderlessButtonStyle"/>
+                    android:orientation="horizontal"
+                    android:layout_margin="0dp">
+                    <com.concon.talkabout.talkabout.elements.MenuButtonFun
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/INevertitle"
+                        android:onClick="startGame"
+                        android:background="@drawable/button_shape"
+                        android:textColor="@color/black"
+                        android:id="@+id/iNeverButton"
+                        android:textSize="@dimen/menu_text_size"
+                        android:layout_margin="5dp"
+                        android:textStyle="bold"
+                        android:padding="3dp"
 
-                <com.concon.talkabout.talkabout.elements.MenuButtonFun
-                    android:layout_height="match_parent"
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="@string/mkfTitle"
-                    android:onClick="startGame"
-                    android:textColor="@color/black"
-                    android:background="@drawable/button_shape"
-                    android:id="@+id/marryButton"
-                    android:textSize="@dimen/menu_text_size"
-                    android:layout_margin="5dp"
-                    android:textStyle="bold"
-                    style="?android:borderlessButtonStyle" />
+                        />
+                    <com.concon.talkabout.talkabout.elements.MenuButtonFun
+                        android:background="@drawable/button_shape"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/truthDareTitle"
+                        android:onClick="startGame"
+                        android:textColor="@color/black"
+                        android:id="@+id/truthDareButton"
+                        android:textSize="@dimen/menu_text_size"
+                        android:layout_margin="5dp"
+                        android:textStyle="bold"
+                        style="?android:borderlessButtonStyle"
+                        />
+                    <com.concon.talkabout.talkabout.elements.MenuButtonFun
+                        android:layout_height="fill_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/charadesTitle"
+                        android:onClick="startGame"
+                        android:background="@drawable/button_shape"
+                        android:textColor="@color/black"
+                        android:id="@+id/mimicButton"
+                        android:textSize="@dimen/menu_text_size"
+                        android:layout_margin="5dp"
+                        android:textStyle="bold"
+                        style="?android:borderlessButtonStyle"/>
 
-
-
+                    <com.concon.talkabout.talkabout.elements.MenuButtonFun
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:text="@string/mkfTitle"
+                        android:onClick="startGame"
+                        android:textColor="@color/black"
+                        android:background="@drawable/button_shape"
+                        android:id="@+id/marryButton"
+                        android:textSize="@dimen/menu_text_size"
+                        android:layout_margin="5dp"
+                        android:textStyle="bold"
+                        style="?android:borderlessButtonStyle" />
+                </LinearLayout>
+            </HorizontalScrollView>
+            <com.concon.talkabout.talkabout.elements.TextViewFun
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:drawableStart="@drawable/arrow_right_small"
+                android:drawableLeft="@drawable/arrow_right_small"
+                android:textSize="20sp"
+                android:layout_gravity="center"
+                android:layout_weight="0"
+                android:gravity="center"/>
             </LinearLayout>
-        </HorizontalScrollView>
-    </LinearLayout>
+
+    </RelativeLayout>
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
