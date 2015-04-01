@@ -3,10 +3,14 @@ package com.concon.talkabout.talkabout;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.HorizontalScrollView;
+import android.widget.TextView;
 
 import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
+import com.concon.talkabout.talkabout.elements.CustomHorizontalScroll;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.analytics.GoogleAnalytics;
@@ -15,6 +19,11 @@ import com.google.android.gms.analytics.Tracker;
 
 
 public class MainMenu extends Activity {
+
+    CustomHorizontalScroll horizontalScrollView;
+    TextView prevButton;
+    TextView nextButton;
+    private final int SCROLL_AMOUNT = 20;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +39,45 @@ public class MainMenu extends Activity {
         t.enableAdvertisingIdCollection(true);
         t.send(new HitBuilders.AppViewBuilder().build());
 
+        prevButton = (TextView) findViewById(R.id.prevButton);
+        nextButton = (TextView) findViewById(R.id.nextButton);
+        horizontalScrollView = (CustomHorizontalScroll) findViewById(R.id.carrousel);
 
+        prevButton.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                horizontalScrollView.scrollTo(horizontalScrollView.getScrollX()-SCROLL_AMOUNT,0);
+                return true;
+            }
+        });
+        nextButton.setOnTouchListener(new View.OnTouchListener() {
+            @Override
+            public boolean onTouch(View v, MotionEvent event) {
+                horizontalScrollView.scrollTo(horizontalScrollView.getScrollX()+SCROLL_AMOUNT,0);
+                return true;
+            }
+        });
+
+        horizontalScrollView.setOnScrollViewListener(new CustomHorizontalScroll.OnScrollViewListener() {
+                                                         public void onScrollChanged(CustomHorizontalScroll v, int l, int t, int oldl, int oldt) {
+                                                             int maxScrollX = horizontalScrollView.getChildAt(0).getMeasuredWidth() - horizontalScrollView.getMeasuredWidth();
+                                                             if (horizontalScrollView.getScrollX() > 0) {
+
+                                                                 prevButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_left_small, 0, 0, 0);
+                                                             } else {
+                                                                 prevButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrowleft_grayed, 0, 0, 0);
+                                                             }
+
+                                                             if (horizontalScrollView.getScrollX() < maxScrollX) {
+
+
+                                                                 nextButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_right_small, 0, 0, 0);
+                                                             } else {
+                                                                 nextButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrowright_grayed, 0, 0, 0);
+                                                             }
+                                                         }
+                                                     }
+        );
     }
 
     @Override
@@ -47,12 +94,13 @@ public class MainMenu extends Activity {
 
     @Override
     public boolean onTouchEvent(MotionEvent event) {
-        // TODO Auto-generated method stub
 
         if (event.getPointerCount() > 1) {
             return true;
-        } else
+        } else {
             return super.onTouchEvent(event);
+        }
+
     }
 
     public void startGame(View v) {

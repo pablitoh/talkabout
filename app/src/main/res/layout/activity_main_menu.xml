@@ -75,9 +75,12 @@
                 android:drawableLeft="@drawable/arrow_left_small"
                 android:textSize="20sp"
                 android:gravity="center"
-                android:layout_weight="0"/>
-            <HorizontalScrollView
-                android:id="@+id/horizontalScrollView1"
+                android:layout_weight="0"
+                android:id="@+id/prevButton"
+                android:clickable="true"
+                android:onClick="scrollCarrousel"/>
+            <com.concon.talkabout.talkabout.elements.CustomHorizontalScroll
+                android:id="@+id/carrousel"
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
                 android:padding="10dp"
@@ -147,7 +150,7 @@
                         android:textStyle="bold"
                         style="?android:borderlessButtonStyle" />
                 </LinearLayout>
-            </HorizontalScrollView>
+            </com.concon.talkabout.talkabout.elements.CustomHorizontalScroll>
             <com.concon.talkabout.talkabout.elements.TextViewFun
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
@@ -156,7 +159,10 @@
                 android:textSize="20sp"
                 android:layout_gravity="center"
                 android:layout_weight="0"
-                android:gravity="center"/>
+                android:gravity="center"
+                android:id="@+id/nextButton"
+                android:clickable="true"
+                android:onClick="scrollCarrousel"/>
             </LinearLayout>
 
     </RelativeLayout>
