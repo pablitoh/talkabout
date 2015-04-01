@@ -23,7 +23,7 @@ public class MainMenu extends Activity {
     CustomHorizontalScroll horizontalScrollView;
     TextView prevButton;
     TextView nextButton;
-    private final int SCROLL_AMOUNT = 20;
+    private final int SCROLL_AMOUNT = 200;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,14 +46,24 @@ public class MainMenu extends Activity {
         prevButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                horizontalScrollView.scrollTo(horizontalScrollView.getScrollX()-SCROLL_AMOUNT,0);
+                switch (event.getAction())
+                {
+                    case MotionEvent.ACTION_DOWN:
+                        horizontalScrollView.scrollTo(horizontalScrollView.getScrollX()-SCROLL_AMOUNT,0);
+                        break;
+                }
                 return true;
             }
         });
         nextButton.setOnTouchListener(new View.OnTouchListener() {
             @Override
             public boolean onTouch(View v, MotionEvent event) {
-                horizontalScrollView.scrollTo(horizontalScrollView.getScrollX()+SCROLL_AMOUNT,0);
+                switch (event.getAction())
+                {
+                    case MotionEvent.ACTION_DOWN:
+                        horizontalScrollView.scrollTo(horizontalScrollView.getScrollX()+SCROLL_AMOUNT,0);
+                        break;
+                }
                 return true;
             }
         });
@@ -61,16 +71,14 @@ public class MainMenu extends Activity {
         horizontalScrollView.setOnScrollViewListener(new CustomHorizontalScroll.OnScrollViewListener() {
                                                          public void onScrollChanged(CustomHorizontalScroll v, int l, int t, int oldl, int oldt) {
                                                              int maxScrollX = horizontalScrollView.getChildAt(0).getMeasuredWidth() - horizontalScrollView.getMeasuredWidth();
+                                                             boolean endRight,endLeft = false;
                                                              if (horizontalScrollView.getScrollX() > 0) {
-
                                                                  prevButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_left_small, 0, 0, 0);
                                                              } else {
                                                                  prevButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrowleft_grayed, 0, 0, 0);
                                                              }
 
                                                              if (horizontalScrollView.getScrollX() < maxScrollX) {
-
-
                                                                  nextButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrow_right_small, 0, 0, 0);
                                                              } else {
                                                                  nextButton.setCompoundDrawablesWithIntrinsicBounds(R.drawable.arrowright_grayed, 0, 0, 0);
