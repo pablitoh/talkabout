@@ -105,7 +105,7 @@
                         android:textSize="@dimen/menu_text_size"
                         android:layout_margin="5dp"
                         android:textStyle="bold"
-                        android:padding="3dp"
+                        android:padding="15dp"
 
                         />
                     <com.concon.talkabout.talkabout.elements.MenuButtonFun
@@ -120,6 +120,7 @@
                         android:textSize="@dimen/menu_text_size"
                         android:layout_margin="5dp"
                         android:textStyle="bold"
+                        android:padding="15dp"
                         style="?android:borderlessButtonStyle"
                         />
                     <com.concon.talkabout.talkabout.elements.MenuButtonFun
@@ -134,6 +135,7 @@
                         android:textSize="@dimen/menu_text_size"
                         android:layout_margin="5dp"
                         android:textStyle="bold"
+                        android:padding="15dp"
                         style="?android:borderlessButtonStyle"/>
 
                     <com.concon.talkabout.talkabout.elements.MenuButtonFun
@@ -148,6 +150,7 @@
                         android:textSize="@dimen/menu_text_size"
                         android:layout_margin="5dp"
                         android:textStyle="bold"
+                        android:padding="15dp"
                         style="?android:borderlessButtonStyle" />
                 </LinearLayout>
             </com.concon.talkabout.talkabout.elements.CustomHorizontalScroll>
