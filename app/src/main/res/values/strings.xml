@@ -10,6 +10,7 @@
     <string name="share_text">Share</string>
     <string name="noMoreOptions">No more options available at the moment, please restart the game to start over!!</string>
     <string name="getReady">Get Ready...</string>
+    <string name="selectGame" >Select Game</string>
    //I Never Strings
 
     <string name="INevertitle">Never have I ever.. </string>
@@ -53,7 +54,8 @@
     <string name="hardTime">7 min</string>
     <string name="timeLimitText">Select time limit</string>
     <string name="Start">Start</string>
-    <string name="Next">Skip</string>s
+    <string name="Next">Skip</string>
+
 
 
 </resources>

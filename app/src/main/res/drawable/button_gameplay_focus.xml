@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item>
-        <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+        <shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
             <corners
-                android:radius="10dp"
+                android:radius="0dp"
                 />
-            <solid android:color="@color/darkyellow"/>
+            <solid android:color="@android:color/transparent"/>
             <size
-                android:width="200dp"
+                android:width="270dp"
                 android:height="60dp"
                 />
             <stroke
                 android:width="2dp"
-                android:color="@color/black"
+                android:color="@color/yellow"
                 />
         </shape>
-        </item>
-
+    </item>
 </selector>
-
