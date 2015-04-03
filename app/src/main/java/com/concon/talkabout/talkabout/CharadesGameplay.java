@@ -103,7 +103,7 @@ public class CharadesGameplay extends Activity {
         if (phraseField.getText().equals(getString(R.string.noMoreOptions))) {
             phraseField.setTextColor(getResources().getColor(R.color.red));
             ((TextView) findViewById(R.id.timer)).setText("");
-            ((TextView) findViewById(R.id.nextStartCharades)).setText("");
+            findViewById(R.id.nextStartCharades).setVisibility(View.GONE);
         } else {
             timerCount = new CountDown(charadesTime * 1000, 1000);
             timerCount.start();
