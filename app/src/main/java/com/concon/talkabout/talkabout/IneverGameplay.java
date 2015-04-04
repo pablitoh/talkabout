@@ -81,6 +81,7 @@ public class IneverGameplay extends Activity {
         if (phraseField.getText().equals(getString(R.string.noMoreOptions))) {
             phraseField.setTextColor(getResources().getColor(R.color.red));
             ((TextView) findViewById(R.id.indicatorContainer)).setText("");
+            findViewById(R.id.shareButtonInever).setVisibility(View.GONE);
         }
 
     }
