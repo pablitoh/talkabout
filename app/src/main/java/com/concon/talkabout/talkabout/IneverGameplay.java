@@ -6,6 +6,7 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
 import com.concon.talkabout.talkabout.service.INeverParserService;
@@ -15,7 +16,9 @@ import com.concon.talkabout.talkabout.utils.FacebookHelper;
 import com.concon.talkabout.talkabout.utils.RandomHelper;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookSdk;
+import com.facebook.share.model.ShareContent;
 import com.facebook.share.model.ShareLinkContent;
+import com.facebook.share.model.SharePhotoContent;
 import com.facebook.share.widget.ShareDialog;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
@@ -83,7 +86,6 @@ public class IneverGameplay extends Activity {
             ((TextView) findViewById(R.id.indicatorContainer)).setText("");
             findViewById(R.id.shareButtonInever).setVisibility(View.GONE);
         }
-
     }
 
     @Override
@@ -126,8 +128,12 @@ public class IneverGameplay extends Activity {
     }
 
     public void shareInever(View v) {
-        if (ShareDialog.canShow(ShareLinkContent.class)) {
+        if (ShareDialog.canShow(SharePhotoContent.class)) {
             FacebookHelper.shareCurrentScreen(shareDialog, DisplayHelper.takeScreenShot(getWindow().getDecorView().getRootView()));
+        }
+        else
+        {
+            Toast.makeText(getApplicationContext(),getResources().getString(R.string.facebookError),Toast.LENGTH_LONG).show();
         }
     }
 }
