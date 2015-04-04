@@ -55,6 +55,7 @@
     <string name="timeLimitText">Select time limit</string>
     <string name="Start">Start</string>
     <string name="Next">Skip</string>
+    <string name="title_activity_spin_wheel">Spin Wheel</string>
 
 
 

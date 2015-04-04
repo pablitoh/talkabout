@@ -81,8 +81,11 @@
         <activity
             android:name=".MarryKillGameplay"
             android:label="@string/title_activity_marry_kill"
-            android:screenOrientation="portrait"
-           >
+            android:screenOrientation="portrait"></activity>
+        <activity
+            android:name=".spinWheel"
+            android:label="@string/title_activity_spin_wheel"
+            android:theme="@style/Theme.AppCompat">
         </activity>
     </application>
 
