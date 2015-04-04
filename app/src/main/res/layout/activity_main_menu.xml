@@ -38,7 +38,8 @@
             android:textIsSelectable="false"
             android:src="@drawable/logo_nuevo"
             android:textStyle="bold"
-            android:adjustViewBounds="true"/>
+            android:adjustViewBounds="true"
+            android:padding="15dp"/>
 
         </LinearLayout>
 
