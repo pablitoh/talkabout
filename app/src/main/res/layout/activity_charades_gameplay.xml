@@ -16,7 +16,6 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true">
     </com.google.android.gms.ads.AdView>
-
         <com.concon.talkabout.talkabout.elements.TitleFun
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

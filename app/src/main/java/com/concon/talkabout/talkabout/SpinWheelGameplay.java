@@ -18,6 +18,8 @@ import android.widget.Toast;
 
 import com.concon.talkabout.talkabout.service.INeverParserService;
 import com.concon.talkabout.talkabout.service.SingleFeedParserService;
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -56,6 +58,9 @@ public class SpinWheelGameplay extends Activity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spinwheel_gameplay);
+        AdView mAdView = (AdView) findViewById(R.id.adView);
+        AdRequest adRequest = new AdRequest.Builder().build();
+        mAdView.loadAd(adRequest);
 
         // load the image only once
         if (imageOriginal == null) {
@@ -252,7 +257,7 @@ public class SpinWheelGameplay extends Activity {
 
             // limit the velocity of the wheel
             if(actualVelocity > 3000) {
-                velocity = 2000;
+                velocity = 1000;
             }
 
             if(actualVelocity > 1500) {
@@ -274,7 +279,7 @@ public class SpinWheelGameplay extends Activity {
 
             else if (actualVelocity > 250 && actualVelocity <= 400) {
                 rotateDialer(velocity / 10);
-                velocity /= 1.0100F;
+                velocity /= 1.0700F;
 
                 // post this instance again
                 dialer.post(this);
@@ -282,7 +287,7 @@ public class SpinWheelGameplay extends Activity {
 
             else if (actualVelocity > 150 && actualVelocity <= 250) {
                 rotateDialer(velocity / 8);
-                velocity /= 1.0100F;
+                velocity /= 1.0700F;
 
                 // post this instance again
                 dialer.post(this);
@@ -290,33 +295,33 @@ public class SpinWheelGameplay extends Activity {
 
             else if  (actualVelocity > 15 && actualVelocity <= 150) {
                 rotateDialer(velocity / 5);
-                velocity /= 1.0100F;
+                velocity /= 1.0700F;
 
                 // post this instance again
                 dialer.post(this);
             }
             else if (actualVelocity > 10 && actualVelocity <= 15) {
                 rotateDialer(velocity / 3);
-                velocity /= 1.0100F;
+                velocity /= 1.0700F;
 
                 // post this instance again
                 dialer.post(this);
 
             } else if (actualVelocity > 5) {
                 rotateDialer(velocity / 2);
-                velocity /= 1.0100F;
+                velocity /= 1.0700F;
                 // post this instance again
                 dialer.post(this);
 
             } else if(actualVelocity > 3 && actualVelocity <= 5 ) {
                 rotateDialer(velocity / 1.5F);
-                velocity /= 1.0100F;
+                velocity /= 1.0700F;
                 // post this instance again
                 dialer.post(this);
             }
               else if(actualVelocity > 1 && actualVelocity <= 3 ) {
                 rotateDialer(velocity / 1.2F);
-                velocity /= 1.0100F;
+                velocity /= 1.0700F;
                 // post this instance again
                 dialer.post(this);
             } else {
