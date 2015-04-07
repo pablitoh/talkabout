@@ -35,24 +35,24 @@
         android:layout_height="wrap_content"
         android:text="@string/spinWheel"
         android:textColor="@color/orange"
-        android:textSize="@dimen/indication_text"
+        android:textSize="@dimen/gameplay_text"
         android:layout_gravity="center_horizontal"
         android:paddingTop="10dp"
         android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:id="@+id/view" />
 
        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
            android:layout_width="fill_parent"
            android:layout_height="fill_parent"
-           android:layout_below="@+id/textView"
-           android:id="@+id/frameContainer">
+           android:id="@+id/frameContainer"
+           android:layout_below="@+id/view">
            <ImageView
                android:src="@drawable/wheel_of_fortune"
                android:id="@+id/imageView_ring"
                android:scaleType="matrix"
                android:layout_width="match_parent"
                android:layout_height="fill_parent"
-               android:layout_weight="1"
                android:padding="0dp">
            </ImageView>
            <ImageView
@@ -63,18 +63,36 @@
                android:padding="0dp"
                android:layout_marginTop="35dp"
                />
+
            <ImageView
-               android:layout_width="fill_parent"
-               android:layout_height="wrap_content"
+               android:layout_width="140dp"
+               android:layout_height="140dp"
                android:id="@+id/iconoCentro"
                android:src="@drawable/logo_icono"
                android:layout_gravity="center"
                android:padding="0dp"
                android:clickable="true"
                android:onClick="spinWheel"
-
                />
 
+           <com.concon.talkabout.talkabout.elements.TextViewFun
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Good Luck !!"
+               android:textColor="@color/orange"
+               android:textSize="@dimen/gameplay_text"
+               android:layout_gravity="center_horizontal|bottom"
+               android:paddingTop="10dp"
+                />
 
-           </FrameLayout>
+           <ImageView
+               android:layout_width="fill_parent"
+               android:layout_height="fill_parent"
+               android:src="@drawable/selector"
+               android:padding="0dp"
+               android:layout_marginTop="0dp"
+               android:scaleType="matrix"
+                />
+
+       </FrameLayout>
 </RelativeLayout>
