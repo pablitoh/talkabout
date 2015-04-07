@@ -384,7 +384,7 @@ public class SpinWheelGameplay extends Activity {
 
     public void spinWheel(View v)
     {
-        
+        dialer.post(new FlingRunnable(1500 + 1000));
     }
 
     private void getRewardFromWheelAngle() {
