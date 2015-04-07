@@ -12,6 +12,8 @@
     <string name="Start">Empezar</string>
     <string name="Next">Siguiente</string>
     <string name="selectGame">Selecciona el juego</string>
+    <string name="facebookError">Necesitas tener la aplicacion de Facebook para realizar esta acción</string>
+
 
 
     //I Never Strings

@@ -42,7 +42,7 @@
         android:text="@string/getReady"
         android:textColor="@drawable/text"
         android:textSize="@dimen/gameplay_text"
-        android:layout_above="@+id/button" />
+        android:layout_above="@+id/shareButtonInever" />
 
     <Button
         android:layout_width="100dp"
@@ -55,7 +55,7 @@
         android:textColor="@color/black"
         android:layout_above="@+id/indicatorContainer"
         android:layout_centerHorizontal="true"
-        android:id="@+id/button" />
+        android:id="@+id/shareButtonInever" />
 
     <com.concon.talkabout.talkabout.elements.TextViewFun
         android:id="@+id/indicatorContainer"

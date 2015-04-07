@@ -36,9 +36,10 @@
             android:gravity="center"
             android:textSize="90sp"
             android:textIsSelectable="false"
-            android:src="@drawable/logo"
+            android:src="@drawable/logo_nuevo"
             android:textStyle="bold"
-            android:adjustViewBounds="true"/>
+            android:adjustViewBounds="true"
+            android:padding="15dp"/>
 
         </LinearLayout>
 
@@ -112,6 +113,7 @@
                         android:background="@drawable/button_shape"
                         android:layout_height="match_parent"
                         android:layout_width="0dp"
+                        android:maxWidth="200dp"
                         android:layout_weight="1"
                         android:text="@string/truthDareTitle"
                         android:onClick="startGame"
@@ -127,6 +129,7 @@
                         android:layout_height="fill_parent"
                         android:layout_width="0dp"
                         android:layout_weight="1"
+                        android:maxWidth="200dp"
                         android:text="@string/charadesTitle"
                         android:onClick="startGame"
                         android:background="@drawable/button_shape"
@@ -141,6 +144,7 @@
                     <com.concon.talkabout.talkabout.elements.MenuButtonFun
                         android:layout_height="match_parent"
                         android:layout_width="0dp"
+                        android:maxWidth="200dp"
                         android:layout_weight="1"
                         android:text="@string/mkfTitle"
                         android:onClick="startGame"

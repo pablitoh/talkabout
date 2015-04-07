@@ -55,7 +55,7 @@
     <string name="timeLimitText">Select time limit</string>
     <string name="Start">Start</string>
     <string name="Next">Skip</string>
-
+    <string name="facebookError">You need the Facebook App installed on your device.</string>
 
 
 </resources>
