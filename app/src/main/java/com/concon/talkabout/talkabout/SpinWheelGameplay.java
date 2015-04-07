@@ -382,6 +382,11 @@ public class SpinWheelGameplay extends Activity {
         dialer.setImageMatrix(matrix);
     }
 
+    public void spinWheel(View v)
+    {
+        
+    }
+
     private void getRewardFromWheelAngle() {
         /**         * Get the matrix angle URL: http://stackoverflow.com/a/28307921/3248003
          */

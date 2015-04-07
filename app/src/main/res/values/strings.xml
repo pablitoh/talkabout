@@ -59,6 +59,7 @@
     <string name="title_activity_activity_spinwheel_gameplay">activity_spinwheel_gameplay</string>
 
     <string name="hello_world">Hello world!</string>
+    <string name="spinWheel">Spin the Wheel</string>
 
 
 </resources>
