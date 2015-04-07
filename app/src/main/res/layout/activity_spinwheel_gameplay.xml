@@ -4,7 +4,8 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/background">
+    android:background="@drawable/background"
+    android:padding="0dp">
 
     <com.google.android.gms.ads.AdView
         android:id="@+id/adView"
@@ -29,32 +30,27 @@
         android:layout_alignParentStart="true"
         android:gravity="center"/>
 
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:orientation="vertical"
-       android:layout_below="@+id/textView"
-       android:padding="0dp">
-
-       <ImageView
+       <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
            android:layout_width="fill_parent"
-           android:layout_height="wrap_content"
-           android:id="@+id/imageView_arrow"
-           android:src="@drawable/arrow_down_small"
-           android:padding="0dp"
-           android:
-            />
-
-       <ImageView
-           android:src="@drawable/wheel_of_fortune"
-           android:id="@+id/imageView_ring"
-           android:scaleType="matrix"
-           android:layout_width="wrap_content"
            android:layout_height="fill_parent"
-           android:adjustViewBounds="true"
-           android:layout_weight="1"
-           android:padding="0dp"
-           >
-       </ImageView>
-   </LinearLayout>
+           android:layout_below="@+id/textView"
+           android:id="@+id/frameContainer">
+           <ImageView
+               android:src="@drawable/wheel_of_fortune"
+               android:id="@+id/imageView_ring"
+               android:scaleType="matrix"
+               android:layout_width="match_parent"
+               android:layout_height="fill_parent"
+               android:layout_weight="1"
+               android:padding="0dp">
+           </ImageView>
+           <ImageView
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/imageView_arrow"
+               android:src="@drawable/arrow_down_small"
+               android:padding="0dp"
+               android:layout_marginTop="35dp"
+               />
+           </FrameLayout>
 </RelativeLayout>
