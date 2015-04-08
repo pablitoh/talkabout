@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background"
+    android:padding="0dp">
+
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/adView"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        ads:adSize="BANNER"
+        ads:adUnitId="@string/banner_ad_unit_id"
+        android:layout_alignParentBottom="false"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+    </com.google.android.gms.ads.AdView>
+
+    <com.concon.talkabout.talkabout.elements.TitleFun
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Spin and Drink"
+        android:id="@+id/textView"
+        android:textSize="@dimen/section_title_text"
+        android:textColor="@color/orange"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/adView"
+        android:layout_alignParentStart="true"
+        android:gravity="center"/>
+
+
+
+       <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+           android:layout_width="fill_parent"
+           android:layout_height="fill_parent"
+           android:id="@+id/frameContainer"
+           android:layout_below="@+id/textView">
+
+
+           <ImageView
+               android:src="@drawable/wheel_of_fortune"
+               android:id="@+id/imageView_ring"
+               android:scaleType="matrix"
+               android:layout_width="fill_parent"
+               android:layout_height="fill_parent"
+               android:adjustViewBounds="true">
+           </ImageView>
+
+           <ImageView
+               android:layout_width="fill_parent"
+               android:layout_height="wrap_content"
+               android:id="@+id/imageView_arrow"
+               android:src="@drawable/arrow_down_small"
+           android:padding="0dp"
+               android:layout_marginTop="25dp"
+               />
+
+
+           <com.concon.talkabout.talkabout.elements.TextViewFun
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Good Luck !!"
+               android:textColor="@color/orange"
+               android:textSize="@dimen/gameplay_text"
+               android:layout_gravity="center_horizontal|bottom"
+               android:paddingTop="10dp"
+                />
+           <ImageView
+               android:src="@drawable/logo_icono"
+               android:id="@+id/logo_icono"
+               android:scaleType="matrix"
+               android:layout_width="150dp"
+               android:layout_height="150dp"
+               android:adjustViewBounds="true"
+               android:layout_gravity="center"
+               android:onClick="spinWheel"
+               android:clickable="true">
+           </ImageView>
+
+
+
+       </FrameLayout>
+</RelativeLayout>

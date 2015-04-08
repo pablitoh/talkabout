@@ -3,10 +3,8 @@ package com.concon.talkabout.talkabout;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.HorizontalScrollView;
 import android.widget.TextView;
 
 import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
@@ -117,7 +115,7 @@ public class MainMenu extends Activity {
                 startActivity(new Intent(MainMenu.this, IneverMainMenu.class));
                 break;
             case R.id.truthDareButton:
-                startActivity(new Intent(MainMenu.this, TruthDareGameplay.class));
+                startActivity(new Intent(MainMenu.this, SpinWheelGameplay.class));
                 break;
             case R.id.mimicButton:
                 startActivity(new Intent(MainMenu.this, CharadesMainMenu.class));

@@ -61,6 +61,7 @@
     <string name="lightTime">3 min</string>
     <string name="hardTime">7 min</string>
     <string name="timeLimitText">Selecciona el tiempo limite</string>
+    <string name="spinWheel">Spin the Wheel</string>
 
 
 </resources>

@@ -56,6 +56,10 @@
     <string name="Start">Start</string>
     <string name="Next">Skip</string>
     <string name="facebookError">You need the Facebook App installed on your device.</string>
+    <string name="title_activity_activity_spinwheel_gameplay">activity_spinwheel_gameplay</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="spinWheel">Spin the Wheel</string>
 
 
 </resources>
