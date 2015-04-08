@@ -30,12 +30,49 @@
         android:layout_alignParentStart="true"
         android:gravity="center"/>
 
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:id="@+id/frameText"
+        android:visibility="gone"
+        android:orientation="vertical"
+        android:weightSum="1"
+        android:layout_below="@+id/textView"
+        android:gravity="center">
+
+        <com.concon.talkabout.talkabout.elements.TextViewFun
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Test"
+            android:textColor="@color/black"
+            android:textSize="@dimen/gameplay_text"
+            android:id="@+id/textInfo"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"/>
+
+        <com.concon.talkabout.talkabout.elements.TextViewFun
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:onClick="dismiss"
+            android:clickable="true"
+            android:text="DISMISS"
+            android:gravity="center"
+            android:textSize="@dimen/gameplay_text"
+            android:textColor="@color/orange"
+            android:background="@drawable/button_gameplay_behavior"
+            android:padding="5dp"
+            android:layout_below="@+id/textInfo"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+        </RelativeLayout>
+
 
 
        <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
            android:layout_width="fill_parent"
            android:layout_height="fill_parent"
            android:id="@+id/frameContainer"
+           android:visibility="visible"
            android:layout_below="@+id/textView">
 
 
