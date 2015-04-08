@@ -458,13 +458,14 @@ public class SpinWheelGameplay extends Activity {
             Toast.makeText(SpinWheelGameplay.this, "Sacrifice Drink: For every drink you take, pick one victim to drink with you", Toast.LENGTH_LONG).show();
         }
         else if(rAngle > 210 && rAngle <= 240) {
-            Toast.makeText(SpinWheelGameplay.this, iNever.get(random.nextInt(chaosRules.size())), Toast.LENGTH_LONG).show();
+            Toast.makeText(SpinWheelGameplay.this, chaosRules.get(random.nextInt(chaosRules.size())), Toast.LENGTH_LONG).show();
+
         }
         else if(rAngle > 240 && rAngle <= 270) {
             Toast.makeText(SpinWheelGameplay.this, randomFacts.get(random.nextInt(randomFacts.size())), Toast.LENGTH_LONG).show();
         }
         else if(rAngle > 270 && rAngle <= 300) {
-            Toast.makeText(SpinWheelGameplay.this, chaosRules.get(random.nextInt(chaosRules.size())), Toast.LENGTH_LONG).show();
+            Toast.makeText(SpinWheelGameplay.this, iNever.get(random.nextInt(chaosRules.size())), Toast.LENGTH_LONG).show();
         }
         else if(rAngle > 300 && rAngle <= 330) {
             Toast.makeText(SpinWheelGameplay.this, "World Wide Drink: Everybody drinks", Toast.LENGTH_LONG).show();
