@@ -51,7 +51,7 @@
         <ScrollView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/view"
+            android:layout_above="@+id/dismissButtn"
             android:layout_below="@+id/logoView"
             android:scrollbars="vertical"
             >
@@ -62,12 +62,10 @@
                 android:textColor="@color/black"
                 android:textSize="20sp"
                 android:id="@+id/textInfo"
-                android:gravity="center"
                 android:padding="20dp"
                 android:paddingTop="0dp"
-                android:layout_centerVertical="true"
-                android:layout_alignParentLeft="true"
-                android:layout_alignParentStart="true" />
+                android:layout_gravity="center"
+                android:gravity="center"/>
         </ScrollView>
 
 
