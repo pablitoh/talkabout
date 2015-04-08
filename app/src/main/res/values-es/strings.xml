@@ -26,11 +26,14 @@
     <string name='hard'>Ambas!</string>
     <string name="IneverPostImage">http://scontent-gru.xx.fbcdn.net/hphotos-xfa1/v/t1.0-9/11081125_831938256855788_5590356093113912653_n.png?oh=e0668f6af106c9749836903e1367dc1b&amp;oe=55B756F3</string>
     <string name="iNeverPostTitle">YO NUNCA</string>
-    //Truth / Dare
+
+    //Rueda
 
     <string name="title_activity_truth_dare_gameplay">truthDareGameplay</string>
     <string name="TruthDareDescription">Serás presentado con varias opciones, al terminar deberas pasarle el control a la victima!!</string>
     <string name="wheelTitle">Rueda Caotica</string>
+    <string name="spinWheel">Gire la rueda!!</string>
+    <string name="goodLuck">Suerte !!</string>
 
 
     //Marry / Kill
@@ -61,7 +64,7 @@
     <string name="lightTime">3 min</string>
     <string name="hardTime">7 min</string>
     <string name="timeLimitText">Selecciona el tiempo limite</string>
-    <string name="spinWheel">Spin the Wheel</string>
+    <string name="spinTitle">Rueda Caotica</string>
 
 
 </resources>

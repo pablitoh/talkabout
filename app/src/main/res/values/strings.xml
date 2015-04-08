@@ -60,6 +60,8 @@
 
     <string name="hello_world">Hello world!</string>
     <string name="spinWheel">Spin the Wheel</string>
+    <string name="goodLuck">Good Luck !!</string>
+    <string name="spinTitle">Spin and Drink</string>
 
 
 </resources>
