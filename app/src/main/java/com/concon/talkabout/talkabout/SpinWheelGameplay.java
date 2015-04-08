@@ -516,7 +516,7 @@ public class SpinWheelGameplay extends Activity {
     public void onBackPressed() {
         if(findViewById(R.id.frameText).getVisibility() == View.VISIBLE)
         {
-            dismiss();
+            dismiss(findViewById(R.id.dismissButtn));
         }
         else
         {
@@ -524,7 +524,7 @@ public class SpinWheelGameplay extends Activity {
         }
     }
 
-    public void dismiss()
+    public void dismiss(View v)
     {
         TranslateAnimation animate = new TranslateAnimation(0,-findViewById(R.id.frameText).getWidth(),0,0);
         animate.setDuration(500);
