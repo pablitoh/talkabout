@@ -13,6 +13,7 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
 
@@ -28,6 +29,7 @@ import java.util.List;
 import java.util.Random;
 
 public class SpinWheelGameplay extends Activity {
+
 
     private static Bitmap imageOriginal, imageScaled;
     private static Matrix matrix;
@@ -130,6 +132,14 @@ public class SpinWheelGameplay extends Activity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
+        try {
+            randomFacts = singleFeedParserService.parseXml(2, this.getResources().openRawResource(R.raw.randomfacts), "randomfacts");
+        } catch (XmlPullParserException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -212,6 +222,8 @@ public class SpinWheelGameplay extends Activity {
             int q1 = getQuadrant(e1.getX() - (dialerWidth / 2), dialerHeight - e1.getY() - (dialerHeight / 2));
             int q2 = getQuadrant(e2.getX() - (dialerWidth / 2), dialerHeight - e2.getY() - (dialerHeight / 2));
 
+
+
             // the inversed rotations
             if ((q1 == 2 && q2 == 2 && Math.abs(velocityX) < Math.abs(velocityY))
                     || (q1 == 3 && q2 == 3)
@@ -237,7 +249,16 @@ public class SpinWheelGameplay extends Activity {
      */
     private class FlingRunnable implements Runnable {
 
+        public static final float VELOCITY = 1.0700F;
+        // SLOW STOP   public static final float VELOCITY = 1.0100F;
+
         private float velocity;
+        private View spinButton = null;
+
+        public FlingRunnable(float velocity, View spinButton) {
+            this.velocity = velocity;
+            this.spinButton = spinButton;
+        }
 
         public FlingRunnable(float velocity) {
             this.velocity = velocity;
@@ -260,10 +281,10 @@ public class SpinWheelGameplay extends Activity {
                 velocity = 1000;
             }
 
-            if(actualVelocity > 1500) {
+            if(actualVelocity > 1000) {
 
                 rotateDialer(velocity / 30);
-                velocity /= 1.0700F;
+                velocity /= VELOCITY;
 
                 // post this instance again
                 dialer.post(this);
@@ -271,7 +292,7 @@ public class SpinWheelGameplay extends Activity {
 
             else if (actualVelocity > 400 && actualVelocity <= 700) {
                 rotateDialer(velocity / 20);
-                velocity /= 1.0700F;
+                velocity /= VELOCITY;
 
                 // post this instance again
                 dialer.post(this);
@@ -279,7 +300,7 @@ public class SpinWheelGameplay extends Activity {
 
             else if (actualVelocity > 250 && actualVelocity <= 400) {
                 rotateDialer(velocity / 10);
-                velocity /= 1.0700F;
+                velocity /= VELOCITY;
 
                 // post this instance again
                 dialer.post(this);
@@ -287,7 +308,7 @@ public class SpinWheelGameplay extends Activity {
 
             else if (actualVelocity > 150 && actualVelocity <= 250) {
                 rotateDialer(velocity / 8);
-                velocity /= 1.0700F;
+                velocity /= VELOCITY;
 
                 // post this instance again
                 dialer.post(this);
@@ -295,33 +316,33 @@ public class SpinWheelGameplay extends Activity {
 
             else if  (actualVelocity > 15 && actualVelocity <= 150) {
                 rotateDialer(velocity / 5);
-                velocity /= 1.0700F;
+                velocity /= VELOCITY;
 
                 // post this instance again
                 dialer.post(this);
             }
             else if (actualVelocity > 10 && actualVelocity <= 15) {
                 rotateDialer(velocity / 3);
-                velocity /= 1.0700F;
+                velocity /= VELOCITY;
 
                 // post this instance again
                 dialer.post(this);
 
             } else if (actualVelocity > 5) {
                 rotateDialer(velocity / 2);
-                velocity /= 1.0700F;
+                velocity /= VELOCITY;
                 // post this instance again
                 dialer.post(this);
 
             } else if(actualVelocity > 3 && actualVelocity <= 5 ) {
                 rotateDialer(velocity / 1.5F);
-                velocity /= 1.0700F;
+                velocity /= VELOCITY;
                 // post this instance again
                 dialer.post(this);
             }
               else if(actualVelocity > 1 && actualVelocity <= 3 ) {
                 rotateDialer(velocity / 1.2F);
-                velocity /= 1.0700F;
+                velocity /= VELOCITY;
                 // post this instance again
                 dialer.post(this);
             } else {
@@ -330,6 +351,9 @@ public class SpinWheelGameplay extends Activity {
                 dialer.setEnabled(true);
                 isPlaying = false;
                 spinningSound.stop();
+                if(spinButton != null) {
+                    spinButton.setEnabled(true);
+                }
             }
 
         }
@@ -384,7 +408,14 @@ public class SpinWheelGameplay extends Activity {
 
     public void spinWheel(View v)
     {
-        dialer.post(new FlingRunnable(1500 + 1000));
+        /**
+         * we enable the button inside the FlingRunnable in order to know
+         * that the wheel finished to spin before you can spin it again.
+        **/
+        v.setEnabled(false);
+        Random random = new Random();
+        dialer.setEnabled(false);
+        dialer.post(new FlingRunnable(1500, v));
     }
 
     private void getRewardFromWheelAngle() {
@@ -412,7 +443,7 @@ public class SpinWheelGameplay extends Activity {
             Toast.makeText(SpinWheelGameplay.this, "Pick someone to tell the TRUTH!! (or next time he/she drinks x2)", Toast.LENGTH_LONG).show();
         }
         else if(rAngle > 60 && rAngle <= 90) {
-            Toast.makeText(SpinWheelGameplay.this, "Random facts", Toast.LENGTH_LONG).show();
+            Toast.makeText(SpinWheelGameplay.this, randomFacts.get(random.nextInt(randomFacts.size())), Toast.LENGTH_LONG).show();
         }
         else if(rAngle > 90 && rAngle <= 120) {
             Toast.makeText(SpinWheelGameplay.this, "You Drink 1 shot", Toast.LENGTH_LONG).show();
@@ -430,7 +461,7 @@ public class SpinWheelGameplay extends Activity {
             Toast.makeText(SpinWheelGameplay.this, iNever.get(random.nextInt(chaosRules.size())), Toast.LENGTH_LONG).show();
         }
         else if(rAngle > 240 && rAngle <= 270) {
-            Toast.makeText(SpinWheelGameplay.this, "Random Facts", Toast.LENGTH_LONG).show();
+            Toast.makeText(SpinWheelGameplay.this, randomFacts.get(random.nextInt(randomFacts.size())), Toast.LENGTH_LONG).show();
         }
         else if(rAngle > 270 && rAngle <= 300) {
             Toast.makeText(SpinWheelGameplay.this, chaosRules.get(random.nextInt(chaosRules.size())), Toast.LENGTH_LONG).show();
