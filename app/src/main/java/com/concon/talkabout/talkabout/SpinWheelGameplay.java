@@ -60,6 +60,8 @@ public class SpinWheelGameplay extends Activity {
     private SingleFeedParserService singleFeedParserService;
 
     private String text = "";
+    private int icon;
+    private String sectionTitle="";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -154,24 +156,6 @@ public class SpinWheelGameplay extends Activity {
         return true;
     }
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    /**
-     *
-     */
     private class MyOnTouchListener implements View.OnTouchListener {
 
         private double startAngle;
@@ -441,39 +425,63 @@ public class SpinWheelGameplay extends Activity {
 
         if(rAngle <= 30) {
             text =  chaosRules.get(random.nextInt(chaosRules.size()));
+            icon = R.drawable.icon_skull;
+            sectionTitle = "Chaos Rule";
         }
         else if(rAngle > 30 && rAngle<= 60) {
-           text = "Pick someone to tell the TRUTH!! (or next time he/she drinks x2)";
+            text = "Pick someone to tell the TRUTH!! (or next time he/she drinks x2)";
+            icon = R.drawable.icon_truth;
+            sectionTitle = "Truth";
         }
         else if(rAngle > 60 && rAngle <= 90) {
             text = randomFacts.get(random.nextInt(randomFacts.size()));
+            icon = R.drawable.icon_question;
+            sectionTitle = "Random Fact";
         }
         else if(rAngle > 90 && rAngle <= 120) {
-           text = "You Drink 1 shot";
+            text = "You Drink 1 shot";
+            icon = R.drawable.icon_drink;
+            sectionTitle = "Drink";
         }
         else if(rAngle > 120 && rAngle <= 150) {
             text =  "Vendetta: the last one that make you drink, drinks";
+            icon = R.drawable.icon_vendetta;
+            sectionTitle = "Vendetta";
         }
         else if(rAngle > 150 && rAngle <= 180) {
            text = "Cleanse all chaos rules, skip turn";
+            icon = R.drawable.icon_broom;
+            sectionTitle = "Clean Rules";
         }
         else if(rAngle > 180 && rAngle <= 210) {
-           text = "Sacrifice Drink: For every drink you take, pick one victim to drink with you";
+           text = "Sacrifice: For every drink you take, pick one victim to drink with you";
+            icon = R.drawable.icon_blood;
+            sectionTitle = "Sacrifice";
         }
         else if(rAngle > 210 && rAngle <= 240) {
            text = chaosRules.get(random.nextInt(chaosRules.size()));
+            icon = R.drawable.icon_skull;
+            sectionTitle = "Chaos Rule";
         }
         else if(rAngle > 240 && rAngle <= 270) {
            text = randomFacts.get(random.nextInt(randomFacts.size()));
+            icon = R.drawable.icon_question;
+            sectionTitle = "Random Fact";
         }
         else if(rAngle > 270 && rAngle <= 300) {
            text = iNever.get(random.nextInt(chaosRules.size()));
+            icon = R.drawable.icon_never;
+            sectionTitle = "Never have I ever";
         }
         else if(rAngle > 300 && rAngle <= 330) {
            text = "World Wide Drink: Everybody drinks";
+            icon = R.drawable.icon_world;
+            sectionTitle = "Global Drink";
         }
         else if(rAngle > 330 && rAngle <= 360) {
            text = "Target Drink: pick someone to drink";
+            icon = R.drawable.icon_target;
+            sectionTitle = "Target Drink";
         }
 
         TranslateAnimation animate = new TranslateAnimation(0,-findViewById(R.id.frameContainer).getWidth(),0,0);
@@ -490,6 +498,9 @@ public class SpinWheelGameplay extends Activity {
                 findViewById(R.id.frameContainer).setVisibility(View.GONE);
                 findViewById(R.id.frameText).setVisibility(View.VISIBLE);
                 ((TextView)findViewById(R.id.textInfo)).setText(text);
+                ((TextView)findViewById(R.id.logoView)).setCompoundDrawablesWithIntrinsicBounds(0, icon, 0, 0);
+                ((TextView)findViewById(R.id.logoView)).setText(sectionTitle);
+
             }
 
             @Override

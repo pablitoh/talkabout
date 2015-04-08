@@ -39,7 +39,7 @@
     <string name="title_activity_mimic_gameplay">MimicGameplay</string>
     <string name="mimicDescription">You have to "act out" a movie title without speaking, while the other members of your team try to guess which movie it is</string>
     <string name="charadesTitle">Charades</string>
-    <string name="truthDareTitle">Truth / Dare</string>
+    <string name="wheelTitle">Drinking Wheel</string>
     <string name="showWoman">Show me the Girls</string>
     <string name="showMen">Give me boys</string>
     <string name="showBoth">I Don\'t Care</string>
