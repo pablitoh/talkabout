@@ -13,8 +13,11 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewTreeObserver;
+import android.view.animation.Animation;
+import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.concon.talkabout.talkabout.service.INeverParserService;
@@ -55,6 +58,8 @@ public class SpinWheelGameplay extends Activity {
     private INeverParserService iNeverParserService;
 
     private SingleFeedParserService singleFeedParserService;
+
+    private String text = "";
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -221,8 +226,6 @@ public class SpinWheelGameplay extends Activity {
             // get the quadrant of the start and the end of the fling
             int q1 = getQuadrant(e1.getX() - (dialerWidth / 2), dialerHeight - e1.getY() - (dialerHeight / 2));
             int q2 = getQuadrant(e2.getX() - (dialerWidth / 2), dialerHeight - e2.getY() - (dialerHeight / 2));
-
-
 
             // the inversed rotations
             if ((q1 == 2 && q2 == 2 && Math.abs(velocityX) < Math.abs(velocityY))
@@ -437,43 +440,93 @@ public class SpinWheelGameplay extends Activity {
         Random random = new Random();
 
         if(rAngle <= 30) {
-            Toast.makeText(SpinWheelGameplay.this, chaosRules.get(random.nextInt(chaosRules.size())), Toast.LENGTH_LONG).show();
+            text =  chaosRules.get(random.nextInt(chaosRules.size()));
         }
         else if(rAngle > 30 && rAngle<= 60) {
-            Toast.makeText(SpinWheelGameplay.this, "Pick someone to tell the TRUTH!! (or next time he/she drinks x2)", Toast.LENGTH_LONG).show();
+           text = "Pick someone to tell the TRUTH!! (or next time he/she drinks x2)";
         }
         else if(rAngle > 60 && rAngle <= 90) {
-            Toast.makeText(SpinWheelGameplay.this, randomFacts.get(random.nextInt(randomFacts.size())), Toast.LENGTH_LONG).show();
+            text = randomFacts.get(random.nextInt(randomFacts.size()));
         }
         else if(rAngle > 90 && rAngle <= 120) {
-            Toast.makeText(SpinWheelGameplay.this, "You Drink 1 shot", Toast.LENGTH_LONG).show();
+           text = "You Drink 1 shot";
         }
         else if(rAngle > 120 && rAngle <= 150) {
-            Toast.makeText(SpinWheelGameplay.this, "Vendetta: the last one that make you drink, drinks", Toast.LENGTH_LONG).show();
+            text =  "Vendetta: the last one that make you drink, drinks";
         }
         else if(rAngle > 150 && rAngle <= 180) {
-            Toast.makeText(SpinWheelGameplay.this, "Cleanse all chaos rules, skip turn", Toast.LENGTH_LONG).show();
+           text = "Cleanse all chaos rules, skip turn";
         }
         else if(rAngle > 180 && rAngle <= 210) {
-            Toast.makeText(SpinWheelGameplay.this, "Sacrifice Drink: For every drink you take, pick one victim to drink with you", Toast.LENGTH_LONG).show();
+           text = "Sacrifice Drink: For every drink you take, pick one victim to drink with you";
         }
         else if(rAngle > 210 && rAngle <= 240) {
-            Toast.makeText(SpinWheelGameplay.this, chaosRules.get(random.nextInt(chaosRules.size())), Toast.LENGTH_LONG).show();
-
+           text = chaosRules.get(random.nextInt(chaosRules.size()));
         }
         else if(rAngle > 240 && rAngle <= 270) {
-            Toast.makeText(SpinWheelGameplay.this, randomFacts.get(random.nextInt(randomFacts.size())), Toast.LENGTH_LONG).show();
+           text = randomFacts.get(random.nextInt(randomFacts.size()));
         }
         else if(rAngle > 270 && rAngle <= 300) {
-            Toast.makeText(SpinWheelGameplay.this, iNever.get(random.nextInt(chaosRules.size())), Toast.LENGTH_LONG).show();
+           text = iNever.get(random.nextInt(chaosRules.size()));
         }
         else if(rAngle > 300 && rAngle <= 330) {
-            Toast.makeText(SpinWheelGameplay.this, "World Wide Drink: Everybody drinks", Toast.LENGTH_LONG).show();
+           text = "World Wide Drink: Everybody drinks";
         }
         else if(rAngle > 330 && rAngle <= 360) {
-            Toast.makeText(SpinWheelGameplay.this, "Target Drink: pick someone to drink", Toast.LENGTH_LONG).show();
+           text = "Target Drink: pick someone to drink";
         }
-        Log.d(DEBUG_TAG, "Degree: " + rAngle);
 
+        TranslateAnimation animate = new TranslateAnimation(0,-findViewById(R.id.frameContainer).getWidth(),0,0);
+        animate.setDuration(500);
+
+        animate.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                findViewById(R.id.frameContainer).setVisibility(View.GONE);
+                findViewById(R.id.frameText).setVisibility(View.VISIBLE);
+                ((TextView)findViewById(R.id.textInfo)).setText(text);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        findViewById(R.id.frameContainer).startAnimation(animate);
+
+    }
+
+    public void dismiss(View v)
+    {
+        TranslateAnimation animate = new TranslateAnimation(0,-findViewById(R.id.frameText).getWidth(),0,0);
+        animate.setDuration(500);
+        animate.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                findViewById(R.id.frameText).setVisibility(View.GONE);
+
+                TranslateAnimation animate = new TranslateAnimation(-findViewById(R.id.frameContainer).getWidth(),0,0,0);
+                animate.setDuration(500);
+                findViewById(R.id.frameContainer).startAnimation(animate);
+
+                findViewById(R.id.frameContainer).setVisibility(View.VISIBLE);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
+        findViewById(R.id.frameText).startAnimation(animate);
     }
 }
