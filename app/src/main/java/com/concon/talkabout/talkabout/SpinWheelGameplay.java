@@ -59,6 +59,8 @@ public class SpinWheelGameplay extends Activity {
 
     private SingleFeedParserService singleFeedParserService;
 
+    private String text = "";
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -436,7 +438,7 @@ public class SpinWheelGameplay extends Activity {
         rAngle = (rAngle + 360) % 360;
 
         Random random = new Random();
-        String text = "";
+
         if(rAngle <= 30) {
             text =  chaosRules.get(random.nextInt(chaosRules.size()));
         }
@@ -476,10 +478,27 @@ public class SpinWheelGameplay extends Activity {
 
         TranslateAnimation animate = new TranslateAnimation(0,-findViewById(R.id.frameContainer).getWidth(),0,0);
         animate.setDuration(500);
+
+        animate.setAnimationListener(new Animation.AnimationListener() {
+            @Override
+            public void onAnimationStart(Animation animation) {
+
+            }
+
+            @Override
+            public void onAnimationEnd(Animation animation) {
+                findViewById(R.id.frameContainer).setVisibility(View.GONE);
+                findViewById(R.id.frameText).setVisibility(View.VISIBLE);
+                ((TextView)findViewById(R.id.textInfo)).setText(text);
+            }
+
+            @Override
+            public void onAnimationRepeat(Animation animation) {
+
+            }
+        });
         findViewById(R.id.frameContainer).startAnimation(animate);
-        findViewById(R.id.frameContainer).setVisibility(View.GONE);
-        findViewById(R.id.frameText).setVisibility(View.VISIBLE);
-        ((TextView)findViewById(R.id.textInfo)).setText(text);
+
     }
 
     public void dismiss(View v)
