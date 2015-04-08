@@ -26,7 +26,7 @@
     <com.concon.talkabout.talkabout.elements.TitleFun
         android:layout_width="fill_parent"
         android:layout_height="50dp"
-        android:text="@string/truthDareTitle"
+        android:text="@string/wheelTitle"
         android:id="@+id/textView"
         android:textSize="@dimen/section_title_text"
         android:textColor="@color/orange"

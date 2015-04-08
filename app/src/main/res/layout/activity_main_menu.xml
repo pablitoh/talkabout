@@ -95,6 +95,21 @@
                     android:orientation="horizontal"
                     android:layout_margin="0dp">
                     <com.concon.talkabout.talkabout.elements.MenuButtonFun
+                        android:background="@drawable/button_shape"
+                        android:layout_height="match_parent"
+                        android:layout_width="0dp"
+                        android:maxWidth="200dp"
+                        android:layout_weight="1"
+                        android:text="@string/wheelTitle"
+                        android:onClick="startGame"
+                        android:textColor="@color/black"
+                        android:id="@+id/truthDareButton"
+                        android:textSize="@dimen/menu_text_size"
+                        android:layout_margin="5dp"
+                        android:textStyle="bold"
+                        android:padding="15dp"
+                        />
+                    <com.concon.talkabout.talkabout.elements.MenuButtonFun
                         android:layout_height="match_parent"
                         android:layout_width="0dp"
                         android:layout_weight="1"
@@ -109,22 +124,7 @@
                         android:padding="15dp"
 
                         />
-                    <com.concon.talkabout.talkabout.elements.MenuButtonFun
-                        android:background="@drawable/button_shape"
-                        android:layout_height="match_parent"
-                        android:layout_width="0dp"
-                        android:maxWidth="200dp"
-                        android:layout_weight="1"
-                        android:text="@string/truthDareTitle"
-                        android:onClick="startGame"
-                        android:textColor="@color/black"
-                        android:id="@+id/truthDareButton"
-                        android:textSize="@dimen/menu_text_size"
-                        android:layout_margin="5dp"
-                        android:textStyle="bold"
-                        android:padding="15dp"
-                        style="?android:borderlessButtonStyle"
-                        />
+
                     <com.concon.talkabout.talkabout.elements.MenuButtonFun
                         android:layout_height="fill_parent"
                         android:layout_width="0dp"
