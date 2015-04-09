@@ -12,14 +12,17 @@
         <entry>Sos Dobby, el elfo esclavo. Si alguien necesita ir a comprar mas bebida, vas vos. Si habia otro Dobby ya en juego, este es liberado de su condicion de esclavo siempre y cuando grite "Dobby es un elfo libre", y tome</entry>
         <entry>Sos un orador. Cuando alguien tome tienes que gritar "Aleluya!" o tomas</entry>
         <entry>Sos el papa. Bendice a alguien con tu trago (salpicar), si esa persona te insulta, tomas.</entry>
-        <entry>Furia: cuando alguien insulte, ese alguien toma</entry>
-        <entry>Negar: cuando alguien diga "No", ese alguien toma</entry>
-        <entry>Ego: cuando alguien diga "Yo", "Mi" o "Mio", ese alguien toma</entry>
-        <entry>Marca diabolica: cuando se limpien las reglas caoticas, esta marca se borra y tomas x2</entry>
-        <entry>Espejito Rebotador: cuando alguien te haga tomar, ese alguien tambien toma</entry>
-        <entry>Voodoo Shaman: sos inmune a el trago sacrificio</entry>
-        <entry>Guy Fawkes: sos inmune a la venganza</entry>
-        <entry>Bestia salvaje: si hay un animal en la casa, a la persona que ese animal toque toma. Si no hay ningun animal, Grita "GreenPeace" y toma</entry>
-        <entry>Bruja de hielo, cuando alguien tome, te quedas congelado o tomas.</entry>
+        <entry>Cuando alguien insulte, ese alguien toma</entry>
+        <entry>Cuando alguien diga "No", ese alguien toma</entry>
+        <entry>Cuando alguien diga "Yo", "Mi" o "Mio", ese alguien toma</entry>
+        <entry>Te marcaron con una marca diabolica. Cuando se limpien las reglas caoticas, esta marca se borra y tomas x2</entry>
+        <entry>Cuando alguien te haga tomar, ese alguien tambien toma</entry>
+        <entry>Sos inmune a el trago sacrificio</entry>
+        <entry>Sos inmune a la venganza</entry>
+        <entry>Si hay un animal en la casa, a la persona que ese animal toque toma. Si no hay ningun animal, Grita "GreenPeace" y toma</entry>
+        <entry>Cuando alguien tome, te quedas congelado o tomas.</entry>
+        <entry>La proxima vez que alguien tenga que tomar, tomas en su lugar. Esta regla se desvanece cuando tomas</entry>
+        <entry>La proxima vez que alguien sea victima del trago francotirador, vos recibis el tiro. Esta regla se desvanece cuando tomas</entry>
+        <entry>Si alguien usa su celular, toma. El dueño de este dispositivo no cuenta</entry>
     </chaos>
 </feed>

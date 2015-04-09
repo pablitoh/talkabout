@@ -12,14 +12,17 @@
         <entry>You are Dobby, a slave elf. If anybody needs to re-buy booze, you go. If there was another dobby in the game, he is released and he has to say "Dobby is a free elf" and drink. This cannot be cleansed</entry>
         <entry>Now you are a preacher. Yell alleluia every time someone drinks, or you drink.</entry>
         <entry>Now you are the pope. Bless one player with your booze, if he/she curses you, you drink, but if he/she laughs, he/she drink.</entry>
-        <entry>Wrath: whenever a player curses, he/she drinks</entry>
-        <entry>Negate Spell: When a player says "No", he/she drinks</entry>
-        <entry>Self-Centered Spell! When a player says "Me", "My", or "I", he/she drinks</entry>
-        <entry>Cursed Mark: The next time the rules are reset, this mark erases from you and you drink x2</entry>
-        <entry>Reflect Mirror Spell: whenever someone makes you drink, that someone drinks too</entry>
-        <entry>Voodoo Shaman: you are immune to sacrifice drink effect</entry>
-        <entry>Guy Fawkes: you are immune to vendetta drinks</entry>
-        <entry>Wild Beast: if there is an animal in the house, whenever it touches someone, that someone drinks. If there are no animals you drink one and yell GreenPeace!</entry>
-        <entry>An Ice witch cursed you. When someone drinks stay frosty or drink if you fail.</entry>
+        <entry>Whenever a player curses, he/she drinks</entry>
+        <entry>When a player says "No", he/she drinks</entry>
+        <entry>When a player says "Me", "My", or "I", he/she drinks</entry>
+        <entry>You are cursed. The next time the rules are reset, this curse vanishes from you and you drink x2</entry>
+        <entry>Whenever someone makes you drink, that someone drinks too</entry>
+        <entry>You are immune to sacrifice drink effect</entry>
+        <entry>You are immune to vendetta drinks</entry>
+        <entry>If there is an animal in the house, whenever it touches someone, that someone drinks. If there are no animals you drink one and yell GreenPeace!</entry>
+        <entry>When someone drinks stay frosty or drink if you fail.</entry>
+        <entry>Next time someone has to drink, you drink in his/her place. This rule vanishes when you drink</entry>
+        <entry>Next time someone is target of target shot, you take the shot. This rule vanishes when you drink</entry>
+        <entry>If someone uses his/her cellphone, he/she drinks. This device user is not considered</entry>
     </chaos>
 </feed>

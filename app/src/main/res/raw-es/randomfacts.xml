@@ -1,17 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed>
     <randomfacts>
-        <entry>Deja Vu: se repite el ultimo turno jugado</entry>
-        <entry>Avaricia: el jugador con mas dinero en la billetera toma</entry>
-        <entry>Lujuria: Grita algo sexual o toma</entry>
-        <entry>Gula: El jugador que este comiendo algo toma</entry>
-        <entry>Pereza: El jugador que haya bebido menos toma</entry>
-        <entry>Envidia: El jugador con algo de color rojo toma</entry>
-        <entry>Soberbia: El jugador con mas reglas caoticas toma</entry>
-        <entry>Silencio! no podes hablar por el resto del juego. Alguien mas lee la consigna cuando sea tu turno, Si hablas desde ahora, tomas. Nota: leiste "tomas", toma 1</entry>
-        <entry>Trago carambola: elegi a alguien para que tome, y ese alguien elege a alguien mas para que tambien tome.</entry>
-        <entry>Una bruja de hielo te hechizo. Cuando alguien toma te tenes que quedar quieto o tomas vos tambien</entry>
-        <entry>Sos el amo del caos. Elegi a alguien con una regla del caos y dobla su efecto. Haz un brindis con la victima.</entry>
+        <entry>Se repite el ultimo turno jugado</entry>
+        <entry>El jugador con mas dinero en la billetera toma</entry>
+        <entry>Grita algo sexual o toma</entry>
+        <entry>El jugador que este comiendo algo toma</entry>
+        <entry>El jugador que haya bebido menos toma</entry>
+        <entry>El jugador con algo de color rojo toma</entry>
+        <entry>El jugador que haya bebido mas toma</entry>
+        <entry>No podes hablar por el resto del juego. Alguien mas lee la consigna cuando sea tu turno, Si hablas desde ahora, tomas. Nota: leiste "tomas", toma 1</entry>
+        <entry>Elegi a alguien para que tome, y ese alguien elege a alguien mas para que tambien tome.</entry>
+        <entry>Elegi a alguien con una regla del caos y su efecto de trago se vuelve doble. Haz un brindis con la victima.</entry>
         <entry>Hacele muecas a alguien como si fuera un bebe. Si se rie tomas, si se rien ambos tomas x2</entry>
+        <entry>Elegi a alguien que tenga reglas caoticas activadas, y pasaselas a otro jugador</entry>
+        <entry>Elegi a alguien y pasale el dispositivo</entry>
+        <entry>Limpia a un jugador de reglas caoticas</entry>
+        <entry>El jugador que tenga algo azul toma</entry>
+        <entry>El jugador a tu derecha toma</entry>
+        <entry>El jugador a tu izquierda toma</entry>
+        <entry>Levanta los brazos hasta tu siguiente turno o toma</entry>
+        <entry>Todo el mundo le pasa sus reglas caoticas a la persona de la derecha</entry>
+        <entry>Inventa un (simple) hecho al azar</entry>
     </randomfacts>
 </feed>
