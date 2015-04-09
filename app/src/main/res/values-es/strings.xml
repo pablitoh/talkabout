@@ -34,7 +34,13 @@
     <string name="wheelTitle">Rueda Caotica</string>
     <string name="spinWheel">Gire la rueda!!</string>
     <string name="goodLuck">Suerte !!</string>
-
+    <string name="truth">Preguntale a alguien lo que quieras, esa persona puede elegir decir la verdad o tomar x2 la proxima vez que le toque tomar</string>
+    <string name="oneShot">tomas 1 trago</string>
+    <string name="vendetta">Vendetta: la ultima persona que te hizo tomar, toma (vos incluido)</string>
+    <string name="cleanse">Limpia todas las reglas caoticas, pasa el turno</string>
+    <string name="sacrifice">Sacrificio: Por cada vez que tomas, elegi a una victima y el tambien toma. (podes tomar las veces que quieras)</string>
+    <string name="global">Todos toman!</string>
+    <string name="target">"Trago francotirador: Elige a alguien para que tome"</string>
 
     //Marry / Kill
 

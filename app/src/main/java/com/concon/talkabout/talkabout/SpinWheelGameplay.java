@@ -402,7 +402,7 @@ public class SpinWheelGameplay extends Activity {
         v.setEnabled(false);
         Random random = new Random();
         dialer.setEnabled(false);
-        dialer.post(new FlingRunnable(1500, v));
+        dialer.post(new FlingRunnable(random.nextInt(1500), v));
     }
 
     private void getRewardFromWheelAngle() {
@@ -429,7 +429,7 @@ public class SpinWheelGameplay extends Activity {
             sectionTitle = "Chaos Rule";
         }
         else if(rAngle > 30 && rAngle<= 60) {
-            text = "Pick someone to tell the TRUTH!! (or next time he/she drinks x2)";
+            text = getString(R.string.truth);
             icon = R.drawable.icon_truth;
             sectionTitle = "Truth";
         }
@@ -439,22 +439,22 @@ public class SpinWheelGameplay extends Activity {
             sectionTitle = "Random Fact";
         }
         else if(rAngle > 90 && rAngle <= 120) {
-            text = "You Drink 1 shot";
+            text = getString(R.string.oneShot);
             icon = R.drawable.icon_drink;
             sectionTitle = "Drink";
         }
         else if(rAngle > 120 && rAngle <= 150) {
-            text =  "Vendetta: the last one that make you drink, drinks";
+            text =  getString(R.string.vendetta);
             icon = R.drawable.icon_vendetta;
             sectionTitle = "Vendetta";
         }
         else if(rAngle > 150 && rAngle <= 180) {
-           text = "Cleanse all chaos rules, skip turn";
+           text = getString(R.string.cleanse);
             icon = R.drawable.icon_broom;
             sectionTitle = "Clean Rules";
         }
         else if(rAngle > 180 && rAngle <= 210) {
-           text = "Sacrifice: For every drink you take, pick one victim to drink with you";
+           text = getString(R.string.sacrifice);
             icon = R.drawable.icon_blood;
             sectionTitle = "Sacrifice";
         }
@@ -474,12 +474,12 @@ public class SpinWheelGameplay extends Activity {
             sectionTitle = "Never have I ever";
         }
         else if(rAngle > 300 && rAngle <= 330) {
-           text = "World Wide Drink: Everybody drinks";
+           text = getString(R.string.global);
             icon = R.drawable.icon_world;
             sectionTitle = "Global Drink";
         }
         else if(rAngle > 330 && rAngle <= 360) {
-           text = "Target Drink: pick someone to drink";
+           text = getString(R.string.target);
             icon = R.drawable.icon_target;
             sectionTitle = "Target Drink";
         }

@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed>
     <randomfacts>
-        <entry>test esp</entry>
+        <entry>Deja Vu: repeat the last turn played</entry>
+        <entry>Greedy: the player with most money in the wallet drinks</entry>
+        <entry>Lust: Say something sexual loud or you drink</entry>
+        <entry>Gluttony: If someone is eating right now, he/she drinks</entry>
+        <entry>Sloth: whenever a player stays 3 turns without drinking, he/she drinks</entry>
+        <entry>Envy: the player with something red drinks</entry>
+        <entry>Pride: the player with more chaos rules drinks</entry>
+        <entry>Silence!, you cannot talk for the rest of the game. Make someone read for you when is your turn, If you speak from now on, you drink. Important: you read out loud "you drink", drink 1.</entry>
+        <entry>Fluke drink; choose someone, he/she drinks. then he/she chooses another one.</entry>
+        <entry>You are the Lord of Chaos. Choose someone with a chaos rule and double its drink effect.Make a toast with the victim.</entry>
+        <entry>Talk to someone like if you were talking to a baby. if she/he laughs, you drink. If both laugh, you drink x2</entry>
     </randomfacts>
 </feed>

@@ -1,37 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed>
     <chaos>
-        <entry>For the rest of the game wear a shoe like a hat. If it drops from your head you drink</entry>
-        <entry>Now your name is Bob. Every time someones call you for your real name, he/she drinks</entry>
-        <entry>You Remember your arabic roots. Every time someone drinks you have to scream like an arabic man, or drink if you forget to do it</entry>
-        <entry>You are a lion king fan. Every time you drink raise your glass over your head with both hands or drink again.</entry>
-        <entry>Now your name is Betty. Every time someones call you for your real name, he/she drinks</entry>
-        <entry>Now you are a groupie of Justin Beiber. Every time someone drinks yell "I Love u Justin" with a sissy voice or drink</entry>
-        <entry>You were possessed by ghost pirate. Every time someone drinks yell "Aye' caṕtain'" like one or drink if you forget to do it</entry>
-        <entry>An Ice witch cursed you. at the end of your turn stay frosty until someone picks the device or drink if you fail.</entry>
-        <entry>An evil clown cursed you. You cannot laugh for the rest of the game, drink if u do.</entry>
-        <entry>You are Dobby, a slave elf. If you need to re-buy booze, you go. If there was another dobby in the game, he is released and he has to say "Dobby is a free elf" and drink. This cannot be cleansed</entry>
-        <entry>You are the Lord of Chaos. Choose someone with a chaos rule and double its drink effect.Make a toast with the victim.</entry>
-        <entry>Your life is already too chaotic, pick someone to get the device, and drink one.</entry>
-        <entry>Talk to someone like if you were talking to a baby. if she/he laughs, you drink. If both laugh, you drink x2</entry>
-        <entry>Now you are a preacher. Yell alleluia every time someone drinks, or you drink.</entry>
-        <entry>Now you are the pope. Bless one player with your booze, if he/she curses you, you drink, but if he/she laughs, he/she drink.</entry>
-        <entry>Silence Spell!, you cannot talk for the rest of the game. Make someone read for you when is your turn, If you speak from now on, you drink. Important: you read out loud "you drink", drink 1.</entry>
-        <entry>Self-Centered Spell! When a player says "Me", "My", or "I", he/she drinks</entry>
-        <entry>Negate Spell: You cannot say "No" for the rest of the game.</entry>
-        <entry>Cursed Mark: The next time the rules are reset, you drink x2</entry>
-        <entry>Reflect Mirror Spell: whenever someone makes you drink, that someone drinks too</entry>
-        <entry>Voodoo Shaman: you are immune to sacrifice drink effect</entry>
-        <entry>Guy Fawkes: you are immune to vendetta drinks</entry>
-        <entry>Wild Beast: if there is an animal in the house, whenever it touches someone, that someone drinks. If there are no animals you drink one and yell GreenPeace!</entry>
-        <entry>Deja Vu Spell: repeat the last turn played</entry>
-        <entry>Greedy: the player with most money in the wallet drinks</entry>
-        <entry>Lust: Say something sexual loud o you drink</entry>
-        <entry>Gluttony: If someone is eating right now, he/she drinks</entry>
-        <entry>Wrath: whenever a player curses, he/she drinks</entry>
-        <entry>Sloth: whenever a player stays 3 turns without drinking, he/she drinks</entry>
-        <entry>Envy: the player with something red drinks</entry>
-        <entry>Pride: the player with more chaos rules drinks</entry>
-        <entry>Fluke drink; choose someone, he/she drinks. then he/she chooses another one.</entry>
+        <entry>Hasta que termine el juego usa una zapatilla como sombrero. Si se cae tomas</entry>
+        <entry>Desde ahora tu nombre es Bob. Si alguien te llama por tu nombre real, ese alguien toma</entry>
+        <entry>Te acordas de tus ancestros arabes. Cuando alguien tome tenes que gritar como un arabe, o tomas</entry>
+        <entry>Sos fan del Rey Leon. Antes de tomar sube tu trago con ambas manos arriba de tu cabeza o toma de nuevo</entry>
+        <entry>Desde ahora tu nombre es Betty. Si alguien te llama por tu nombre real, ese alguien toma.</entry>
+        <entry>Desde ahora sos una gropie de Justin Beiber. Cuando alguien tome tenes que gritar "Te Amo Justin!!", o tomas</entry>
+        <entry>Fuiste poseido por un pirata. Cuando alguien tome tienes que gritar "si mi capitan!" o tomas</entry>
+        <entry>Te maldijo un Payaso diabolico. Cada vez que te rias, tomas</entry>
+        <entry>Sos Dobby, el elfo esclavo. Si alguien necesita ir a comprar mas bebida, vas vos. Si habia otro Dobby ya en juego, este es liberado de su condicion de esclavo siempre y cuando grite "Dobby es un elfo libre", y tome</entry>
+        <entry>Sos un orador. Cuando alguien tome tienes que gritar "Aleluya!" o tomas</entry>
+        <entry>Sos el papa. Bendice a alguien con tu trago (salpicar), si esa persona te insulta, tomas.</entry>
+        <entry>Furia: cuando alguien insulte, ese alguien toma</entry>
+        <entry>Negar: cuando alguien diga "No", ese alguien toma</entry>
+        <entry>Ego: cuando alguien diga "Yo", "Mi" o "Mio", ese alguien toma</entry>
+        <entry>Marca diabolica: cuando se limpien las reglas caoticas, esta marca se borra y tomas x2</entry>
+        <entry>Espejito Rebotador: cuando alguien te haga tomar, ese alguien tambien toma</entry>
+        <entry>Voodoo Shaman: sos inmune a el trago sacrificio</entry>
+        <entry>Guy Fawkes: sos inmune a la venganza</entry>
+        <entry>Bestia salvaje: si hay un animal en la casa, a la persona que ese animal toque toma. Si no hay ningun animal, Grita "GreenPeace" y toma</entry>
+        <entry>Bruja de hielo, cuando alguien tome, te quedas congelado o tomas.</entry>
     </chaos>
 </feed>

@@ -62,6 +62,12 @@
     <string name="spinWheel">Spin the Wheel</string>
     <string name="goodLuck">Good Luck !!</string>
     <string name="spinTitle">Spin and Drink</string>
-
+    <string name="truth">pick someone to tell the truth!! (or next time he/she drinks x2)</string>
+    <string name="oneShot">You Drink one shot</string>
+    <string name="vendetta">Vendetta: the last one that make you drink, drinks (even yourself)</string>
+    <string name="cleanse">Cleanse all chaos rules, skip turn</string>
+    <string name="sacrifice">Sacrifice: For every drink you take, pick one victim to drink with you (you can drink all the times you want)</string>
+    <string name="global">Global Drink: Everybody Drinks!</string>
+    <string name="target">"Target Drink: pick someone to drink"</string>
 
 </resources>
