@@ -26,7 +26,7 @@
     //Wheel
     <string name="title_activity_truth_dare_gameplay">truthDareGameplay</string>
     <string name="TruthDareDescription">You will be faced with different options, once you choose someone you will have to hand the device to that person!!\n HAVE FUN!</string>
-    <string name="VendettaTitle">Vendetta</string>
+    <string name="vendettaTitle">Vendetta</string>
     <string name="targetTitle">Target Drink</string>
     <string name="chaosTitle">Chaos Rule</string>
     <string name="sacrificeTitle">Sacrifice</string>

@@ -424,7 +424,7 @@ public class SpinWheelGameplay extends Activity {
         else if(rAngle > 30 && rAngle<= 60) {
             text = getString(R.string.truth);
             icon = R.drawable.icon_truth;
-            sectionTitle = getString(R.string.truth);
+            sectionTitle = getString(R.string.truthTitle);
         }
         else if(rAngle > 60 && rAngle <= 90) {
             text = randomFacts.get(random.nextInt(randomFacts.size()));
@@ -439,17 +439,17 @@ public class SpinWheelGameplay extends Activity {
         else if(rAngle > 120 && rAngle <= 150) {
             text =  getString(R.string.vendetta);
             icon = R.drawable.icon_vendetta;
-            sectionTitle = getString(R.string.vendetta);
+            sectionTitle = getString(R.string.vendettaTitle);
         }
         else if(rAngle > 150 && rAngle <= 180) {
            text = getString(R.string.cleanse);
             icon = R.drawable.icon_broom;
-            sectionTitle = getString(R.string.cleanse);
+            sectionTitle = getString(R.string.cleanseTitle);
         }
         else if(rAngle > 180 && rAngle <= 210) {
            text = getString(R.string.sacrifice);
             icon = R.drawable.icon_blood;
-            sectionTitle = getString(R.string.sacrifice);
+            sectionTitle = getString(R.string.sacrificeTitle);
         }
         else if(rAngle > 210 && rAngle <= 240) {
            text = chaosRules.get(random.nextInt(chaosRules.size()));
