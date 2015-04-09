@@ -419,67 +419,66 @@ public class SpinWheelGameplay extends Activity {
         if(rAngle <= 30) {
             text =  chaosRules.get(random.nextInt(chaosRules.size()));
             icon = R.drawable.icon_skull;
-            sectionTitle = "Chaos Rule";
+            sectionTitle = getString(R.string.chaosTitle);
         }
         else if(rAngle > 30 && rAngle<= 60) {
             text = getString(R.string.truth);
             icon = R.drawable.icon_truth;
-            sectionTitle = "Truth";
+            sectionTitle = getString(R.string.truth);
         }
         else if(rAngle > 60 && rAngle <= 90) {
             text = randomFacts.get(random.nextInt(randomFacts.size()));
             icon = R.drawable.icon_question;
-            sectionTitle = "Random Fact";
+            sectionTitle = getString(R.string.randomTitle);
         }
         else if(rAngle > 90 && rAngle <= 120) {
             text = getString(R.string.oneShot);
             icon = R.drawable.icon_drink;
-            sectionTitle = "Drink";
+            sectionTitle = getString(R.string.drinkTitle);
         }
         else if(rAngle > 120 && rAngle <= 150) {
             text =  getString(R.string.vendetta);
             icon = R.drawable.icon_vendetta;
-            sectionTitle = "Vendetta";
+            sectionTitle = getString(R.string.vendetta);
         }
         else if(rAngle > 150 && rAngle <= 180) {
            text = getString(R.string.cleanse);
             icon = R.drawable.icon_broom;
-            sectionTitle = "Clean Rules";
+            sectionTitle = getString(R.string.cleanse);
         }
         else if(rAngle > 180 && rAngle <= 210) {
            text = getString(R.string.sacrifice);
             icon = R.drawable.icon_blood;
-            sectionTitle = "Sacrifice";
+            sectionTitle = getString(R.string.sacrifice);
         }
         else if(rAngle > 210 && rAngle <= 240) {
            text = chaosRules.get(random.nextInt(chaosRules.size()));
             icon = R.drawable.icon_skull;
-            sectionTitle = "Chaos Rule";
+            sectionTitle = getString(R.string.chaosTitle);
         }
         else if(rAngle > 240 && rAngle <= 270) {
            text = randomFacts.get(random.nextInt(randomFacts.size()));
             icon = R.drawable.icon_question;
-            sectionTitle = "Random Fact";
+            sectionTitle = getString(R.string.randomTitle);
         }
         else if(rAngle > 270 && rAngle <= 300) {
-           text = iNever.get(random.nextInt(chaosRules.size()));
+           text = iNever.get(random.nextInt(iNever.size()));
             icon = R.drawable.icon_never;
-            sectionTitle = "Never have I ever";
+            sectionTitle = getString(R.string.iNeverPostTitle);
         }
         else if(rAngle > 300 && rAngle <= 330) {
            text = getString(R.string.global);
             icon = R.drawable.icon_world;
-            sectionTitle = "Global Drink";
+            sectionTitle = getString(R.string.globalTitle);
         }
         else if(rAngle > 330 && rAngle <= 360) {
            text = getString(R.string.target);
             icon = R.drawable.icon_target;
-            sectionTitle = "Target Drink";
+            sectionTitle = getString(R.string.targetTitle);
         }
 
         TranslateAnimation animate = new TranslateAnimation(0,-findViewById(R.id.frameContainer).getWidth(),0,0);
         animate.setDuration(500);
-
         animate.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
@@ -530,11 +529,9 @@ public class SpinWheelGameplay extends Activity {
             @Override
             public void onAnimationEnd(Animation animation) {
                 findViewById(R.id.frameText).setVisibility(View.GONE);
-
                 TranslateAnimation animate = new TranslateAnimation(-findViewById(R.id.frameContainer).getWidth(),0,0,0);
                 animate.setDuration(500);
                 findViewById(R.id.frameContainer).startAnimation(animate);
-
                 findViewById(R.id.frameContainer).setVisibility(View.VISIBLE);
             }
 

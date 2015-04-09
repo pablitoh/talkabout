@@ -21,9 +21,20 @@
     <string name='hard'> A little bit of both</string>
     <string name="IneverPostImage">http://scontent-gru.xx.fbcdn.net/hphotos-xpf1/v/t1.0-9/11081467_831485430234404_7159253971600731338_n.png?oh=693feffdfa3a5dd0fe3e1a6f09a8aa39&amp;oe=55AC4C31</string>
     <string name="iNeverPostTitle">Never have i ever</string>
-    //Truth / Dare
+
+
+    //Wheel
     <string name="title_activity_truth_dare_gameplay">truthDareGameplay</string>
     <string name="TruthDareDescription">You will be faced with different options, once you choose someone you will have to hand the device to that person!!\n HAVE FUN!</string>
+    <string name="VendettaTitle">Vendetta</string>
+    <string name="targetTitle">Target Drink</string>
+    <string name="chaosTitle">Chaos Rule</string>
+    <string name="sacrificeTitle">Sacrifice</string>
+    <string name="globalTitle">Global Drink</string>
+    <string name="cleanseTitle">Cleanse</string>
+    <string name="drinkTitle">Drink</string>
+    <string name="truthTitle">Truth</string>
+    <string name="randomTitle">Random</string>
 
     //Marry / Kill
     <string name="title_activity_marry_kill">MarryKill</string>
@@ -58,18 +69,17 @@
     <string name="facebookError">You need the Facebook App installed on your device.</string>
     <string name="title_activity_activity_spinwheel_gameplay">activity_spinwheel_gameplay</string>
 
-    <string name="hello_world">Hello world!</string>
     <string name="spinWheel">Spin the Wheel</string>
     <string name="goodLuck">Good Luck !!</string>
     <string name="spinTitle">Spin and Drink</string>
-    <string name="truth">pick someone to tell the truth!! (or next time he/she drinks x2)</string>
+    <string name="truth">Pick someone to tell the truth!! (or next time he/she drinks x2)</string>
     <string name="oneShot">You Drink one shot</string>
     <string name="vendetta">Vendetta: the last one that make you drink, drinks (even yourself)</string>
     <string name="cleanse">Cleanse all chaos rules, skip turn</string>
     <string name="sacrifice">For every drink you take, pick one victim to drink with you (you can drink all the times you want)</string>
     <string name="global">Everybody Drinks!</string>
-    <string name="target">pick someone to drink"</string>
+    <string name="target">Pick someone to drink"</string>
     <string name="backButton">BACK</string>
-    <string name="wheelDescription">Description</string>
+    <string name="wheelDescription">After spinning the wheel, and doing what the game tells you to do, hand the device to the player to your right.</string>
 
 </resources>
