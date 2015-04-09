@@ -69,5 +69,7 @@
     <string name="sacrifice">For every drink you take, pick one victim to drink with you (you can drink all the times you want)</string>
     <string name="global">Everybody Drinks!</string>
     <string name="target">pick someone to drink"</string>
+    <string name="backButton">BACK</string>
+    <string name="wheelDescription">Description</string>
 
 </resources>

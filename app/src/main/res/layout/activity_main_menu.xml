@@ -24,8 +24,6 @@
         android:layout_width="match_parent"
         android:layout_weight="1"
         android:orientation="horizontal"
-        android:splitMotionEvents="false"
-        android:windowEnableSplitTouch="false"
         >
 
         <ImageView
@@ -47,8 +45,6 @@
         android:layout_height="210dp"
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:splitMotionEvents="false"
-        android:windowEnableSplitTouch="false"
         android:layout_margin="0dp"
 
         android:layout_weight="0.09">
@@ -79,7 +75,7 @@
                 android:layout_weight="0"
                 android:id="@+id/prevButton"
                 android:clickable="true"
-                android:onClick="scrollCarrousel"/>
+                />
             <com.concon.talkabout.talkabout.elements.CustomHorizontalScroll
                 android:id="@+id/carrousel"
                 android:layout_width="wrap_content"
@@ -139,7 +135,7 @@
                         android:layout_margin="5dp"
                         android:textStyle="bold"
                         android:padding="15dp"
-                        style="?android:borderlessButtonStyle"/>
+                        />
 
                     <com.concon.talkabout.talkabout.elements.MenuButtonFun
                         android:layout_height="match_parent"
@@ -155,7 +151,7 @@
                         android:layout_margin="5dp"
                         android:textStyle="bold"
                         android:padding="15dp"
-                        style="?android:borderlessButtonStyle" />
+                        />
                 </LinearLayout>
             </com.concon.talkabout.talkabout.elements.CustomHorizontalScroll>
             <com.concon.talkabout.talkabout.elements.TextViewFun
@@ -169,7 +165,7 @@
                 android:gravity="center"
                 android:id="@+id/nextButton"
                 android:clickable="true"
-                android:onClick="scrollCarrousel"/>
+                />
             </LinearLayout>
 
     </RelativeLayout>
@@ -177,8 +173,6 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:splitMotionEvents="false"
-        android:windowEnableSplitTouch="false"
         android:layout_margin="0dp">
         <com.concon.talkabout.talkabout.elements.TextViewFun
             android:layout_width="wrap_content"

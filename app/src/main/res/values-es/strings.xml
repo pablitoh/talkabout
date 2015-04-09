@@ -41,7 +41,7 @@
     <string name="sacrifice">Por cada vez que tomas, elegi a una victima y el tambien toma. (podes tomar las veces que quieras)</string>
     <string name="global">Todos toman!</string>
     <string name="target">Elige a alguien para que tome"</string>
-
+    <string name="spinTitle">Rueda Caotica</string>
     //Marry / Kill
 
     <string name="title_activity_marry_kill">MarryKill</string>
@@ -70,7 +70,9 @@
     <string name="lightTime">3 min</string>
     <string name="hardTime">7 min</string>
     <string name="timeLimitText">Selecciona el tiempo limite</string>
-    <string name="spinTitle">Rueda Caotica</string>
+
+    <string name="backButton">Atras</string>
+    <string name="wheelDescription">Description de la rueda sarasa sarasa sarasa lalal loloo wachi wachi wachi sarasaaaaa</string>
 
 
 </resources>
