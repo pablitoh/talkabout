@@ -2,24 +2,34 @@
 <feed>
     <randomfacts>
         <entry>Repeat the last turn played</entry>
-        <entry>The player with most money in the wallet drinks</entry>
         <entry>Say something sexual loud or you drink</entry>
         <entry>If someone is eating right now, he/she drinks</entry>
-        <entry>Whenever a player stays 3 turns without drinking, he/she drinks</entry>
-        <entry>The player with something red drinks</entry>
+        <entry>The players wearing a red shirt/t-shirt drink</entry>
+        <entry>The players wearing a blue shirt/t-shirt drink</entry>
+        <entry>The players wearing a black shirt/t-shirt drink</entry>
+        <entry>The players wearing a yellow shirt/t-shirt drink</entry>
+        <entry>The players wearing a white shirt/t-shirt drink</entry>
         <entry>The player with more chaos rules drinks</entry>
-        <entry>You cannot talk for the rest of the game. Make someone read for you when is your turn, If you speak from now on, you drink. Important: you read out loud "you drink", drink 1.</entry>
+        <entry>You cannot talk for the rest of the turn. Make someone read for you when is your turn, If you speak from now on, you drink. Important: you read out loud "you drink", drink 1.</entry>
         <entry>Choose someone, he/she drinks. then he/she chooses another one.</entry>
         <entry>Choose someone with a chaos rule and double its drink effect.Make a toast with the victim.</entry>
         <entry>Talk to someone like if you were talking to a baby. if she/he laughs, you drink. If both laugh, you drink x2</entry>
         <entry>Select one player with chaos rules and give them to another player</entry>
         <entry>Choose a player and hand the device</entry>
         <entry>Cleanse a player of chaos rules</entry>
-        <entry>The player with something blue drinks</entry>
         <entry>The player to your right drinks</entry>
         <entry>The player to your left drinks</entry>
         <entry>Put your arms up until your next turn, or drink</entry>
         <entry>Everybody gives their chaos rules to the person on the right</entry>
-        <entry>Make your own (simple) Random Fact.</entry>
+        <entry>Players whose names begin with A through M, drink</entry>
+        <entry>Players whose names begin with M through Z, drink</entry>
+        <entry>Players that are older than you, drink</entry>
+        <entry>Players that are younger than you, drink</entry>
+        <entry>Same sex players, drink</entry>
+        <entry>Players of opposite sex,drink</entry>
+        <entry>Choose a player to say which song is currently being played. If there is no music, you drink</entry>
+        <entry>Last player in arriving to the party, drinks</entry>
+        <entry>Everybody touch their noses, last one drinks</entry>
+        <entry>Everybody raise their drinking glasses, last one drinks</entry>
     </randomfacts>
 </feed>

@@ -2,24 +2,39 @@
 <feed>
     <randomfacts>
         <entry>Se repite el ultimo turno jugado</entry>
-        <entry>El jugador con mas dinero en la billetera toma</entry>
+        <entry>Los jugadores con mas dinero en la billetera toma</entry>
         <entry>Grita algo sexual o toma</entry>
-        <entry>El jugador que este comiendo algo toma</entry>
-        <entry>El jugador que haya bebido menos toma</entry>
-        <entry>El jugador con algo de color rojo toma</entry>
-        <entry>El jugador que haya bebido mas toma</entry>
-        <entry>No podes hablar por el resto del juego. Alguien mas lee la consigna cuando sea tu turno, Si hablas desde ahora, tomas. Nota: leiste "tomas", toma 1</entry>
+        <entry>Los jugadores que esten comiendo algo toman</entry>
+        <entry>No podes hablar por el resto del Turno. Alguien mas lee la consigna cuando sea tu turno, Si hablas desde ahora, tomas. Nota: leiste "tomas", toma 1</entry>
         <entry>Elegi a alguien para que tome, y ese alguien elege a alguien mas para que tambien tome.</entry>
         <entry>Elegi a alguien con una regla del caos y su efecto de trago se vuelve doble. Haz un brindis con la victima.</entry>
-        <entry>Hacele muecas a alguien como si fuera un bebe. Si se rie tomas, si se rien ambos tomas x2</entry>
+        <entry>Hacele muecas a alguien como si fuera un bebe. Si no se rie, tomas. Si se rie, toma esa persona, si se rien ambos toman los dos</entry>
         <entry>Elegi a alguien que tenga reglas caoticas activadas, y pasaselas a otro jugador</entry>
-        <entry>Elegi a alguien y pasale el dispositivo</entry>
-        <entry>Limpia a un jugador de reglas caoticas</entry>
-        <entry>El jugador que tenga algo azul toma</entry>
+        <entry>Elegi a alguien y pasale el dispositivo. Toma con esa persona.</entry>
+        <entry>Limpia a un jugador de reglas caoticas. No podes ser vos.</entry>
+        <entry>Los jugadores que tengan remera o camisa Azul toman</entry>
+        <entry>Los jugadores que tengan remera o camisa Roja toman</entry>
+        <entry>Los jugadores que tengan remera o camisa Verde toman</entry>
+        <entry>Los jugadores que tengan remera o camisa Amarilla toman</entry>
+        <entry>Los jugadores que tengan remera o camisa Negra toman</entry>
+        <entry>Los jugadores que tengan remera o camisa Blanca toman</entry>
+        <entry>Los jugadores que tengan pollera toman</entry>
+        <entry>Los jugadores que tengan jean toman</entry>
+        <entry>Los jugadores que tengan zapatos toman</entry>
         <entry>El jugador a tu derecha toma</entry>
         <entry>El jugador a tu izquierda toma</entry>
         <entry>Levanta los brazos hasta tu siguiente turno o toma</entry>
         <entry>Todo el mundo le pasa sus reglas caoticas a la persona de la derecha</entry>
-        <entry>Inventa un (simple) hecho al azar</entry>
+        <entry>Los jugadores cuyo nombre empiezan de la A a la  M, toman</entry>
+        <entry>Los jugadores cuyo nombre empiezan de la N a la  Z, toman</entry>
+        <entry>Los jugadores menores que tu, toman.</entry>
+        <entry>Los jugadores mayores que tu, toman</entry>
+        <entry>Los jugadores con edad impar, toman</entry>
+        <entry>Los jugadores de tu mismo sexo, toman</entry>
+        <entry>Los jugadores del otro sexo, toman</entry>
+        <entry>Elegis a alguien para que diga el nombre de la cancion que está sonando en este momento. Si no hay musica, tomas.</entry>
+        <entry>El ultimo que llegó a la fiesta, toma</entry>
+        <entry>El ultimo en tocarse la nariz, toma</entry>
+        <entry>El ultimo en levantar el vaso, toma</entry>
     </randomfacts>
 </feed>
