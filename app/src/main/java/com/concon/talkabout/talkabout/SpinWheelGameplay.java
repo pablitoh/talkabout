@@ -332,9 +332,6 @@ public class SpinWheelGameplay extends Activity {
                 dialer.setEnabled(true);
                 isPlaying = false;
                 spinningSound.stop();
-                if(spinButton != null) {
-                    spinButton.setEnabled(true);
-                }
             }
 
         }
@@ -394,8 +391,9 @@ public class SpinWheelGameplay extends Activity {
          * that the wheel finished to spin before you can spin it again.
         **/
         v.setEnabled(false);
-
         dialer.setEnabled(false);
+
+
         dialer.post(new FlingRunnable(random.nextInt(1500), v));
     }
 
@@ -536,6 +534,10 @@ public class SpinWheelGameplay extends Activity {
                 animate.setDuration(500);
                 findViewById(R.id.frameContainer).startAnimation(animate);
                 findViewById(R.id.frameContainer).setVisibility(View.VISIBLE);
+                ImageView spinButton =  (ImageView) findViewById(R.id.logo_icono);
+                if(spinButton != null) {
+                    spinButton.setEnabled(true);
+                }
             }
 
             @Override
