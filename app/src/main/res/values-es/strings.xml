@@ -31,7 +31,7 @@
 
     <string name="title_activity_truth_dare_gameplay">truthDareGameplay</string>
     <string name="TruthDareDescription">Serás presentado con varias opciones, al terminar deberas pasarle el control a la victima!!</string>
-    <string name="wheelTitle">Rueda Caotica</string>
+    <string name="wheelTitle">Gira y Toma!!</string>
     <string name="spinWheel">Gire la rueda!!</string>
     <string name="goodLuck">Suerte !!</string>
     <string name="truth">Preguntale a alguien lo que quieras, esa persona puede decidir entre decir la verdad o tomar x2 la proxima vez que le toque tomar</string>
@@ -42,7 +42,6 @@
     <string name="global">Todos toman!</string>
     <string name="target">Elige a alguien para que tome"</string>
     <string name="spinTitle">Rueda Caotica</string>
-
     <string name="vendettaTitle">Vendetta</string>
     <string name="targetTitle">Francotirador</string>
     <string name="chaosTitle">Regla Caotica</string>
@@ -51,7 +50,7 @@
     <string name="cleanseTitle">Limpieza</string>
     <string name="drinkTitle">Tomar</string>
     <string name="truthTitle">Verdad</string>
-    <string name="randomTitle">Azar</string>
+    <string name="randomTitle">Aleatorio</string>
 
     //Marry / Kill
 
@@ -81,9 +80,8 @@
     <string name="lightTime">3 min</string>
     <string name="hardTime">7 min</string>
     <string name="timeLimitText">Selecciona el tiempo limite</string>
-
     <string name="backButton">Atras</string>
-    <string name="wheelDescription">Despues de girar la rueda, y cumplir con lo que diga la pantalla, le pasas el control al jugador de la derecha</string>
+    <string name="wheelDescription">Despues de girar la rueda, y cumplir con lo que diga la pantalla, le pasas el control al jugador de la derecha. Las reglas caoticas aplican para siempre, o hasta que se juegue una "Limpieza". Un turno consiste en una vuelta entera de la ronda.</string>
 
 
 </resources>
