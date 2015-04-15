@@ -37,7 +37,8 @@
             android:src="@drawable/logo_nuevo"
             android:textStyle="bold"
             android:adjustViewBounds="true"
-            android:padding="15dp"/>
+            android:padding="15dp"
+            android:contentDescription="Logo"/>
 
         </LinearLayout>
 
