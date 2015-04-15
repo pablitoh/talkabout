@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:text="@string/marryKillTitle"
         android:id="@+id/MarryKillTitle"
-        android:textColor="@color/orange"
+        android:textColor="@color/black"
         android:textSize="@dimen/section_title_text"
         android:gravity="center"
         android:layout_below="@+id/adView"

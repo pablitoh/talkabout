@@ -22,7 +22,7 @@
             android:text="@string/mimicTitle"
             android:id="@+id/textView"
             android:textSize="@dimen/section_title_text"
-            android:textColor="@color/orange"
+            android:textColor="@color/black"
             android:layout_below="@+id/adView"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"

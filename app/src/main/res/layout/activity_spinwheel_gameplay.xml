@@ -24,7 +24,7 @@
         android:text="@string/wheelTitle"
         android:id="@+id/textView"
         android:textSize="@dimen/section_title_text"
-        android:textColor="@color/orange"
+        android:textColor="@color/black"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/adView"
         android:layout_alignParentStart="true"
@@ -123,7 +123,7 @@
                />
 
 
-           <com.concon.talkabout.talkabout.elements.TextViewFun
+           <com.concon.talkabout.talkabout.elements.TitleFun
                android:layout_width="wrap_content"
                android:layout_height="wrap_content"
                android:text="@string/spinWheel"
