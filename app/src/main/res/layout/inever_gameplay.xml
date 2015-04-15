@@ -68,5 +68,4 @@
         android:textSize="@dimen/indication_text"
         android:clickable="true"
         android:onClick="changeTopic"/>
-
 </RelativeLayout>
