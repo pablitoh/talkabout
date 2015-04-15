@@ -66,6 +66,7 @@ public class SpinWheelGameplay extends Activity {
     private String text = "";
     private int icon;
     private String sectionTitle="";
+    Random random = new Random();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -265,7 +266,6 @@ public class SpinWheelGameplay extends Activity {
 
         @Override
         public void run() {
-
             if(!isPlaying){
                 spinningSound =  MediaPlayer.create(getApplicationContext(), R.raw.wheel_tick);
                 spinningSound.start();
@@ -277,7 +277,8 @@ public class SpinWheelGameplay extends Activity {
 
             // limit the velocity of the wheel
             if(actualVelocity > 3000) {
-                velocity = 1000;
+
+                velocity = random.nextInt((1500 - 1000) + 1) + 1000;
             }
 
             if(actualVelocity > 1000) {
@@ -412,7 +413,7 @@ public class SpinWheelGameplay extends Activity {
          * that the wheel finished to spin before you can spin it again.
         **/
         v.setEnabled(false);
-        Random random = new Random();
+
         dialer.setEnabled(false);
         dialer.post(new FlingRunnable(random.nextInt(1500), v));
     }
@@ -501,7 +502,7 @@ public class SpinWheelGameplay extends Activity {
         animate.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
-
+                dialer.setEnabled(false);
             }
 
             @Override
@@ -528,6 +529,7 @@ public class SpinWheelGameplay extends Activity {
         if(findViewById(R.id.frameText).getVisibility() == View.VISIBLE)
         {
             dismiss(findViewById(R.id.dismissButtn));
+            dialer.setEnabled(true);
         }
         else
         {
@@ -537,12 +539,13 @@ public class SpinWheelGameplay extends Activity {
 
     public void dismiss(View v)
     {
+        dialer.setEnabled(true);
         TranslateAnimation animate = new TranslateAnimation(0,-findViewById(R.id.frameText).getWidth(),0,0);
         animate.setDuration(500);
         animate.setAnimationListener(new Animation.AnimationListener() {
             @Override
             public void onAnimationStart(Animation animation) {
-
+                dialer.setEnabled(true);
             }
 
             @Override
