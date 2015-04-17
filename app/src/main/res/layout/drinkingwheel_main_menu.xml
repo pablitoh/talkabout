@@ -40,7 +40,7 @@
             android:id="@+id/phrase"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
+            android:gravity="center|left"
             android:layout_gravity="center"
             android:padding="10dp"
             android:text="@string/wheelDescription"

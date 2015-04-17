@@ -81,7 +81,7 @@
     <string name="hardTime">7 min</string>
     <string name="timeLimitText">Selecciona el tiempo limite</string>
     <string name="backButton">Atras</string>
-    <string name="wheelDescription">Despues de girar la rueda, y cumplir con lo que diga la pantalla, le pasas el control al jugador de la derecha. Las reglas caoticas aplican para siempre, o hasta que se juegue una "Limpieza". Un turno consiste en una vuelta entera de la ronda.</string>
+    <string name="wheelDescription">-Despues de girar la rueda, y cumplir con lo que diga la pantalla, le pasas el control al jugador de la derecha.\n -Las reglas caoticas aplican para siempre, o hasta que se juegue una "Limpieza".\n -Un turno consiste en una vuelta entera de la ronda.</string>
 
 
 </resources>
