@@ -187,7 +187,7 @@ public class SpinWheelGameplay extends Activity {
 
 
                     allowRotating = false;
-
+                    findViewById(R.id.logo_icono).setEnabled(false);
                     startAngle = getAngle(event.getX(), event.getY());
                     break;
 
@@ -411,8 +411,6 @@ public class SpinWheelGameplay extends Activity {
         **/
         v.setEnabled(false);
         dialer.setEnabled(false);
-
-
         dialer.post(new FlingRunnable(random.nextInt((3000 - 1000) + 1) + 1000, v));
     }
 
@@ -537,6 +535,7 @@ public class SpinWheelGameplay extends Activity {
 
     public void dismiss(View v)
     {
+        v.setEnabled(false);
         dialer.setEnabled(true);
         TranslateAnimation animate = new TranslateAnimation(0,-findViewById(R.id.frameText).getWidth(),0,0);
         animate.setDuration(500);
@@ -557,6 +556,7 @@ public class SpinWheelGameplay extends Activity {
                 if(spinButton != null) {
                     spinButton.setEnabled(true);
                 }
+                findViewById(R.id.dismissButtn).setEnabled(true);
             }
 
             @Override
