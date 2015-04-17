@@ -1,30 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed>
     <chaos>
-        <entry>Hasta que termine el juego usa una zapatilla como sombrero. Si se cae tomas</entry>
-        <entry>Desde ahora tu nombre es Bob. Si alguien te llama por tu nombre real, ese alguien toma</entry>
-        <entry>Te acordas de tus ancestros arabes. Cuando alguien tome tenes que gritar como un arabe, o tomas</entry>
-        <entry>Sos fan del Rey Leon. Antes de tomar sube tu trago con ambas manos arriba de tu cabeza o toma de nuevo</entry>
-        <entry>Desde ahora tu nombre es Betty. Si alguien te llama por tu nombre real, ese alguien toma.</entry>
-        <entry>Desde ahora sos una groupie de Justin Beiber. Cuando alguien tome tenes que gritar "Te Amo Justin!!", o tomas x2</entry>
-        <entry>Fuiste poseido por un pirata. Cuando alguien tome tienes que gritar "si mi capitan!" o tomas</entry>
-        <entry>Te maldijo un Payaso diabolico. Cada vez que te rias, tomas</entry>
-        <entry>Sos Dobby, el elfo esclavo. Si alguien necesita ir a comprar mas bebida, vas vos. Si habia otro Dobby ya en juego, este es liberado de su condicion de esclavo siempre y cuando grite "Dobby es un elfo libre", y tome</entry>
-        <entry>Sos un orador. Cuando alguien tome tienes que gritar "Aleluya!" o tomas</entry>
-        <entry>Sos el papa. Bendice a alguien con tu trago (salpicar), si esa persona te insulta, tomas.</entry>
-        <entry>Cuando alguien insulte, ese alguien toma</entry>
-        <entry>Cuando alguien diga "No", ese alguien toma</entry>
-        <entry>Cuando alguien diga "Yo", "Mi" o "Mio", ese alguien toma</entry>
-        <entry>Llevas la marca del ebrio. Cuando se limpien las reglas caoticas, esta marca se borra y tomas x2</entry>
-        <entry>Cuando alguien te haga tomar, ese alguien tambien toma</entry>
-        <entry>Sos inmune a el trago sacrificio. Si alguien te lo tira, ese alguien toma.</entry>
-        <entry>Sos inmune a la venganza.Si alguien te lo tira, ese alguien toma</entry>
-        <entry>Si hay un animal en la casa, a la persona que ese animal toque toma. Si no hay ningun animal, Grita "GreenPeace" y toma</entry>
+        <entry>Hasta que termine el juego usa una zapatilla como sombrero. Si se cae, tomas</entry>
+        <entry>Desde ahora tu nombre es Bob. Si alguien te llama por tu nombre real, </entry>
+        <entry>oma</entry>
+        <entry>Te acuerdas de tus ancestros árabes. Cuando alguien tome tienes que gritar como un árabe, o tomas</entry>
+        <entry>Sos fan del Rey León. Antes de tomar sube tu trago con ambas manos por arriba de tu cabeza o toma de nuevo</entry>
+        <entry>Desde ahora tu nombre es Betty. Si alguien te llama por tu nombre real, toma.</entry>
+        <entry>Desde ahora eres una groupie de Justin Beiber. Cuando alguien tome tienes que gritar "Te Amo Justin!!", o tomas x2</entry>
+        <entry>Fuiste poseído por un pirata. Cuando alguien tome tienes que gritar "Si mi capitan!" o tomas</entry>
+        <entry>Te maldijo un Payaso diabólico. Cada vez que te rías, tomas</entry>
+        <entry>Eres un orador. Cuando alguien tome tienes que gritar "Aleluya!" o tomas</entry>
+        <entry>Eres el papa. Bendice a alguien con unas gotas de tu trago (salpicar), si esa persona te insulta, tomas</entry>
+        <entry>Cuando alguien insulte, toma</entry>
+        <entry>Cuando alguien diga "No",  toma</entry>
+        <entry>Cuando alguien diga "Yo", "Mí" o "Mío",toma</entry>
+        <entry>Llevas la marca del ebrio. Cuando se limpien las reglas caóticas, esta marca se borra y tomas x2</entry>
+        <entry>Cuando alguien te haga tomar, ese alguien también toma</entry>
+        <entry>Eres inmune al trago sacrificio. Si alguien te lo tira, toma.</entry>
+        <entry>Eres inmune a la venganza. Si alguien te lo tira, toma</entry>
+        <entry>Si hay un animal en la casa, a la persona que ese animal toque toma. Si no, grita "GreenPeace" y toma</entry>
         <entry>Cuando alguien tome, te quedas congelado o tomas.</entry>
-        <entry>La proxima vez que alguien tenga que tomar, tomas en su lugar. Esta regla se desvanece cuando tomas</entry>
-        <entry>La proxima vez que alguien sea victima del trago francotirador, vos recibis el tiro. Esta regla se desvanece cuando tomas</entry>
+        <entry>La próxima vez que alguien tenga que tomar, tomas en su lugar. Esta regla se desvanece cuando tomas</entry>
+        <entry>La próxima vez que alguien sea víctima del trago francotirador, recibes el tiro. Esta regla se desvanece cuando tomas</entry>
         <entry>Si alguien usa su celular, toma. El dueño de este dispositivo no cuenta</entry>
         <entry>Todos toman con la mano izquierda</entry>
-        <entry>Te quedas parado el resto del juego, si estas parado, te sentas</entry>
+        <entry>Te quedas parado el resto del juego, si estás parado, te sientas</entry>
+        <entry>Eres Dobby, el elfo esclavo. Si alguien necesita ir a comprar más bebida o preparar otro trago,tú lo haces. Si había otro Dobby ya en juego, este es liberado de su condición de esclavo, para ganar su libertad debe gritar: "Dobby es un elfo libre", y tome</entry>
     </chaos>
 </feed>

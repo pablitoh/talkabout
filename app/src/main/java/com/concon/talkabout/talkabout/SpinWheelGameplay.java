@@ -413,7 +413,7 @@ public class SpinWheelGameplay extends Activity {
         dialer.setEnabled(false);
 
 
-        dialer.post(new FlingRunnable(random.nextInt(1500), v));
+        dialer.post(new FlingRunnable(random.nextInt((3000 - 1000) + 1) + 1000, v));
     }
 
     private void getRewardFromWheelAngle() {
