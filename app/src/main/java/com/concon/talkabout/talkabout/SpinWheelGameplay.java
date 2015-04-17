@@ -20,10 +20,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
 import com.concon.talkabout.talkabout.service.INeverParserService;
 import com.concon.talkabout.talkabout.service.SingleFeedParserService;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -71,6 +75,10 @@ public class SpinWheelGameplay extends Activity {
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+        Tracker t = ((GoogleAnalyticsApp) getApplication()).getTracker(GoogleAnalyticsApp.TrackerName.APP_TRACKER);
+        t.setScreenName("SpinWheel Gameplay");
+        t.enableAdvertisingIdCollection(true);
+        t.send(new HitBuilders.AppViewBuilder().build());
 
         // load the image only once
         if (imageOriginal == null) {
@@ -148,6 +156,17 @@ public class SpinWheelGameplay extends Activity {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+    @Override
+    protected void onStart() {
+        super.onStart();
+        GoogleAnalytics.getInstance(this).reportActivityStart(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        GoogleAnalytics.getInstance(this).reportActivityStop(this);
     }
 
     private class MyOnTouchListener implements View.OnTouchListener {

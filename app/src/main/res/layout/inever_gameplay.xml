@@ -27,7 +27,7 @@
         android:layout_below="@+id/adView"
         android:gravity="center"
         android:text="@string/INevertitle"
-        android:textColor="@color/orange"
+        android:textColor="@color/black"
         android:textSize="@dimen/section_title_text" />
 
     <com.concon.talkabout.talkabout.elements.TextViewFun
@@ -68,5 +68,4 @@
         android:textSize="@dimen/indication_text"
         android:clickable="true"
         android:onClick="changeTopic"/>
-
 </RelativeLayout>

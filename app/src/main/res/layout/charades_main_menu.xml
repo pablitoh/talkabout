@@ -25,7 +25,7 @@
         android:layout_below="@+id/adView"
         android:gravity="center"
         android:text="@string/charadesTitle"
-        android:textColor="@color/orange"
+        android:textColor="@color/black"
         android:textSize="@dimen/section_title_text"/>
     <ScrollView
         android:id="@+id/SCROLLER_ID"
