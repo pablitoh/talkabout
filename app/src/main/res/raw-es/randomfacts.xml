@@ -4,11 +4,11 @@
         <entry>Se repite el último turno jugado</entry>
         <entry>Los jugadores con más dinero en la billetera toma</entry>
         <entry>Grita algo sexual o toma</entry>
-        <entry>Los jugadores que estén comiendo algo toman</entry>
+        <entry>Los jugadores que estén comiendo algo toman, si nadie come, tomas vos.</entry>
         <entry>Eliges a alguien para que tome, y ese alguien elige a alguien más para que también tome.</entry>
         <entry>Elige a alguien con una regla del caos y su efecto de trago se vuelve doble. Haz un brindis con la víctima</entry>
         <entry>Hazle muecas a alguien como si fuera un bebe. Si no se ríe, tomas. Si se ríe, toma esa persona, si ambos se ríen toman los dos</entry>
-        <entry>Elige a alguien que tenga reglas caóticas activadas, y pásaselas a otro jugador</entry>
+        <entry>Elige a alguien que tenga reglas caóticas activadas, y pásaselas a otro jugador. Toman los dos afectados.</entry>
         <entry>Elige a alguien y pásale el dispositivo. Toma con esa persona.</entry>
         <entry>Limpia a un jugador de reglas caóticas. No puedes ser tú mismo.</entry>
         <entry>Los jugadores que tengan remera o camisa Azul toman</entry>
@@ -22,8 +22,7 @@
         <entry>Los jugadores que tengan zapatos toman</entry>
         <entry>El jugador a tu derecha toma</entry>
         <entry>El jugador a tu izquierda toma</entry>
-        <entry>Levanta los brazos hasta tu siguiente turno o toma</entry>
-        <entry>Todo el mundo le pasa sus reglas caóticas a la persona de la derecha</entry>
+        <entry>Todo el mundo le pasa sus reglas caóticas a la persona de la derecha. Todos toman.</entry>
         <entry>Los jugadores cuyo nombre empieza con las letras entre A-M, toman</entry>
         <entry>Los jugadores cuyo nombre empieza con las letras entre N-Z, toman</entry>
         <entry>Los jugadores menores que tú, toman.</entry>
@@ -35,6 +34,6 @@
         <entry>El último que llegó a la fiesta, toma</entry>
         <entry>El último en tocarse la nariz, toma</entry>
         <entry>El último en levantar el vaso, toma</entry>
-        <entry>No puedes hablar por el resto del Turno. Alguien más lee la consigna cuando sea tu turno, desde este momento, si hablas, tomas. Nota: ¿leiste "tomas"?, toma 1</entry>
+
     </randomfacts>
 </feed>

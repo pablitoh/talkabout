@@ -26,5 +26,7 @@
         <entry>Todos toman con la mano izquierda</entry>
         <entry>Te quedas parado el resto del juego, si estás parado, te sientas</entry>
         <entry>Eres Dobby, el elfo esclavo. Si alguien necesita ir a comprar más bebida o preparar otro trago,tú lo haces. Si había otro Dobby ya en juego, este es liberado de su condición de esclavo, para ganar su libertad debe gritar: "Dobby es un elfo libre", y tome</entry>
+        <entry>Levanta los brazos hasta tu siguiente turno o toma</entry>
+        <entry>No puedes hablar por el resto del Turno. Alguien más lee la consigna cuando sea tu turno, desde este momento, si hablas, tomas. Nota: ¿leiste "tomas"?, toma 1</entry>
     </chaos>
 </feed>
