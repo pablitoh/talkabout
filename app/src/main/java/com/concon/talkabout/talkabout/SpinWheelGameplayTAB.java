@@ -1,5 +1,6 @@
-package adapters;
+package com.concon.talkabout.talkabout;
 
+import android.app.Activity;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
@@ -20,6 +21,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.concon.talkabout.talkabout.R;
+import com.concon.talkabout.talkabout.dataType.RewardCard;
 import com.concon.talkabout.talkabout.service.INeverParserService;
 import com.concon.talkabout.talkabout.service.SingleFeedParserService;
 
@@ -33,7 +35,7 @@ import java.util.Random;
  * Created by OE on 28/04/2015.
  */
 
-public class FirstTab extends Fragment {
+public class SpinWheelGameplayTAB extends Fragment {
 
     private static Bitmap imageOriginal, imageScaled;
     private static Matrix matrix;
@@ -56,6 +58,27 @@ public class FirstTab extends Fragment {
     private int icon;
     private String sectionTitle="";
     Random random = new Random();
+
+    RewardListener mCallback;
+
+    // Container Activity must implement this interface
+    public interface RewardListener {
+        public void onReward(RewardCard rewardCard);
+    }
+
+    @Override
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+
+        // This makes sure that the container activity has implemented
+        // the callback interface. If not, it throws an exception
+        try {
+            mCallback = (RewardListener) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement OnReward");
+        }
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -450,6 +473,7 @@ public class FirstTab extends Fragment {
             text =  chaosRules.get(random.nextInt(chaosRules.size()));
             icon = R.drawable.icon_skull;
             sectionTitle = getString(R.string.chaosTitle);
+
         }
         else if(rAngle > 30 && rAngle<= 60) {
             text = getString(R.string.truth);
@@ -507,6 +531,7 @@ public class FirstTab extends Fragment {
             sectionTitle = getString(R.string.targetTitle);
         }
 
+        mCallback.onReward(new RewardCard(sectionTitle,text,icon));
         TranslateAnimation animate = new TranslateAnimation(0,-getView().findViewById(R.id.frameContainer).getWidth(),0,0);
         animate.setDuration(500);
         animate.setAnimationListener(new Animation.AnimationListener() {

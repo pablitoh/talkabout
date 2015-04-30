@@ -12,6 +12,8 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:screenOrientation="portrait"
+
+        android:theme="@android:style/Theme.Holo.Wallpaper.NoTitleBar"
         >
         <provider
             android:name="com.facebook.FacebookContentProvider"
@@ -59,21 +61,22 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".MainContainer"
+            android:name=".SpinWheelContainerActivity"
             android:label="@string/app_name"
             android:screenOrientation="portrait"
             android:theme="@style/Theme.Orangebar">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".MainMenu"
             android:label="@string/title_activity_main_menu"
             android:screenOrientation="portrait"
              >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
         <activity
             android:name=".TruthDareGameplay"
@@ -90,12 +93,6 @@
             android:name=".MarryKillGameplay"
             android:label="@string/title_activity_marry_kill"
             android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".SpinWheelGameplay"
-            android:label="SpinWheel"
-            android:screenOrientation="portrait"
-            >
         </activity>
     </application>
 

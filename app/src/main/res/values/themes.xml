@@ -26,4 +26,5 @@
         <!-- Support library compatibility -->
         <item name="background">@color/orange</item>
     </style>
+
 </resources>

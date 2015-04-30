@@ -12,16 +12,20 @@ public class TextViewFun extends TextView {
     public TextViewFun(Context context) {
         super(context);
         setFont(context, this);
+        setTransformationMethod(null);
     }
 
     public TextViewFun(Context context, AttributeSet attrs) {
         super(context, attrs);
         setFont(context, this);
+        setTransformationMethod(null);
     }
 
     public TextViewFun(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         setFont(context, this);
+        setTransformationMethod(null);
+
     }
 
     private void setFont(Context context, TextView text) {
