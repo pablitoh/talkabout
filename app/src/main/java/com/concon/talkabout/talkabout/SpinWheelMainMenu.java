@@ -52,7 +52,7 @@ public class SpinWheelMainMenu extends Activity {
     }
 
     public void startWheel(View v) {
-        Intent intent = new Intent(SpinWheelMainMenu.this, SpinWheelGameplay.class);
+        Intent intent = new Intent(SpinWheelMainMenu.this, SpinWheelContainerActivity.class);
         startActivity(intent);
 
     }

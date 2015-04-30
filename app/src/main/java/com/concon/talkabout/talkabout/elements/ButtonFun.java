@@ -15,6 +15,7 @@ public class ButtonFun extends Button {
         super(context);
         Typeface font = Typeface.createFromAsset(context.getAssets(), "Action_Man.ttf");
         this.setTypeface(font);
+        setTransformationMethod(null);
 
     }
 
@@ -23,6 +24,7 @@ public class ButtonFun extends Button {
 
         Typeface font = Typeface.createFromAsset(context.getAssets(), "Action_Man.ttf");
         this.setTypeface(font);
+        setTransformationMethod(null);
 
     }
 
@@ -30,6 +32,7 @@ public class ButtonFun extends Button {
         super(context, attrs, defStyle);
         Typeface font = Typeface.createFromAsset(context.getAssets(), "Action_Man.ttf");
         this.setTypeface(font);
+        setTransformationMethod(null);
     }
 }
 

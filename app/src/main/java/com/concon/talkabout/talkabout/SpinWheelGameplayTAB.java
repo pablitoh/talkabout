@@ -6,28 +6,24 @@ import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.GestureDetector;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.view.animation.Animation;
 import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
+import com.concon.talkabout.talkabout.R;
+import com.concon.talkabout.talkabout.dataType.RewardCard;
 import com.concon.talkabout.talkabout.service.INeverParserService;
 import com.concon.talkabout.talkabout.service.SingleFeedParserService;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
-import com.google.android.gms.analytics.GoogleAnalytics;
-import com.google.android.gms.analytics.HitBuilders;
-import com.google.android.gms.analytics.Tracker;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -35,8 +31,11 @@ import java.io.IOException;
 import java.util.List;
 import java.util.Random;
 
-public class SpinWheelGameplay extends Activity {
+/**
+ * Created by OE on 28/04/2015.
+ */
 
+public class SpinWheelGameplayTAB extends Fragment {
 
     private static Bitmap imageOriginal, imageScaled;
     private static Matrix matrix;
@@ -46,39 +45,46 @@ public class SpinWheelGameplay extends Activity {
     private ImageView dialer;
     private int dialerHeight, dialerWidth;
     private GestureDetector detector;
-
     // needed for detecting the inversed rotations
     private boolean[] quadrantTouched;
-
     private boolean allowRotating;
-
     private MediaPlayer spinningSound = null;
     private boolean loopStarted = false;
-
     private boolean isPlaying = false;
-
     private List<String> chaosRules, iNever, randomFacts;
-
     private INeverParserService iNeverParserService;
-
     private SingleFeedParserService singleFeedParserService;
-
     private String text = "";
     private int icon;
     private String sectionTitle="";
     Random random = new Random();
 
+    RewardListener mCallback;
+
+    // Container Activity must implement this interface
+    public interface RewardListener {
+        public void onReward(RewardCard rewardCard);
+    }
+
     @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_spinwheel_gameplay);
-        AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-        Tracker t = ((GoogleAnalyticsApp) getApplication()).getTracker(GoogleAnalyticsApp.TrackerName.APP_TRACKER);
-        t.setScreenName("SpinWheel Gameplay");
-        t.enableAdvertisingIdCollection(true);
-        t.send(new HitBuilders.AppViewBuilder().build());
+    public void onAttach(Activity activity) {
+        super.onAttach(activity);
+
+        // This makes sure that the container activity has implemented
+        // the callback interface. If not, it throws an exception
+        try {
+            mCallback = (RewardListener) activity;
+        } catch (ClassCastException e) {
+            throw new ClassCastException(activity.toString()
+                    + " must implement OnReward");
+        }
+    }
+
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+
+        View android = inflater.inflate(R.layout.activity_spinwheel_gameplay, container, false);
 
         // load the image only once
         if (imageOriginal == null) {
@@ -92,15 +98,66 @@ public class SpinWheelGameplay extends Activity {
             // not needed, you can also post the matrix immediately to restore the old state
             matrix.reset();
         }
+        ImageView spinButton = (ImageView) android.findViewById(R.id.logo_icono);
 
-        detector = new GestureDetector(this, new MyGestureDetector());
+
+
+        spinButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                v.setEnabled(false);
+                dialer.setEnabled(false);
+                dialer.post(new FlingRunnable(random.nextInt((3000 - 1000) + 1) + 1000, v));
+            }
+        });
+        if(spinButton != null) {
+            spinButton.setEnabled(true);
+        }
+        Button dismissButton = (Button) android.findViewById(R.id.dismissButtn);
+        dismissButton.setOnClickListener(new View.OnClickListener(){
+            public void onClick(View v) {
+                v.setEnabled(false);
+                dialer.setEnabled(true);
+                TranslateAnimation animate = new TranslateAnimation(0,-getView().findViewById(R.id.frameText).getWidth(),0,0);
+                animate.setDuration(500);
+                animate.setAnimationListener(new Animation.AnimationListener() {
+                    @Override
+                    public void onAnimationStart(Animation animation) {
+                        dialer.setEnabled(true);
+                    }
+
+                    @Override
+                    public void onAnimationEnd(Animation animation) {
+                        getView().findViewById(R.id.frameText).setVisibility(View.GONE);
+                        TranslateAnimation animate = new TranslateAnimation(-getView().findViewById(R.id.frameContainer).getWidth(),0,0,0);
+                        animate.setDuration(500);
+                        getView().findViewById(R.id.frameContainer).startAnimation(animate);
+                        getView().findViewById(R.id.frameContainer).setVisibility(View.VISIBLE);
+                        ImageView spinButton =  (ImageView) getView().findViewById(R.id.logo_icono);
+                        if(spinButton != null) {
+                            spinButton.setEnabled(true);
+                        }
+                        getView().findViewById(R.id.dismissButtn).setEnabled(true);
+                    }
+
+                    @Override
+                    public void onAnimationRepeat(Animation animation) {
+
+                    }
+                });
+                getView().findViewById(R.id.frameText).startAnimation(animate);
+            }
+        });
+
+
+        detector = new GestureDetector(getActivity().getApplicationContext(), new MyGestureDetector());
 
         // there is no 0th quadrant, to keep it simple the first value gets ignored
         quadrantTouched = new boolean[] { false, false, false, false, false };
 
         allowRotating = true;
 
-        dialer = (ImageView) findViewById(R.id.imageView_ring);
+        dialer = (ImageView) android.findViewById(R.id.imageView_ring);
         dialer.setOnTouchListener(new MyOnTouchListener());
 
         dialer.getViewTreeObserver().addOnGlobalLayoutListener(new ViewTreeObserver.OnGlobalLayoutListener() {
@@ -156,17 +213,8 @@ public class SpinWheelGameplay extends Activity {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-    @Override
-    protected void onStart() {
-        super.onStart();
-        GoogleAnalytics.getInstance(this).reportActivityStart(this);
-    }
 
-    @Override
-    protected void onStop() {
-        super.onStop();
-        GoogleAnalytics.getInstance(this).reportActivityStop(this);
+        return android;
     }
 
     private class MyOnTouchListener implements View.OnTouchListener {
@@ -187,7 +235,7 @@ public class SpinWheelGameplay extends Activity {
 
 
                     allowRotating = false;
-                    findViewById(R.id.logo_icono).setEnabled(false);
+                    getView().findViewById(R.id.logo_icono).setEnabled(false);
                     startAngle = getAngle(event.getX(), event.getY());
                     break;
 
@@ -267,7 +315,7 @@ public class SpinWheelGameplay extends Activity {
         @Override
         public void run() {
             if(!isPlaying){
-                spinningSound =  MediaPlayer.create(getApplicationContext(), R.raw.wheel_tick);
+                spinningSound =  MediaPlayer.create(getActivity().getApplicationContext().getApplicationContext(), R.raw.wheel_tick);
                 spinningSound.start();
                 isPlaying = true;
             }
@@ -340,7 +388,7 @@ public class SpinWheelGameplay extends Activity {
                 // post this instance again
                 dialer.post(this);
             }
-              else if(actualVelocity > 1 && actualVelocity <= 3 ) {
+            else if(actualVelocity > 1 && actualVelocity <= 3 ) {
                 rotateDialer(velocity / 1.2F);
                 velocity /= VELOCITY;
                 // post this instance again
@@ -403,17 +451,6 @@ public class SpinWheelGameplay extends Activity {
         dialer.setImageMatrix(matrix);
     }
 
-    public void spinWheel(View v)
-    {
-        /**
-         * we enable the button inside the FlingRunnable in order to know
-         * that the wheel finished to spin before you can spin it again.
-        **/
-        v.setEnabled(false);
-        dialer.setEnabled(false);
-        dialer.post(new FlingRunnable(random.nextInt((3000 - 1000) + 1) + 1000, v));
-    }
-
     private void getRewardFromWheelAngle() {
         /**         * Get the matrix angle URL: http://stackoverflow.com/a/28307921/3248003
          */
@@ -436,6 +473,7 @@ public class SpinWheelGameplay extends Activity {
             text =  chaosRules.get(random.nextInt(chaosRules.size()));
             icon = R.drawable.icon_skull;
             sectionTitle = getString(R.string.chaosTitle);
+
         }
         else if(rAngle > 30 && rAngle<= 60) {
             text = getString(R.string.truth);
@@ -458,42 +496,43 @@ public class SpinWheelGameplay extends Activity {
             sectionTitle = getString(R.string.vendettaTitle);
         }
         else if(rAngle > 150 && rAngle <= 180) {
-           text = getString(R.string.cleanse);
+            text = getString(R.string.cleanse);
             icon = R.drawable.icon_broom;
             sectionTitle = getString(R.string.cleanseTitle);
         }
         else if(rAngle > 180 && rAngle <= 210) {
-           text = getString(R.string.sacrifice);
+            text = getString(R.string.sacrifice);
             icon = R.drawable.icon_blood;
             sectionTitle = getString(R.string.sacrificeTitle);
         }
         else if(rAngle > 210 && rAngle <= 240) {
-           text = chaosRules.get(random.nextInt(chaosRules.size()));
+            text = chaosRules.get(random.nextInt(chaosRules.size()));
             icon = R.drawable.icon_skull;
             sectionTitle = getString(R.string.chaosTitle);
         }
         else if(rAngle > 240 && rAngle <= 270) {
-           text = randomFacts.get(random.nextInt(randomFacts.size()));
+            text = randomFacts.get(random.nextInt(randomFacts.size()));
             icon = R.drawable.icon_question;
             sectionTitle = getString(R.string.randomTitle);
         }
         else if(rAngle > 270 && rAngle <= 300) {
-           text = iNever.get(random.nextInt(iNever.size()));
+            text = iNever.get(random.nextInt(iNever.size()));
             icon = R.drawable.icon_never;
             sectionTitle = getString(R.string.iNeverPostTitle);
         }
         else if(rAngle > 300 && rAngle <= 330) {
-           text = getString(R.string.global);
+            text = getString(R.string.global);
             icon = R.drawable.icon_world;
             sectionTitle = getString(R.string.globalTitle);
         }
         else if(rAngle > 330 && rAngle <= 360) {
-           text = getString(R.string.target);
+            text = getString(R.string.target);
             icon = R.drawable.icon_target;
             sectionTitle = getString(R.string.targetTitle);
         }
 
-        TranslateAnimation animate = new TranslateAnimation(0,-findViewById(R.id.frameContainer).getWidth(),0,0);
+        mCallback.onReward(new RewardCard(sectionTitle,text,icon));
+        TranslateAnimation animate = new TranslateAnimation(0,-getView().findViewById(R.id.frameContainer).getWidth(),0,0);
         animate.setDuration(500);
         animate.setAnimationListener(new Animation.AnimationListener() {
             @Override
@@ -503,11 +542,11 @@ public class SpinWheelGameplay extends Activity {
 
             @Override
             public void onAnimationEnd(Animation animation) {
-                findViewById(R.id.frameContainer).setVisibility(View.GONE);
-                findViewById(R.id.frameText).setVisibility(View.VISIBLE);
-                ((TextView)findViewById(R.id.textInfo)).setText(text);
-                ((TextView)findViewById(R.id.logoView)).setCompoundDrawablesWithIntrinsicBounds(0, icon, 0, 0);
-                ((TextView)findViewById(R.id.logoView)).setText(sectionTitle);
+                getView().findViewById(R.id.frameContainer).setVisibility(View.GONE);
+                getView().findViewById(R.id.frameText).setVisibility(View.VISIBLE);
+                ((TextView)getView().findViewById(R.id.textInfo)).setText(text);
+                ((TextView)getView().findViewById(R.id.logoView)).setCompoundDrawablesWithIntrinsicBounds(0, icon, 0, 0);
+                ((TextView)getView().findViewById(R.id.logoView)).setText(sectionTitle);
 
             }
 
@@ -516,54 +555,11 @@ public class SpinWheelGameplay extends Activity {
 
             }
         });
-        findViewById(R.id.frameContainer).startAnimation(animate);
+        getView().findViewById(R.id.frameContainer).startAnimation(animate);
 
     }
 
-    @Override
-    public void onBackPressed() {
-        if(findViewById(R.id.frameText).getVisibility() == View.VISIBLE)
-        {
-            dismiss(findViewById(R.id.dismissButtn));
-            dialer.setEnabled(true);
-        }
-        else
-        {
-            super.onBackPressed();
-        }
-    }
 
-    public void dismiss(View v)
-    {
-        v.setEnabled(false);
-        dialer.setEnabled(true);
-        TranslateAnimation animate = new TranslateAnimation(0,-findViewById(R.id.frameText).getWidth(),0,0);
-        animate.setDuration(500);
-        animate.setAnimationListener(new Animation.AnimationListener() {
-            @Override
-            public void onAnimationStart(Animation animation) {
-                dialer.setEnabled(true);
-            }
 
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                findViewById(R.id.frameText).setVisibility(View.GONE);
-                TranslateAnimation animate = new TranslateAnimation(-findViewById(R.id.frameContainer).getWidth(),0,0,0);
-                animate.setDuration(500);
-                findViewById(R.id.frameContainer).startAnimation(animate);
-                findViewById(R.id.frameContainer).setVisibility(View.VISIBLE);
-                ImageView spinButton =  (ImageView) findViewById(R.id.logo_icono);
-                if(spinButton != null) {
-                    spinButton.setEnabled(true);
-                }
-                findViewById(R.id.dismissButtn).setEnabled(true);
-            }
 
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-
-            }
-        });
-        findViewById(R.id.frameText).startAnimation(animate);
-    }
 }

@@ -4,7 +4,6 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/background"
     android:padding="0dp">
 
     <com.google.android.gms.ads.AdView
@@ -81,7 +80,6 @@
                 android:layout_weight="1"
                 android:background="@drawable/button_shape"
                 android:gravity="center"
-                android:onClick="dismiss"
                 android:text="@string/backButton"
                 android:textSize="@dimen/gameplay_button_text"
                 android:padding="5dp"
@@ -112,15 +110,12 @@
                android:src="@drawable/logo_icono"
                android:id="@+id/logo_icono"
                android:scaleType="matrix"
-               android:layout_width="133dp"
-               android:layout_height="160dp"
+               android:layout_width="165dp"
+               android:layout_height="165dp"
                android:adjustViewBounds="true"
                android:layout_gravity="center"
-               android:onClick="spinWheel"
                android:clickable="true">
            </ImageView>
-
-
 
        </FrameLayout>
 </RelativeLayout>

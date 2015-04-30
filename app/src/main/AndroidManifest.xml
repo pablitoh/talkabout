@@ -5,13 +5,16 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+
     <application
         android:name=".analitycs.GoogleAnalyticsApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:screenOrientation="portrait"
-        android:theme="@android:style/Theme.Holo.Wallpaper.NoTitleBar" >
+
+        android:theme="@android:style/Theme.Holo.Wallpaper.NoTitleBar"
+        >
         <provider
             android:name="com.facebook.FacebookContentProvider"
             android:authorities="com.facebook.app.FacebookContentProvider1624377927833115"
@@ -58,10 +61,17 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
+            android:name=".SpinWheelContainerActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.Orangebar">
+
+        </activity>
+        <activity
             android:name=".MainMenu"
             android:label="@string/title_activity_main_menu"
             android:screenOrientation="portrait"
-            android:theme="@android:style/Theme.Holo.Wallpaper.NoTitleBar" >
+             >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -83,12 +93,6 @@
             android:name=".MarryKillGameplay"
             android:label="@string/title_activity_marry_kill"
             android:screenOrientation="portrait" >
-        </activity>
-        <activity
-            android:name=".SpinWheelGameplay"
-            android:label="SpinWheel"
-            android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat">
         </activity>
     </application>
 
