@@ -1,23 +1,22 @@
 package com.concon.talkabout.talkabout;
 
-import android.app.ActionBar;
-import android.app.FragmentTransaction;
+
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
-import android.view.View;
-import android.view.Window;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.ActionBarActivity;
+import android.util.Log;
 
+import com.google.android.gms.ads.AdRequest;
+import com.google.android.gms.ads.AdView;
 
-import java.util.List;
-
+import adapters.FirstTab;
 import adapters.TabPagerAdapter;
 
 /**
  * Created by OE on 28/04/2015.
  */
-public class MainContainer extends FragmentActivity implements ActionBar.TabListener {
+public class MainContainer extends ActionBarActivity implements ActionBar.TabListener {
 
     private ViewPager viewPager;
     private TabPagerAdapter mAdapter;
@@ -28,12 +27,14 @@ public class MainContainer extends FragmentActivity implements ActionBar.TabList
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getActionBar().setDisplayShowTitleEnabled(false);
-        getActionBar().setDisplayShowHomeEnabled(false);
         setContentView(R.layout.tab_container);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        getSupportActionBar().setDisplayShowHomeEnabled(false);
+
+
 
         viewPager = (ViewPager) findViewById(R.id.pager);
-        actionBar = getActionBar();
+        actionBar = getSupportActionBar();
         mAdapter = new TabPagerAdapter(getSupportFragmentManager());
 
         viewPager.setAdapter(mAdapter);
@@ -49,6 +50,8 @@ public class MainContainer extends FragmentActivity implements ActionBar.TabList
             @Override
             public void onPageSelected(int position) {
                 actionBar.setSelectedNavigationItem(position);
+                Log.e("Cambio","Pagina");
+                viewPager.getRootView().findViewById(R.id.logo_icono).setEnabled(true);
             }
 
             @Override
@@ -61,20 +64,18 @@ public class MainContainer extends FragmentActivity implements ActionBar.TabList
         });
     }
 
-
-
     @Override
-    public void onTabSelected(ActionBar.Tab tab, FragmentTransaction ft) {
+    public void onTabSelected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
         viewPager.setCurrentItem(tab.getPosition());
     }
 
     @Override
-    public void onTabUnselected(ActionBar.Tab tab, FragmentTransaction ft) {
+    public void onTabUnselected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
 
     }
 
     @Override
-    public void onTabReselected(ActionBar.Tab tab, FragmentTransaction ft) {
+    public void onTabReselected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
 
     }
 }

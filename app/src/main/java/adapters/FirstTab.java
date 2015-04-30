@@ -77,7 +77,7 @@ public class FirstTab extends Fragment {
         }
         ImageView spinButton = (ImageView) android.findViewById(R.id.logo_icono);
 
-        spinButton.setEnabled(true);
+
 
         spinButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -87,7 +87,9 @@ public class FirstTab extends Fragment {
                 dialer.post(new FlingRunnable(random.nextInt((3000 - 1000) + 1) + 1000, v));
             }
         });
-
+        if(spinButton != null) {
+            spinButton.setEnabled(true);
+        }
         Button dismissButton = (Button) android.findViewById(R.id.dismissButtn);
         dismissButton.setOnClickListener(new View.OnClickListener(){
             public void onClick(View v) {
@@ -190,17 +192,6 @@ public class FirstTab extends Fragment {
         }
 
         return android;
-    }
-
-    public void spinWheel(View v)
-    {
-        /**
-         * we enable the button inside the FlingRunnable in order to know
-         * that the wheel finished to spin before you can spin it again.
-         **/
-        v.setEnabled(false);
-        dialer.setEnabled(false);
-        dialer.post(new FlingRunnable(random.nextInt((3000 - 1000) + 1) + 1000, v));
     }
 
     private class MyOnTouchListener implements View.OnTouchListener {

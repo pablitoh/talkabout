@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- the theme applied to the application or activity -->
+    <style name="OrangeActionBar"
+        parent="@style/Theme.AppCompat">
+        <item name="android:actionBarStyle">@style/ActionBarStyle</item>
+        <item name="android:actionBarTabStyle">@style/ActionBarTabStyle</item>
+
+        <!-- Support library compatibility -->
+        <item name="actionBarStyle">@style/ActionBarStyle</item>
+        <item name="actionBarTabStyle">@style/ActionBarTabStyle</item>
+    </style>
+
+    <!-- ActionBar styles -->
+    <style name="ActionBarStyle"
+        parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
+        <item name="android:background">#ffffc413</item>
+
+        <!-- Support library compatibility -->
+        <item name="background">@color/orange</item>
+    </style>
+    <style name="ActionBarTabStyle" parent="@style/Widget.AppCompat.ActionBar.TabView">
+        <item name="android:background">#ffffc413</item>
+
+
+        <!-- Support library compatibility -->
+        <item name="background">@color/orange</item>
+    </style>
+</resources>
