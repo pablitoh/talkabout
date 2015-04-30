@@ -23,6 +23,7 @@ public class SpinWheelContainerActivity extends ActionBarActivity implements Act
     private ViewPager viewPager;
     private TabPagerAdapter mAdapter;
     private ActionBar actionBar;
+    private int currentTab = 0;
     // Tab titles
 
 
@@ -56,6 +57,7 @@ public class SpinWheelContainerActivity extends ActionBarActivity implements Act
             public void onPageSelected(int position) {
                 actionBar.setSelectedNavigationItem(position);
                 viewPager.getRootView().findViewById(R.id.logo_icono).setEnabled(true);
+                currentTab = position;
             }
 
             @Override
@@ -71,6 +73,7 @@ public class SpinWheelContainerActivity extends ActionBarActivity implements Act
     @Override
     public void onTabSelected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
         viewPager.setCurrentItem(tab.getPosition());
+        currentTab = tab.getPosition();
     }
 
     @Override
@@ -100,4 +103,16 @@ public class SpinWheelContainerActivity extends ActionBarActivity implements Act
             secondtab.addToList(reward);
     }
 
+    @Override
+    public void onBackPressed() {
+
+        if(currentTab ==1)
+        {
+            viewPager.setCurrentItem(0);
+        }
+        else
+        {
+            super.onBackPressed();
+        }
+    }
 }
