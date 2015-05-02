@@ -112,6 +112,8 @@ public class SpinWheelContainerActivity extends ActionBarActivity implements Act
         }
         else
         {
+            SpinWheelGameplayTAB firstTab = (SpinWheelGameplayTAB)mAdapter.getRegisteredFragment(0);
+            firstTab.enableSpinButton();
             super.onBackPressed();
         }
     }
