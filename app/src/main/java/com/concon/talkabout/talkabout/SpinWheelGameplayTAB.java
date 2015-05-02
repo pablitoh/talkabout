@@ -1,9 +1,12 @@
 package com.concon.talkabout.talkabout;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
+import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -61,6 +64,12 @@ public class SpinWheelGameplayTAB extends Fragment {
 
     RewardListener mCallback;
 
+    public void enableSpinButton() {
+        ImageView spinButton = (ImageView) getActivity().findViewById(R.id.logo_icono);
+        spinButton.setEnabled(true);
+        dialer.setEnabled(false);
+    }
+
     // Container Activity must implement this interface
     public interface RewardListener {
         public void onReward(RewardCard rewardCard);
@@ -113,43 +122,6 @@ public class SpinWheelGameplayTAB extends Fragment {
         if(spinButton != null) {
             spinButton.setEnabled(true);
         }
-        Button dismissButton = (Button) android.findViewById(R.id.dismissButtn);
-        dismissButton.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                v.setEnabled(false);
-                dialer.setEnabled(true);
-                TranslateAnimation animate = new TranslateAnimation(0,-getView().findViewById(R.id.frameText).getWidth(),0,0);
-                animate.setDuration(500);
-                animate.setAnimationListener(new Animation.AnimationListener() {
-                    @Override
-                    public void onAnimationStart(Animation animation) {
-                        dialer.setEnabled(true);
-                    }
-
-                    @Override
-                    public void onAnimationEnd(Animation animation) {
-                        getView().findViewById(R.id.frameText).setVisibility(View.GONE);
-                        TranslateAnimation animate = new TranslateAnimation(-getView().findViewById(R.id.frameContainer).getWidth(),0,0,0);
-                        animate.setDuration(500);
-                        getView().findViewById(R.id.frameContainer).startAnimation(animate);
-                        getView().findViewById(R.id.frameContainer).setVisibility(View.VISIBLE);
-                        ImageView spinButton =  (ImageView) getView().findViewById(R.id.logo_icono);
-                        if(spinButton != null) {
-                            spinButton.setEnabled(true);
-                        }
-                        getView().findViewById(R.id.dismissButtn).setEnabled(true);
-                    }
-
-                    @Override
-                    public void onAnimationRepeat(Animation animation) {
-
-                    }
-                });
-                getView().findViewById(R.id.frameText).startAnimation(animate);
-            }
-        });
-
-
         detector = new GestureDetector(getActivity().getApplicationContext(), new MyGestureDetector());
 
         // there is no 0th quadrant, to keep it simple the first value gets ignored
@@ -531,31 +503,33 @@ public class SpinWheelGameplayTAB extends Fragment {
             sectionTitle = getString(R.string.targetTitle);
         }
 
-        mCallback.onReward(new RewardCard(sectionTitle,text,icon));
-        TranslateAnimation animate = new TranslateAnimation(0,-getView().findViewById(R.id.frameContainer).getWidth(),0,0);
-        animate.setDuration(500);
-        animate.setAnimationListener(new Animation.AnimationListener() {
+        mCallback.onReward(new RewardCard(sectionTitle, text, icon));
+        // custom dialog
+
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getActivity());
+        LayoutInflater inflater = getActivity().getLayoutInflater();
+        final View dialog = inflater.inflate(R.layout.reward_dialog, null);
+        dialogBuilder.setView(dialog);
+        final AlertDialog alertDialog = dialogBuilder.create();
+        TextView text2 = (TextView) dialog.findViewById(R.id.dialogText);
+        text2.setText(text);
+        ((TextView)dialog.findViewById(R.id.dialogTitle)).setText(sectionTitle);
+        ((TextView)dialog.findViewById(R.id.dialogTitle)).setCompoundDrawablesWithIntrinsicBounds(0, icon, 0, 0);
+        Button dialogButton = (Button) dialog.findViewById(R.id.dismissDialogButton);
+        enableSpinButton();
+
+        // if button is clicked, close the custom dialog
+        dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onAnimationStart(Animation animation) {
-                dialer.setEnabled(false);
-            }
+            public void onClick(View v) {
+                alertDialog.dismiss();
 
-            @Override
-            public void onAnimationEnd(Animation animation) {
-                getView().findViewById(R.id.frameContainer).setVisibility(View.GONE);
-                getView().findViewById(R.id.frameText).setVisibility(View.VISIBLE);
-                ((TextView)getView().findViewById(R.id.textInfo)).setText(text);
-                ((TextView)getView().findViewById(R.id.logoView)).setCompoundDrawablesWithIntrinsicBounds(0, icon, 0, 0);
-                ((TextView)getView().findViewById(R.id.logoView)).setText(sectionTitle);
-
-            }
-
-            @Override
-            public void onAnimationRepeat(Animation animation) {
-
+                dialer.setEnabled(true);
             }
         });
-        getView().findViewById(R.id.frameContainer).startAnimation(animate);
+        alertDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        alertDialog.show();
+
 
     }
 
