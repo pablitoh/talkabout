@@ -1,32 +1,36 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed>
     <chaos>
-        <entry>Hasta que termine el juego usa una zapatilla como sombrero. Si se cae, tomas</entry>
+        <entry>Hasta que termine el juego usa una zapatilla como sombrero. Si se cae, tomas. Si no lo haces, tomas doble cada vez que te toque tomar.</entry>
         <entry>Desde ahora tu nombre es Bob. Si alguien te llama por tu nombre real, toma</entry>
         <entry>Te acuerdas de tus ancestros árabes. Cuando alguien tome tienes que gritar como un árabe, o tomas</entry>
         <entry>Sos fan del Rey León. Antes de tomar sube tu trago con ambas manos por arriba de tu cabeza o toma de nuevo</entry>
         <entry>Desde ahora tu nombre es Betty. Si alguien te llama por tu nombre real, toma.</entry>
-        <entry>Desde ahora eres una groupie de Justin Beiber. Cuando alguien tome tienes que gritar "Te Amo Justin!!", o tomas x2</entry>
+        <entry>Desde ahora eres una groupie de Justin Beiber. Cuando alguien tome tienes que gritar "Te Amo Justin!!", o tomas</entry>
         <entry>Fuiste poseído por un pirata. Cuando alguien tome tienes que gritar "Si mi capitan!" o tomas</entry>
         <entry>Te maldijo un Payaso diabólico. Cada vez que te rías, tomas</entry>
         <entry>Eres un orador. Cuando alguien tome tienes que gritar "Aleluya!" o tomas</entry>
         <entry>Eres el papa. Bendice a alguien con unas gotas de tu trago (salpicar), si esa persona te insulta, tomas</entry>
-        <entry>Cuando alguien insulte, toma</entry>
-        <entry>Cuando alguien diga "No",  toma</entry>
-        <entry>Cuando alguien diga "Yo", "Mí" o "Mío",toma</entry>
+        <entry>Cada vez que alguien insulte, toma</entry>
+        <entry>Cada vez que alguien diga "No",  toma</entry>
+        <entry>Llegaste a tu limite de Ego. Cada vez que digas "Yo", "Mí" o "Mío",tomas</entry>
         <entry>Llevas la marca del ebrio. Cuando se limpien las reglas caóticas, esta marca se borra y tomas x2</entry>
-        <entry>Cuando alguien te haga tomar, ese alguien también toma</entry>
-        <entry>Eres inmune al trago sacrificio. Si alguien te lo tira, toma.</entry>
+        <entry>Tienes sed de venganza. Cuando alguien te haga tomar, ese alguien también toma</entry>
         <entry>Eres inmune a la venganza. Si alguien te lo tira, toma</entry>
         <entry>Si hay un animal en la casa, a la persona que ese animal toque toma. Si no, grita "GreenPeace" y toma</entry>
-        <entry>Cuando alguien tome, te quedas congelado o tomas.</entry>
+        <entry>Cada vez que alguien tome, te quedas congelado o tomas.</entry>
         <entry>La próxima vez que alguien tenga que tomar, tomas en su lugar. Esta regla se desvanece cuando tomas</entry>
         <entry>La próxima vez que alguien sea víctima del trago francotirador, recibes el tiro. Esta regla se desvanece cuando tomas</entry>
-        <entry>Si alguien usa su celular, toma. El dueño de este dispositivo no cuenta</entry>
+        <entry>Si alguien usa su celular, toma. ( Este dispositivo no cuenta )</entry>
         <entry>Todos toman con la mano izquierda</entry>
-        <entry>Te quedas parado el resto del juego, si estás parado, te sientas</entry>
+        <entry>Te quedas parado el resto del juego. Si estás parado, te sientas</entry>
         <entry>Eres Dobby, el elfo esclavo. Si alguien necesita ir a comprar más bebida o preparar otro trago,tú lo haces. Si había otro Dobby ya en juego, este es liberado de su condición de esclavo, para ganar su libertad debe gritar: "Dobby es un elfo libre", y tome</entry>
-        <entry>Levanta los brazos hasta tu siguiente turno o toma</entry>
-        <entry>No puedes hablar por el resto del Turno. Alguien más lee la consigna cuando sea tu turno, desde este momento, si hablas, tomas. Nota: ¿leiste "tomas"?, toma 1</entry>
+        <entry>Levanta los brazos hasta tu siguiente turno o toma cada vez que alguien tome</entry>
+        <entry>No puedes hablar por el resto del turno a partir de desde este momento, si hablas, tomas. Nota: ¿leiste "si hablas tomas"?, toma 1</entry>
+        <entry>Tomas y cambias el sentido de la ronda, si el dispositivo se pasaba hacia la izquierda, ahora se pasa hacia la derecha y viceversa.</entry>
+        <entry>Te rehusas a tomar solo. Cuando alguien te haga tomar, eliges a alguien para que tome contigo</entry>
+        <entry>La Proxima REGLA CAOTICA, tambien aplica a ti.</entry>
+
+
     </chaos>
 </feed>
