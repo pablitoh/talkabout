@@ -75,7 +75,7 @@
     <string name="truth">Pick someone to tell the truth!! (or next time he/she drinks x2)</string>
     <string name="oneShot">You Drink one shot</string>
     <string name="vendetta">Vendetta: the last one that make you drink, drinks (even yourself)</string>
-    <string name="cleanse">Cleanse all chaos rules, skip turn</string>
+    <string name="cleanse">Cleanse all chaos rules, if there are no rules being played. Drink</string>
     <string name="sacrifice">For every drink you take, pick one victim to drink with you (you can drink all the times you want)</string>
     <string name="global">Everybody Drinks!</string>
     <string name="target">Pick someone to drink"</string>
