@@ -37,7 +37,7 @@
     <string name="truth">Preguntale a alguien lo que quieras, esa persona puede decidir entre decir la verdad o tomar x2 la proxima vez que le toque tomar</string>
     <string name="oneShot">Tomas un trago</string>
     <string name="vendetta">La ultima persona que te hizo tomar, toma (vos incluido)</string>
-    <string name="cleanse">Limpia todas las reglas caoticas, sino hay reglas en juego. Tomas</string>
+    <string name="cleanse">Los jugadores con Reglas Caoticas beben para limpiarlas, sino hay reglas en juego. Tomas</string>
     <string name="sacrifice">Tomas las veces que quieras. Por cada vez que tomas, elegi a una victima para que tambien tome. Pueden ser personas distintas</string>
     <string name="global">Todos toman!</string>
     <string name="target">Elige a alguien para que tome"</string>

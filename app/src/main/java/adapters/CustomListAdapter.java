@@ -47,4 +47,5 @@ public class CustomListAdapter extends ArrayAdapter<RewardCard> {
         // Return the completed view to render on screen
         return convertView;
     }
+
 }

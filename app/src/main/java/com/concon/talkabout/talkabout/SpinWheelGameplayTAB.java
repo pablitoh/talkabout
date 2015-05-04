@@ -448,9 +448,9 @@ public class SpinWheelGameplayTAB extends Fragment {
 
         }
         else if(rAngle > 30 && rAngle<= 60) {
-            text = getString(R.string.truth);
-            icon = R.drawable.icon_truth;
-            sectionTitle = getString(R.string.truthTitle);
+            text = getString(R.string.sacrifice);
+            icon = R.drawable.icon_blood;
+            sectionTitle = getString(R.string.sacrificeTitle);
         }
         else if(rAngle > 60 && rAngle <= 90) {
             text = randomFacts.get(random.nextInt(randomFacts.size()));
@@ -458,9 +458,9 @@ public class SpinWheelGameplayTAB extends Fragment {
             sectionTitle = getString(R.string.randomTitle);
         }
         else if(rAngle > 90 && rAngle <= 120) {
-            text = getString(R.string.oneShot);
-            icon = R.drawable.icon_drink;
-            sectionTitle = getString(R.string.drinkTitle);
+            text = chaosRules.get(random.nextInt(chaosRules.size()));
+            icon = R.drawable.icon_skull;
+            sectionTitle = getString(R.string.chaosTitle);
         }
         else if(rAngle > 120 && rAngle <= 150) {
             text =  getString(R.string.vendetta);
@@ -473,14 +473,14 @@ public class SpinWheelGameplayTAB extends Fragment {
             sectionTitle = getString(R.string.cleanseTitle);
         }
         else if(rAngle > 180 && rAngle <= 210) {
-            text = getString(R.string.sacrifice);
-            icon = R.drawable.icon_blood;
-            sectionTitle = getString(R.string.sacrificeTitle);
-        }
-        else if(rAngle > 210 && rAngle <= 240) {
             text = chaosRules.get(random.nextInt(chaosRules.size()));
             icon = R.drawable.icon_skull;
             sectionTitle = getString(R.string.chaosTitle);
+        }
+        else if(rAngle > 210 && rAngle <= 240) {
+            text = getString(R.string.oneShot);
+            icon = R.drawable.icon_drink;
+            sectionTitle = getString(R.string.drinkTitle);
         }
         else if(rAngle > 240 && rAngle <= 270) {
             text = randomFacts.get(random.nextInt(randomFacts.size()));

@@ -2,7 +2,6 @@
 <feed>
     <randomfacts>
         <entry>Se repite el último turno jugado</entry>
-        <entry>Los jugadores con más dinero en la billetera toma</entry>
         <entry>Grita algo sexual o toma</entry>
         <entry>Los jugadores que estén comiendo algo toman, si nadie come, tomas vos.</entry>
         <entry>Eliges a alguien para que tome, y ese alguien elige a alguien más para que también tome.</entry>
@@ -34,6 +33,19 @@
         <entry>El último que llegó a la fiesta, toma</entry>
         <entry>El último en tocarse la nariz, toma</entry>
         <entry>El último en levantar el vaso, toma</entry>
-
+        <entry>El jugador de menor estatura, toma</entry>
+        <entry>El jugador de mayor estatura, toma</entry>
+        <entry>Los jugadores con tatuajes, toman</entry>
+        <entry>Los jugadores hijos unicos, toman.</entry>
+        <entry>Los jugadores con hermana/s, toman.</entry>
+        <entry>Los jugadores con hermano/s, toman.</entry>
+        <entry>Los jugadores toman por cada mascota que tengan.</entry>
+        <entry>Los jugadores toman por cada llave en su llavero.</entry>
+        <entry>Los jugadores solteros, toman.</entry>
+        <entry>Los jugadores en pareja, toman.</entry>
+        <entry>Los jugadores sin carnet de conducir, toman.</entry>
+        <entry>Los jugadores con piercing, toman un trago por piercing.</entry>
+        <entry>Los jugadores toman un trago por cada ex que tuvieron.</entry>
+        <entry>Crisis Economica. El jugador con mas dinero suelto en los bolsillos toma. Si nadie tiene, tomas.</entry>
     </randomfacts>
 </feed>
