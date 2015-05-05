@@ -10,6 +10,15 @@
     <ListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/historyList" />
+        android:id="@android:id/list" />
+
+    <com.concon.talkabout.talkabout.elements.TextViewFun
+        android:id="@android:id/empty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/nothingToShow"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textSize="@dimen/section_title_text"/>
 
 </LinearLayout>
