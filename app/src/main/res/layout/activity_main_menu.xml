@@ -65,7 +65,6 @@
             android:padding="15dp"
             android:gravity="center"
             android:layout_gravity="center"
-            android:drawableLeft="@drawable/rueda_icono"
             android:drawablePadding="5dp"/>
         </LinearLayout>
     <LinearLayout
