@@ -11,7 +11,7 @@
     <string name="noMoreOptions">No hay mas opciones disponibles, vuelva al menu y empieze de nuevo!!!</string>
     <string name="Start">Empezar</string>
     <string name="Next">Siguiente</string>
-    <string name="selectGame">Selecciona el juego</string>
+    <string name="selectGame">Probá uno de los extras..</string>
     <string name="facebookError">Necesitas tener la aplicacion de Facebook para realizar esta acción</string>
     <string name="title_activity_activity_spinwheel_gameplay">activity_spinwheel_gameplay</string>
 
@@ -85,4 +85,5 @@
     <string name="playTab">Jugar</string>
     <string name="historyTab">Historial</string>
     <string name="nothingToShow">No hay nada que ver aqui</string>
+    <string name="playButton">Jugar !!</string>
 </resources>
