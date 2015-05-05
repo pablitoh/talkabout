@@ -82,5 +82,6 @@
     <string name="wheelDescription">After spinning the wheel, and doing what the game tells you to do, hand the device to the player to your right. Chaos rules last forever or until a "cleanse" is played. One turn = One complete round</string>
     <string name="playTab">Play</string>
     <string name="historyTab">History</string>
+ <string name="nothingToShow">No items to show</string>
 
 </resources>
