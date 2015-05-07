@@ -99,7 +99,6 @@ public class SpinWheelContainerActivity extends ActionBarActivity implements Act
         @Override
     public void onReward(RewardCard reward) {
      SpinWheelHistoryTAB secondtab = (SpinWheelHistoryTAB)mAdapter.getRegisteredFragment(1);
-            Log.e("Entro al reward","Ohh yeah");
             secondtab.addToList(reward);
     }
 

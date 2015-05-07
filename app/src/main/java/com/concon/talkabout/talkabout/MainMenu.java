@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
 import com.concon.talkabout.talkabout.elements.CustomHorizontalScroll;
+import com.concon.talkabout.talkabout.utils.AppRater;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.analytics.GoogleAnalytics;
@@ -36,6 +37,7 @@ public class MainMenu extends Activity {
         t.setScreenName("Main Menu");
         t.enableAdvertisingIdCollection(true);
         t.send(new HitBuilders.AppViewBuilder().build());
+        AppRater.app_launched(this);
 
         prevButton = (TextView) findViewById(R.id.prevButton);
         nextButton = (TextView) findViewById(R.id.nextButton);
@@ -84,6 +86,7 @@ public class MainMenu extends Activity {
                                                          }
                                                      }
         );
+
     }
 
     @Override

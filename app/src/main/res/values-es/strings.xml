@@ -86,4 +86,7 @@
     <string name="historyTab">Historial</string>
     <string name="nothingToShow">No hay nada que ver aqui</string>
     <string name="playButton">Jugar !!</string>
+    <string name="rateText">Te agradecemos que te tomes el tiempo para calificar Embriagados!! Y  ayudarnos a mejorar dia a dia.</string>
+    <string name="rateApptext">Calificanos!!</string>
+    <string name="remindLater">Mas tarde</string>
 </resources>

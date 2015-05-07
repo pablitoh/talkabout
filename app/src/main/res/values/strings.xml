@@ -84,5 +84,8 @@
     <string name="historyTab">History</string>
  <string name="nothingToShow">No items to show</string>
     <string name="playButton">Play!</string>
+    <string name="rateText">Please rate this application. Help us get better and better!</string>
+    <string name="rateApptext">Rate!!</string>
+    <string name="remindLater">Not now</string>
 
 </resources>
