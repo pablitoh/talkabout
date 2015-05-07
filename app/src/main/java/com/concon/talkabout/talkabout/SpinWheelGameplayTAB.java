@@ -67,7 +67,7 @@ public class SpinWheelGameplayTAB extends Fragment {
     public void enableSpinButton() {
         ImageView spinButton = (ImageView) getActivity().findViewById(R.id.logo_icono);
         spinButton.setEnabled(true);
-        dialer.setEnabled(false);
+        dialer.setEnabled(true);
     }
 
     // Container Activity must implement this interface
@@ -220,6 +220,7 @@ public class SpinWheelGameplayTAB extends Fragment {
                 case MotionEvent.ACTION_UP:
 
                     allowRotating = true;
+                    enableSpinButton();
 
                     break;
             }
