@@ -3,6 +3,7 @@ package com.concon.talkabout.talkabout;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
+import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
@@ -68,6 +69,12 @@ public class SpinWheelGameplayTAB extends Fragment {
         ImageView spinButton = (ImageView) getActivity().findViewById(R.id.logo_icono);
         spinButton.setEnabled(true);
         dialer.setEnabled(true);
+    }
+    public void disableSpinButton()
+    {
+        ImageView spinButton = (ImageView) getActivity().findViewById(R.id.logo_icono);
+        spinButton.setEnabled(false);
+        dialer.setEnabled(false);
     }
 
     // Container Activity must implement this interface
@@ -244,7 +251,7 @@ public class SpinWheelGameplayTAB extends Fragment {
             // get the quadrant of the start and the end of the fling
             int q1 = getQuadrant(e1.getX() - (dialerWidth / 2), dialerHeight - e1.getY() - (dialerHeight / 2));
             int q2 = getQuadrant(e2.getX() - (dialerWidth / 2), dialerHeight - e2.getY() - (dialerHeight / 2));
-
+            disableSpinButton();
             // the inversed rotations
             if ((q1 == 2 && q2 == 2 && Math.abs(velocityX) < Math.abs(velocityY))
                     || (q1 == 3 && q2 == 3)
@@ -427,6 +434,7 @@ public class SpinWheelGameplayTAB extends Fragment {
     private void getRewardFromWheelAngle() {
         /**         * Get the matrix angle URL: http://stackoverflow.com/a/28307921/3248003
          */
+
         float[] v = new float[9];
 
         matrix.getValues(v);
@@ -517,21 +525,25 @@ public class SpinWheelGameplayTAB extends Fragment {
         ((TextView)dialog.findViewById(R.id.dialogTitle)).setText(sectionTitle);
         ((TextView)dialog.findViewById(R.id.dialogTitle)).setCompoundDrawablesWithIntrinsicBounds(0, icon, 0, 0);
         Button dialogButton = (Button) dialog.findViewById(R.id.dismissDialogButton);
-        enableSpinButton();
 
+
+        alertDialog.setOnDismissListener(new DialogInterface.OnDismissListener() {
+            @Override
+            public void onDismiss(DialogInterface dialog) {
+                enableSpinButton();
+            }
+        });
         // if button is clicked, close the custom dialog
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 alertDialog.dismiss();
 
-                dialer.setEnabled(true);
             }
         });
+
         alertDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         alertDialog.show();
-
-
     }
 
 
