@@ -81,7 +81,6 @@
     <string name="hardTime">3 min</string>
     <string name="timeLimitText">Selecciona el tiempo limite</string>
     <string name="backButton">Ok</string>
-    <string name="wheelDescription">-\n -\n </string>
     <string name="playTab">Jugar</string>
     <string name="historyTab">Historial</string>
     <string name="nothingToShow">No hay nada que ver aqui</string>
