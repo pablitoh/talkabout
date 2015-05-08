@@ -81,7 +81,7 @@
     <string name="hardTime">3 min</string>
     <string name="timeLimitText">Selecciona el tiempo limite</string>
     <string name="backButton">Ok</string>
-    <string name="wheelDescription">-Despues de girar la rueda, y cumplir con lo que diga la pantalla, le pasas el control al jugador de la derecha.\n -Las reglas caoticas aplican para siempre, o hasta que se juegue un "Vaso Sanador".\n -Un turno consiste en una vuelta entera de la ronda.</string>
+    <string name="wheelDescription">-\n -\n </string>
     <string name="playTab">Jugar</string>
     <string name="historyTab">Historial</string>
     <string name="nothingToShow">No hay nada que ver aqui</string>
@@ -89,4 +89,7 @@
     <string name="rateText">Te agradecemos que te tomes el tiempo para calificar Embriagados!! Y  ayudarnos a mejorar dia a dia.</string>
     <string name="rateApptext">Calificanos!!</string>
     <string name="remindLater">Mas tarde</string>
+    <string name="wheelDescription1">Despues de girar la rueda, y cumplir con lo que diga la pantalla, le pasas el control al jugador de la derecha.</string>
+    <string name="wheelDescription2">Las reglas caoticas aplican para siempre, o hasta que se juegue un "Vaso Sanador".</string>
+    <string name="wheelDescription3">Un turno consiste en una vuelta entera de la ronda.</string>
 </resources>

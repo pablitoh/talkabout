@@ -26,7 +26,7 @@
         android:gravity="center"
         android:text="@string/wheelTitle"
         android:textColor="@color/black"
-        android:textSize="@dimen/section_title_text"/>
+        android:textSize="45sp"/>
     <ScrollView
         android:id="@+id/SCROLLER_ID"
         android:layout_width="fill_parent"
@@ -35,19 +35,61 @@
         android:fillViewport="true"
         android:scrollbars="vertical"
         android:layout_above="@+id/linearLayout2">
-
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
         <com.concon.talkabout.talkabout.elements.TextViewFun
             android:id="@+id/phrase"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:gravity="center|left"
             android:layout_gravity="center"
             android:padding="10dp"
-            android:text="@string/wheelDescription"
+            android:gravity="center|end"
+            android:text="@string/wheelDescription1"
             android:textColor="@color/black"
-            android:textSize="25sp"
+            android:textSize="20sp"
             android:textStyle="italic"
-            android:typeface="normal" />
+            android:typeface="normal"
+            android:drawableEnd="@drawable/arrow_circle"
+            android:drawableRight="@drawable/arrow_circle"
+            android:drawablePadding="10dp"
+            android:layout_marginBottom="10dp"/>
+        <com.concon.talkabout.talkabout.elements.TextViewFun
+            android:id="@+id/phrase2"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center|start"
+            android:padding="10dp"
+            android:text="@string/wheelDescription2"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:typeface="normal"
+            android:drawableStart="@drawable/skullcircle"
+            android:drawableLeft="@drawable/skullcircle"
+            android:drawablePadding="10dp"
+            android:layout_marginBottom="10dp"/>
+        <com.concon.talkabout.talkabout.elements.TextViewFun
+            android:id="@+id/phrase3"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center|end"
+            android:padding="10dp"
+            android:text="@string/wheelDescription3"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:typeface="normal"
+            android:drawablePadding="10dp"
+            android:drawableEnd="@drawable/circle_turn"
+            android:drawableRight="@drawable/circle_turn"
+            android:layout_marginBottom="10dp"/>
+        </LinearLayout>
+
     </ScrollView>
 
     <LinearLayout
