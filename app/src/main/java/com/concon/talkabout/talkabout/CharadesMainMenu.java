@@ -57,13 +57,13 @@ public class CharadesMainMenu extends Activity {
 
         switch (v.getId()) {
             case R.id.charadesFirstTimeOption:
-                b.putInt("time", 3);
+                b.putInt("time", 1);
                 break;
             case R.id.charadesSecondTimeOption:
-                b.putInt("time", 5);
+                b.putInt("time", 2);
                 break;
             case R.id.charadesThirdTimeOption:
-                b.putInt("time", 7);
+                b.putInt("time", 3);
                 break;
             default:
                 throw new RuntimeException("Unknown button ID");

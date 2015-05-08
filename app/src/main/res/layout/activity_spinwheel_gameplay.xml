@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="@string/wheelTitle"
         android:id="@+id/textView"
-        android:textSize="@dimen/section_title_text"
+        android:textSize="45sp"
         android:textColor="@color/black"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/adView"

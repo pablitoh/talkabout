@@ -16,7 +16,7 @@ import com.google.android.gms.analytics.Tracker;
 import adapters.TabPagerAdapter;
 
 /**
- * Created by OE on 28/04/2015.
+ * Created by Pablitoh on 28/04/2015.
  */
 public class SpinWheelContainerActivity extends ActionBarActivity implements ActionBar.TabListener, SpinWheelGameplayTAB.RewardListener {
 

@@ -60,9 +60,9 @@
     <string name="timeout">TIME-OUT!!!\n Time to DRINK!!</string>
     <string name="tapToContinue">Tap anywhere to continue...</string>
 
-    <string name="mediumTime">5 min</string>
-    <string name="lightTime">3 min</string>
-    <string name="hardTime">7 min</string>
+    <string name="mediumTime">2 min</string>
+    <string name="lightTime">1 min</string>
+    <string name="hardTime">3 min</string>
     <string name="timeLimitText">Select time limit</string>
     <string name="Start">Start</string>
     <string name="Next">Skip</string>
@@ -79,7 +79,7 @@
     <string name="global">Everybody Drinks!</string>
     <string name="target">Pick someone to drink"</string>
     <string name="backButton">OK</string>
-    <string name="wheelDescription">After spinning the wheel, and doing what the game tells you to do, hand the device to the player to your right. Chaos rules last forever or until a "cleanse" is played. One turn = One complete round</string>
+    <string name="wheelDescription">-After spinning the wheel, and doing what the game tells you to do, hand the device to the player to your right.\n -Chaos rules last forever or until a "Healing Glass" is played.\n - One turn = One complete round</string>
     <string name="playTab">Play</string>
     <string name="historyTab">History</string>
  <string name="nothingToShow">No items to show</string>
