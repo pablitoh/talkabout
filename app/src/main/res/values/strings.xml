@@ -79,7 +79,6 @@
     <string name="global">Everybody Drinks!</string>
     <string name="target">Pick someone to drink"</string>
     <string name="backButton">OK</string>
-    <string name="wheelDescription">-After spinning the wheel, and doing what the game tells you to do, hand the device to the player to your right.\n -Chaos rules last forever or until a "Healing Glass" is played.\n - One turn = One complete round</string>
     <string name="playTab">Play</string>
     <string name="historyTab">History</string>
  <string name="nothingToShow">No items to show</string>
@@ -87,5 +86,8 @@
     <string name="rateText">Please rate this application. Help us get better and better!</string>
     <string name="rateApptext">Rate!!</string>
     <string name="remindLater">Not now</string>
+    <string name="wheelDescription1" >After spinning the wheel, and doing what the game tells you to do, hand the device to the player to your right.</string>
+    <string name="wheelDescription2" >Chaos rules last forever or until a "Healing Glass" is played.</string>
+    <string name="wheelDescription3" >One turn = One complete round</string>
 
 </resources>
