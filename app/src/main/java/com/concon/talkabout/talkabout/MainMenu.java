@@ -2,6 +2,7 @@ package com.concon.talkabout.talkabout;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
@@ -38,7 +39,7 @@ public class MainMenu extends Activity {
         t.enableAdvertisingIdCollection(true);
         t.send(new HitBuilders.AppViewBuilder().build());
         AppRater.app_launched(this);
-
+        this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
         prevButton = (TextView) findViewById(R.id.prevButton);
         nextButton = (TextView) findViewById(R.id.nextButton);
         horizontalScrollView = (CustomHorizontalScroll) findViewById(R.id.carrousel);
