@@ -5,7 +5,6 @@
         <entry>Hasta que termine el juego usa una zapatilla como sombrero. Si se cae, tomas. Si no lo haces, tomas doble cada vez que te toque tomar.</entry>
         <entry>Sos fan del Rey León. Antes de tomar sube tu trago con ambas manos por arriba de tu cabeza o toma de nuevo</entry>
         <entry>Eres el papa. Bendice a alguien con unas gotas de tu trago (salpicar), si esa persona te insulta, tomas</entry>
-        <entry>Cada vez que alguien tome, te quedas congelado o tomas.</entry>
         <entry>Todos toman con la mano izquierda</entry>
         <entry>Te quedas parado el resto del juego. Si estás parado, te sientas</entry>
         <entry>Levanta los brazos hasta tu siguiente turno o toma cada vez que alguien tome</entry>
@@ -18,11 +17,11 @@
         <entry>Desde ahora tu nombre es Betty. Si alguien te llama por tu nombre real, toma.</entry>
         <entry>Cambias de nombre con la persona de enfrente. Si alguien los llama por su nombre real, toma.</entry>
         <!--Gritar-->
-        <entry>Te acuerdas de tus ancestros árabes. Cuando alguien tome tienes que gritar como un árabe, o tomas</entry>
+        <entry>Te acuerdas de tus ancestros árabes. Cuando tomes debes gritar como un árabe, o volves a tomar</entry>
         <entry>Te maldijo un Payaso diabólico. Cada vez que te rías, tomas</entry>
-        <entry>Desde ahora eres una groupie de Justin Beiber. Cuando alguien tome tienes que gritar "Te Amo Justin!!", o tomas</entry>
+        <entry>Desde ahora eres una groupie de Justin Beiber. Cuando tomes debes que gritar "Te Amo Justin!!", o volves a tomar</entry>
         <entry>Fuiste poseído por un pirata. Cuando alguien tome tienes que gritar "Si mi capitan!" o tomas</entry>
-        <entry>Eres un orador. Cuando alguien tome tienes que gritar "Aleluya!" o tomas</entry>
+        <entry>Eres un orador. Cuando tomes debes gritar "Aleluya!" o volves a tomar</entry>
         <!--Globales-->
         <entry>Cada vez que alguien diga "No",  toma</entry>
         <entry>Cada vez que alguien insulte, toma</entry>
@@ -40,7 +39,7 @@
         <entry>Te rehusas a tomar solo. Cuando alguien te haga tomar, eliges a alguien para que tome contigo</entry>
         <entry>La Proxima REGLA CAOTICA, tambien aplica a ti.</entry>
         <entry>Cambias de nombre con la persona de enfrente. Si alguien los llama por su nombre real, toma</entry>
-        <entry>Hora de meditar y cerrar los ojos. Si los abris, tomas. Si no lo haces, tomas doble cada vez que te toque tomar.</entry>
+        <entry>Hora de meditar y cerrar los ojos. Si los abris, tomas. Si decides no meditar, tomas doble cada vez que te toque tomar.</entry>
         <entry>El cansancio surte efecto. Apoyas los codos en una superficie. Si los levantas, tomas.</entry>
         <entry>Sos un fantasma. Nadie te dirige la palabra. El que lo haga, toma.</entry>
         <entry>Tienes el poder de Pinocho. Puedes tocarte la nariz cuando quieras, y el resto tiene que seguirte. El ultimo toma.</entry>
@@ -52,5 +51,6 @@
         <entry>Sos un experimentado Swinger. Cambias de asiento con la persona de enfrente.</entry>
         <entry>Tanto alcohol te ha hecho tartamudo. hablas como tartamudo el resto de la partida. Cada vez que no lo hagas, tomas.</entry>
         <entry>Cada vez que hables, empezas la frase con la palabra "Embriagados". Cuando no lo hagas, tomas.</entry>
+        <entry>Sos un iman gigante que se activa con alcohol. Cuando tomas, el dispositivo vuelva a tu mano.</entry>
     </chaos>
 </feed>
