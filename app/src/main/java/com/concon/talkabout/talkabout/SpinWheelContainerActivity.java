@@ -1,6 +1,7 @@
 package com.concon.talkabout.talkabout;
 
 
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
@@ -50,6 +51,8 @@ public class SpinWheelContainerActivity extends ActionBarActivity implements Act
         for (String tab_name : tabs) {
             actionBar.addTab(actionBar.newTab().setText(tab_name).setTabListener(this));
         }
+
+        this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
 
         viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
 
