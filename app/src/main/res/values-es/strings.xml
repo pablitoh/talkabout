@@ -95,8 +95,9 @@
     <string name="spanishLanguage">Español</string>
     <string name="EnglishLanguage">English</string>
     <string name="developers">Gonzalo Conte \n Pablo Conde</string>
-    <string name="qas">Cristina Rodriguez \n Ignacio Sraer \n Leonel Landaburu \n Rodrigo Morganti</string>
+    <string name="qas">Agustin Sraer \n Carlos Ramos \n Cristina Rodriguez \n Ignacio Sraer \n Juan Alcoba \n Leonel Landaburu \n Rodrigo Morganti </string>
     <string name="createdBy">Creado Por</string>
     <string name="developedBy">Desarrollado por</string>
     <string name="qualityAssurance">Agradecimiento Especial</string>
+    <string name="creator">Decote Apps</string>
 </resources>

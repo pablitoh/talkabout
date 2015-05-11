@@ -37,10 +37,10 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/createdBy"
-                android:textSize="@dimen/gameplay_text"
+                android:textSize="@dimen/gameplay_button_text"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textColor="@color/black"
+                android:textColor="@color/darkred"
                 />
             <com.concon.talkabout.talkabout.elements.TextViewFun
                 android:layout_width="fill_parent"
@@ -48,7 +48,7 @@
                 android:layout_gravity="center"
                 android:padding="10dp"
                 android:gravity="center"
-                android:text="@string/developers"
+                android:text="@string/creator"
                 android:textColor="@color/black"
                 android:textSize="@dimen/gameplay_button_text"
                 android:textStyle="italic"
@@ -59,10 +59,10 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/developedBy"
-                android:textSize="@dimen/gameplay_text"
+                android:textSize="@dimen/gameplay_button_text"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textColor="@color/black"
+                android:textColor="@color/darkred"
                 />
             <com.concon.talkabout.talkabout.elements.TextViewFun
                 android:layout_width="fill_parent"
@@ -81,10 +81,10 @@
                 android:layout_width="fill_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/qualityAssurance"
-                android:textSize="@dimen/gameplay_text"
+                android:textSize="@dimen/gameplay_button_text"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textColor="@color/black"
+                android:textColor="@color/darkred"
                 />
             <com.concon.talkabout.talkabout.elements.TextViewFun
                 android:id="@+id/phrase"
