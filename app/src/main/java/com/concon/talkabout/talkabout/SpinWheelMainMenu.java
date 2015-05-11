@@ -2,6 +2,7 @@ package com.concon.talkabout.talkabout;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.view.View;
 
@@ -25,6 +26,7 @@ public class SpinWheelMainMenu extends Activity {
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
         mAdView.loadAd(adRequest);
+        this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
         Tracker t = ((GoogleAnalyticsApp) getApplication()).getTracker(GoogleAnalyticsApp.TrackerName.APP_TRACKER);
         t.setScreenName("SpinWheel Main Menu");
         t.enableAdvertisingIdCollection(true);
