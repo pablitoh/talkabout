@@ -89,5 +89,13 @@
     <string name="wheelDescription1" >After spinning the wheel, and doing what the game tells you to do, hand the device to the player to your right.</string>
     <string name="wheelDescription2" >Chaos rules last forever or until a "Healing Glass" is played.</string>
     <string name="wheelDescription3" >One turn = One complete round</string>
+    <string name="changeLanguage">Change Language</string>
+    <string name="spanishLanguage">Español</string>
+    <string name="EnglishLanguage">English</string>
+    <string name="developers">Gonzalo Conte \n Pablo Conde</string>
+    <string name="qas">Cristina Rodriguez \n Ignacio Sraer \n Leonel Landaburu \n Rodrigo Morganti</string>
+    <string name="createdBy">Created By</string>
+    <string name="developedBy">Developed By</string>
+    <string name="qualityAssurance">Special Thanks</string>
 
 </resources>

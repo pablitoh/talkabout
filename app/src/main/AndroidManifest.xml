@@ -41,6 +41,11 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
+            android:name=".About"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
             android:name=".IneverGameplay"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >

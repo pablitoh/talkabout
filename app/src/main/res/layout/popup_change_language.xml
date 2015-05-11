@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:background="@drawable/dialog_shape"
     android:layout_margin="20dp"
+    android:padding="15dp"
     >
 
     <com.concon.talkabout.talkabout.elements.TextViewFun
@@ -15,7 +16,7 @@
         android:textSize="@dimen/menu_text_size"
         android:textColor="@color/black"
         android:layout_marginBottom="5dp"
-        android:text="ChangeLanguage"
+        android:text="@string/changeLanguage"
         />
 
  <ScrollView
@@ -29,35 +30,37 @@
          <com.concon.talkabout.talkabout.elements.ButtonFun
              android:layout_width="fill_parent"
              android:layout_height="wrap_content"
-             android:id="@+id/rateLater"
+             android:id="@+id/spanishButton"
              android:background="@drawable/button_shape"
              android:gravity="center"
              android:layout_gravity="center"
-             android:text="Spanish"
+             android:text="@string/spanishLanguage"
              android:textSize="@dimen/gameplay_button_text"
              android:padding="5dp"
              android:layout_margin="15dp"
              android:textColor="@color/black"
              android:textStyle="bold"
+             android:drawableLeft="@drawable/spain_flag_icon"
+             android:drawableStart="@drawable/spain_flag_icon"
+
+
              />
          <com.concon.talkabout.talkabout.elements.ButtonFun
              android:layout_width="fill_parent"
              android:layout_height="wrap_content"
-             android:id="@+id/rateApp"
+             android:id="@+id/englishButton"
              android:background="@drawable/button_shape"
              android:gravity="center"
-             android:text="English"
+             android:text="@string/EnglishLanguage"
              android:textSize="@dimen/gameplay_button_text"
              android:padding="5dp"
              android:textColor="@color/black"
              android:textStyle="bold"
              android:layout_margin="15dp"
-             android:layout_gravity="center_horizontal" />
-
+             android:layout_gravity="center_horizontal"
+             android:drawableStart="@drawable/uk_flag_icon"
+             android:drawableLeft="@drawable/uk_flag_icon"/>
      </LinearLayout>
      </ScrollView>
-
-
-
 
 </LinearLayout>
