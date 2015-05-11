@@ -1,11 +1,17 @@
 package com.concon.talkabout.talkabout;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.res.Configuration;
 import android.media.AudioManager;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
@@ -17,6 +23,8 @@ import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 
+import java.util.Locale;
+
 
 public class MainMenu extends Activity {
 
@@ -24,10 +32,16 @@ public class MainMenu extends Activity {
     TextView prevButton;
     TextView nextButton;
     private final int SCROLL_AMOUNT = 200;
+    private Locale myLocale;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        String locale = getSharedPreferences("embriagados",0).getString("languageToLoad","");
+        if(!locale.isEmpty())
+        {
+            changeLanguage(locale);
+        }
         setContentView(R.layout.activity_main_menu);
 
         AdView mAdView = (AdView) findViewById(R.id.adView);
@@ -133,5 +147,56 @@ public class MainMenu extends Activity {
 
     }
 
+    public void changeLanguage(View v)
+    {
+        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
+        LayoutInflater inflater = this.getLayoutInflater();
+        final View dialog = inflater.inflate(R.layout.popup_change_language, null);
+        dialogBuilder.setView(dialog);
+        final AlertDialog alertDialog = dialogBuilder.create();
+        Button dialogButtonES = (Button) dialog.findViewById(R.id.spanishButton);
+        Button dialogButtonEN = (Button) dialog.findViewById(R.id.englishButton);
 
+        dialogButtonES.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                changeLanguage("es");
+                alertDialog.dismiss();
+                recreate();
+            }
+        });
+        dialogButtonEN.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                changeLanguage("en");
+                alertDialog.dismiss();
+                recreate();
+            }
+        });
+        alertDialog.show();
+    }
+
+private void changeLanguage(String localeString)
+{
+    String languageToLoad  = localeString; // your language
+    Locale locale = new Locale(languageToLoad);
+    Locale.setDefault(locale);
+    Configuration config = new Configuration();
+    config.locale = locale;
+    getBaseContext().getResources().updateConfiguration(config,
+            getBaseContext().getResources().getDisplayMetrics());
+
+
+
+    SharedPreferences prefs = getSharedPreferences("embriagados", 0);
+    SharedPreferences.Editor editor = prefs.edit();
+    editor.putString("languageToLoad",languageToLoad );
+    editor.commit();
+}
+
+    public void loadAbout(View view) {
+        startActivity(new Intent(MainMenu.this, About.class));
+    }
 }

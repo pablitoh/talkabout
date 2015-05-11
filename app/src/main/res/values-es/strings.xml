@@ -91,4 +91,13 @@
     <string name="wheelDescription1">Despues de girar la rueda, y cumplir con lo que diga la pantalla, le pasas el control al jugador de la derecha.</string>
     <string name="wheelDescription2">Las reglas caoticas aplican para siempre, o hasta que se juegue un "Vaso Sanador".</string>
     <string name="wheelDescription3">Un turno consiste en una vuelta entera de la ronda.</string>
+    <string name="changeLanguage">Cambiar Idioma</string>
+    <string name="spanishLanguage">Español</string>
+    <string name="EnglishLanguage">English</string>
+    <string name="developers">Gonzalo Conte \n Pablo Conde</string>
+    <string name="qas">Agustin Sraer \n Carlos Ramos \n Cristina Rodriguez \n Ignacio Sraer \n Juan Alcoba \n Leonel Landaburu \n Rodrigo Morganti </string>
+    <string name="createdBy">Creado Por</string>
+    <string name="developedBy">Desarrollado por</string>
+    <string name="qualityAssurance">Agradecimiento Especial</string>
+    <string name="creator">Decote Apps</string>
 </resources>
