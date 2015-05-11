@@ -96,7 +96,8 @@ public class SpinWheelContainerActivity extends ActionBarActivity implements Act
         super.onStop();
         GoogleAnalytics.getInstance(this).reportActivityStop(this);
     }
-        @Override
+
+    @Override
     public void onReward(RewardCard reward) {
      SpinWheelHistoryTAB secondtab = (SpinWheelHistoryTAB)mAdapter.getRegisteredFragment(1);
             secondtab.addToList(reward);

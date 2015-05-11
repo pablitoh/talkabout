@@ -50,19 +50,36 @@
         android:orientation="vertical"
         android:layout_below="@id/logoLayout"
         android:layout_above="@+id/bottomMenu"
-        android:gravity="center">
+        android:gravity="center"
+       >
 
         <com.concon.talkabout.talkabout.elements.ButtonFun
             android:background="@drawable/button_shape"
             android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
+
             android:text="@string/playButton"
             android:onClick="startGame"
             android:textColor="@color/black"
             android:id="@+id/truthDareButton"
             android:textSize="@dimen/gameplay_text"
             android:textStyle="bold"
-            android:padding="15dp"
+            android:gravity="center"
+
+            android:drawableLeft="@drawable/rueda_icono"
+            android:drawablePadding="5dp"/>
+
+        <com.concon.talkabout.talkabout.elements.ButtonFun
+            android:background="@drawable/button_shape"
+            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_margin="10dp"
+            android:text="Change Language"
+            android:onClick="startGame"
+            android:textColor="@color/black"
+            android:id="@+id/changelanguageButton"
+            android:textSize="@dimen/gameplay_text"
+            android:textStyle="bold"
             android:gravity="center"
             android:layout_gravity="center"
             android:drawableLeft="@drawable/rueda_icono"

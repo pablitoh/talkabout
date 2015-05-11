@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_shape"
+    android:layout_margin="20dp"
+    >
+
+    <com.concon.talkabout.talkabout.elements.TextViewFun
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:id="@+id/dialogTitle"
+        android:textSize="@dimen/menu_text_size"
+        android:textColor="@color/black"
+        android:layout_marginBottom="5dp"
+        android:text="ChangeLanguage"
+        />
+
+ <ScrollView
+     android:layout_width="fill_parent"
+     android:layout_height="wrap_content">
+     <LinearLayout
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:orientation="vertical"
+         android:paddingTop="10dp">
+         <com.concon.talkabout.talkabout.elements.ButtonFun
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:id="@+id/rateLater"
+             android:background="@drawable/button_shape"
+             android:gravity="center"
+             android:layout_gravity="center"
+             android:text="Spanish"
+             android:textSize="@dimen/gameplay_button_text"
+             android:padding="5dp"
+             android:layout_margin="15dp"
+             android:textColor="@color/black"
+             android:textStyle="bold"
+             />
+         <com.concon.talkabout.talkabout.elements.ButtonFun
+             android:layout_width="fill_parent"
+             android:layout_height="wrap_content"
+             android:id="@+id/rateApp"
+             android:background="@drawable/button_shape"
+             android:gravity="center"
+             android:text="English"
+             android:textSize="@dimen/gameplay_button_text"
+             android:padding="5dp"
+             android:textColor="@color/black"
+             android:textStyle="bold"
+             android:layout_margin="15dp"
+             android:layout_gravity="center_horizontal" />
+
+     </LinearLayout>
+     </ScrollView>
+
+
+
+
+</LinearLayout>

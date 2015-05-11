@@ -65,6 +65,11 @@ public class SpinWheelGameplayTAB extends Fragment {
 
     RewardListener mCallback;
 
+    // Container Activity must implement this interface
+    public interface RewardListener {
+        public void onReward(RewardCard rewardCard);
+    }
+
     public void enableSpinButton() {
         ImageView spinButton = (ImageView) getActivity().findViewById(R.id.logo_icono);
         spinButton.setEnabled(true);
@@ -77,10 +82,7 @@ public class SpinWheelGameplayTAB extends Fragment {
         dialer.setEnabled(false);
     }
 
-    // Container Activity must implement this interface
-    public interface RewardListener {
-        public void onReward(RewardCard rewardCard);
-    }
+
 
     @Override
     public void onAttach(Activity activity) {
