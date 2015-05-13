@@ -44,10 +44,6 @@ public class MainMenu extends Activity {
         }
         setContentView(R.layout.activity_main_menu);
 
-        AdView mAdView = (AdView) findViewById(R.id.adView);
-        AdRequest adRequest = new AdRequest.Builder().build();
-        mAdView.loadAd(adRequest);
-
         Tracker t = ((GoogleAnalyticsApp) getApplication()).getTracker(GoogleAnalyticsApp.TrackerName.APP_TRACKER);
         t.setScreenName("Main Menu");
         t.enableAdvertisingIdCollection(true);
@@ -124,7 +120,6 @@ public class MainMenu extends Activity {
         } else {
             return super.onTouchEvent(event);
         }
-
     }
 
     public void startGame(View v) {
@@ -186,8 +181,6 @@ private void changeLanguage(String localeString)
     config.locale = locale;
     getBaseContext().getResources().updateConfiguration(config,
             getBaseContext().getResources().getDisplayMetrics());
-
-
 
     SharedPreferences prefs = getSharedPreferences("embriagados", 0);
     SharedPreferences.Editor editor = prefs.edit();
