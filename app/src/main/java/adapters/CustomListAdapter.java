@@ -19,9 +19,6 @@ import java.util.ArrayList;
  */
 public class CustomListAdapter extends ArrayAdapter<RewardCard> {
 
-    Context mContext;
-    int layoutResourceId;
-    RewardCard data[] = null;
 
     public CustomListAdapter(Context mContext, ArrayList<RewardCard> data) {
 

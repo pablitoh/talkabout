@@ -141,8 +141,7 @@ public class MainMenu extends Activity {
             case R.id.marryButton:
                 startActivity(new Intent(MainMenu.this, MarryKillGameplay.class));
                 break;
-            default:
-                ;
+            default:;
         }
 
     }

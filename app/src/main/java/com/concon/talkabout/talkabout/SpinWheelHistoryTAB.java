@@ -35,16 +35,13 @@ public class SpinWheelHistoryTAB extends ListFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
         View android = inflater.inflate(R.layout.spin_wheel_history_tab, container, false);
-
         return android;
     }
 
     public void addToList(RewardCard rewardCard) {
         if (!rewardCard.cardTitle.equals(getString(R.string.cleanseTitle))) {
-            lista.add(rewardCard);
-            Collections.reverse(lista);
+            lista.add(0,rewardCard);
         } else {
             lista.clear();
         }
