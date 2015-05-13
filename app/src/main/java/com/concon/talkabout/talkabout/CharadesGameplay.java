@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
 import com.concon.talkabout.talkabout.service.SingleFeedParserService;
+import com.concon.talkabout.talkabout.utils.LanguageHelper;
 import com.concon.talkabout.talkabout.utils.RandomHelper;
 import com.concon.talkabout.talkabout.utils.TimeHelper;
 import com.google.android.gms.ads.AdRequest;
@@ -35,6 +36,7 @@ public class CharadesGameplay extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        LanguageHelper.loadApplicationLanguage(getBaseContext());
         setContentView(R.layout.activity_charades_gameplay);
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();

@@ -6,10 +6,10 @@ import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
-import android.util.Log;
 
 import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
 import com.concon.talkabout.talkabout.dataType.RewardCard;
+import com.concon.talkabout.talkabout.utils.LanguageHelper;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
@@ -31,6 +31,7 @@ public class SpinWheelContainerActivity extends ActionBarActivity implements Act
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        LanguageHelper.loadApplicationLanguage(getBaseContext());
         setContentView(R.layout.spin_wheel_tab_container);
         String[] tabs = { getApplication().getString(R.string.playTab), getApplication().getString(R.string.historyTab)};
         getSupportActionBar().setDisplayShowTitleEnabled(false);
@@ -39,6 +40,8 @@ public class SpinWheelContainerActivity extends ActionBarActivity implements Act
         t.setScreenName("SpinWheel Gameplay");
         t.enableAdvertisingIdCollection(true);
         t.send(new HitBuilders.AppViewBuilder().build());
+
+
 
         viewPager = (ViewPager) findViewById(R.id.pager);
         actionBar = getSupportActionBar();
