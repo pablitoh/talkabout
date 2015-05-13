@@ -6,25 +6,51 @@
     android:orientation="vertical"
     android:background="@drawable/background"
     >
-    <LinearLayout
+    <RelativeLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="horizontal"
-        android:id="@+id/adsLayout">
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adView"
-            android:layout_width="fill_parent"
-            android:layout_height="60dp"
-            ads:adSize="BANNER"
-            ads:adUnitId="@string/banner_ad_unit_id"
-            >
-        </com.google.android.gms.ads.AdView>
-    </LinearLayout>
+        android:id="@+id/options"
+        android:padding="5dp"
+        >
+
+        <ImageView
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:textColor="@color/black"
+            android:id="@+id/aboutButton"
+            android:textSize="@dimen/gameplay_text"
+            android:textStyle="bold"
+            android:src="@drawable/info_black"
+            android:clickable="true"
+            android:onClick="loadAbout"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <ImageView
+            android:layout_height="30dp"
+            android:layout_width="30dp"
+            android:textColor="@color/black"
+            android:id="@+id/changelanguageButton"
+            android:textSize="@dimen/gameplay_text"
+            android:textStyle="bold"
+            android:src="@drawable/flag"
+            android:clickable="true"
+            android:onClick="changeLanguage"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_alignTop="@+id/aboutButton"
+            android:layout_toLeftOf="@+id/aboutButton"
+            android:layout_toStartOf="@+id/aboutButton" />
+
+
+    </RelativeLayout>
     <LinearLayout
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:orientation="vertical"
-        android:layout_below="@+id/adsLayout"
+        android:layout_below="@+id/options"
         android:id="@+id/logoLayout"
         >
 
@@ -69,36 +95,7 @@
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
              />
-        <ImageView
-            android:layout_height="30dp"
-            android:layout_width="30dp"
-            android:textColor="@color/black"
-            android:id="@+id/aboutButton"
-            android:textSize="@dimen/gameplay_text"
-            android:textStyle="bold"
-            android:src="@drawable/info_black"
-            android:layout_alignParentBottom="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:clickable="true"
-            android:onClick="loadAbout"
-            android:layout_marginRight="5dp"
-            android:layout_marginEnd="5dp"/>
 
-        <ImageView
-            android:layout_height="30dp"
-            android:layout_width="30dp"
-            android:textColor="@color/black"
-            android:id="@+id/changelanguageButton"
-            android:textSize="@dimen/gameplay_text"
-            android:textStyle="bold"
-            android:src="@drawable/flag"
-            android:clickable="true"
-            android:onClick="changeLanguage"
-            android:layout_above="@+id/aboutButton"
-            android:layout_alignLeft="@+id/aboutButton"
-            android:layout_alignStart="@+id/aboutButton"
-            android:layout_marginBottom="5dp"/>
         </RelativeLayout>
     <LinearLayout
         android:layout_height="wrap_content"
