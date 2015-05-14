@@ -18,12 +18,17 @@ import java.util.Random;
  */
 public class OptionsMap {
 
+    public interface RewardRunner
+    {
+        public RewardCard getReward();
+    }
     private INeverParserService iNeverParserService;
     private SingleFeedParserService singleFeedParserService;
     Random random = new Random();
     HashMap<Integer, RewardRunner> OPTIONS_MAP;
     private Context mContext;
     private List<String> chaosRules, iNever, randomFacts;
+
 
     public OptionsMap(Context mContext)
     {
