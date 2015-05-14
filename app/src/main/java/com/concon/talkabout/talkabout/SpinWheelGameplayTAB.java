@@ -2,12 +2,10 @@ package com.concon.talkabout.talkabout;
 
 import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
-import android.graphics.drawable.ColorDrawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -18,21 +16,13 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
-import android.view.animation.Animation;
-import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.concon.talkabout.talkabout.R;
+import com.concon.talkabout.talkabout.dataType.OptionsMap;
 import com.concon.talkabout.talkabout.dataType.RewardCard;
-import com.concon.talkabout.talkabout.service.INeverParserService;
-import com.concon.talkabout.talkabout.service.SingleFeedParserService;
 
-import org.xmlpull.v1.XmlPullParserException;
-
-import java.io.IOException;
-import java.util.List;
 import java.util.Random;
 
 /**
@@ -55,15 +45,12 @@ public class SpinWheelGameplayTAB extends Fragment {
     private MediaPlayer spinningSound = null;
     private boolean loopStarted = false;
     private boolean isPlaying = false;
-    private List<String> chaosRules, iNever, randomFacts;
-    private INeverParserService iNeverParserService;
-    private SingleFeedParserService singleFeedParserService;
-    private String text = "";
-    private int icon;
-    private String sectionTitle="";
-    Random random = new Random();
 
+    Random random = new Random();
+    private int AMOUNT_OF_OPTIONS = 12;
+    private float DEGREES_PER_OPTION = 360 / AMOUNT_OF_OPTIONS;
     RewardListener mCallback;
+    private OptionsMap OptionsMapObj;
 
     // Container Activity must implement this interface
     public interface RewardListener {
@@ -81,9 +68,6 @@ public class SpinWheelGameplayTAB extends Fragment {
         spinButton.setEnabled(false);
         dialer.setEnabled(false);
     }
-
-
-
     @Override
     public void onAttach(Activity activity) {
         super.onAttach(activity);
@@ -104,6 +88,8 @@ public class SpinWheelGameplayTAB extends Fragment {
 
         View android = inflater.inflate(R.layout.activity_spinwheel_gameplay, container, false);
 
+        OptionsMapObj = new OptionsMap(getActivity());
+
         // load the image only once
         if (imageOriginal == null) {
             imageOriginal = BitmapFactory.decodeResource(getResources(), R.drawable.wheel_of_fortune);
@@ -117,8 +103,6 @@ public class SpinWheelGameplayTAB extends Fragment {
             matrix.reset();
         }
         ImageView spinButton = (ImageView) android.findViewById(R.id.logo_icono);
-
-
 
         spinButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -167,34 +151,6 @@ public class SpinWheelGameplayTAB extends Fragment {
             }
 
         });
-
-        iNeverParserService = new INeverParserService();
-        try {
-            iNever = iNeverParserService.parseXml(2, this.getResources().openRawResource(R.raw.inever), "inever");
-        } catch (XmlPullParserException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        singleFeedParserService = new SingleFeedParserService();
-
-        try {
-            chaosRules = singleFeedParserService.parseXml(2, this.getResources().openRawResource(R.raw.chaosrule), "chaos");
-        } catch (XmlPullParserException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
-        try {
-            randomFacts = singleFeedParserService.parseXml(2, this.getResources().openRawResource(R.raw.randomfacts), "randomfacts");
-        } catch (XmlPullParserException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
         return android;
     }
 
@@ -213,8 +169,6 @@ public class SpinWheelGameplayTAB extends Fragment {
                     for (int i = 0; i < quadrantTouched.length; i++) {
                         quadrantTouched[i] = false;
                     }
-
-
                     allowRotating = false;
                     getView().findViewById(R.id.logo_icono).setEnabled(false);
                     startAngle = getAngle(event.getX(), event.getY());
@@ -227,10 +181,8 @@ public class SpinWheelGameplayTAB extends Fragment {
                     break;
 
                 case MotionEvent.ACTION_UP:
-
                     allowRotating = true;
                     enableSpinButton();
-
                     break;
             }
 
@@ -425,20 +377,16 @@ public class SpinWheelGameplayTAB extends Fragment {
      */
     private void rotateDialer(float degrees) {
         matrix.postRotate(degrees, dialerWidth / 2, dialerHeight / 2);
-
         if (allowRotating) {
             dialer.setEnabled(false);
         }
-
         dialer.setImageMatrix(matrix);
     }
 
     private void getRewardFromWheelAngle() {
         /**         * Get the matrix angle URL: http://stackoverflow.com/a/28307921/3248003
          */
-
         float[] v = new float[9];
-
         matrix.getValues(v);
 
         // calculate the degree of rotation
@@ -450,71 +398,10 @@ public class SpinWheelGameplayTAB extends Fragment {
          */
         rAngle = (rAngle + 360) % 360;
 
-        Random random = new Random();
+        int option = (int) Math.floor(rAngle / DEGREES_PER_OPTION);
+        RewardCard reward = OptionsMapObj.getMap().get(option).getReward();
+        mCallback.onReward(reward);
 
-        if(rAngle <= 30) {
-            text =  chaosRules.get(random.nextInt(chaosRules.size()));
-            icon = R.drawable.icon_skull;
-            sectionTitle = getString(R.string.chaosTitle);
-
-        }
-        else if(rAngle > 30 && rAngle<= 60) {
-            text = getString(R.string.sacrifice);
-            icon = R.drawable.icon_blood;
-            sectionTitle = getString(R.string.sacrificeTitle);
-        }
-        else if(rAngle > 60 && rAngle <= 90) {
-            text = randomFacts.get(random.nextInt(randomFacts.size()));
-            icon = R.drawable.icon_question;
-            sectionTitle = getString(R.string.randomTitle);
-        }
-        else if(rAngle > 90 && rAngle <= 120) {
-            text = chaosRules.get(random.nextInt(chaosRules.size()));
-            icon = R.drawable.icon_skull;
-            sectionTitle = getString(R.string.chaosTitle);
-        }
-        else if(rAngle > 120 && rAngle <= 150) {
-            text =  getString(R.string.vendetta);
-            icon = R.drawable.icon_vendetta;
-            sectionTitle = getString(R.string.vendettaTitle);
-        }
-        else if(rAngle > 150 && rAngle <= 180) {
-            text = getString(R.string.cleanse);
-            icon = R.drawable.icon_broom;
-            sectionTitle = getString(R.string.cleanseTitle);
-        }
-        else if(rAngle > 180 && rAngle <= 210) {
-            text = chaosRules.get(random.nextInt(chaosRules.size()));
-            icon = R.drawable.icon_skull;
-            sectionTitle = getString(R.string.chaosTitle);
-        }
-        else if(rAngle > 210 && rAngle <= 240) {
-            text = getString(R.string.oneShot);
-            icon = R.drawable.icon_drink;
-            sectionTitle = getString(R.string.drinkTitle);
-        }
-        else if(rAngle > 240 && rAngle <= 270) {
-            text = randomFacts.get(random.nextInt(randomFacts.size()));
-            icon = R.drawable.icon_question;
-            sectionTitle = getString(R.string.randomTitle);
-        }
-        else if(rAngle > 270 && rAngle <= 300) {
-            text = iNever.get(random.nextInt(iNever.size()));
-            icon = R.drawable.icon_never;
-            sectionTitle = getString(R.string.iNeverPostTitle);
-        }
-        else if(rAngle > 300 && rAngle <= 330) {
-            text = getString(R.string.global);
-            icon = R.drawable.icon_world;
-            sectionTitle = getString(R.string.globalTitle);
-        }
-        else if(rAngle > 330 && rAngle <= 360) {
-            text = getString(R.string.target);
-            icon = R.drawable.icon_target;
-            sectionTitle = getString(R.string.targetTitle);
-        }
-
-        mCallback.onReward(new RewardCard(sectionTitle, text, icon));
         // custom dialog
 
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getActivity());
@@ -523,9 +410,9 @@ public class SpinWheelGameplayTAB extends Fragment {
         dialogBuilder.setView(dialog);
         final AlertDialog alertDialog = dialogBuilder.create();
         TextView text2 = (TextView) dialog.findViewById(R.id.dialogText);
-        text2.setText(text);
-        ((TextView)dialog.findViewById(R.id.dialogTitle)).setText(sectionTitle);
-        ((TextView)dialog.findViewById(R.id.dialogTitle)).setCompoundDrawablesWithIntrinsicBounds(0, icon, 0, 0);
+        text2.setText(reward.cardDescription);
+        ((TextView)dialog.findViewById(R.id.dialogTitle)).setText(reward.cardTitle);
+        ((TextView)dialog.findViewById(R.id.dialogTitle)).setCompoundDrawablesWithIntrinsicBounds(0, reward.cardIcon, 0, 0);
         Button dialogButton = (Button) dialog.findViewById(R.id.dismissDialogButton);
 
 

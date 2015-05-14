@@ -3,22 +3,18 @@ package com.concon.talkabout.talkabout;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Intent;
-import android.content.SharedPreferences;
-import android.content.res.Configuration;
 import android.media.AudioManager;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
 import com.concon.talkabout.talkabout.elements.CustomHorizontalScroll;
 import com.concon.talkabout.talkabout.utils.AppRater;
-import com.google.android.gms.ads.AdRequest;
-import com.google.android.gms.ads.AdView;
+import com.concon.talkabout.talkabout.utils.LanguageHelper;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
@@ -37,11 +33,7 @@ public class MainMenu extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        String locale = getSharedPreferences("embriagados",0).getString("languageToLoad","");
-        if(!locale.isEmpty())
-        {
-            changeLanguage(locale);
-        }
+        LanguageHelper.loadApplicationLanguage(getBaseContext());
         setContentView(R.layout.activity_main_menu);
 
         Tracker t = ((GoogleAnalyticsApp) getApplication()).getTracker(GoogleAnalyticsApp.TrackerName.APP_TRACKER);
@@ -155,7 +147,7 @@ public class MainMenu extends Activity {
 
             @Override
             public void onClick(View v) {
-                changeLanguage("es");
+                LanguageHelper.setApplicationLanguage(getBaseContext(), "es");
                 alertDialog.dismiss();
                 recreate();
             }
@@ -164,7 +156,7 @@ public class MainMenu extends Activity {
 
             @Override
             public void onClick(View v) {
-                changeLanguage("en");
+                LanguageHelper.setApplicationLanguage(getBaseContext(), "en");
                 alertDialog.dismiss();
                 recreate();
             }
@@ -172,21 +164,6 @@ public class MainMenu extends Activity {
         alertDialog.show();
     }
 
-private void changeLanguage(String localeString)
-{
-    String languageToLoad  = localeString; // your language
-    Locale locale = new Locale(languageToLoad);
-    Locale.setDefault(locale);
-    Configuration config = new Configuration();
-    config.locale = locale;
-    getBaseContext().getResources().updateConfiguration(config,
-            getBaseContext().getResources().getDisplayMetrics());
-
-    SharedPreferences prefs = getSharedPreferences("embriagados", 0);
-    SharedPreferences.Editor editor = prefs.edit();
-    editor.putString("languageToLoad",languageToLoad );
-    editor.commit();
-}
 
     public void loadAbout(View view) {
         startActivity(new Intent(MainMenu.this, About.class));

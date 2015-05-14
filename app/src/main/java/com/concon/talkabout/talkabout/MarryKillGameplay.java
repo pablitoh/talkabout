@@ -14,6 +14,7 @@ import com.concon.talkabout.talkabout.service.MarryKillParserService;
 import com.concon.talkabout.talkabout.service.ParserService;
 import com.concon.talkabout.talkabout.utils.DisplayHelper;
 import com.concon.talkabout.talkabout.utils.FacebookHelper;
+import com.concon.talkabout.talkabout.utils.LanguageHelper;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookSdk;
 import com.facebook.share.model.ShareLinkContent;
@@ -42,6 +43,7 @@ public class MarryKillGameplay extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        LanguageHelper.loadApplicationLanguage(getBaseContext());
         setContentView(R.layout.activity_marry_kill);
         parser = new MarryKillParserService();
         AdView mAdView = (AdView) findViewById(R.id.adView);

@@ -8,6 +8,7 @@ import android.view.View;
 
 import com.concon.talkabout.talkabout.ads.CustomInterstitial;
 import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
+import com.concon.talkabout.talkabout.utils.LanguageHelper;
 import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.AdView;
 import com.google.android.gms.analytics.GoogleAnalytics;
@@ -22,6 +23,7 @@ public class SpinWheelMainMenu extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        LanguageHelper.loadApplicationLanguage(getBaseContext());
         setContentView(R.layout.drinkingwheel_main_menu);
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();

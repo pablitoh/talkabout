@@ -13,6 +13,7 @@ import com.concon.talkabout.talkabout.service.INeverParserService;
 import com.concon.talkabout.talkabout.service.ParserService;
 import com.concon.talkabout.talkabout.utils.DisplayHelper;
 import com.concon.talkabout.talkabout.utils.FacebookHelper;
+import com.concon.talkabout.talkabout.utils.LanguageHelper;
 import com.concon.talkabout.talkabout.utils.RandomHelper;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookSdk;
@@ -47,6 +48,7 @@ public class IneverGameplay extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        LanguageHelper.loadApplicationLanguage(getBaseContext());
         setContentView(R.layout.inever_gameplay);
         AdView mAdView = (AdView) findViewById(R.id.adView);
         AdRequest adRequest = new AdRequest.Builder().build();
