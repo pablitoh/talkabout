@@ -73,6 +73,10 @@ public class AppRater {
 
         rateLater.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
+                if (editor != null) {
+                    editor.putLong("launch_count", 0);
+                    editor.commit();
+                }
                 alertDialog.dismiss();
             }
         });
