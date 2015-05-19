@@ -57,7 +57,7 @@
         android:layout_above="@+id/linearLayout2"
         android:gravity="center"
         android:text="@string/IneverDifficultySelect"
-        android:textColor="@color/orange"
+        android:textColor="@color/black"
         android:textSize="@dimen/indication_text"/>
 
     <LinearLayout

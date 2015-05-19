@@ -80,18 +80,11 @@
        >
 
         <com.concon.talkabout.talkabout.elements.ButtonFun
-            android:background="@drawable/button_shape"
+            android:background="@drawable/button_play"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            android:text="@string/playButton"
             android:onClick="startGame"
-            android:textColor="@color/black"
             android:id="@+id/truthDareButton"
-            android:textSize="@dimen/gameplay_text"
-            android:textStyle="bold"
-            android:padding="10dp"
-            android:drawableLeft="@drawable/rueda_icono"
-            android:drawablePadding="5dp"
             android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
              />
@@ -107,17 +100,6 @@
         >
 
 
-        <com.concon.talkabout.talkabout.elements.TextViewFun
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/selectGame"
-            android:gravity="center"
-            android:textColor="@color/orange"
-            android:textSize="@dimen/gameplay_button_text"
-            android:layout_above="@+id/linearLayout3"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentStart="true"
-            android:id="@+id/view" />
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
