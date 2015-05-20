@@ -8,8 +8,8 @@ android {
         applicationId "com.concon.talkabout.talkabout"
         minSdkVersion 11
         targetSdkVersion 21
-        versionCode 29
-        versionName "1.1.7"
+        versionCode 31
+        versionName "1.1.8"
     }
     buildTypes {
         release {
