@@ -65,6 +65,14 @@ public class DbManager extends SQLiteOpenHelper {
                 "_id = ? ",
                 new String[] { Integer.toString(id) });
     }
+    public Integer updatePhrase(long id,String text)
+    {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+
+        contentValues.put("phrase", text);
+        return db.update("phrases",contentValues,"_id=" + id,null);
+    }
     public Cursor getAllPhrases()
     {
         ArrayList<Rules> array_list = new ArrayList<Rules>();
@@ -73,6 +81,19 @@ public class DbManager extends SQLiteOpenHelper {
         Cursor res =  db.rawQuery( "select _id,phrase from phrases order by _id desc", null );
 
         return res;
+    }
+
+    public ArrayList<String> getAllPhrasesAsArray() {
+        ArrayList<String> array_list = new ArrayList<String>();
+        SQLiteDatabase db = this.getReadableDatabase();
+        Cursor res = db.rawQuery("select _id,phrase from phrases order by _id desc", null);
+
+        res.moveToFirst();
+        while (!res.isAfterLast()) {
+            array_list.add(res.getString(1));
+            res.moveToNext();
+        }
+        return array_list;
     }
 
 }

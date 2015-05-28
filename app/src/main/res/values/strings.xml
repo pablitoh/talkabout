@@ -99,5 +99,10 @@
     <string name="qualityAssurance">Special Thanks</string>
     <string name="creator">Decote Apps</string>
     <string name="addRule">Add Rule</string>
+    <string name="myRulesText">Adding a rule will give it the possiblity to be rolled when playing a Chaotic Rule.</string>
+    <string name="CustomRuleTitle">Custom Rule</string>
+    <string name="rulesTitle">My rules</string>
+    <string name="addRuleIndication">Write the rule you want to add</string>
+    <string name="addRulePopUpTitle">Add Rule</string>
 
 </resources>

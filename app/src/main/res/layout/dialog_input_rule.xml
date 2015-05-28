@@ -15,7 +15,7 @@
         android:textSize="@dimen/menu_text_size"
         android:textColor="@color/black"
         android:layout_marginBottom="5dp"
-        android:text="Add Rule"
+        android:text="@string/addRulePopUpTitle"
         />
 
     <com.concon.talkabout.talkabout.elements.TextViewFun
@@ -28,7 +28,7 @@
         android:padding="30dp"
         android:layout_marginBottom="10dp"
         android:textSize="@dimen/gameplay_button_text"
-        android:text="Write the rule you want to add"/>
+        android:text="@string/addRuleIndication"/>
     <EditText
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

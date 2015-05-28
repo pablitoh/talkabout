@@ -1,7 +1,9 @@
 package com.concon.talkabout.talkabout;
 
+import android.animation.ObjectAnimator;
 import android.app.AlertDialog;
 import android.app.ListActivity;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -13,7 +15,9 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.concon.talkabout.talkabout.dataType.Rules;
@@ -34,6 +38,7 @@ public class CustomRules extends ListActivity {
     private Cursor mCursor;
     private ListView listView;
     private DbManager db;
+    private int previousButtonId = -1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,12 +53,40 @@ public class CustomRules extends ListActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                db.deletePhrase((int)id);
-                customAdapter.changeCursor(db.getAllPhrases());
+            public void onItemClick(AdapterView<?> parent, View view, int position,final long id) {
+                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(CustomRules.this);
+                LayoutInflater inflater = (LayoutInflater) getApplicationContext().getSystemService(
+                        Context.LAYOUT_INFLATER_SERVICE);
+                final View dialog = inflater.inflate(R.layout.dialog_input_rule, null);
+                dialogBuilder.setView(dialog);
+                final AlertDialog alertDialog = dialogBuilder.create();
+                Button dialogOkButton = (Button) dialog.findViewById(R.id.addRule);
+                Button dialogCancelButton = (Button) dialog.findViewById(R.id.cancelRule);
+                final EditText editableField = (EditText) dialog.findViewById(R.id.ruleInput);
+                editableField.setText(((TextView)view.findViewById(R.id.textDesc)).getText());
+                dialogOkButton.setOnClickListener(new View.OnClickListener(){
+
+                    @Override
+                    public void onClick(View v) {
+                        if(!editableField.getText().toString().equals(""))
+                        {
+                            db.updatePhrase(id, editableField.getText().toString());
+                            alertDialog.dismiss();
+                            customAdapter.changeCursor(db.getAllPhrases());
+                        }
+                    }
+                });
+                dialogCancelButton.setOnClickListener(new View.OnClickListener(){
+
+                    @Override
+                    public void onClick(View v) {
+                        alertDialog.dismiss();
+                    }
+                });
+                alertDialog.show();
             }
         });
-        
+
         new Handler().post(new Runnable() {
 
             @Override
@@ -82,9 +115,12 @@ public class CustomRules extends ListActivity {
 
             @Override
             public void onClick(View v) {
-                db.insertPhrase(editableField.getText().toString());
-                alertDialog.dismiss();
-                customAdapter.changeCursor(db.getAllPhrases());
+                if(!editableField.getText().toString().equals(""))
+                {
+                    db.insertPhrase(editableField.getText().toString());
+                    alertDialog.dismiss();
+                    customAdapter.changeCursor(db.getAllPhrases());
+                }
             }
         });
         dialogCancelButton.setOnClickListener(new View.OnClickListener(){

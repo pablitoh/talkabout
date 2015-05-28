@@ -101,4 +101,9 @@
     <string name="qualityAssurance">Agradecimiento Especial</string>
     <string name="creator">Decote Apps</string>
     <string name="addRule">Add Rule</string>
+    <string name="myRulesText">Las reglas personalizadas tendran posibilidad de salir al caer una Regla Caótica.</string>
+    <string name="CustomRuleTitle">Regla Personalizada</string>
+    <string name="rulesTitle">Mis Reglas</string>
+    <string name="addRuleIndication">Escribe la regla que quieras agregar...</string>
+    <string name="addRulePopUpTitle">Agregar Regla</string>
 </resources>
