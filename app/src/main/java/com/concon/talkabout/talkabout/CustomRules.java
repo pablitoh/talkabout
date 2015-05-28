@@ -63,7 +63,10 @@ public class CustomRules extends ListActivity {
                 Button dialogOkButton = (Button) dialog.findViewById(R.id.addRule);
                 Button dialogCancelButton = (Button) dialog.findViewById(R.id.cancelRule);
                 final EditText editableField = (EditText) dialog.findViewById(R.id.ruleInput);
+                 TextView title = (TextView) dialog.findViewById(R.id.dialogTitle);
+                title.setText(getString(R.string.changeRule));
                 editableField.setText(((TextView)view.findViewById(R.id.textDesc)).getText());
+                dialogOkButton.setText(getString(R.string.modify));
                 dialogOkButton.setOnClickListener(new View.OnClickListener(){
 
                     @Override

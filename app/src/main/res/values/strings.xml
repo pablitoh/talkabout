@@ -104,5 +104,8 @@
     <string name="rulesTitle">My rules</string>
     <string name="addRuleIndication">Write the rule you want to add</string>
     <string name="addRulePopUpTitle">Add Rule</string>
+    <string name="cancel">Cancel</string>
+    <string name="modify">Accept</string>
+    <string name="changeRule">Change Rule</string>
 
 </resources>

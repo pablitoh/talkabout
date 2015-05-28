@@ -34,7 +34,9 @@
         android:layout_gravity="center"
         android:layout_marginTop="2dip"
         android:layout_toRightOf="@id/imgRow"
+        android:layout_toEndOf="@id/imgRow"
         android:textStyle="italic"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:textSize="20sp"/>
 
 </RelativeLayout>

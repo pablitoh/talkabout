@@ -46,7 +46,7 @@
             android:background="@drawable/button_start_shape"
             android:gravity="center"
             android:layout_gravity="center"
-            android:text="Cancel"
+            android:text="@string/cancel"
             android:textSize="@dimen/gameplay_button_text"
             android:padding="5dp"
             android:textColor="@color/black"

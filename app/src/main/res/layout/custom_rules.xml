@@ -48,7 +48,8 @@
         android:layout_height="match_parent"
         android:id="@android:id/list"
         android:layout_below="@+id/view2"
-        android:layout_above="@+id/view" />
+        android:layout_above="@+id/view"
+        />
 
     <com.concon.talkabout.talkabout.elements.TextViewFun
         android:id="@android:id/empty"
