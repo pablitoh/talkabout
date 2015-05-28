@@ -98,5 +98,6 @@
     <string name="developedBy">Developed By</string>
     <string name="qualityAssurance">Special Thanks</string>
     <string name="creator">Decote Apps</string>
+    <string name="addRule">Add Rule</string>
 
 </resources>

@@ -14,6 +14,7 @@ import android.widget.TextView;
 import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
 import com.concon.talkabout.talkabout.elements.CustomHorizontalScroll;
 import com.concon.talkabout.talkabout.utils.AppRater;
+import com.concon.talkabout.talkabout.utils.DbManager;
 import com.concon.talkabout.talkabout.utils.LanguageHelper;
 import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.HitBuilders;
@@ -167,5 +168,10 @@ public class MainMenu extends Activity {
 
     public void loadAbout(View view) {
         startActivity(new Intent(MainMenu.this, About.class));
+    }
+
+    public void customRules(View view) {
+
+        startActivity(new Intent(MainMenu.this, CustomRules.class));
     }
 }
