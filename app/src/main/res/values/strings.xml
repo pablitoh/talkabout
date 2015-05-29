@@ -108,5 +108,6 @@
     <string name="modify">Accept</string>
     <string name="changeRule">Change Rule</string>
     <string name="noRules">There are no rules yet..</string>
+    <string name="myrulestext">My rules</string>
 
 </resources>

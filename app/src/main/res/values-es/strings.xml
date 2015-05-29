@@ -104,10 +104,11 @@
     <string name="myRulesText">Las reglas personalizadas tendran posibilidad de salir al caer una Regla Caótica.</string>
     <string name="CustomRuleTitle">Regla Personalizada</string>
     <string name="rulesTitle">Mis Reglas</string>
-    <string name="addRuleIndication">Escribe la regla que quieras agregar...</string>
+    <string name="addRuleIndication">Introduce la descripción de la regla que quieras agregar...</string>
     <string name="addRulePopUpTitle">Agregar Regla</string>
     <string name="cancel">Cancelar</string>
     <string name="modify">Aceptar</string>
     <string name="changeRule">Cambiar Regla</string>
     <string name="noRules">No hay reglas personalizadas todavía</string>
+    <string name="myrulestext">Mis reglas</string>
 </resources>

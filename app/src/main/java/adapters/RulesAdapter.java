@@ -54,9 +54,13 @@ public class RulesAdapter extends CursorAdapter {
             @Override
             public void onClick(View v) {
                 db = new DbManager(context);
-                cursor.moveToPosition((int)view.getTag());
-                db.deletePhrase(cursor.getInt(0));
-                changeCursor(db.getAllPhrases());
+                if(cursor.moveToFirst() )
+                {
+                    cursor.moveToPosition((int)view.getTag());
+                    db.deletePhrase(cursor.getInt(0));
+                    changeCursor(db.getAllPhrases());
+                    db.close();
+                }
             }
         });
 
