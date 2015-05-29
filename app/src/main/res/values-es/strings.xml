@@ -109,4 +109,5 @@
     <string name="cancel">Cancelar</string>
     <string name="modify">Aceptar</string>
     <string name="changeRule">Cambiar Regla</string>
+    <string name="noRules">No hay reglas personalizadas todavía</string>
 </resources>
