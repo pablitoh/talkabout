@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.concon.talkabout.talkabout.CustomRulesFragment;
+import com.concon.talkabout.talkabout.ServerRules;
 
 /**
  * Created by Pablitoh on 02/06/2015.
@@ -33,9 +34,9 @@ public class RulesPageAdapter extends FragmentPagerAdapter {
         switch (position) {
             case 0: return new CustomRulesFragment();
             case 1:
-                return new CustomRulesFragment();
+                return ServerRules.newInstance(0);
             case 2:
-                return new CustomRulesFragment();
+                return ServerRules.newInstance(1);
         }
         return null;
     }
@@ -45,4 +46,6 @@ public class RulesPageAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         return tabTitles[position];
     }
+
+
 }

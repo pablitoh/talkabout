@@ -12,6 +12,7 @@ import adapters.RulesPageAdapter;
  */
 
 public class RulesHost extends FragmentActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
