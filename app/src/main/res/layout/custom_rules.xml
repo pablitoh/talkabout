@@ -44,7 +44,6 @@
             android:layout_height="30dp"
             android:src="@drawable/add_icon"
             android:clickable="true"
-            android:onClick="addRule"
             android:id="@+id/addIcon"
             android:layout_below="@+id/instructions"
             android:layout_alignParentRight="true"
