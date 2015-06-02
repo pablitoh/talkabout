@@ -22,6 +22,7 @@ import android.widget.TextView;
 
 import com.concon.talkabout.talkabout.dataType.OptionsMap;
 import com.concon.talkabout.talkabout.dataType.RewardCard;
+import com.concon.talkabout.talkabout.utils.DbManager;
 
 import java.util.Random;
 
@@ -89,7 +90,7 @@ public class SpinWheelGameplayTAB extends Fragment {
         View android = inflater.inflate(R.layout.activity_spinwheel_gameplay, container, false);
 
         OptionsMapObj = new OptionsMap(getActivity());
-
+        DbManager db = new DbManager(getActivity());
         // load the image only once
         if (imageOriginal == null) {
             imageOriginal = BitmapFactory.decodeResource(getResources(), R.drawable.wheel_of_fortune);

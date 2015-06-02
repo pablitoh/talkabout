@@ -5,6 +5,7 @@ import android.content.Context;
 import com.concon.talkabout.talkabout.R;
 import com.concon.talkabout.talkabout.service.INeverParserService;
 import com.concon.talkabout.talkabout.service.SingleFeedParserService;
+import com.concon.talkabout.talkabout.utils.DbManager;
 
 import org.xmlpull.v1.XmlPullParserException;
 
@@ -46,6 +47,8 @@ public class OptionsMap {
 
         try {
             chaosRules = singleFeedParserService.parseXml(2, mContext.getResources().openRawResource(R.raw.chaosrule), "chaos");
+            DbManager db = new DbManager(mContext);
+            chaosRules.addAll(db.getAllPhrasesAsArray());
         } catch (XmlPullParserException e) {
             e.printStackTrace();
         } catch (IOException e) {
