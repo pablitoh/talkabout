@@ -28,7 +28,7 @@ public class ServerRules extends ListFragment {
         switch (getArguments().getInt("TYPE"))
         {
             case 0:
-            sectionTitle.setText("Popular Today");
+            sectionTitle.setText("Popular Today in " + getActivity().getApplicationContext().getResources().getConfiguration().locale.getDisplayCountry());
                 break;
             case 1:sectionTitle.setText("Recent");
                 break;
