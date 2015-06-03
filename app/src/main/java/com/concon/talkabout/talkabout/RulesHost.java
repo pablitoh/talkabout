@@ -1,15 +1,9 @@
 package com.concon.talkabout.talkabout;
 
-import android.content.Context;
-import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
-
-
-import java.util.Locale;
 
 import adapters.RulesPageAdapter;
 
@@ -28,7 +22,6 @@ public class RulesHost extends FragmentActivity {
         viewPager.setAdapter(new RulesPageAdapter(getSupportFragmentManager(),
                 RulesHost.this));
 
-        // Give the TabLayout the ViewPager
         TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
         tabLayout.setupWithViewPager(viewPager);
     }
