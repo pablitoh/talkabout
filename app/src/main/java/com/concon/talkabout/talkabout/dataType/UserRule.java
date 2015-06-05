@@ -21,6 +21,10 @@ public class UserRule {
         this.rule = rule;
         this.amountAdds= 0;
     }
+    public UserRule(long id)
+    {
+        this.id = id;
+    }
     public long getId() {
         return id;
     }

@@ -34,6 +34,8 @@ public class ServerRuleAdapter extends ArrayAdapter<UserRule> {
         // Lookup view for data population
         TextView textTitle = (TextView) convertView.findViewById(R.id.textTitle);
         TextView textDesc = (TextView) convertView.findViewById(R.id.textDesc);
+        TextView idField = (TextView) convertView.findViewById(R.id.idField);
+        idField.setText(String.valueOf(userRule.getId()));
         ImageView imageIcon = (ImageView) convertView.findViewById(R.id.imgRow);
         // Populate the data into the template view using the data object
         textTitle.setText("title");

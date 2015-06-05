@@ -3,6 +3,7 @@ package com.concon.talkabout.talkabout;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.Context;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ListFragment;
@@ -29,6 +30,15 @@ import com.concon.talkabout.talkabout.utils.DbManager;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
+import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.client.methods.HttpPut;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.BasicResponseHandler;
+import org.apache.http.impl.client.DefaultHttpClient;
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -135,7 +145,13 @@ public class ServerRules extends ListFragment {
                     public void onClick(View v) {
                         db.insertPhrase(((TextView) view.findViewById(R.id.textDesc)).getText().toString());
                         mCallback.updateDB();
+
                         alertDialog.dismiss();
+
+                        UserRule userRule = new UserRule(Long.parseLong(((TextView) view.findViewById(R.id.idField)).getText().toString()));
+
+                        new Connection(userRule).execute();
+
                     }
                 });
                 dialogCancelButton.setOnClickListener(new View.OnClickListener(){
@@ -160,6 +176,48 @@ public class ServerRules extends ListFragment {
         } catch (ClassCastException e) {
             throw new ClassCastException(activity.toString()
                     + " must implement OnReward");
+        }
+    }
+
+    private class Connection extends AsyncTask {
+
+        UserRule userRule;
+
+        public Connection(UserRule userRule) {
+            this.userRule = userRule;
+        }
+
+        @Override
+        protected Object doInBackground(Object... arg0) {
+            connect();
+            return null;
+        }
+
+        private void connect() {
+            DefaultHttpClient httpclient = new DefaultHttpClient();
+            //url with the post data
+            HttpPut httpost = new HttpPut("http://embriagados.herokuapp.com/rules");
+            StringEntity se = null;
+            try {
+                se = new StringEntity(new Gson().toJson(userRule));
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+            //sets the post request as the resulting string
+            httpost.setEntity(se);
+            //sets a request header so the page receving the request
+            //will know what to do with it
+            httpost.setHeader("Accept", "application/json");
+            httpost.setHeader("Content-type", "application/json");
+
+            //Handles what is returned from the page
+            ResponseHandler responseHandler = new BasicResponseHandler();
+            try {
+                httpclient.execute(httpost, responseHandler);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
         }
     }
 
