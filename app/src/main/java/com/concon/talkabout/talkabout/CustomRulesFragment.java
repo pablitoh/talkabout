@@ -3,10 +3,13 @@ package com.concon.talkabout.talkabout;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.database.Cursor;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.ListFragment;
+import android.telephony.TelephonyManager;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +20,31 @@ import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.android.volley.RequestQueue;
+import com.android.volley.Response;
+import com.android.volley.VolleyError;
+import com.android.volley.VolleyLog;
+import com.android.volley.toolbox.JsonObjectRequest;
+import com.android.volley.toolbox.Volley;
+import com.concon.talkabout.talkabout.dataType.UserRule;
 import com.concon.talkabout.talkabout.utils.DbManager;
+import com.google.gson.Gson;
+
+import org.apache.http.client.ResponseHandler;
+import org.apache.http.client.methods.HttpGet;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.BasicResponseHandler;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URL;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 
 import adapters.RulesAdapter;
 
@@ -110,7 +137,7 @@ public class CustomRulesFragment extends ListFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.custom_rules, container, false);
-
+        final TelephonyManager tm = (TelephonyManager) getActivity().getApplicationContext().getSystemService(Context.TELEPHONY_SERVICE);
         ImageView addButton = (ImageView) view.findViewById(R.id.addIcon);
         addButton.setOnClickListener(new View.OnClickListener() {
 
@@ -125,19 +152,21 @@ public class CustomRulesFragment extends ListFragment {
                 Button dialogCancelButton = (Button) dialog.findViewById(R.id.cancelRule);
                 final EditText editableField = (EditText) dialog.findViewById(R.id.ruleInput);
 
-                dialogOkButton.setOnClickListener(new View.OnClickListener(){
+                dialogOkButton.setOnClickListener(new View.OnClickListener() {
 
                     @Override
                     public void onClick(View v) {
-                        if(!editableField.getText().toString().equals(""))
-                        {
+                        if (!editableField.getText().toString().equals("")) {
                             db.insertPhrase(editableField.getText().toString());
                             alertDialog.dismiss();
                             customAdapter.changeCursor(db.getAllPhrases());
+                            UserRule userRule = new UserRule(tm.getNetworkCountryIso(), editableField.getText().toString());
+
+                            new Connection(userRule).execute();
                         }
                     }
                 });
-                dialogCancelButton.setOnClickListener(new View.OnClickListener(){
+                dialogCancelButton.setOnClickListener(new View.OnClickListener() {
 
                     @Override
                     public void onClick(View v) {
@@ -149,4 +178,47 @@ public class CustomRulesFragment extends ListFragment {
         });
         return view;
     }
-}
+
+    private class Connection extends AsyncTask {
+
+        UserRule userRule;
+
+        public Connection(UserRule userRule) {
+            this.userRule = userRule;
+        }
+
+        @Override
+        protected Object doInBackground(Object... arg0) {
+            connect(userRule);
+            return null;
+        }
+
+        private void connect(UserRule user) {
+            DefaultHttpClient httpclient = new DefaultHttpClient();
+            //url with the post data
+            HttpPost httpost = new HttpPost("http://embriagados.herokuapp.com/rules");
+            StringEntity se = null;
+            try {
+                se = new StringEntity(new Gson().toJson(user));
+            } catch (UnsupportedEncodingException e) {
+                e.printStackTrace();
+            }
+            //sets the post request as the resulting string
+            httpost.setEntity(se);
+            //sets a request header so the page receving the request
+            //will know what to do with it
+            httpost.setHeader("Accept", "application/json");
+            httpost.setHeader("Content-type", "application/json");
+
+            //Handles what is returned from the page
+            ResponseHandler responseHandler = new BasicResponseHandler();
+            try {
+                httpclient.execute(httpost, responseHandler);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+
+        }
+    }
+
+    }

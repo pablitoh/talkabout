@@ -1,6 +1,7 @@
 package com.concon.talkabout.talkabout;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -10,6 +11,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -62,7 +65,6 @@ public class ServerRules extends ListFragment {
                 RequestQueue queue = Volley.newRequestQueue(getActivity());
                 String url = "http://embriagados.herokuapp.com/rules?country="+tm.getNetworkCountryIso()+"&section=popular";
 
-// Request a string response from the provided URL.
                 StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
                         new Response.Listener<String>() {
                             @Override
@@ -78,7 +80,6 @@ public class ServerRules extends ListFragment {
                         Toast.makeText(getActivity().getApplicationContext(),"There was an error processing the response, please try again later ",Toast.LENGTH_LONG).show();
                     }
                 });
-// Add the request to the RequestQueue.
                 queue.add(stringRequest);
                 break;
             case 1:
@@ -86,7 +87,6 @@ public class ServerRules extends ListFragment {
                 queue = Volley.newRequestQueue(getActivity());
                  url = "http://embriagados.herokuapp.com/rules?country="+tm.getNetworkCountryIso()+"&section=recent";
 
-// Request a string response from the provided URL.
                 stringRequest = new StringRequest(Request.Method.GET, url,
                         new Response.Listener<String>() {
                             @Override
@@ -101,7 +101,6 @@ public class ServerRules extends ListFragment {
                         Toast.makeText(getActivity().getApplicationContext(),"There was an error procesing the response, please try again later ",Toast.LENGTH_LONG).show();
                     }
                 });
-// Add the request to the RequestQueue.
                 queue.add(stringRequest);
                 break;
             default:
@@ -118,9 +117,35 @@ public class ServerRules extends ListFragment {
         getListView().setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                db.insertPhrase(((TextView) view.findViewById(R.id.textDesc)).getText().toString());
-                mCallback.updateDB();
+            public void onItemClick(AdapterView<?> parent,final View view, int position, long id) {
+                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getActivity());
+                LayoutInflater inflater = (LayoutInflater) getActivity().getApplicationContext().getSystemService(
+                        Context.LAYOUT_INFLATER_SERVICE);
+                final View dialog = inflater.inflate(R.layout.confirmation_popup, null);
+                dialogBuilder.setView(dialog);
+                final AlertDialog alertDialog = dialogBuilder.create();
+                Button dialogOkButton = (Button) dialog.findViewById(R.id.addRule);
+                Button dialogCancelButton = (Button) dialog.findViewById(R.id.cancelRule);
+                TextView desc = (TextView) dialog.findViewById(R.id.dialogText);
+                desc.setText("Are you Sure yo want to add this rule?");;
+                dialogOkButton.setText("Yes");
+                dialogOkButton.setOnClickListener(new View.OnClickListener(){
+
+                    @Override
+                    public void onClick(View v) {
+                        db.insertPhrase(((TextView) view.findViewById(R.id.textDesc)).getText().toString());
+                        mCallback.updateDB();
+                        alertDialog.dismiss();
+                    }
+                });
+                dialogCancelButton.setOnClickListener(new View.OnClickListener(){
+
+                    @Override
+                    public void onClick(View v) {
+                        alertDialog.dismiss();
+                    }
+                });
+                alertDialog.show();
             }
         });
     }
