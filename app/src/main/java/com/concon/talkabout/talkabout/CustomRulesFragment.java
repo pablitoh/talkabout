@@ -97,6 +97,12 @@ public class CustomRulesFragment extends ListFragment {
         });
 
 
+
+    }
+
+    public void updateDB()
+    {
+        customAdapter.changeCursor(db.getAllPhrases());
     }
 
 
