@@ -117,5 +117,8 @@
     <string name="confirmationDelete">Are you Sure yo want to delete this rule?</string>
     <string name="myRulesTabName">My Rules</string>
     <string name="customRule">Custom Rule</string>
+    <string name="popularRuleTitle">Popular</string>
+    <string name="recentRuleTitle">Recent</string>
+    <string name="connectionError">Could not retrieve data. Please verify that you has internet access and try again</string>
 
 </resources>

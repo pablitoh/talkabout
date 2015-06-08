@@ -19,9 +19,11 @@ import java.util.ArrayList;
 public class ServerRuleAdapter extends ArrayAdapter<UserRule> {
 
     private Context mContext;
-    public ServerRuleAdapter(Context mContext, ArrayList<UserRule> data) {
+    private int type;
+    public ServerRuleAdapter(Context mContext, ArrayList<UserRule> data, int type) {
         super(mContext, 0, data);
         this.mContext = mContext;
+        this.type = type;
     }
 
     @Override
@@ -41,7 +43,17 @@ public class ServerRuleAdapter extends ArrayAdapter<UserRule> {
         // Populate the data into the template view using the data object
         textTitle.setText(mContext.getString(R.string.customRule));
         textDesc.setText(userRule.getRule());
-        imageIcon.setImageDrawable(getContext().getResources().getDrawable(R.drawable.icon_skull));
+        if(type==0)
+        {
+            textTitle.setText(mContext.getString(R.string.popularRuleTitle));
+            imageIcon.setImageDrawable(getContext().getResources().getDrawable(R.drawable.hot_icon));
+        }
+        else
+        {
+            textTitle.setText(mContext.getString(R.string.recentRuleTitle));
+            imageIcon.setImageDrawable(getContext().getResources().getDrawable(R.drawable.new_icon));
+        }
+
         // Return the completed view to render on screen
         return convertView;
     }

@@ -194,14 +194,14 @@ public class ServerRules extends ListFragment implements ListPopulator {
                                         public void onResponse(String response) {
                                             ArrayList<UserRule> ruleArray = new Gson().fromJson(response, new TypeToken<List<UserRule>>() {
                                             }.getType());
-                                            adapter = new ServerRuleAdapter(getActivity(), ruleArray);
+                                            adapter = new ServerRuleAdapter(getActivity(), ruleArray,getArguments().getInt("TYPE"));
                                             setListAdapter(adapter);
                                         }
                                     }, new Response.ErrorListener() {
                                 @Override
                                 public void onErrorResponse(VolleyError error) {
 
-                                    empty.setText("Could not retrieve data. Please verify that you has internet access and try again");
+                                    empty.setText(getResources().getString(R.string.connectionError));
                                 }
                             });
                             queue.add(stringRequest);
@@ -210,7 +210,7 @@ public class ServerRules extends ListFragment implements ListPopulator {
                     }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
-                    empty.setText("Could not retrieve data. Please verify that you has internet access and try again");
+                    empty.setText(getResources().getString(R.string.connectionError));
                 }
             });
             stringRequest.setTag(TAG);
@@ -232,14 +232,14 @@ public class ServerRules extends ListFragment implements ListPopulator {
                         @Override
                         public void onResponse(String response) {
                             ArrayList<UserRule> ruleArray = new Gson().fromJson(response, new TypeToken<List<UserRule>>(){}.getType());
-                            adapter = new ServerRuleAdapter(getActivity(), ruleArray);
+                            adapter = new ServerRuleAdapter(getActivity(), ruleArray, getArguments().getInt("TYPE"));
                             setListAdapter(adapter);
                         }
                     }, new Response.ErrorListener() {
                 @Override
                 public void onErrorResponse(VolleyError error) {
 
-                    empty.setText("Could not retrieve data. Please verify that you has internet access and try again");
+                    empty.setText(getResources().getString(R.string.connectionError));
                 }
             });
         stringRequest.setTag(TAG);

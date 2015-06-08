@@ -119,4 +119,7 @@
     <string name="confirmationDelete">Estás seguro que deseas eliminar esta regla ?</string>
     <string name="myRulesTabName">Mis Reglas</string>
     <string name="customRule">Regla Personalizada</string>
+    <string name="popularRuleTitle">Popular</string>
+    <string name="recentRuleTitle">Reciente</string>
+    <string name="connectionError">No se pudo establecer una coneccion. Por favor, reintente.</string>
 </resources>
