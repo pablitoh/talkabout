@@ -62,8 +62,8 @@ public class RulesAdapter extends CursorAdapter {
                 Button dialogOkButton = (Button) dialog.findViewById(R.id.addRule);
                 Button dialogCancelButton = (Button) dialog.findViewById(R.id.cancelRule);
                 TextView desc = (TextView) dialog.findViewById(R.id.dialogText);
-                desc.setText("Are you Sure yo want to delete this rule?");;
-                dialogOkButton.setText("Yes");
+                desc.setText(context.getString(R.string.confirmationDelete));;
+                dialogOkButton.setText(context.getString(R.string.yes));
                 dialogOkButton.setOnClickListener(new View.OnClickListener(){
 
                     @Override

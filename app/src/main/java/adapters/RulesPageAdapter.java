@@ -6,6 +6,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import com.concon.talkabout.talkabout.CustomRulesFragment;
+import com.concon.talkabout.talkabout.R;
 import com.concon.talkabout.talkabout.ServerRules;
 
 /**
@@ -14,13 +15,14 @@ import com.concon.talkabout.talkabout.ServerRules;
 public class RulesPageAdapter extends FragmentPagerAdapter {
 
     final int PAGE_COUNT = 3;
-    private String tabTitles[] = new String[] { "My Rules", "Popular", "Recently Added" };
     private Context context;
+    private String tabTitles[];
 
     public RulesPageAdapter(FragmentManager fm, Context context)
     {
         super(fm);
         this.context = context;
+        tabTitles = new String[] { context.getString(R.string.myRulesTabName), context.getString(R.string.PopularToday), context.getString(R.string.Recent) };
     }
 
     @Override

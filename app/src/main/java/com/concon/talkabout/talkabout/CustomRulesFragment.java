@@ -26,6 +26,7 @@ import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
+import com.concon.talkabout.talkabout.adapters.ListPopulator;
 import com.concon.talkabout.talkabout.dataType.UserRule;
 import com.concon.talkabout.talkabout.utils.DbManager;
 import com.google.gson.Gson;

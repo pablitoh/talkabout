@@ -111,4 +111,12 @@
     <string name="changeRule">Cambiar Regla</string>
     <string name="noRules">No hay reglas personalizadas todavía</string>
     <string name="myrulestext">Mis reglas</string>
+    <string name="myServerRulesText">Toca una regla para agregarla a tu lista. Cuantas mas veces la tengas, mas chances tendra de salir cuando juegues</string>
+    <string name="PopularToday">Populares</string>
+    <string name="Recent">Recientes</string>
+    <string name="ruleAddConfirmation">Estás seguro de querer agregar esta regla ?</string>
+    <string name="yes">Si</string>
+    <string name="confirmationDelete">Estás seguro que deseas eliminar esta regla ?</string>
+    <string name="myRulesTabName">Mis Reglas</string>
+    <string name="customRule">Regla Personalizada</string>
 </resources>

@@ -109,5 +109,13 @@
     <string name="changeRule">Change Rule</string>
     <string name="noRules">There are no rules yet..</string>
     <string name="myrulestext">My rules</string>
+    <string name="myServerRulesText">Tap any rule to add them to your list. For each time the rule is added to your list, the more chances it has of getting rolled</string>
+    <string name="PopularToday">Popular Today</string>
+    <string name="Recent">Recent</string>
+    <string name="ruleAddConfirmation">Are you Sure yo want to add this rule?</string>
+    <string name="yes">Yes</string>
+    <string name="confirmationDelete">Are you Sure yo want to delete this rule?</string>
+    <string name="myRulesTabName">My Rules</string>
+    <string name="customRule">Custom Rule</string>
 
 </resources>

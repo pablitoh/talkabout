@@ -18,9 +18,10 @@ import java.util.ArrayList;
  */
 public class ServerRuleAdapter extends ArrayAdapter<UserRule> {
 
+    private Context mContext;
     public ServerRuleAdapter(Context mContext, ArrayList<UserRule> data) {
-
         super(mContext, 0, data);
+        this.mContext = mContext;
     }
 
     @Override
@@ -38,7 +39,7 @@ public class ServerRuleAdapter extends ArrayAdapter<UserRule> {
         idField.setText(String.valueOf(userRule.getId()));
         ImageView imageIcon = (ImageView) convertView.findViewById(R.id.imgRow);
         // Populate the data into the template view using the data object
-        textTitle.setText("title");
+        textTitle.setText(mContext.getString(R.string.customRule));
         textDesc.setText(userRule.getRule());
         imageIcon.setImageDrawable(getContext().getResources().getDrawable(R.drawable.icon_skull));
         // Return the completed view to render on screen
