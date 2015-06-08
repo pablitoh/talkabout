@@ -54,15 +54,14 @@
 
         <com.concon.talkabout.talkabout.elements.TextViewFun
             android:id="@android:id/empty"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
             android:text="@string/noRules"
             android:textColor="@color/blackAlpha"
             android:layout_gravity="center"
             android:gravity="center"
-            android:textSize="@dimen/section_title_text"
-            android:layout_centerVertical="true"
-            android:layout_centerHorizontal="true" />
+            android:textSize="@dimen/gameplay_text"
+            android:layout_alignTop="@+id/swipe_container" />
 
 
 </RelativeLayout>

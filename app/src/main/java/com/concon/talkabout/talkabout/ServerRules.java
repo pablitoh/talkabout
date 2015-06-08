@@ -188,24 +188,7 @@ public class ServerRules extends ListFragment implements ListPopulator {
                             }.getType());
 
                             countryCode = country.getCountryCode();
-                            StringRequest stringRequest = new StringRequest(Request.Method.GET, url.replace("{country}", countryCode.toLowerCase()),
-                                    new Response.Listener<String>() {
-                                        @Override
-                                        public void onResponse(String response) {
-                                            ArrayList<UserRule> ruleArray = new Gson().fromJson(response, new TypeToken<List<UserRule>>() {
-                                            }.getType());
-                                            adapter = new ServerRuleAdapter(getActivity(), ruleArray,getArguments().getInt("TYPE"));
-                                            setListAdapter(adapter);
-                                        }
-                                    }, new Response.ErrorListener() {
-                                @Override
-                                public void onErrorResponse(VolleyError error) {
-
-                                    empty.setText(getResources().getString(R.string.connectionError));
-                                }
-                            });
-                            queue.add(stringRequest);
-                            empty.setText("Loading...");
+                            retrieveData(countryCode);
                         }
                     }, new Response.ErrorListener() {
                 @Override
@@ -215,7 +198,7 @@ public class ServerRules extends ListFragment implements ListPopulator {
             });
             stringRequest.setTag(TAG);
             queue.add(stringRequest);
-            empty.setText("Loading...");
+            empty.setText(getResources().getString(R.string.loading));
         } else {
             retrieveData(countryCode);
         }
@@ -244,7 +227,7 @@ public class ServerRules extends ListFragment implements ListPopulator {
             });
         stringRequest.setTag(TAG);
             queue.add(stringRequest);
-            empty.setText("Loading...");
+            empty.setText(getResources().getString(R.string.loading));
 
 
     }
