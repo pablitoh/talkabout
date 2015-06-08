@@ -8,7 +8,13 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 
 import com.concon.talkabout.talkabout.adapters.ListPopulator;
+import com.concon.talkabout.talkabout.ads.CustomInterstitial;
+import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
 import com.concon.talkabout.talkabout.communication.ListManager;
+import com.concon.talkabout.talkabout.utils.LanguageHelper;
+import com.google.android.gms.analytics.GoogleAnalytics;
+import com.google.android.gms.analytics.HitBuilders;
+import com.google.android.gms.analytics.Tracker;
 
 import java.util.List;
 
@@ -23,10 +29,19 @@ import adapters.TabPagerAdapter;
 public class RulesHost extends FragmentActivity implements ListManager {
 
 
+    private CustomInterstitial ad;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rules_container);
+        LanguageHelper.loadApplicationLanguage(getBaseContext());
+
+        Tracker t = ((GoogleAnalyticsApp) getApplication()).getTracker(GoogleAnalyticsApp.TrackerName.APP_TRACKER);
+        t.setScreenName("My Rules");
+        t.enableAdvertisingIdCollection(true);
+        t.send(new HitBuilders.AppViewBuilder().build());
+        ad = new CustomInterstitial(this);
 
         ViewPager viewPager = (ViewPager) findViewById(R.id.viewpager);
         viewPager.setOffscreenPageLimit(3);
@@ -40,6 +55,23 @@ public class RulesHost extends FragmentActivity implements ListManager {
     @Override
     protected void onResume() {
         super.onResume();
+    }
+    @Override
+    public void onBackPressed() {
+        ad.showIfAvailable();
+        super.onBackPressed();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        GoogleAnalytics.getInstance(this).reportActivityStart(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        GoogleAnalytics.getInstance(this).reportActivityStop(this);
     }
 
 
