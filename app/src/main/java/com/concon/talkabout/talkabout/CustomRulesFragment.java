@@ -37,6 +37,7 @@ import org.apache.http.client.methods.HttpPost;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.protocol.HTTP;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -200,7 +201,7 @@ public class CustomRulesFragment extends ListFragment {
             HttpPost httpost = new HttpPost("http://embriagados.herokuapp.com/rules");
             StringEntity se = null;
             try {
-                se = new StringEntity(new Gson().toJson(user));
+                se = new StringEntity(new Gson().toJson(user), HTTP.UTF_8);
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             }
