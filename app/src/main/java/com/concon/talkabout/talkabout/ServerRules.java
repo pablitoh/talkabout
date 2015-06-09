@@ -36,6 +36,7 @@ import org.apache.http.client.methods.HttpPut;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.BasicResponseHandler;
 import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.protocol.HTTP;
 
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
@@ -217,6 +218,7 @@ public class ServerRules extends ListFragment implements ListPopulator {
                             ArrayList<UserRule> ruleArray = new Gson().fromJson(response, new TypeToken<List<UserRule>>(){}.getType());
                             adapter = new ServerRuleAdapter(getActivity(), ruleArray, getArguments().getInt("TYPE"));
                             setListAdapter(adapter);
+                            empty.setText(getResources().getString(R.string.noRules));
                         }
                     }, new Response.ErrorListener() {
                 @Override
@@ -251,7 +253,7 @@ public class ServerRules extends ListFragment implements ListPopulator {
             HttpPut httpost = new HttpPut("http://embriagados.herokuapp.com/rules");
             StringEntity se = null;
             try {
-                se = new StringEntity(new Gson().toJson(userRule));
+                se = new StringEntity(new Gson().toJson(userRule), HTTP.UTF_8);
             } catch (UnsupportedEncodingException e) {
                 e.printStackTrace();
             }
