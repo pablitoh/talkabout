@@ -5,24 +5,23 @@
         <entry>Hasta que termine el juego usa una zapatilla como sombrero. Si se cae, tomas. Si no lo haces, tomas doble cada vez que te toque tomar.</entry>
         <entry>Sos fan del Rey León. Antes de tomar sube tu trago con ambas manos por arriba de tu cabeza o toma de nuevo</entry>
         <entry>Eres el papa. Bendice a alguien con unas gotas de tu trago (salpicar), si esa persona te insulta, tomas</entry>
-        <entry>Cada vez que alguien tome, te quedas congelado o tomas.</entry>
         <entry>Todos toman con la mano izquierda</entry>
         <entry>Te quedas parado el resto del juego. Si estás parado, te sientas</entry>
         <entry>Levanta los brazos hasta tu siguiente turno o toma cada vez que alguien tome</entry>
         <entry>Tomas y cambias el sentido de la ronda, si el dispositivo se pasaba hacia la izquierda, ahora se pasa hacia la derecha y viceversa.</entry>
-        <entry>No puedes hablar por el resto del turno a partir de desde este momento, si hablas, tomas. Nota: ¿leiste "si hablas tomas"?, toma 1</entry>
-        <entry>Hora de meditar y cerrar los ojos. Si los abris, tomas. Si no lo haces, tomas doble cada vez que te toque tomar.</entry>
-        <entry>El cansansio surte efecto. Apoyas los codos en una superficie. Si los levantas, tomas.</entry>
+        <entry>No puedes hablar por el resto del turno a partir de este momento, si hablas, tomas. Nota: ¿leiste "si hablas tomas"?, toma 1</entry>
+        <entry>Hora de meditar y cerrar los ojos. Si los abris, tomas. Si no los cerras, tomas doble cada vez que te toque tomar.</entry>
+        <entry>El cansancio surte efecto. Apoyas los codos en una superficie. Si los levantas, tomas.</entry>
         <!-- Cambio de nombre-->
         <entry>Desde ahora tu nombre es Bob. Si alguien te llama por tu nombre real, toma</entry>
         <entry>Desde ahora tu nombre es Betty. Si alguien te llama por tu nombre real, toma.</entry>
         <entry>Cambias de nombre con la persona de enfrente. Si alguien los llama por su nombre real, toma.</entry>
         <!--Gritar-->
-        <entry>Te acuerdas de tus ancestros árabes. Cuando alguien tome tienes que gritar como un árabe, o tomas</entry>
+        <entry>Te acuerdas de tus ancestros árabes. Cuando tomes tienes que gritar como un árabe, o volves a tomar</entry>
         <entry>Te maldijo un Payaso diabólico. Cada vez que te rías, tomas</entry>
-        <entry>Desde ahora eres una groupie de Justin Beiber. Cuando alguien tome tienes que gritar "Te Amo Justin!!", o tomas</entry>
-        <entry>Fuiste poseído por un pirata. Cuando alguien tome tienes que gritar "Si mi capitan!" o tomas</entry>
-        <entry>Eres un orador. Cuando alguien tome tienes que gritar "Aleluya!" o tomas</entry>
+        <entry>Desde ahora eres una groupie de Justin Beiber. Cuando tomes tienes que gritar "Te Amo Justin!!", o volves a tomas</entry>
+        <entry>Fuiste poseído por un pirata. Cuando tomes ienes que gritar "Si mi capitan!" o volves a tomas</entry>
+        <entry>Eres un orador. Cuando tomes tienes que gritar "Aleluya!" o volves a tomas</entry>
         <!--Globales-->
         <entry>Cada vez que alguien diga "No",  toma</entry>
         <entry>Cada vez que alguien insulte, toma</entry>
@@ -43,14 +42,14 @@
         <entry>Hora de meditar y cerrar los ojos. Si los abris, tomas. Si no lo haces, tomas doble cada vez que te toque tomar.</entry>
         <entry>El cansancio surte efecto. Apoyas los codos en una superficie. Si los levantas, tomas.</entry>
         <entry>Sos un fantasma. Nadie te dirige la palabra. El que lo haga, toma.</entry>
-        <entry>Tienes el poder de Pinocho. Puedes tocarte la nariz cuando quieras, y el resto tiene que seguirte. El ultimo toma.</entry>
-        <entry>Sos el preguntón. Cada vez que digas "Que?" el resto debera preguntarlo tambien. El ultimo, toma.</entry>
+        <entry>Tienes el poder de Pinocho. Una vez por turno, puedes tocarte la nariz, y el resto tiene que seguirte. El ultimo toma.</entry>
+        <entry>Sos el preguntón. Una vez por turno, puedes preguntar "Que?", el resto debera preguntarlo tambien. El ultimo, toma.</entry>
         <entry>Estas negado. No podes decir "si". Si lo haces, tomas.</entry>
         <entry>Sos un robot. Actuas y hablas como tal. Cuando no lo hagas, tomas.</entry>
         <entry>El piso es LAVA. No puedes tocar mas el piso. Cada vez que lo hagas, tomas.</entry>
         <entry>Unidos por siempre. Te agarras de la mano con el jugador de la derecha. Si se sueltan, toman.</entry>
         <entry>Sos un experimentado Swinger. Cambias de asiento con la persona de enfrente.</entry>
         <entry>Tanto alcohol te ha hecho tartamudo. hablas como tartamudo el resto de la partida. Cada vez que no lo hagas, tomas.</entry>
-        <entry>Cada vez que hables, empezas la frase con la palabra "Embriagados". Cuando no lo hagas, tomas.</entry>
+        <entry>Cada vez que hables, empezas la frase con una palabra elegida por el jugador de la derecha. Cuando no lo hagas, tomas.</entry>
     </chaos>
 </feed>
