@@ -8,6 +8,7 @@ import android.graphics.BitmapFactory;
 import android.graphics.Matrix;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.util.Log;
 import android.view.GestureDetector;
@@ -137,11 +138,11 @@ public class SpinWheelGameplayTAB extends Fragment {
 
                     // resize
                     Matrix resize = new Matrix();
-                    resize.postScale((float)Math.min(dialerWidth, dialerHeight) / (float)imageOriginal.getWidth(), (float)Math.min(dialerWidth, dialerHeight) / (float)imageOriginal.getHeight());
+                    resize.postScale((float) Math.min(dialerWidth, dialerHeight) / (float) imageOriginal.getWidth(), (float) Math.min(dialerWidth, dialerHeight) / (float) imageOriginal.getHeight());
                     imageScaled = Bitmap.createBitmap(imageOriginal, 0, 0, imageOriginal.getWidth(), imageOriginal.getHeight(), resize, false);
 
                     // translate to the image view's center
-                    float translateX =  dialerWidth /2 - imageScaled.getWidth() / 2;
+                    float translateX = dialerWidth / 2 - imageScaled.getWidth() / 2;
 
                     float translateY = dialerHeight / 2 - imageScaled.getHeight() / 2;
                     matrix.postTranslate(translateX, translateY);
@@ -153,6 +154,12 @@ public class SpinWheelGameplayTAB extends Fragment {
 
         });
         return android;
+    }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        enableSpinButton();
     }
 
     private class MyOnTouchListener implements View.OnTouchListener {
@@ -171,7 +178,7 @@ public class SpinWheelGameplayTAB extends Fragment {
                         quadrantTouched[i] = false;
                     }
                     allowRotating = false;
-                    getView().findViewById(R.id.logo_icono).setEnabled(false);
+                    //getView().findViewById(R.id.logo_icono).setEnabled(false);
                     startAngle = getAngle(event.getX(), event.getY());
                     break;
 
