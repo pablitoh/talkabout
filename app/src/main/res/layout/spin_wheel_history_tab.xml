@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center"
@@ -7,18 +7,34 @@
     android:id="@+id/historyPage"
    >
 
+    <com.concon.talkabout.talkabout.elements.TextViewFun
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/historyTab"
+        android:id="@+id/textView"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:background="@color/blackAlpha"
+        android:paddingTop="20dp"/>
+
     <ListView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@android:id/list" />
+        android:layout_height="fill_parent"
+        android:id="@android:id/list"
+        android:layout_below="@+id/textView" />
 
     <com.concon.talkabout.talkabout.elements.TextViewFun
         android:id="@android:id/empty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
         android:text="@string/nothingToShow"
         android:layout_gravity="center"
         android:gravity="center"
-        android:textSize="@dimen/section_title_text"/>
+        android:textColor="@color/blackAlpha"
+        android:textSize="@dimen/section_title_text"
+        android:layout_below="@+id/textView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
 
-</LinearLayout>
+</RelativeLayout>

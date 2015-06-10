@@ -3,6 +3,8 @@ package com.concon.talkabout.talkabout;
 
 import android.media.AudioManager;
 import android.os.Bundle;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.ActionBarActivity;
@@ -14,19 +16,16 @@ import com.google.android.gms.analytics.GoogleAnalytics;
 import com.google.android.gms.analytics.HitBuilders;
 import com.google.android.gms.analytics.Tracker;
 
+import adapters.RulesPageAdapter;
 import adapters.TabPagerAdapter;
 
 /**
  * Created by Pablitoh on 28/04/2015.
  */
-public class SpinWheelContainerActivity extends ActionBarActivity implements ActionBar.TabListener, SpinWheelGameplayTAB.RewardListener {
+public class SpinWheelContainerActivity extends FragmentActivity implements SpinWheelGameplayTAB.RewardListener {
 
-    private ViewPager viewPager;
-    private TabPagerAdapter mAdapter;
-    private ActionBar actionBar;
-    private int currentTab = 0;
+    ViewPager viewPager;
     // Tab titles
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,63 +33,20 @@ public class SpinWheelContainerActivity extends ActionBarActivity implements Act
         LanguageHelper.loadApplicationLanguage(getBaseContext());
         setContentView(R.layout.spin_wheel_tab_container);
         String[] tabs = { getApplication().getString(R.string.playTab), getApplication().getString(R.string.historyTab)};
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        getSupportActionBar().setDisplayShowHomeEnabled(false);
         Tracker t = ((GoogleAnalyticsApp) getApplication()).getTracker(GoogleAnalyticsApp.TrackerName.APP_TRACKER);
         t.setScreenName("SpinWheel Gameplay");
         t.enableAdvertisingIdCollection(true);
         t.send(new HitBuilders.AppViewBuilder().build());
 
+        viewPager = (ViewPager) findViewById(R.id.viewpager);
+        viewPager.setOffscreenPageLimit(3);
+        viewPager.setAdapter(new TabPagerAdapter(getSupportFragmentManager(),
+                SpinWheelContainerActivity.this));
 
-
-        viewPager = (ViewPager) findViewById(R.id.pager);
-        actionBar = getSupportActionBar();
-        mAdapter = new TabPagerAdapter(getSupportFragmentManager());
-
-        viewPager.setAdapter(mAdapter);
-        actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-
-        // Adding Tabs
-        for (String tab_name : tabs) {
-            actionBar.addTab(actionBar.newTab().setText(tab_name).setTabListener(this));
-        }
-
-        this.setVolumeControlStream(AudioManager.STREAM_MUSIC);
-
-        viewPager.setOnPageChangeListener(new ViewPager.OnPageChangeListener() {
-
-            @Override
-            public void onPageSelected(int position) {
-                actionBar.setSelectedNavigationItem(position);
-                viewPager.getRootView().findViewById(R.id.logo_icono).setEnabled(true);
-                currentTab = position;
-            }
-
-            @Override
-            public void onPageScrolled(int arg0, float arg1, int arg2) {
-            }
-
-            @Override
-            public void onPageScrollStateChanged(int arg0) {
-            }
-        });
+        TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
+        tabLayout.setupWithViewPager(viewPager);
     }
 
-    @Override
-    public void onTabSelected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
-        viewPager.setCurrentItem(tab.getPosition());
-        currentTab = tab.getPosition();
-    }
-
-    @Override
-    public void onTabUnselected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
-
-    }
-
-    @Override
-    public void onTabReselected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction fragmentTransaction) {
-
-    }
     @Override
     protected void onStart() {
         super.onStart();
@@ -105,22 +61,23 @@ public class SpinWheelContainerActivity extends ActionBarActivity implements Act
 
     @Override
     public void onReward(RewardCard reward) {
-     SpinWheelHistoryTAB secondtab = (SpinWheelHistoryTAB)mAdapter.getRegisteredFragment(1);
+     SpinWheelHistoryTAB secondtab = (SpinWheelHistoryTAB) getSupportFragmentManager().getFragments().get(1);
             secondtab.addToList(reward);
     }
+
 
     @Override
     public void onBackPressed() {
 
-        if(currentTab ==1)
+        if(viewPager.getCurrentItem()==1)
         {
             viewPager.setCurrentItem(0);
+            viewPager.getChildAt(0).findViewById(R.id.logo_icono).setEnabled(true);
         }
         else
         {
-            SpinWheelGameplayTAB firstTab = (SpinWheelGameplayTAB)mAdapter.getRegisteredFragment(0);
-            firstTab.enableSpinButton();
             super.onBackPressed();
         }
     }
+
 }
