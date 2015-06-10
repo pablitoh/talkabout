@@ -8,7 +8,7 @@ android {
         applicationId "com.concon.talkabout.talkabout"
         minSdkVersion 11
         targetSdkVersion 21
-        versionCode 36
+        versionCode 37
         versionName "1.2.0"
 
     }
