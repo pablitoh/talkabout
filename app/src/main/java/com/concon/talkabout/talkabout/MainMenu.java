@@ -172,6 +172,6 @@ public class MainMenu extends Activity {
 
     public void customRules(View view) {
 
-        startActivity(new Intent(MainMenu.this, CustomRules.class));
+        startActivity(new Intent(MainMenu.this, RulesHost.class));
     }
 }

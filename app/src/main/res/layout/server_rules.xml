@@ -4,7 +4,6 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:id="@+id/historyPage"
-
     >
 
     <RelativeLayout
@@ -16,7 +15,7 @@
         <com.concon.talkabout.talkabout.elements.TextViewFun
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="@string/myRulesText"
+            android:text="@string/myServerRulesText"
             android:textColor="@color/white"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
@@ -36,48 +35,33 @@
             android:padding="10dp"
             android:textSize="25sp"
             android:layout_below="@id/instructions"
-
-             />
-
-        <ImageView
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/add_icon"
-            android:clickable="true"
-            android:id="@+id/addIcon"
-            android:layout_below="@+id/instructions"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_margin="10dp"/>
-
+            />
 
     </RelativeLayout>
 
-    <RelativeLayout
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:orientation="vertical"
-    android:id="@+id/linearLayout4"
-    android:layout_below="@+id/relativeLayout">
-    <ListView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:id="@android:id/list" />
+    <android.support.v4.widget.SwipeRefreshLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:id="@+id/swipe_container"
+        android:layout_below="@+id/relativeLayout">
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@android:id/list" />
 
-    <com.concon.talkabout.talkabout.elements.TextViewFun
-        android:id="@android:id/empty"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/noRules"
-        android:textColor="@color/blackAlpha"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:textSize="@dimen/section_title_text"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
+    </android.support.v4.widget.SwipeRefreshLayout>
 
-
-    </RelativeLayout>
+        <com.concon.talkabout.talkabout.elements.TextViewFun
+            android:id="@android:id/empty"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:text="@string/noRules"
+            android:textColor="@color/blackAlpha"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="@dimen/gameplay_text"
+            android:layout_alignTop="@+id/swipe_container" />
 
 
 </RelativeLayout>

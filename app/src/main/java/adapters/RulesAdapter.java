@@ -53,14 +53,41 @@ public class RulesAdapter extends CursorAdapter {
         ((ImageView) view.findViewById(R.id.trashCan)).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                db = new DbManager(context);
-                if(cursor.moveToFirst() )
-                {
-                    cursor.moveToPosition((int)view.getTag());
-                    db.deletePhrase(cursor.getInt(0));
-                    changeCursor(db.getAllPhrases());
-                    db.close();
-                }
+                AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(context);
+                LayoutInflater inflater = (LayoutInflater) context.getSystemService(
+                        Context.LAYOUT_INFLATER_SERVICE);
+                final View dialog = inflater.inflate(R.layout.confirmation_popup, null);
+                dialogBuilder.setView(dialog);
+                final AlertDialog alertDialog = dialogBuilder.create();
+                Button dialogOkButton = (Button) dialog.findViewById(R.id.addRule);
+                Button dialogCancelButton = (Button) dialog.findViewById(R.id.cancelRule);
+                TextView desc = (TextView) dialog.findViewById(R.id.dialogText);
+                desc.setText(context.getString(R.string.confirmationDelete));;
+                dialogOkButton.setText(context.getString(R.string.yes));
+                dialogOkButton.setOnClickListener(new View.OnClickListener(){
+
+                    @Override
+                    public void onClick(View v) {
+                        db = new DbManager(context);
+                        if(cursor.moveToFirst() )
+                        {
+                            cursor.moveToPosition((int)view.getTag());
+                            db.deletePhrase(cursor.getInt(0));
+                            changeCursor(db.getAllPhrases());
+                            db.close();
+                            alertDialog.dismiss();
+                        }
+                    }
+                });
+                dialogCancelButton.setOnClickListener(new View.OnClickListener(){
+
+                    @Override
+                    public void onClick(View v) {
+                        alertDialog.dismiss();
+                    }
+                });
+                alertDialog.show();
+
             }
         });
 
