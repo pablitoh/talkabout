@@ -13,6 +13,7 @@
         android:layout_gravity="center"
         android:id="@+id/dialogTitle"
         android:textColor="@color/black"
+        android:textSize="@dimen/indication_text"
         />
 <ScrollView
     android:layout_width="wrap_content"
@@ -39,6 +40,9 @@
         android:text="@string/backButton"
         android:textSize="@dimen/gameplay_button_text"
         android:padding="5dp"
+        android:paddingEnd="20dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
         android:textColor="@color/black"
         android:textStyle="bold"/>
 
