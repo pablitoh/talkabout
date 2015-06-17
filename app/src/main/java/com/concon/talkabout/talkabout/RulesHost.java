@@ -7,6 +7,12 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
 
+import com.amazon.device.ads.Ad;
+import com.amazon.device.ads.AdError;
+import com.amazon.device.ads.AdProperties;
+import com.amazon.device.ads.AdRegistration;
+import com.amazon.device.ads.DefaultAdListener;
+import com.amazon.device.ads.InterstitialAd;
 import com.concon.talkabout.talkabout.adapters.ListPopulator;
 import com.concon.talkabout.talkabout.ads.CustomInterstitial;
 import com.concon.talkabout.talkabout.analitycs.GoogleAnalyticsApp;
@@ -30,6 +36,9 @@ public class RulesHost extends FragmentActivity implements ListManager {
 
 
     private CustomInterstitial ad;
+    private InterstitialAd interstitialAd;
+    private boolean amazonLoaded = false;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,6 +59,11 @@ public class RulesHost extends FragmentActivity implements ListManager {
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.sliding_tabs);
         tabLayout.setupWithViewPager(viewPager);
+
+        AdRegistration.setAppKey("a5b437e27b884a1ba87e831f5ca71ac1");
+        this.interstitialAd = new InterstitialAd(this);
+        this.interstitialAd.setListener(new MyCustomAdListener());
+        this.interstitialAd.loadAd();
     }
 
     @Override
@@ -58,7 +72,15 @@ public class RulesHost extends FragmentActivity implements ListManager {
     }
     @Override
     public void onBackPressed() {
-        ad.showIfAvailable();
+        if(amazonLoaded)
+        {
+            this.interstitialAd.showAd();
+        }
+        else
+        {
+            ad.showIfAvailable();
+
+        }
         super.onBackPressed();
     }
 
@@ -80,4 +102,19 @@ public class RulesHost extends FragmentActivity implements ListManager {
         CustomRulesFragment fragment =  (CustomRulesFragment) getSupportFragmentManager().getFragments().get(0);
         fragment.updateDB();
     }
+    class MyCustomAdListener extends DefaultAdListener
+    {
+        @Override
+        public void onAdLoaded(Ad ad, AdProperties adProperties)
+        {
+            amazonLoaded = true;
+        }
+
+        @Override
+        public void onAdFailedToLoad(Ad ad, AdError error)
+        {
+            amazonLoaded = false;
+        }
+    }
+
 }
