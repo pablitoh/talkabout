@@ -141,6 +141,12 @@ public class OptionsMap {
                     return new RewardCard(mContext.getString(R.string.targetTitle), mContext.getString(R.string.target), R.drawable.icon_target);
                 }
             });
+            OPTIONS_MAP.put(12, new RewardRunner() {
+                @Override
+                public RewardCard getReward() {
+                    return new RewardCard("Explosion", "Lorem Ipsum Sarasa Mondongo", R.drawable.icon_skull);
+                }
+            });
         }
         return OPTIONS_MAP;
     }
