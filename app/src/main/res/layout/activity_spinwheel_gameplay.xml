@@ -36,9 +36,9 @@
         <com.concon.talkabout.talkabout.elements.TitleFun
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Borrachometro 0%"
+            android:text="0%"
             android:textSize="20sp"
-            android:id="@+id/borrachometroString"
+            android:id="@+id/borrachometroNumber"
             android:textColor="@color/black"
             android:gravity="center"
             android:layout_alignLeft="@id/progressBar"
@@ -48,13 +48,26 @@
             android:layout_alignEnd="@id/progressBar"
             android:layout_alignBottom="@id/progressBar"
             />
+        <com.concon.talkabout.talkabout.elements.TitleFun
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Borrachometro"
+            android:textSize="20sp"
+            android:id="@+id/borrachometroString"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:layout_alignLeft="@id/progressBar"
+            android:layout_alignStart="@id/progressBar"
+            android:layout_below="@id/progressBar"
+            android:rotation="-15"
+            />
     </RelativeLayout>
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:id="@+id/frameContainer"
         android:visibility="visible"
-        android:layout_below="@+id/borrachometroString">
+        android:layout_below="@+id/progressLayout">
 
            <ImageView
                android:src="@drawable/wheel_of_fortune"
