@@ -29,5 +29,5 @@ dependencies {
     compile 'com.facebook.android:facebook-android-sdk:4.0.0'
     compile 'com.mcxiaoke.volley:library-aar:1.0.0'
     compile 'com.google.code.gson:gson:2.2.+'
-
+    compile files('libs/amazon-ads-5.6.20.jar')
 }

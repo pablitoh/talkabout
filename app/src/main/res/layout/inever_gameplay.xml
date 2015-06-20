@@ -45,7 +45,7 @@
         android:layout_above="@+id/shareButtonInever" />
 
     <Button
-        android:layout_width="100dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:text="@string/share_text"
         android:textSize="@dimen/indication_text"
@@ -64,7 +64,7 @@
         android:layout_alignParentBottom="true"
         android:gravity="center"
         android:text="@string/tapToContinue"
-        android:textColor="@color/orange"
+        android:textColor="@color/black"
         android:textSize="@dimen/indication_text"
         android:clickable="true"
         android:onClick="changeTopic"/>

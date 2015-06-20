@@ -51,6 +51,9 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
+            android:name="com.amazon.device.ads.AdActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"/>
+        <activity
             android:name=".SpinWheelMainMenu"
             android:label="@string/app_name"
             android:screenOrientation="portrait" >
