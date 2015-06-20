@@ -61,6 +61,7 @@
             android:layout_alignStart="@id/progressBar"
             android:layout_below="@id/progressBar"
             android:rotation="-15"
+            android:padding="5dp"
             />
         </RelativeLayout>
 

@@ -122,5 +122,6 @@
     <string name="connectionError">Could not retrieve data. Please verify that you has internet access and try again</string>
     <string name="loading">Loading...</string>
     <string name="devilTitle">The Devil!</string>
+    <string name="drunkMeter">Drunk-o-meter</string>
 
 </resources>

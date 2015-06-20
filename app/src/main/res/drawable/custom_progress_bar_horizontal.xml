@@ -7,7 +7,7 @@
         <shape>
             <stroke
                 android:color="@color/black"
-                android:width="2dp"/>
+                android:width="1dp"/>
             <corners
                 android:radius="0dip" />
             <gradient
@@ -39,7 +39,7 @@
             <shape>
                 <stroke
                     android:color="@color/black"
-                    android:width="2dp"/>
+                    android:width="1dp"/>
                 <corners
                     android:radius="0dip" />
                 <gradient
