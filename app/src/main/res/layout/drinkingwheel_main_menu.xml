@@ -31,6 +31,22 @@
         android:orientation="vertical"
         android:gravity="center">
         <com.concon.talkabout.talkabout.elements.TextViewFun
+            android:id="@+id/phrase0"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center|start"
+            android:padding="10dp"
+            android:text="@string/wheelDescription0"
+            android:textColor="@color/black"
+            android:textSize="@dimen/gameplay_button_text"
+            android:textStyle="italic"
+            android:typeface="normal"
+            android:drawableStart="@drawable/devil"
+            android:drawableLeft="@drawable/devil"
+            android:drawablePadding="10dp"
+            android:layout_marginBottom="10dp"/>
+        <com.concon.talkabout.talkabout.elements.TextViewFun
             android:id="@+id/phrase"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"

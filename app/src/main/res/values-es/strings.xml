@@ -125,4 +125,5 @@
     <string name="loading">Cargando...</string>
     <string name="devilTitle">El Diablo!</string>
     <string name="drunkMeter">Borrachometro</string>
+    <string name="wheelDescription0">Las reglas aplicadas por EL DIABLO no pueden ser borradas. Solo reemplazadas por otra del Diablo. Solo una regla diabolica por persona.</string>
 </resources>

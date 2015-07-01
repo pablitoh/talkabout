@@ -123,5 +123,6 @@
     <string name="loading">Loading...</string>
     <string name="devilTitle">The Devil!</string>
     <string name="drunkMeter">Drunk-o-meter</string>
+    <string name="wheelDescription0">Rules applied by THE DEVIL cannot be cleaned, only replaced by other Devil Rule. Only 1 Devil Rule can be applied at the same time.</string>
 
 </resources>
