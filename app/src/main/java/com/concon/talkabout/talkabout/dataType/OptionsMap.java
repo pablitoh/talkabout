@@ -19,6 +19,8 @@ import java.util.Random;
  */
 public class OptionsMap {
 
+
+
     public interface RewardRunner
     {
         public RewardCard getReward();
@@ -28,7 +30,7 @@ public class OptionsMap {
     Random random = new Random();
     HashMap<Integer, RewardRunner> OPTIONS_MAP;
     private Context mContext;
-    private List<String> chaosRules, iNever, randomFacts;
+    private List<String> chaosRules, iNever, randomFacts, superRules;
 
 
     public OptionsMap(Context mContext)
@@ -57,6 +59,13 @@ public class OptionsMap {
 
         try {
             randomFacts = singleFeedParserService.parseXml(2, mContext.getResources().openRawResource(R.raw.randomfacts), "randomfacts");
+        } catch (XmlPullParserException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        try {
+            superRules = singleFeedParserService.parseXml(2, mContext.getResources().openRawResource(R.raw.super_rules), "superrules");
         } catch (XmlPullParserException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -139,6 +148,12 @@ public class OptionsMap {
                 @Override
                 public RewardCard getReward() {
                     return new RewardCard(mContext.getString(R.string.targetTitle), mContext.getString(R.string.target), R.drawable.icon_target);
+                }
+            });
+            OPTIONS_MAP.put(12, new RewardRunner() {
+                @Override
+                public RewardCard getReward() {
+                    return new RewardCard(mContext.getString(R.string.devilTitle),  superRules.get(random.nextInt(superRules.size())), R.drawable.devil);
                 }
             });
         }

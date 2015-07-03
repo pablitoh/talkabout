@@ -19,7 +19,9 @@ import android.view.ViewGroup;
 import android.view.ViewTreeObserver;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.concon.talkabout.talkabout.dataType.OptionsMap;
 import com.concon.talkabout.talkabout.dataType.RewardCard;
@@ -396,6 +398,7 @@ public class SpinWheelGameplayTAB extends Fragment {
          */
         float[] v = new float[9];
         matrix.getValues(v);
+        RewardCard reward;
 
         // calculate the degree of rotation
         float rAngle = Math.round(Math.atan2(v[Matrix.MSKEW_X],
@@ -406,21 +409,34 @@ public class SpinWheelGameplayTAB extends Fragment {
          */
         rAngle = (rAngle + 360) % 360;
 
-        int option = (int) Math.floor(rAngle / DEGREES_PER_OPTION);
-        RewardCard reward = OptionsMapObj.getMap().get(option).getReward();
-        mCallback.onReward(reward);
 
-        // custom dialog
+        ProgressBar progress = (ProgressBar) getView().findViewById(R.id.progressBar);
+        progress.incrementProgressBy(random.nextInt((20 - 1) + 1) + 1);
 
         AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(getActivity());
         LayoutInflater inflater = getActivity().getLayoutInflater();
-        final View dialog = inflater.inflate(R.layout.reward_dialog, null);
+
+        ((TextView) getView().findViewById(R.id.borrachometroNumber)).setText(progress.getProgress()+"%");
+        int option = (int) Math.floor(rAngle / DEGREES_PER_OPTION);
+         View dialog = inflater.inflate(R.layout.reward_dialog, null);
+
+        if(progress.getProgress()>=100)
+        {
+            option = 12;
+            progress.setProgress(0);
+            ((TextView) getView().findViewById(R.id.borrachometroNumber)).setText(progress.getProgress() + "%");
+            dialog = inflater.inflate(R.layout.devil_dialog, null);
+        }
         dialogBuilder.setView(dialog);
         final AlertDialog alertDialog = dialogBuilder.create();
-        TextView text2 = (TextView) dialog.findViewById(R.id.dialogText);
-        text2.setText(reward.cardDescription);
-        ((TextView)dialog.findViewById(R.id.dialogTitle)).setText(reward.cardTitle);
-        ((TextView)dialog.findViewById(R.id.dialogTitle)).setCompoundDrawablesWithIntrinsicBounds(0, reward.cardIcon, 0, 0);
+        TextView dialogText = (TextView) dialog.findViewById(R.id.dialogText);
+        TextView dialogTitle = (TextView)dialog.findViewById(R.id.dialogTitle);
+
+        reward = OptionsMapObj.getMap().get(option).getReward();
+        dialogText.setText(reward.cardDescription);
+        dialogTitle.setText(reward.cardTitle);
+        dialogTitle.setCompoundDrawablesWithIntrinsicBounds(0, reward.cardIcon, 0, 0);
+        mCallback.onReward(reward);
         Button dialogButton = (Button) dialog.findViewById(R.id.dismissDialogButton);
 
 
@@ -430,17 +446,16 @@ public class SpinWheelGameplayTAB extends Fragment {
                 enableSpinButton();
             }
         });
-        // if button is clicked, close the custom dialog
         dialogButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 alertDialog.dismiss();
-
             }
         });
 
         alertDialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
         alertDialog.show();
+
     }
 
 

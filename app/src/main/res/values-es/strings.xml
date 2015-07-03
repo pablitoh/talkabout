@@ -123,4 +123,7 @@
     <string name="recentRuleTitle">Reciente</string>
     <string name="connectionError">No se pudo establecer una coneccion. Por favor, reintente.</string>
     <string name="loading">Cargando...</string>
+    <string name="devilTitle">El Diablo!</string>
+    <string name="drunkMeter">Borrachometro</string>
+    <string name="wheelDescription0">El Diablo hace que un espíritu se adueñe de ti. Solo puedes estar poseido por un espíritu a la vez y este reemplaza al anterior. Los espiritus no pueden ser limpiados.</string>
 </resources>
