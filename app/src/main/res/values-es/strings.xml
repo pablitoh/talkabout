@@ -125,5 +125,5 @@
     <string name="loading">Cargando...</string>
     <string name="devilTitle">El Diablo!</string>
     <string name="drunkMeter">Borrachometro</string>
-    <string name="wheelDescription0">Las reglas aplicadas por EL DIABLO no pueden ser borradas. Solo reemplazadas por otra del Diablo. Solo una regla diabolica por persona.</string>
+    <string name="wheelDescription0">El Diablo hace que un espíritu se adueñe de ti. Solo puedes estar poseido por un espíritu a la vez y este reemplaza al anterior. Los espiritus no pueden ser limpiados.</string>
 </resources>

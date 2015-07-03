@@ -16,7 +16,6 @@
         ads:adSize="BANNER"
         ads:adUnitId="@string/banner_ad_unit_id"/>
 
-
     <ScrollView
         android:id="@+id/SCROLLER_ID"
         android:layout_width="fill_parent"
@@ -95,7 +94,6 @@
             android:drawableRight="@drawable/circle_turn"
             android:layout_marginBottom="10dp"/>
         </LinearLayout>
-
     </ScrollView>
 
     <LinearLayout
